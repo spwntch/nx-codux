@@ -1,5 +1,7 @@
 # nx-codux
 
+![social-preview-image](/assets//github//spwntch-nx-codux-social-preview.png)
+
 Welcome to the nx-codux boilerplate project! This repository is a configured starter template designed to use NX for managing components and other libraries, as well as supporting multiple applications. Codux is integrated into the mix as a replacement for Storybook.
 
 ## Table of Contents
@@ -28,26 +30,26 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/spwntch/nx-codux.git
-    cd nx-codux
-    ```
+   ```bash
+   git clone https://github.com/spwntch/nx-codux.git
+   cd nx-codux
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Serve the applications:**
 
-    ```bash
-    nx serve
-    ```
+   ```bash
+   nx serve
+   ```
 
 4. **Open Codux:**
 
-    Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
+   Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
 
 ## Project Structure
 
@@ -68,14 +70,11 @@ Here is the `codux.config.json` used in this project:
   "tailwindcssConfig": "./.codux/tailwind.config.js",
   "boardsPath": ".codux/src/boards",
   "componentsDiscovery": {
-    "include": [
-      "apps/**/app/**",
-      "apps/**/components/**",
-      "libs/**/src/lib/components/**"
-    ],
+    "include": ["apps/**/app/**", "apps/**/components/**", "libs/**/src/lib/components/**"],
     "exclude": [".codux/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
   }
 }
+```
