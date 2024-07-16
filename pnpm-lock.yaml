@@ -64,6 +64,9 @@ devDependencies:
   '@typescript-eslint/parser':
     specifier: ^7.3.0
     version: 7.16.1(eslint@8.57.0)(typescript@5.4.5)
+  '@wixc3/react-board':
+    specifier: ^2.5.0
+    version: 2.6.0(react-dom@18.3.1)(react@18.3.1)
   autoprefixer:
     specifier: 10.4.13
     version: 10.4.13(postcss@8.4.38)
@@ -3585,6 +3588,21 @@ packages:
     dependencies:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
+    dev: true
+
+  /@wixc3/board-core@2.6.0:
+    resolution: {integrity: sha512-+6Np6PW7gdOtv2ACdXwZV8qydhVn/FJdX3E8QN5T8FxqCitmpsr8o7Df7nXCKyT58wuxoK7VVIpv3cd7fGvxGg==}
+    dev: true
+
+  /@wixc3/react-board@2.6.0(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-KNJcno+/8Ji1FcxMvzKQGuMlyrUwFjnr1spekZtRe013LWKeQ4vvQ/FJJ3143BcG1CVR9dtHCrmAwC771DQBcg==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@wixc3/board-core': 2.6.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     dev: true
 
   /@xtuc/ieee754@1.2.0:
