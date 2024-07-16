@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/react-ui": ["libs/react-ui/src/index.ts"],
-      "@/tailwind/*": ["libs/tailwind/src/*"]
+      "@/react-ui": ["libs/react-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

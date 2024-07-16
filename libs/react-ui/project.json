@@ -5,13 +5,5 @@
   "projectType": "library",
   "tags": ["tech:react"],
   "// targets": "to see all targets run: nx show project react-ui --web",
-  "targets": {
-    "add-shad": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpx shadcn-ui@latest add",
-        "cwd": "libs/react-ui"
-      }
-    }
-  }
+  "targets": {}
 }
