@@ -1,7 +1,5 @@
 # nx-codux
 
-![social-preview-image](/assets//github//spwntch-nx-codux-social-preview.png)
-
 Welcome to the nx-codux boilerplate project! This repository is a configured starter template designed to use NX for managing components and other libraries, as well as supporting multiple applications. Codux is integrated into the mix as a replacement for Storybook.
 
 ## Table of Contents
@@ -9,6 +7,7 @@ Welcome to the nx-codux boilerplate project! This repository is a configured sta
 - [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
+- [Adding UI Components](#adding-ui-components)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [License](#license)
@@ -19,11 +18,11 @@ The `nx-codux` project is a boilerplate configured to leverage NX for component 
 
 ## Features
 
-- **PNPM Package Management**: Because I like PNPM and in the future, and I'm sure codux's support for it will improve (they seeem like an amazing team 🇮🇱).
 - **NX Integration**: Utilize NX for efficient monorepo management, enabling scalable architecture for your projects.
 - **Codux Integration**: Replace Storybook with Codux for component development and visualization.
 - **Tailwind CSS Support**: Preconfigured Tailwind CSS for rapid UI development.
 - **Global Setup for Boards**: Custom global setup for Codux boards.
+- **Shadcn/UI Integration**: Easily add base UI components to your project.
 
 ## Getting Started
 
@@ -31,26 +30,44 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/spwntch/nx-codux.git
-   cd nx-codux
-   ```
+    ```bash
+    git clone https://github.com/spwntch/nx-codux.git
+    cd nx-codux
+    ```
 
 2. **Install dependencies:**
 
-   ```bash
-   pnpm install
-   ```
+    ```bash
+    npm install
+    ```
 
 3. **Serve the applications:**
 
-   ```bash
-   nx serve
-   ```
+    ```bash
+    nx serve
+    ```
 
 4. **Open Codux:**
 
-   Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
+    Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
+
+## Adding UI Components
+
+This project includes a capability to add base UI components from [Shadcn/UI](https://ui.shadcn.com/) to a library called `@/react-ui`. To add a component, follow these steps:
+
+1. **Add a component using Shadcn/UI:**
+
+    ```bash
+    pnpm dlx shadcn-ui@latest add button
+    ```
+
+    Alternatively, you can use the script in the package.json to achieve the same result:
+
+    ```bash
+    pnpm run shadcn-ui button
+    ```
+
+2. Follow the instructions on [Shadcn/UI](https://ui.shadcn.com/) for further customization and usage of the components.
 
 ## Project Structure
 
@@ -71,11 +88,14 @@ Here is the `codux.config.json` used in this project:
   "tailwindcssConfig": "./.codux/tailwind.config.js",
   "boardsPath": ".codux/src/boards",
   "componentsDiscovery": {
-    "include": ["apps/**/app/**", "apps/**/components/**", "libs/**/src/lib/components/**"],
+    "include": [
+      "apps/**/app/**",
+      "apps/**/components/**",
+      "libs/**/src/lib/components/**"
+    ],
     "exclude": [".codux/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
   }
 }
-```
