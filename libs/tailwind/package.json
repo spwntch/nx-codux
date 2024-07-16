@@ -1,0 +1,25 @@
+{
+  "name": "@spwntch/tailwind",
+  "version": "0.63.2",
+  "author": "spwntch",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "require": "./src/index.js"
+    },
+    "./styles": {
+      "default": "./src/tailwind.css"
+    },
+    "./presets": {
+      "default": "./src/lib/tailwind.presets.js"
+    }
+  },
+  "keywords": [
+    "react",
+    "vite"
+  ]
+}
