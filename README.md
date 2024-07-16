@@ -45,7 +45,7 @@ To get started with this project, follow these steps:
 3. **Serve the applications:**
 
    ```bash
-   nx serve
+   pnpm run start
    ```
 
 4. **Open Codux:**

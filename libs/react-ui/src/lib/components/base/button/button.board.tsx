@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBoard } from '@wixc3/react-board';
-import Page from '../../../apps/site/app/page';
+import Button from './button';
 
 export default createBoard({
-  name: 'Shalom',
+  name: 'Button',
   Board: () => (
     <div>
-      <Page />
+      <Button>CLICK ME</Button>
     </div>
   ),
   isSnippet: true,

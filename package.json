@@ -2,7 +2,9 @@
   "name": "@spwntch/nx-codux",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "pnpm dlx nx run site:dev"
+  },
   "private": true,
   "dependencies": {
     "next": "14.2.3",
