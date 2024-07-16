@@ -1,0 +1,12 @@
+{
+  "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
+  "boardGlobalSetup": "./.codux/boards-global-setup.ts",
+  "tailwindcssConfig": "./.codux/tailwind.config.js",
+  "componentsDiscovery": {
+    "include": ["apps/site/app/**"],
+    "exclude": [".codux/component-templates/**"]
+  },
+  "newComponent": {
+    "componentsPath": ".codux/src/components"
+  }
+}
