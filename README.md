@@ -19,6 +19,7 @@ The `nx-codux` project is a boilerplate configured to leverage NX for component 
 
 ## Features
 
+- **PNPM Package Management**: Because I like PNPM and in the future, and I'm sure codux's support for it will improve (they seeem like an amazing team 🇮🇱).
 - **NX Integration**: Utilize NX for efficient monorepo management, enabling scalable architecture for your projects.
 - **Codux Integration**: Replace Storybook with Codux for component development and visualization.
 - **Tailwind CSS Support**: Preconfigured Tailwind CSS for rapid UI development.
@@ -38,7 +39,7 @@ To get started with this project, follow these steps:
 2. **Install dependencies:**
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Serve the applications:**
