@@ -9,7 +9,8 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "@/lib/components",
-    "utils": "@/lib/utils"
+    "components": "@shadcn-ui/components",
+    "ui": "@shadcn-ui/components",
+    "utils": "@shadcn-ui/utils"
   }
 }
