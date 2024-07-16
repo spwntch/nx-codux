@@ -5,7 +5,7 @@ const Widget = () => {
   return (
     <div className="flex-col justify-center items-center">
       <h1 className="text-5xl text-primary">Hello world...</h1>
-      <Button variant="outline">Click me</Button>
+      <Button variant="ghost">Click me</Button>
     </div>
   );
 };
