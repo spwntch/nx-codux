@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@shadcn-ui/*": ["components/shadcn-ui/src/*"]
+      "@react-ui/*": ["libs/react-ui/src/*"]
     }
   }
 }
