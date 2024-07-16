@@ -19,6 +19,12 @@ dependencies:
     version: 2.6.3
 
 devDependencies:
+  '@babel/core':
+    specifier: ^7.14.5
+    version: 7.24.9
+  '@babel/preset-react':
+    specifier: ^7.14.5
+    version: 7.24.7(@babel/core@7.24.9)
   '@nx/eslint':
     specifier: 19.4.3
     version: 19.4.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.4.3)
@@ -34,6 +40,9 @@ devDependencies:
   '@nx/next':
     specifier: 19.4.3
     version: 19.4.3(@babel/core@7.24.9)(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(next@14.2.3)(nx@19.4.3)(typescript@5.4.5)(webpack@5.93.0)
+  '@nx/react':
+    specifier: 19.4.3
+    version: 19.4.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.4.3)(typescript@5.4.5)(webpack@5.93.0)
   '@nx/workspace':
     specifier: 19.4.3
     version: 19.4.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)
