@@ -10,7 +10,7 @@
   },
   "aliases": {
     "components": "@react-ui/lib/components",
-    "ui": "@react-ui/lib/components",
+    "ui": "@react-ui/lib/components/shadcn-ui",
     "utils": "@react-ui/lib/utils"
   }
 }
