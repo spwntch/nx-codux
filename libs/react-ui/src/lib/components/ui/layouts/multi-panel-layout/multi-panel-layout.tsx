@@ -30,11 +30,11 @@ export const MultiPanelLayout = forwardRef<
   ) => {
     const isHorizontal = orientation === 'horizontal';
 
-    const mainBlockStyle = isHorizontal
+    const mainBlockStyle: React.CSSProperties = isHorizontal
       ? { width: `${mainPaneCoverage}%`, order: flip ? 1 : 0 }
       : { height: `${mainPaneCoverage}%`, order: flip ? 1 : 0 };
 
-    const subBlockContainerStyle = isHorizontal
+    const subBlockContainerStyle: React.CSSProperties = isHorizontal
       ? {
           flex: `1 1 calc(100% - ${mainPaneCoverage}%)`,
           display: 'flex',
