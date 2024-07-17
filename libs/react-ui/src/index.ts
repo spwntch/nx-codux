@@ -1,3 +1,5 @@
-export * from './lib/components/shadcn-ui/badge';
-export * from './lib/components/shadcn-ui/button';
+export * from './lib/components';
+export * from './lib/providers';
+export * from './lib/types';
 export * from './lib/utils';
+
