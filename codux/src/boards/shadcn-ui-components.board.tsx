@@ -1,6 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { Badge } from '../../../libs/react-ui/src/lib/components/shadcn-ui/badge';
-import { Button } from '../../../libs/react-ui/src';
+import { Badge, Button } from '@/react-ui';
 
 export default createBoard({
   name: 'shadcn-ui-components',
