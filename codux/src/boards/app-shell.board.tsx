@@ -3,16 +3,16 @@ import { createBoard } from '@wixc3/react-board';
 
 const brand: IBrand = {
   logoUrl: {
-    light: '/brand/logo-primary.webp',
-    dark: '/brand/logo-dark.webp',
+    light: '/spwn/brand/public/logo-primary.webp',
+    dark: '/spwn/brand/public/logo-dark.webp',
   },
   markUrl: {
-    light: '/brand/mark-primary.webp',
-    dark: '/brand/mark-dark.webp',
+    light: '/spwn/brand/public/mark-primary.webp',
+    dark: '/spwn/brand/public/mark-dark.webp',
   },
   underConstructionUrl: {
-    light: '/under-construction/powered-by-spawntech-primary.webp',
-    dark: '/under-construction/powered-by-spawntech-dark.webp',
+    light: '/spwn/under-construction/public/powered-by-spawntech-primary.webp',
+    dark: '/spwn/under-construction/public/powered-by-spawntech-dark.webp',
   },
   tagline: '{ experience in code }',
   about: {
@@ -38,6 +38,10 @@ const brand: IBrand = {
 
 export default createBoard({
   name: 'App Shell',
-  Board: () => <ShellProvider brand={brand}><Logo /></ShellProvider>,
+  Board: () => (
+    <ShellProvider brand={brand}>
+      <Logo />
+    </ShellProvider>
+  ),
   isSnippet: true,
 });
