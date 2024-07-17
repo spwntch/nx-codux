@@ -7,6 +7,7 @@ Welcome to the nx-codux boilerplate project! This repository is a configured sta
 - [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
+- [Scripts](#scripts)
 - [Adding UI Components](#adding-ui-components)
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
@@ -14,7 +15,7 @@ Welcome to the nx-codux boilerplate project! This repository is a configured sta
 
 ## Introduction
 
-The `nx-codux` project is a boilerplate configured to leverage NX for component and library management while supporting multiple applications. Instead of using Storybook, this project integrates Codux, providing a modern and efficient development experience.
+The `nx-codux` project is a boilerplate configured to leverage NX for component and library management while supporting multiple applications. Instead of using Storybook, this project integrates Codux, providing a modern and efficient, integrated design & development experience.
 
 ## Features
 
@@ -51,6 +52,34 @@ To get started with this project, follow these steps:
 
     Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
 
+## Scripts
+
+The `package.json` includes several scripts to help streamline your workflow:
+
+- **Start the demo site in development mode:**
+
+    ```bash
+    pnpm start
+    ```
+
+    This runs the demo site in development mode using NX.
+
+- **Add a Shadcn/UI component:**
+
+    ```bash
+    pnpm run shadcn-ui button
+    ```
+
+    This script allows you to add a new Shadcn/UI component to the library.
+
+- **Convert images to .webp format:**
+
+    ```bash
+    pnpm run webp
+    ```
+
+    This script converts `.png`, `.jpg`, and other image types to `.webp` formats using a custom script located in `scripts/webp.sh`.
+
 ## Adding UI Components
 
 This project includes a capability to add base UI components from [Shadcn/UI](https://ui.shadcn.com/) to a library called `@/react-ui`. To add a component, follow these steps:
@@ -75,7 +104,9 @@ This project follows the standard NX monorepo structure:
 
 - `apps/`: Contains the applications in the workspace.
 - `libs/`: Contains the libraries in the workspace.
-- `.codux/`: Contains Codux specific configuration and setup files.
+- `codux/`: Contains Codux specific configuration and setup files.
+- `assets/`: This is where all static assets are stored.
+- `scripts/`: These are bash scripts used during build and deploy steps. An example is our webp script to minimize images.
 
 ## Configuration
 
@@ -84,16 +115,16 @@ Here is the `codux.config.json` used in this project:
 ```json
 {
   "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
-  "boardGlobalSetup": "./.codux/boards-global-setup.ts",
-  "tailwindcssConfig": "./.codux/tailwind.config.js",
-  "boardsPath": ".codux/src/boards",
+  "boardGlobalSetup": "./codux/boards-global-setup.ts",
+  "tailwindcssConfig": "./codux/tailwind.config.js",
+  "boardsPath": "codux/src/boards",
   "componentsDiscovery": {
     "include": [
       "apps/**/app/**",
       "apps/**/components/**",
       "libs/**/src/lib/components/**"
     ],
-    "exclude": [".codux/component-templates/**"]
+    "exclude": ["codux/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
