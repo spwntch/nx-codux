@@ -1,11 +1,18 @@
-import { cn } from '../../../../utils';
 import { PropsWithChildren, forwardRef } from 'react';
 import { IContent } from '../../../../types';
+import { cn } from '../../../../utils';
 // import { Announcement } from '../../content/announcement/announcement';
 // import { ContentChildren } from '../../content/content-children/content-children';
 // import { Header } from '../../content/header/header';
 // import { List } from '../../content/list/list';
 // import { Paragraphs } from '../../content/paragraphs/paragraphs';
+import {
+  Announcement,
+  ContentChildren,
+  Header,
+  List,
+  Paragraphs,
+} from '../../content';
 import {
   getBodyContentAndClassName,
   getSubTitleContentAndClassName,
@@ -80,14 +87,14 @@ export const ContentContainer = forwardRef<
         ref={ref}
         {...props}
       >
-        {/* {innerContent.announcement && (
+        {innerContent.announcement && (
           <Announcement
             message={innerContent.announcement.message}
             href={innerContent.announcement.href}
             className={innerContent.announcement.className}
           />
-        )} */}
-        {/* <Header
+        )}
+        <Header
           titleContent={titleContent}
           titleClassName={titleClassName}
           subTitleContent={subTitleContent}
@@ -95,28 +102,16 @@ export const ContentContainer = forwardRef<
           tagsContent={tagsContent}
           tagsClassName={tagsClassName}
           alignment={hAlign}
-        /> */}
-        {/* {bodyContent && (
+        />
+        {bodyContent && (
           <Paragraphs content={bodyContent} className={bodyClassName} />
-        )} */}
-        {/* {innerContent.bullets && <List bullets={innerContent.bullets} />} */}
-        {/* {children && (
-          <ContentChildren
-            className={cn('mt-10 flex gap-8', {
-              'justify-start items-start': alignmentClass === 'top-left',
-              'justify-start items-center': alignmentClass === 'top-center',
-              'justify-start items-end': alignmentClass === 'top-right',
-              'justify-center items-start': alignmentClass === 'middle-left',
-              'justify-center items-center': alignmentClass === 'middle-center',
-              'justify-center items-end': alignmentClass === 'middle-right',
-              'justify-end items-start': alignmentClass === 'bottom-left',
-              'justify-end items-center': alignmentClass === 'bottom-center',
-              'justify-end items-end': alignmentClass === 'bottom-right',
-            })}
-          >
+        )}
+        {innerContent.bullets && <List bullets={innerContent.bullets} />}
+        {children && (
+          <ContentChildren alignmentClass={alignmentClass}>
             {children}
           </ContentChildren>
-        )} */}
+        )}
       </div>
     );
   }
