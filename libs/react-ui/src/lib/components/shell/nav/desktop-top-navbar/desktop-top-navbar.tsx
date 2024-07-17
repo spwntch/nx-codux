@@ -40,8 +40,14 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         <div className="flex p-2 pb-4 items-center">
           <Logo
             height={logoHeight || 36}
-            className="cursor-pointer"
+            className="cursor-pointer hidden lg:block"
             onClick={() => onLinkTo('/')}
+          />
+          <Logo
+            height={logoHeight || 36}
+            className="cursor-pointer block lg:hidden"
+            onClick={() => onLinkTo('/')}
+            variant="mark"
           />
           <div className="flex-1">
             <nav
