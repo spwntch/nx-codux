@@ -1,5 +1,5 @@
-import { INavLink } from "../../../types";
-import { NavigationMenuItem, NavigationMenuLink } from "../../shadcn-ui";
+import { INavLink } from '../../../types';
+import { NavigationMenuItem, NavigationMenuLink } from '../../shadcn-ui';
 
 interface INavToolbarMenuLinkProps extends INavLink {
   className?: string;
@@ -20,9 +20,9 @@ export const NavToolbarMenuLink = ({
           onSelect={() => onLinkTo(href)}
         >
           <h4 className="text-sm font-medium leading-none">{label}</h4>
-          {/* <Muted className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {description}
-          </Muted> */}
+          </p>
         </NavigationMenuLink>
       </NavigationMenuItem>
     </li>
