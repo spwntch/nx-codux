@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "pnpm dlx nx run site:dev",
-    "shadcn-ui": "pnpm dlx shadcn-ui@latest add"
+    "shadcn-ui": "pnpm dlx shadcn-ui@latest add",
+    "webp": "scripts/webp.sh "
   },
   "private": true,
   "dependencies": {
