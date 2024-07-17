@@ -8,6 +8,9 @@ dependencies:
   '@radix-ui/react-accordion':
     specifier: ^1.2.0
     version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
+  '@radix-ui/react-avatar':
+    specifier: ^1.1.0
+    version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
   '@radix-ui/react-dialog':
     specifier: ^1.1.1
     version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
@@ -107,8 +110,8 @@ devDependencies:
     specifier: ^7.3.0
     version: 7.16.1(eslint@8.57.0)(typescript@5.4.5)
   '@wixc3/react-board':
-    specifier: ^2.5.0
-    version: 2.6.0(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^3.0.0
+    version: 3.0.0(react-dom@18.3.1)(react@18.3.1)
   accordion:
     specifier: ^3.0.2
     version: 3.0.2
@@ -2785,6 +2788,29 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: false
 
+  /@radix-ui/react-avatar@1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-Q/PbuSMk/vyAd/UoIShVGZ7StHHeRFYU7wXmi5GV+8cLXflZAEpHL/F697H1klrzxKXNtZ97vWiC0q3RKUH8UA==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/react-context': 1.1.0(@types/react@18.3.1)(react@18.3.1)
+      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-use-callback-ref': 1.1.0(@types/react@18.3.1)(react@18.3.1)
+      '@radix-ui/react-use-layout-effect': 1.1.0(@types/react@18.3.1)(react@18.3.1)
+      '@types/react': 18.3.1
+      '@types/react-dom': 18.3.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
+
   /@radix-ui/react-collapsible@1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-zQY7Epa8sTL0mq4ajSJpjgn2YmCgyrG7RsQgLp3C0LQVkG7+Tf6Pv1CeNWZLyqMjhdPkBa5Lx7wYBeSu7uCSTA==}
     peerDependencies:
@@ -4229,17 +4255,17 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@wixc3/board-core@2.6.0:
-    resolution: {integrity: sha512-+6Np6PW7gdOtv2ACdXwZV8qydhVn/FJdX3E8QN5T8FxqCitmpsr8o7Df7nXCKyT58wuxoK7VVIpv3cd7fGvxGg==}
+  /@wixc3/board-core@3.0.0:
+    resolution: {integrity: sha512-BJOYILAB3YjNhuy7WSP81K6aQkRQ51WECZCX+JeAUZp8eqlCUn+b71en3496fULhyuxTN7GYDEb00SwJ9KLYag==}
     dev: true
 
-  /@wixc3/react-board@2.6.0(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-KNJcno+/8Ji1FcxMvzKQGuMlyrUwFjnr1spekZtRe013LWKeQ4vvQ/FJJ3143BcG1CVR9dtHCrmAwC771DQBcg==}
+  /@wixc3/react-board@3.0.0(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-Qjws0cxFvwja2yTbBm6X301ZOSgsAhcIyD6NyPcBJcXV3KoqoFMEFXeP29NMQmEmmkVEc3BPYFodazfNFBuwsg==}
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@wixc3/board-core': 2.6.0
+      '@wixc3/board-core': 3.0.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     dev: true
