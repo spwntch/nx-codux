@@ -4,6 +4,7 @@ import {
   INavItem,
   ShellProvider,
   RegularFooter,
+  UnderConstruction,
 } from '@/react-ui';
 import { createBoard } from '@wixc3/react-board';
 
@@ -84,7 +85,9 @@ export default createBoard({
             onLinkTo={handleLinkTo}
           />
 
-          <main className="flex-1 flex justify-center items-center">ping.</main>
+          <main className="flex-1 flex justify-center items-center ">
+            <UnderConstruction />
+          </main>
           <RegularFooter />
         </div>
       </ShellProvider>
