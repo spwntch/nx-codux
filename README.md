@@ -112,9 +112,14 @@ Here is the `codux.config.json` used in this project:
   "boardGlobalSetup": "./codux/boards-global-setup.ts",
   "tailwindcssConfig": "./codux/tailwind.config.js",
   "boardsPath": "codux/src/boards",
+  "staticServerRoot": "./assets",
   "componentsDiscovery": {
-    "include": ["apps/**/app/**", "apps/**/components/**", "libs/**/src/lib/components/**"],
-    "exclude": ["codux/component-templates/**"]
+    "include": [
+      "apps/**/app/**",
+      "apps/**/components/**",
+      "libs/**/src/lib/components/**"
+    ],
+    "exclude": ["codux/src/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
