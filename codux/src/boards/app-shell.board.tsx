@@ -1,4 +1,10 @@
-import { DesktopTopNavbar, IBrand, INavItem, ShellProvider } from '@/react-ui';
+import {
+  DesktopTopNavbar,
+  IBrand,
+  INavItem,
+  ShellProvider,
+  RegularFooter,
+} from '@/react-ui';
 import { createBoard } from '@wixc3/react-board';
 
 const brand: IBrand = {
@@ -78,9 +84,8 @@ export default createBoard({
             onLinkTo={handleLinkTo}
           />
 
-          <main className="flex-1">ping.</main>
-          <div>hi</div>
-          {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
+          <main className="flex-1 flex justify-center items-center">ping.</main>
+          <RegularFooter />
         </div>
       </ShellProvider>
     );
