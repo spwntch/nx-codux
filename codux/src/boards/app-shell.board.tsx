@@ -2,14 +2,10 @@ import {
   DesktopTopNavbar,
   RegularFooter,
   ShellProvider,
-  UnderConstruction
+  UnderConstruction,
 } from '@/react-ui';
 import { createBoard } from '@wixc3/react-board';
 import { brand, primaryNav } from '../config';
-
-
-
-
 
 export default createBoard({
   name: 'App Shell',
@@ -40,4 +36,5 @@ export default createBoard({
     windowWidth: 1458,
     windowHeight: 768,
   },
+  tags: ['shell'],
 });
