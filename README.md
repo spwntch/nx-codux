@@ -31,26 +31,20 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/spwntch/nx-codux.git
-    cd nx-codux
-    ```
+   ```bash
+   git clone https://github.com/spwntch/nx-codux.git
+   cd nx-codux
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   pnpm install
+   ```
 
-3. **Serve the applications:**
+3. **Open Codux:**
 
-    ```bash
-    nx serve
-    ```
-
-4. **Open Codux:**
-
-    Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
+   Follow the instructions on [Codux](https://codux.com) to set up and visualize your components.
 
 ## Scripts
 
@@ -58,27 +52,27 @@ The `package.json` includes several scripts to help streamline your workflow:
 
 - **Start the demo site in development mode:**
 
-    ```bash
-    pnpm start
-    ```
+  ```bash
+  pnpm run start
+  ```
 
-    This runs the demo site in development mode using NX.
+  This runs the demo site in development mode using NX.
 
 - **Add a Shadcn/UI component:**
 
-    ```bash
-    pnpm run shadcn-ui button
-    ```
+  ```bash
+  pnpm run shadcn-ui button <!- or an other shadcn/ui component->
+  ```
 
-    This script allows you to add a new Shadcn/UI component to the library.
+  This script allows you to add a new Shadcn/UI component to the library.
 
 - **Convert images to .webp format:**
 
-    ```bash
-    pnpm run webp
-    ```
+  ```bash
+  pnpm run webp .assets/spwn/brand <!- or an other directory containing uncompressed images.->
+  ```
 
-    This script converts `.png`, `.jpg`, and other image types to `.webp` formats using a custom script located in `scripts/webp.sh`.
+  This script converts `.png`, `.jpg`, and other image types to `.webp` formats using a custom script located in `scripts/webp.sh`.
 
 ## Adding UI Components
 
@@ -86,15 +80,15 @@ This project includes a capability to add base UI components from [Shadcn/UI](ht
 
 1. **Add a component using Shadcn/UI:**
 
-    ```bash
-    pnpm dlx shadcn-ui@latest add button
-    ```
+   ```bash
+   pnpm dlx shadcn-ui@latest add button
+   ```
 
-    Alternatively, you can use the script in the package.json to achieve the same result:
+   Alternatively, you can use the script in the package.json to achieve the same result:
 
-    ```bash
-    pnpm run shadcn-ui button
-    ```
+   ```bash
+   pnpm run shadcn-ui button
+   ```
 
 2. Follow the instructions on [Shadcn/UI](https://ui.shadcn.com/) for further customization and usage of the components.
 
@@ -119,14 +113,19 @@ Here is the `codux.config.json` used in this project:
   "tailwindcssConfig": "./codux/tailwind.config.js",
   "boardsPath": "codux/src/boards",
   "componentsDiscovery": {
-    "include": [
-      "apps/**/app/**",
-      "apps/**/components/**",
-      "libs/**/src/lib/components/**"
-    ],
+    "include": ["apps/**/app/**", "apps/**/components/**", "libs/**/src/lib/components/**"],
     "exclude": ["codux/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
   }
 }
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Feel free to contribute and open issues if you find any bugs or have suggestions for improvements.
+
+Happy coding!
