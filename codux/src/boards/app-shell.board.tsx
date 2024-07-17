@@ -1,4 +1,4 @@
-import { IBrand, Logo, ShellProvider } from '@/react-ui';
+import { DesktopTopNavbar, IBrand, INavItem, ShellProvider } from '@/react-ui';
 import { createBoard } from '@wixc3/react-board';
 
 const brand: IBrand = {
@@ -36,12 +36,52 @@ const brand: IBrand = {
   },
 };
 
+export const primaryNav: INavItem[] = [
+  { label: 'Our Backstory', href: '/about' },
+  { label: 'Docs', href: '/docs' },
+  {
+    label: 'Resources',
+    children: [
+      {
+        label: 'Blog',
+        description: 'ipsum lorem and that sh*t',
+        href: '/blog',
+      },
+      {
+        label: 'Case Studies',
+        description: 'ipsum lorem and that sh*t',
+        href: '/case-studies',
+      },
+      {
+        label: 'White Papers',
+        description: 'ipsum lorem and that sh*t',
+        href: '/white-papers',
+      },
+    ],
+  },
+  { label: 'Hire Us', href: '/services' },
+];
+
 export default createBoard({
   name: 'App Shell',
-  Board: () => (
-    <ShellProvider brand={brand}>
-      <Logo />
-    </ShellProvider>
-  ),
+  Board: () => {
+    const handleLinkTo = (url: string) => {
+      console.log(url);
+    };
+    return (
+      <ShellProvider brand={brand} navItems={primaryNav}>
+        <div className="h-screen w-screen">
+          <DesktopTopNavbar
+            navAlignment="center"
+            logoHeight={60}
+            onLinkTo={handleLinkTo}
+          />
+
+          <main>ping</main>
+          {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
+        </div>
+      </ShellProvider>
+    );
+  },
   isSnippet: true,
 });
