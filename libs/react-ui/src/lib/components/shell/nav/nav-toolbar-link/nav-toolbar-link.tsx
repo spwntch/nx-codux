@@ -1,9 +1,9 @@
-import { INavLink } from '../../../types';
+import { INavLink } from '../../../../types';
 import {
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
-} from '../../shadcn-ui';
+} from '../../../shadcn-ui';
 
 type INavToolbarLinkProps = INavLink;
 

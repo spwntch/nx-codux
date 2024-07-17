@@ -70,14 +70,16 @@ export default createBoard({
     };
     return (
       <ShellProvider brand={brand} navItems={primaryNav}>
-        <div className="h-screen w-screen">
+        <div className="h-screen w-screen flex flex-col">
           <DesktopTopNavbar
             navAlignment="center"
             logoHeight={60}
+            githubUrl="https://github.com/spwntch/nx-codux"
             onLinkTo={handleLinkTo}
           />
 
-          <main>ping.</main>
+          <main className="flex-1">ping.</main>
+          <div>hi</div>
           {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
         </div>
       </ShellProvider>
@@ -85,7 +87,7 @@ export default createBoard({
   },
   isSnippet: true,
   environmentProps: {
-    windowWidth: 1247,
+    windowWidth: 1116,
     windowHeight: 768,
   },
 });

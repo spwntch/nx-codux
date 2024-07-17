@@ -1,10 +1,10 @@
-import { INavLink, INavMenu } from '../../../types';
+import { INavLink, INavMenu } from '../../../../types';
 import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
-} from '../../shadcn-ui';
-import { NavToolbarMenuLink } from './nav-toolbar-menu-link';
+} from '../../../shadcn-ui';
+import { NavToolbarMenuLink } from '../nav-toolbar-menu-link/nav-toolbar-menu-link';
 
 interface ITopNavMenuProps extends INavMenu {
   onLinkTo: (href: string) => void;

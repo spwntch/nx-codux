@@ -1,9 +1,13 @@
-import { cn } from '../../../utils';
+import { cn } from '../../../../utils';
 // import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
-import { Logo } from '../brand/logo';
-import { NavToolbar } from './nav-toolbar';
+import { Button } from '../../../shadcn-ui';
+import { ButtonGroup } from '../../../ui';
+import { Logo } from '../../brand';
+import { NavToolbar } from '../nav-toolbar/nav-toolbar';
+import { GithubButton, ThemeToggleButton } from '../../buttons';
+import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   classNames?: string;
@@ -54,18 +58,18 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
             </nav>
           </div>
           <div>
-            {/* <ButtonGroup>
+            <ButtonGroup>
               {!disableThemeToggle && <ThemeToggleButton />}
-            </ButtonGroup> */}
+            </ButtonGroup>
           </div>
           <div className="hidden md:block"></div>
           <div className="ml-2">
-            {/* {githubUrl && <GithubButton url={githubUrl} />} */}
+            {githubUrl && <GithubButton url={githubUrl} />}
           </div>
           <div className="block md:hidden">
-            {/* <ButtonGroup>
+            <ButtonGroup>
               <MobileNavDrawer onLinkTo={onLinkTo} />
-            </ButtonGroup> */}
+            </ButtonGroup>
           </div>
         </div>
       </header>

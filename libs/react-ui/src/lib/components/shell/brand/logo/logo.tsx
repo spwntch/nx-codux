@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { useBrand } from '../../../providers';
-import { cn } from '../../../utils';
+import { useBrand } from '../../../../providers';
+import { cn } from '../../../../utils';
 
 export interface ILogoProps {
   className?: string;

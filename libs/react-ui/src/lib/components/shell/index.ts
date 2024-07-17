@@ -1,2 +1,3 @@
-export * from './brand/logo';
-export * from './nav/desktop-top-navbar';
+export * from './brand';
+export * from './nav';
+
