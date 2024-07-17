@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/codux": ["codux/src/index.ts"],
       "@/react-ui": ["libs/react-ui/src/index.ts"]
     }
   },

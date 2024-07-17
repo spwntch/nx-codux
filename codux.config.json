@@ -1,15 +1,15 @@
 {
   "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
-  "boardGlobalSetup": "./.codux/boards-global-setup.ts",
-  "tailwindcssConfig": "./.codux/tailwind.config.js",
-  "boardsPath": ".codux/src/boards",
+  "boardGlobalSetup": "./codux/boards-global-setup.ts",
+  "tailwindcssConfig": "./codux/tailwind.config.js",
+  "boardsPath": "codux/src/boards",
   "componentsDiscovery": {
     "include": [
       "apps/**/app/**",
       "apps/**/components/**",
       "libs/**/src/lib/components/**"
     ],
-    "exclude": [".codux/component-templates/**"]
+    "exclude": ["codux/src/component-templates/**"]
   },
   "newComponent": {
     "componentsPath": "libs/react-ui/src/lib/components/.new"
