@@ -3,6 +3,7 @@ import { cn } from '../../../utils';
 import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
 import { Logo } from '../brand/logo';
+import { NavToolbar } from './nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   classNames?: string;
@@ -49,7 +50,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
                   : 'justify-center'
               )}
             >
-              {/* <NavToolbar onLinkTo={onLinkTo} /> */}
+              <NavToolbar onLinkTo={onLinkTo} />
             </nav>
           </div>
           <div>

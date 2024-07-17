@@ -77,11 +77,15 @@ export default createBoard({
             onLinkTo={handleLinkTo}
           />
 
-          <main>ping</main>
+          <main>ping.</main>
           {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
         </div>
       </ShellProvider>
     );
   },
   isSnippet: true,
+  environmentProps: {
+    windowWidth: 1024,
+    windowHeight: 768,
+  },
 });

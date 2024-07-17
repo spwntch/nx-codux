@@ -15,17 +15,17 @@
             "output": "under-construction"
           },
           {
-            "input": "assets/spwn/brand/public",
+            "input": "assets/interact/brand/public",
             "glob": "*.webp",
             "output": "brand"
           },
           {
-            "input": "assets/spwn/images/public",
+            "input": "assets/interact/images/public",
             "glob": "*.webp",
             "output": "images"
           },
           {
-            "input": "assets/acme/client-logos/svg",
+            "input": "assets/interact/client-logos/svg",
             "glob": "*.svg",
             "output": "client-logos"
           }
