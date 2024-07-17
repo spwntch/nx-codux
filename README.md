@@ -69,7 +69,7 @@ The `package.json` includes several scripts to help streamline your workflow:
 - **Convert images to .webp format:**
 
   ```bash
-  pnpm run webp .assets/spwn/brand <!- or an other directory containing uncompressed images.->
+  pnpm run webp ./assets/spwn/brand <!- or an other directory containing uncompressed images.->
   ```
 
   This script converts `.png`, `.jpg`, and other image types to `.webp` formats using a custom script located in `scripts/webp.sh`.
