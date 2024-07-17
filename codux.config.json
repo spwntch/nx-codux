@@ -3,6 +3,7 @@
   "boardGlobalSetup": "./codux/boards-global-setup.ts",
   "tailwindcssConfig": "./codux/tailwind.config.js",
   "boardsPath": "codux/src/boards",
+  "staticServerRoot": "./assets",
   "componentsDiscovery": {
     "include": [
       "apps/**/app/**",

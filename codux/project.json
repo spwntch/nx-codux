@@ -5,5 +5,32 @@
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project codux --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "options": {
+        "assets": [
+          {
+            "input": "assets/spwn/under-construction/public",
+            "glob": "*.webp",
+            "output": "under-construction"
+          },
+          {
+            "input": "assets/spwn/brand/public",
+            "glob": "*.webp",
+            "output": "brand"
+          },
+          {
+            "input": "assets/spwn/images/public",
+            "glob": "*.webp",
+            "output": "images"
+          },
+          {
+            "input": "assets/acme/client-logos/svg",
+            "glob": "*.svg",
+            "output": "client-logos"
+          }
+        ]
+      }
+    }
+  }
 }
