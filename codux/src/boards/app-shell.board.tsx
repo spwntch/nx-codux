@@ -3,7 +3,7 @@ import {
   RegularFooter,
   ShellProvider,
   UnderConstruction,
-} from '@/react-ui';
+} from '@/ui';
 import { createBoard } from '@wixc3/react-board';
 import { brand, primaryNav } from '../config';
 

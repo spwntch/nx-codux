@@ -1,4 +1,4 @@
-import { IBrand } from '@/react-ui';
+import { IBrand } from '@/ui';
 
 export const brand: IBrand = {
   logoUrl: {
