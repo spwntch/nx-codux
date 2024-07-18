@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   :root {
@@ -47,7 +45,7 @@
     --input: 210 20% 20%; /* #333333 (Medium dark gray) */
     --ring: 270 89% 70%; /* #8A2FF4 (Violet) */
     --radius: 0.75rem;
-}
+  }
 }
 
 @layer base {

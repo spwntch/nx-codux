@@ -10,14 +10,9 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  presets: [require('../../tailwind/shadcn.presets')],
   theme: {
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-        },
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

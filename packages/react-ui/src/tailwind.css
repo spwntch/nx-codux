@@ -1,9 +1,3 @@
-@tailwind base;
+@import '../../../tailwind/spawntech.css';
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  :root {
-    --primary: 270 89% 70%; /* #8A2FF4 (Violet) */
-  }
-}
