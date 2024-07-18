@@ -1,3 +1,14 @@
+## 0.0.3 (2024-07-18)
+
+
+### 🩹 Fixes
+
+- switch to css variable for primary color ([04eb1c3](https://github.com/spwntch/new-core/commit/04eb1c3))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.0.2 (2024-07-18)
 
 This was a version bump only, there were no code changes.
