@@ -19,4 +19,5 @@ export default createBoard({
     </div>
   ),
   isSnippet: true,
+  tags: ['shadcn/ui'],
 });

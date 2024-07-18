@@ -46,4 +46,5 @@ export default createBoard({
     </ContentContainer>
   ),
   isSnippet: true,
+  tags: ['ui'],
 });
