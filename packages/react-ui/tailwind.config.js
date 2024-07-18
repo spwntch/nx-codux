@@ -13,7 +13,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#00ff00',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+        },
       },
     },
   },
