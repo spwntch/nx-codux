@@ -7,6 +7,9 @@
     ".": {
       "import": "./index.mjs",
       "require": "./index.js"
+    },
+    "./styles": {
+      "default": "./style.css"
     }
   }
 }
