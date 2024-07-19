@@ -2,7 +2,6 @@ import { cn } from '../../../../utils';
 // import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
-import { Button } from '../../../shadcn-ui';
 import { ButtonGroup } from '../../../ui';
 import { Logo } from '../../brand';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';

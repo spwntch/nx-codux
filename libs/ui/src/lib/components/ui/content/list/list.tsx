@@ -1,7 +1,7 @@
 import { Dot } from 'lucide-react';
 import { IBullet } from '../../../../types';
 import { cn } from '../../../../utils';
-import { Avatar, AvatarFallback, AvatarImage } from '../../../shadcn-ui';
+import { Avatar, AvatarFallback, AvatarImage } from '@spwntch/react-ui';
 
 export interface IBulletsProps {
   bullets: IBullet[];

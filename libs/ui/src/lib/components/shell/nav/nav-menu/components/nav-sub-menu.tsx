@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '../../../../shadcn-ui';
+} from '@spwntch/react-ui';
 import { NavSubMenuLink } from './nav-sub-menu-link';
 
 interface INavSubMenuProps extends INavMenu {

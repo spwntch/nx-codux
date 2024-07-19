@@ -3,8 +3,8 @@ import { cn } from '../../../../utils';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import React from 'react';
+import { Button } from '@spwntch/react-ui';
 import {
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,

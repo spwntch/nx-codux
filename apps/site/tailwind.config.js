@@ -10,7 +10,7 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  presets: [require('../../tailwind.presets')],
+  presets: [require('../../tailwind/shadcn.presets')],
   theme: {
     extend: {},
   },
