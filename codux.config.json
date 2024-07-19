@@ -8,7 +8,8 @@
     "include": [
       "apps/**/app/**",
       "apps/**/components/**",
-      "libs/**/src/lib/components/**"
+      "libs/**/src/lib/components/**",
+      "packages/**/src/lib/components/**"
     ],
     "exclude": ["codux/src/component-templates/**"]
   },
