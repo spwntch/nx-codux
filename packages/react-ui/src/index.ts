@@ -1,2 +1,2 @@
 import './tailwind.css';
-export * from './lib/components/shadcn-ui';
+export * from './lib/components';
