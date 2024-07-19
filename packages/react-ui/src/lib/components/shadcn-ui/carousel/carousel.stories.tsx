@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from './carousel';
 import { playBasic } from './carousel.specs';
-import { withFullPage } from '../../../utils';
+import { withFullPage } from '../../../storybook';
 
 const componentDescription = `
 ### Overview
