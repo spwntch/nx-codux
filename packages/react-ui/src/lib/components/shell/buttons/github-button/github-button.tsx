@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@spwntch/react-ui';
+import { Button, ButtonProps } from '../../../shadcn-ui';
 import { forwardRef } from 'react';
 import { GithubIcon } from './github-icon';
 

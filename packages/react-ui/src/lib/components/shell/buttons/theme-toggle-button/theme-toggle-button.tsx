@@ -3,12 +3,11 @@ import { cn } from '../../../../utils';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import React from 'react';
-import { Button } from '@spwntch/react-ui';
 import {
-  DropdownMenu,
+  Button, DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from '../../../shadcn-ui';
 
 export const ThemeToggleButton: React.FC<{ className?: string }> = ({

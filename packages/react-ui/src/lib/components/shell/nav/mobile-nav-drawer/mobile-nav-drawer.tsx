@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Logo } from '../../brand';
 import { useNav } from '../../../../providers';
-import { Button } from '@spwntch/react-ui';
+import { Button } from '../../../shadcn-ui';
 import {
   DropdownMenuSeparator,
   Sheet,
