@@ -1,3 +1,21 @@
+## 0.4.0 (2024-07-19)
+
+
+### 🚀 Features
+
+- adds shadcn/ui card component with stories and specs ([4b5c032](https://github.com/spwntch/new-core/commit/4b5c032))
+- adds shadcn/ui card & carousel components, with stories ([e6abdb4](https://github.com/spwntch/new-core/commit/e6abdb4))
+- adds shadcn/ui menubar, navigation-menu and sheet ([eb22887](https://github.com/spwntch/new-core/commit/eb22887))
+
+### 🩹 Fixes
+
+- fix utils imports and omit menubar for now ([306b023](https://github.com/spwntch/new-core/commit/306b023))
+- a fialed attempt to include menubar in the package. removed menubar from index ([bbea4a4](https://github.com/spwntch/new-core/commit/bbea4a4))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.3.0 (2024-07-19)
 
 This was a version bump only, there were no code changes.
