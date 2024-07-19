@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { withFullWidth } from '../../../utils';
 import {
   Accordion,
   AccordionContent,
@@ -11,8 +10,9 @@ import {
   playBasic,
   playEmptyAccordion,
   playLargeNumberOfItems,
-  playMultipleItems,
+  playMultipleItems
 } from './accordion.specs';
+import { withFullWidth } from '../../../utils';
 
 const componentDescription = `
 ### Overview
