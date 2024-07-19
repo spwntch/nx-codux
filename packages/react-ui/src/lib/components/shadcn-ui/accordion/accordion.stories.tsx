@@ -12,7 +12,7 @@ import {
   playLargeNumberOfItems,
   playMultipleItems
 } from './accordion.specs';
-import { withFullWidth } from '../../../utils';
+import { withFullWidth } from '../../../storybook';
 
 const componentDescription = `
 ### Overview

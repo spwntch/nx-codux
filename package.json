@@ -15,18 +15,21 @@
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run storybook:storybook",
     "start": "pnpm dlx nx run site:dev",
-    "ci" : "pnpm dlx nx run-many -t build lint test build-storybook"
+    "ci": "pnpm dlx nx run-many -t build lint test build-storybook"
   },
   "private": true,
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-context": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.1.7",
     "lucide-react": "^0.408.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
