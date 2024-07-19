@@ -10,8 +10,7 @@
     },
     "./shadcn": {
       "import": "./shadcn.mjs",
-      "require": "./shadcn.js",
-      "types": "./shadcn.js"
+      "require": "./shadcn.js"
     },
     "./styles": {
       "default": "./style.css"
