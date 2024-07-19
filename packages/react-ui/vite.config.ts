@@ -42,6 +42,7 @@ export default defineConfig({
         '@radix-ui/react-slot',
         'class-variance-authority',
         'clsx',
+        'embla-carousel-react',
         'lucide-react',
         'react',
         'react-dom',
