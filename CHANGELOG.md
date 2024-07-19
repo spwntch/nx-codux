@@ -1,3 +1,19 @@
+## 0.2.0 (2024-07-19)
+
+
+### 🚀 Features
+
+- adds shadcn entry point to package ([566131a](https://github.com/spwntch/new-core/commit/566131a))
+- adds accordion, avatar & badge components ([7bf8812](https://github.com/spwntch/new-core/commit/7bf8812))
+
+### 🩹 Fixes
+
+- libs/ui imports from @spwntch/react-ui whe n required ([9004893](https://github.com/spwntch/new-core/commit/9004893))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.1.0 (2024-07-18)
 
 
