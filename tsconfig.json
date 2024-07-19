@@ -4,5 +4,10 @@
     "paths": {
       "@react-ui/*": ["libs/react-ui/src/*"]
     }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   }
 }
