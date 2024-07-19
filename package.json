@@ -7,14 +7,15 @@
     "rm:node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "rm:tmp": "rm -rf tmp",
     "rm:lockfile": "rm pnpm-lock.yaml",
+    "shadcn-ui": "pnpm dlx shadcn-ui@latest add",
+    "webp": "scripts/webp.sh ",
     "clean": "pnpm run rm:dist && pnpm run rm:node-modules && pnpm run rm:tmp && pnpm run rm:lockfile",
     "build": "pnpm dlx nx run-many -t build",
     "release": "pnpm dlx nx release",
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run storybook:storybook",
     "start": "pnpm dlx nx run site:dev",
-    "shadcn-ui": "pnpm dlx shadcn-ui@latest add",
-    "webp": "scripts/webp.sh "
+    "ci" : "pnpm dlx nx run-many -t build lint test build-storybook"
   },
   "private": true,
   "dependencies": {
