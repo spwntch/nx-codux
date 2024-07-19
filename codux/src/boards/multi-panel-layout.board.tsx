@@ -1,4 +1,4 @@
-import { Card, MultiPanelLayout } from '@/ui';
+import { Card, MultiPanelLayout } from '@spwntch/react-ui';
 import { createBoard } from '@wixc3/react-board';
 
 export default createBoard({
