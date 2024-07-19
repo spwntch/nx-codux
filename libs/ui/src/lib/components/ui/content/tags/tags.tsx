@@ -1,4 +1,4 @@
-import { Badge } from '../../../shadcn-ui';
+import { Badge } from '@spwntch/react-ui';
 
 interface ITagsProps {
   tags: string[];
