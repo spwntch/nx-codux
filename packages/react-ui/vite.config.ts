@@ -39,6 +39,7 @@ export default defineConfig({
       external: [
         '@radix-ui/react-accordion',
         '@radix-ui/react-avatar',
+        '@radix-ui/react-dropdown-menu',
         '@radix-ui/react-slot',
         'class-variance-authority',
         'clsx',
