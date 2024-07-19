@@ -12,6 +12,10 @@
       "import": "./shadcn.mjs",
       "require": "./shadcn.js"
     },
+    "./ui": {
+      "import": "./ui.mjs",
+      "require": "./ui.js"
+    },
     "./styles": {
       "default": "./style.css"
     }

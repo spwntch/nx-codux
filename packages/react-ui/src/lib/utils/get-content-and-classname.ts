@@ -2,7 +2,7 @@ import {
   IContent,
   TextWithClassName,
   ParapgraphsWithClassName,
-} from '../../../../types';
+} from '../types';
 
 export const getTitleContentAndClassName = (title: IContent['title']) => {
   const titleContent =

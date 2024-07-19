@@ -1,11 +1,12 @@
 import { PropsWithChildren, forwardRef } from 'react';
 import { IContent } from '../../../../types';
-import { cn } from '../../../../utils';
-// import { Announcement } from '../../content/announcement/announcement';
-// import { ContentChildren } from '../../content/content-children/content-children';
-// import { Header } from '../../content/header/header';
-// import { List } from '../../content/list/list';
-// import { Paragraphs } from '../../content/paragraphs/paragraphs';
+import {
+  cn,
+  getBodyContentAndClassName,
+  getSubTitleContentAndClassName,
+  getTagsContentAndClassName,
+  getTitleContentAndClassName,
+} from '../../../../utils';
 import {
   Announcement,
   ContentChildren,
@@ -13,12 +14,6 @@ import {
   List,
   Paragraphs,
 } from '../../content';
-import {
-  getBodyContentAndClassName,
-  getSubTitleContentAndClassName,
-  getTagsContentAndClassName,
-  getTitleContentAndClassName,
-} from './content-container.utils';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
