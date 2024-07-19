@@ -47,9 +47,6 @@ export default defineConfig({
         'react/jsx-runtime',
         'tailwind-merge',
       ],
-      output: {
-        entryFileNames: '[name].js',
-      },
     },
   },
 });
