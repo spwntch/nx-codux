@@ -35,16 +35,6 @@
       "options": {
         "targetName": "lint"
       }
-    },
-    {
-      "plugin": "@nx/vite/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "testTargetName": "test",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview",
-        "serveStaticTargetName": "serve-static"
-      }
     }
   ],
   "generators": {
@@ -57,23 +47,6 @@
     "@nx/react": {
       "library": {
         "unitTestRunner": "none"
-      }
-    }
-  },
-  "release": {
-    "projects": ["packages/*"],
-    "version": {
-      "preVersionCommand": "pnpm dlx nx run-many -t build",
-      "generatorOptions": {
-        "currentVersionResolver": "git-tag",
-        "packageRoot": "dist/packages/{projectName}"
-      }
-    }
-  },
-  "targetDefaults": {
-    "nx-release-publish": {
-      "options": {
-        "packageRoot": "dist/packages/{projectName}"
       }
     }
   },

@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/codux": ["codux/src/index.ts"],
-      "@/ui": ["libs/ui/src/index.ts"],
-      "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
+      "@/react-ui": ["libs/react-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,4 @@
-import { INavItem } from '@/ui';
+import { INavItem } from '@/react-ui';
 
 export const primaryNav: INavItem[] = [
   { label: 'Our Backstory', href: '/about' },

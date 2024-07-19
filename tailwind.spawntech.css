@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* #FAFAFA (Very Light Gray) */
+    --foreground: 210 20% 10%; /* #1A1A1A (Dark Gray) */
+    --card: 0 0% 100%; /* #FFFFFF (White) */
+    --card-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
+    --popover: 0 0% 100%; /* #FFFFFF (White) */
+    --popover-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
+    --primary: 270 89% 70%; /* #8A2FF4 (Violet) */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --secondary: 270 84% 81%; /* #AC5BF7 (Light Violet) */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --accent: 150 72% 80%; /* #96E9C6 (Light Green) */
+    --accent-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
+    --destructive: 0 84.2% 60.2%; /* #ff4d4f (Red) */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --muted: 210 16% 96%; /* #F9F9F9 (Light Gray) */
+    --muted-foreground: 210 8.9% 46.1%; /* #666666 (Medium Gray) */
+    --border: 210 16% 91%; /* #E1E1E1 (Light Gray) */
+    --input: 210 16% 91%; /* #E1E1E1 (Light Gray) */
+    --ring: 270 89% 70%; /* #8A2FF4 (Violet) */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 210 20% 10%; /* #1A1A1A (Dark Gray) */
+    --foreground: 0 0% 98%; /* #FAFAFA (Very Light Gray) */
+    --card: 210 20% 12%; /* #212121 (Slightly lighter dark gray) */
+    --card-foreground: 0 0% 98%; /* #FAFAFA (Very Light Gray) */
+    --popover: 210 20% 12%; /* #212121 (Slightly lighter dark gray) */
+    --popover-foreground: 0 0% 98%; /* #FAFAFA (Very Light Gray) */
+    --primary: 270 89% 70%; /* #8A2FF4 (Violet) */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --secondary: 270 84% 81%; /* #AC5BF7 (Light Violet) */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --accent: 150 72% 80%; /* #96E9C6 (Light Green) */
+    --accent-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
+    --destructive: 0 84.2% 60.2%; /* #ff4d4f (Red) */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF (White) */
+    --muted: 210 20% 20%; /* #333333 (Medium dark gray) */
+    --muted-foreground: 0 0% 80%; /* #CCCCCC (Light gray) */
+    --border: 210 20% 20%; /* #333333 (Medium dark gray) */
+    --input: 210 20% 20%; /* #333333 (Medium dark gray) */
+    --ring: 270 89% 70%; /* #8A2FF4 (Violet) */
+    --radius: 0.75rem;
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
