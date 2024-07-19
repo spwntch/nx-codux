@@ -1,4 +1,4 @@
-import { Button, ContentContainer } from '@/react-ui';
+import { Button, ContentContainer } from '@/ui';
 import { createBoard } from '@wixc3/react-board';
 import React from 'react';
 

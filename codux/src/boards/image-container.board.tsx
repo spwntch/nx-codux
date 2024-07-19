@@ -1,4 +1,4 @@
-import { Card, ImageContainer } from '@/react-ui';
+import { Card, ImageContainer } from '@/ui';
 import { createBoard } from '@wixc3/react-board';
 
 export default createBoard({
