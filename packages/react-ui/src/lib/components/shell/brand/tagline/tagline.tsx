@@ -13,7 +13,7 @@ export const Tagline = forwardRef<HTMLDivElement, ITaglineProps>(
     const { tagline } = useBrand();
 
     return (
-      <p className={cn(className)} ref={ref} {...props}>
+      <p className={cn('text-sm', className)} ref={ref} {...props}>
         {tagline}
       </p>
     );
