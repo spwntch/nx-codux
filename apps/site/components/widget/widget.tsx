@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@spwntch/react-ui';
+import { Button } from '@/react-ui';
 
 const Widget = () => {
   return (

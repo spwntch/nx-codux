@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { ShellProvider, Logo } from '@/ui';
+import { ShellProvider, Logo } from '@/react-ui';
 import { brand } from '../config';
 
 export default createBoard({
