@@ -8,6 +8,11 @@
       "import": "./index.mjs",
       "require": "./index.js"
     },
+    "./shadcn": {
+      "import": "./shadcn.mjs",
+      "require": "./shadcn.js",
+      "types": "./shadcn.js"
+    },
     "./styles": {
       "default": "./style.css"
     }

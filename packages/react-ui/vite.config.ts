@@ -15,6 +15,7 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
+      rollupTypes:true
     }),
   ],
 
@@ -26,9 +27,12 @@ export default defineConfig({
       transformMixedEsModules: true,
     },
     lib: {
-      entry: 'src/index.ts',
+      entry: {
+        index: 'src/index.ts',
+        shadcn: 'src/lib/components/shadcn-ui/index.ts',
+        utils: 'src/lib/utils/index.ts',
+      },
       name: 'react-ui',
-      fileName: 'index',
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
