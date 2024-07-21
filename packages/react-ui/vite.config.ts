@@ -29,9 +29,9 @@ export default defineConfig({
     lib: {
       entry: {
         index: 'src/index.ts',
-        shell: 'src/lib/components/shell/index.ts',
         shadcn: 'src/lib/components/shadcn-ui/index.ts',
-        ui: 'src/lib/components/ui/index.ts',
+        components: 'src/lib/components/ui/index.ts',
+        shell: 'src/lib/components/shell/index.ts',
         utils: 'src/lib/utils/index.ts',
       },
       name: 'react-ui',

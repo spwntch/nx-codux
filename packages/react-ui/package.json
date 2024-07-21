@@ -16,7 +16,7 @@
       "import": "./shadcn.mjs",
       "require": "./shadcn.js"
     },
-    "./ui": {
+    "./components": {
       "import": "./ui.mjs",
       "require": "./ui.js"
     },
