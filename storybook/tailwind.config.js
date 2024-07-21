@@ -11,5 +11,5 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   presets: [require('../tailwind/shadcn.presets')],
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
