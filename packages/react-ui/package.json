@@ -20,9 +20,9 @@
       "import": "./shell.mjs",
       "require": "./shell.js"
     },
-    "./mdx": {
-      "import": "./mdx.mjs",
-      "require": "./mdx.js"
+    "./articles": {
+      "import": "./articles.mjs",
+      "require": "./articles.js"
     },
     "./styles": {
       "default": "./style.css"
