@@ -3,7 +3,9 @@ import {
   DesktopTopNavbar,
   IBrand,
   INavItem,
+  RegularFooter,
   ShellProvider,
+  UnderConstructionFooter,
 } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
@@ -45,7 +47,7 @@ export const Shell = ({
         />
 
         <main>{children}</main>
-        {/* {underContruction ? <UnderConstructionFooter /> : <RegularFooter />} */}
+        {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
       </div>
     </ShellProvider>
   );
