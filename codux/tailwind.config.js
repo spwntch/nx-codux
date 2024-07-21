@@ -10,9 +10,9 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  presets: [require('../tailwind.presets')],
+  presets: [require('../tailwind/shadcn.presets')],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography', require('tailwindcss-animate'))],
 };
