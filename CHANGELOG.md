@@ -1,3 +1,20 @@
+## 0.6.0 (2024-07-21)
+
+
+### 🚀 Features
+
+- adds type defs for mdx ([214e657](https://github.com/spwntch/new-core/commit/214e657))
+- adds mdx utils ([6027710](https://github.com/spwntch/new-core/commit/6027710))
+- adds mdx article-header component ([cbbf91c](https://github.com/spwntch/new-core/commit/cbbf91c))
+- adds mdx article-mdx component ([6cb4d5c](https://github.com/spwntch/new-core/commit/6cb4d5c))
+- adds mdx article component ([92267d5](https://github.com/spwntch/new-core/commit/92267d5))
+- adds mdx article-card component ([f9b61d9](https://github.com/spwntch/new-core/commit/f9b61d9))
+- adds mdx article-grid component ([7ce1b75](https://github.com/spwntch/new-core/commit/7ce1b75))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.5.0 (2024-07-21)
 
 
