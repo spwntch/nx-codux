@@ -37,7 +37,7 @@ export const Shell = ({
 
   return (
     <ShellProvider brand={brand} navItems={navbar?.navItems}>
-      <div className="h-screen ">
+      <div className="h-screen flex flex-col">
         <DesktopTopNavbar
           classNames={`${navbar?.classNames} bg-background`}
           navAlignment={navbar?.alignment}
@@ -46,7 +46,7 @@ export const Shell = ({
           onLinkTo={handleLinkTo}
         />
 
-        <main>{children}</main>
+        <main className='flex-1'>{children}</main>
         {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
       </div>
     </ShellProvider>

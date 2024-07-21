@@ -17,7 +17,7 @@ export default function RootLayout({
     navItems: primaryNav
   };
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Shell brand={brand} navbar={navbar} underContruction>
         {children}
