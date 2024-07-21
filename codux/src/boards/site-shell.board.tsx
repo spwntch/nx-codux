@@ -1,8 +1,10 @@
+import { SiteShell } from '@spwntch/react-ui';
 import { createBoard } from '@wixc3/react-board';
-import { Shell } from '@/next-shell';
 
 export default createBoard({
   name: 'Site Shell',
-  Board: () => <Shell>ping</Shell>,
+  Board: () => {
+    return <SiteShell>ping</SiteShell>;
+  },
   isSnippet: true,
 });
