@@ -1,4 +1,4 @@
-import Widget from '../components/widget/widget';
+import Widget from '../components/widget';
 
 export default function Index() {
   return (

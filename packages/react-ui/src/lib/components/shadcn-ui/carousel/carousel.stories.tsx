@@ -33,7 +33,7 @@ This component is used to create a sliding image carousel.
 `;
 
 const meta: Meta = {
-  title: 'ui/carousel',
+  title: 'shadcn-ui/carousel',
   component: Carousel,
   decorators: [withFullPage],
   // subcomponents: { CarouselContent, CarouselItem, CarouselNext, CarouselPrevious },

@@ -69,7 +69,7 @@ The \`NavigationMenu\` component provides a flexible and customizable navigation
 `;
 
 const meta: Meta<typeof NavigationMenu> = {
-  title: 'ui/navigation-menu',
+  title: 'shadcn-ui/navigation-menu',
   component: NavigationMenu,
   tags: ['autodocs'],
   parameters: {

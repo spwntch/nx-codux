@@ -22,7 +22,7 @@ Use this component to display user profile images with fallback content.
 `;
 
 const meta: Meta<typeof Avatar> = {
-  title: 'ui/avatar',
+  title: 'shadcn-ui/avatar',
   component: Avatar,
   tags: ['autodocs'],
   parameters: {

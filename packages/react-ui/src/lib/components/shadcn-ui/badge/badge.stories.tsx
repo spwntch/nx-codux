@@ -17,7 +17,7 @@ The \`Badge\` component is used to highlight specific information or status in y
 `;
 
 const meta: Meta<typeof Badge> = {
-  title: 'ui/badge',
+  title: 'shadcn-ui/badge',
   component: Badge,
   tags: ['autodocs'],
   argTypes: {

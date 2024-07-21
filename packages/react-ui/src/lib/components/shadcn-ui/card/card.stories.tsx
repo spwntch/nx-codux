@@ -31,7 +31,7 @@ The \`Card\` component is a versatile container for displaying content in a styl
 `;
 
 const meta: Meta<typeof Card> = {
-  title: 'ui/card',
+  title: 'shadcn-ui/card',
   component: Card,
   tags: ['autodocs'],
   parameters: {

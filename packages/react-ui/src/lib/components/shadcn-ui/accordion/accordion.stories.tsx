@@ -40,7 +40,7 @@ This component is based on the [ShadCN/UI Accordion component](https://ui.shadcn
 `;
 
 const meta: Meta<typeof Accordion> = {
-  title: 'ui/accordion',
+  title: 'shadcn-ui/accordion',
   component: Accordion,
   decorators: [withFullWidth],
   tags: ['autodocs'],

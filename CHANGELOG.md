@@ -1,3 +1,14 @@
+## 0.4.1 (2024-07-19)
+
+
+### 🚀 Features
+
+- adds ui components ([0d3569a](https://github.com/spwntch/new-core/commit/0d3569a))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.4.0 (2024-07-19)
 
 

@@ -1,5 +1,10 @@
 'use client';
-import { DesktopTopNavbar, IBrand, INavItem, ShellProvider } from '@/ui';
+import {
+  DesktopTopNavbar,
+  IBrand,
+  INavItem,
+  ShellProvider,
+} from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
