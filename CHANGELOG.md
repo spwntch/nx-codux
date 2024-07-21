@@ -1,3 +1,16 @@
+## 0.5.0 (2024-07-21)
+
+
+### 🚀 Features
+
+- adds ui components ([0d3569a](https://github.com/spwntch/new-core/commit/0d3569a))
+- adds tagline to shell/brand ([5f2a3c3](https://github.com/spwntch/new-core/commit/5f2a3c3))
+- adds logo carousel ([b7bd00b](https://github.com/spwntch/new-core/commit/b7bd00b))
+
+### ❤️  Thank You
+
+- zpydee @zpydee
+
 ## 0.4.1 (2024-07-19)
 
 
