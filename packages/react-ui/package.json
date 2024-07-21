@@ -8,10 +8,6 @@
       "import": "./index.mjs",
       "require": "./index.js"
     },
-    "./shell": {
-      "import": "./shell.mjs",
-      "require": "./shell.js"
-    },
     "./shadcn": {
       "import": "./shadcn.mjs",
       "require": "./shadcn.js"
@@ -19,6 +15,14 @@
     "./components": {
       "import": "./ui.mjs",
       "require": "./ui.js"
+    },
+    "./shell": {
+      "import": "./shell.mjs",
+      "require": "./shell.js"
+    },
+    "./mdx": {
+      "import": "./mdx.mjs",
+      "require": "./mdx.js"
     },
     "./styles": {
       "default": "./style.css"
