@@ -4,7 +4,7 @@ import { cn } from '../../../../utils';
 import { ContentContainer } from '../../containers';
 
 interface IContentSectionProps {
-  content: IContent;
+  innerContent: IContent;
   className?: string;
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
@@ -13,7 +13,7 @@ interface IContentSectionProps {
 }
 
 export const ContentSection: React.FC<IContentSectionProps> = ({
-  content: innerContent,
+  innerContent,
   hAlign,
   vAlign,
   className,

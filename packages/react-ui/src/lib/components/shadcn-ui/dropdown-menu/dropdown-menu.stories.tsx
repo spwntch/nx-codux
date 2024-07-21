@@ -53,7 +53,7 @@ The \`DropdownMenu\` component provides a flexible and customizable dropdown men
 `;
 
 const meta: Meta<typeof DropdownMenu> = {
-  title: 'ui/dropdown-menu',
+  title: 'shadcn-ui/dropdown-menu',
   component: DropdownMenu,
   // subcomponents: {
   //   DropdownMenuTrigger,

@@ -20,7 +20,7 @@ The \`Button\` component is used to trigger an action or event, such as submitti
 `;
 
 const meta: Meta<typeof Button> = {
-  title: 'ui/button',
+  title: 'shadcn-ui/button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

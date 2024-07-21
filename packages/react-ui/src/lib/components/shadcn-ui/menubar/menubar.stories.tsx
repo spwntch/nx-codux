@@ -52,7 +52,7 @@ The \`Menubar\` component provides a flexible and customizable menu bar system.
 `;
 
 const meta: Meta<typeof Menubar> = {
-  title: 'ui/menubar',
+  title: 'shadcn-ui/menubar',
   component: Menubar,
   tags: ['autodocs'],
   parameters: {

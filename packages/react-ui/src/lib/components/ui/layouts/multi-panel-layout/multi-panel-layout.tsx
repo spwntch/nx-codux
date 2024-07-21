@@ -62,7 +62,7 @@ export const MultiPanelLayout = forwardRef<
         >
           {containers ? containers[0] : 'Main Block'}
         </div>
-        <div className="flex flex-col h-full" style={subBlockContainerStyle}>
+        <div className="flex flex-col  h-full" style={subBlockContainerStyle}>
           {containers &&
             containers.slice(1).map((container, index) => (
               <div

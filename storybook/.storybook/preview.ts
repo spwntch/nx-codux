@@ -19,6 +19,7 @@ export const parameters: Parameters = {
         'Introduction',
         'Tailwind',
         'Tech Stack',
+        'shadcn-ui',
         'ui',
         'typography',
         ['complete-example', '*'],

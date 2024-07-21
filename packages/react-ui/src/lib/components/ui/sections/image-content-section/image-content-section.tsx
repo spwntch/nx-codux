@@ -13,7 +13,7 @@ interface IImageContentBlockProps {
   hero?: boolean;
 }
 
-export const ImageContentBlock: React.FC<IImageContentBlockProps> = ({
+export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
   image,
   innerContent,
   hAlign,
@@ -40,4 +40,4 @@ export const ImageContentBlock: React.FC<IImageContentBlockProps> = ({
   );
 };
 
-export default ImageContentBlock;
+export default ImageContentSection;

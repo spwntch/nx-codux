@@ -52,7 +52,7 @@ The \`Sheet\` component provides a flexible and customizable sheet system.
 `;
 
 const meta: Meta<typeof Sheet> = {
-  title: 'ui/sheet',
+  title: 'shadcn-ui/sheet',
   component: Sheet,
   tags: ['autodocs'],
   parameters: {
