@@ -7,7 +7,7 @@ export interface LogoCarouselProps {
   logos: string[];
 }
 
-const LogoCarousel: React.FC<LogoCarouselProps> = ({ title, logos }) => {
+export const LogoCarousel: React.FC<LogoCarouselProps> = ({ title, logos }) => {
   const plugin = useRef(Autoplay({ delay: 0, jump: false }));
   if (!logos?.length) return null;
   const carouselOptions = { loop: true, duration: 4000 };
