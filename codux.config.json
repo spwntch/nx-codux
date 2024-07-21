@@ -10,6 +10,7 @@
       "apps/**/app/**",
       "apps/**/components/**",
       "libs/**/src/lib/components/**",
+      "libs/**/src/lib/client-components/**",
       "packages/**/src/lib/components/**"
     ],
     "exclude": ["codux/src/component-templates/**"]
