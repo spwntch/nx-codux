@@ -1,4 +1,4 @@
-import { Shell } from '../components/shell';
+import { Shell } from '@/next-shell';
 import { brand, primaryNav } from '../config';
 import './global.css';
 
@@ -14,13 +14,13 @@ export default function RootLayout({
 }) {
   const navbar = {
     logoHeight: 48,
-    navItems: primaryNav
+    navItems: primaryNav,
   };
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         <Shell brand={brand} navbar={navbar} underContruction>
-        {children}
+          {children}
         </Shell>
       </body>
     </html>

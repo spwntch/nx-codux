@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@/codux": ["codux/src/index.ts"],
+      "@/next-shell": ["libs/next-shell/src/index.ts"],
+      "@/next-shell/server": ["libs/next-shell/src/server.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
     }
