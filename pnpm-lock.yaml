@@ -62,6 +62,9 @@ dependencies:
   react-youtube:
     specifier: ^10.1.0
     version: 10.1.0(react@18.3.1)
+  rehype-toc:
+    specifier: ^3.0.2
+    version: 3.0.2
   tailwind-merge:
     specifier: ^2.4.0
     version: 2.4.0
@@ -2420,6 +2423,11 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  /@jsdevtools/rehype-toc@3.0.2:
+    resolution: {integrity: sha512-n5JEf16Wr4mdkRMZ8wMP/wN9/sHmTjRPbouXjJH371mZ2LEGDl72t8tEsMRNFerQN/QJtivOxqK1frdGa4QK5Q==}
+    engines: {node: '>=10'}
+    dev: false
 
   /@leichtgewicht/ip-codec@2.0.5:
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
@@ -14493,6 +14501,13 @@ packages:
       hast-util-to-string: 3.0.0
       unist-util-visit: 5.0.0
     dev: true
+
+  /rehype-toc@3.0.2:
+    resolution: {integrity: sha512-DMt376+4i1KJGgHJL7Ezd65qKkJ7Eqp6JSB47BJ90ReBrohI9ufrornArM6f4oJjP2E2DVZZHufWucv/9t7GUQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@jsdevtools/rehype-toc': 3.0.2
+    dev: false
 
   /release-zalgo@1.0.0:
     resolution: {integrity: sha512-gUAyHVHPPC5wdqX/LG4LWtRYtgjxyX78oanFNTMMyFEfOqdC54s3eE82imuWKbOeqYht2CrNf64Qb8vgmmtZGA==}
