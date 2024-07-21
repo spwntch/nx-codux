@@ -32,7 +32,7 @@ export default defineConfig({
         shadcn: 'src/lib/components/shadcn-ui/index.ts',
         components: 'src/lib/components/ui/index.ts',
         shell: 'src/lib/components/shell/index.ts',
-        mdx: 'src/lib/components/mdx/index.ts',
+        articles: 'src/lib/components/articles/index.ts',
         utils: 'src/lib/utils/index.ts',
       },
       name: 'react-ui',
