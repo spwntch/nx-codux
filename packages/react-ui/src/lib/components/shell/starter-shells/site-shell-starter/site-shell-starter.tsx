@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { RegularFooter, UnderConstructionFooter } from '../../footer';
 import { DesktopTopNavbar } from '../../nav';
+import { cn } from '../../../../utils';
 
 export interface SiteShellProps {
   navbar: {
@@ -23,7 +24,7 @@ export const SiteShellStarter = ({
   return (
     <div className="h-screen flex flex-col">
       <DesktopTopNavbar
-        classNames={`${navbar?.classNames} bg-background`}
+        classNames={cn(navbar?.classNames, 'bg-background')}
         navAlignment={navbar?.alignment}
         logoHeight={navbar?.logoHeight}
         githubUrl={githubUrl}
