@@ -9,7 +9,7 @@ import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
-  classNames?: string;
+  className?: string;
   logoHeight?: number;
   navAlignment?: 'start' | 'center' | 'end';
   disableThemeToggle?: boolean;
@@ -20,7 +20,7 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
 export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
   (
     {
-      classNames,
+      className,
       logoHeight,
       navAlignment,
       disableThemeToggle = false,
@@ -31,10 +31,9 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     ref
   ) => {
     return (
-      <header
-        className={cn('sticky top-0 z-50', classNames)}
-        ref={ref}
-        {...props}
+      <header className={cn('sticky top-0',className)}
+      ref={ref}
+      {...props}
       >
         <div className="flex p-2 pb-4 items-center">
           <Logo
