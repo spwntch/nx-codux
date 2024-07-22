@@ -11,7 +11,7 @@ export interface IHeroProps {
 const Hero = ({image,content}: IHeroProps) => {
 
 
-  return <ImageContentSection image={image} innerContent={content} hero hAlign='left' vAlign='top'/>;
+  return <ImageContentSection image={image} innerContent={content} hero hAlign='left' vAlign='bottom'/>;
 };
 
 export default Hero;
