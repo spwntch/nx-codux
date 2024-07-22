@@ -1,5 +1,5 @@
 import { IContent, IImage } from '@spwntch/react-ui';
-import { Hero, LogoCarousel } from '../../client-components';
+import { Benefits, Hero, LogoCarousel } from '../../client-components';
 
 const HomePage = () => {
   const heroImage: IImage = {
@@ -53,10 +53,30 @@ const HomePage = () => {
     '/client-logos/scale-colored.svg',
     '/client-logos/theo-colored.svg',
   ];
+
+  const benefits: { image: IImage; content: IContent }[] = [
+    {
+      image: { src: '/images/dartboard.webp' },
+      content: { title: 'Improved Targeting' },
+    },
+    {
+      image: { src: '/images/purchase.webp' },
+      content: { title: 'Increased Conversions'},
+    },
+    {
+      image: { src: '/images/teamwork.webp' },
+      content: { title: 'Team Alignment' },
+    },
+    {
+      image: { src: '/images/growth.webp' },
+      content: { title: 'Professional Growth' },
+    },
+  ];
   return (
     <>
       <Hero image={heroImage} content={heroContent} />
       <LogoCarousel logos={clientLogos} />
+      <Benefits benefits={benefits} />
     </>
   );
 };
