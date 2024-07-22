@@ -1,4 +1,4 @@
-import { Shell } from '../components/shell';
+import { SiteShell } from '@/next-shell';
 import { brand, primaryNav } from '../config';
 import './global.css';
 
@@ -13,15 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const navbar = {
-    logoHeight: 60,
-    navItems: primaryNav
+    logoHeight: 48,
   };
+
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Shell brand={brand} navbar={navbar} underContruction>
-        {children}
-        </Shell>
+        <SiteShell
+          brand={brand}
+          navItems={primaryNav}
+          navbar={navbar}
+          underContruction
+        >
+          {children}
+        </SiteShell>
       </body>
     </html>
   );

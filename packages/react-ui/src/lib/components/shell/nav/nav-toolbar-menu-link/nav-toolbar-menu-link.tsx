@@ -20,7 +20,7 @@ export const NavToolbarMenuLink = ({
           onSelect={() => onLinkTo(href)}
         >
           <h4 className="text-sm font-medium leading-none">{label}</h4>
-          <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+          <p className="line-clamp-2 text-xs leading-snug">
             {description}
           </p>
         </NavigationMenuLink>
