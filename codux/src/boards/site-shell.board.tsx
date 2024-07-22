@@ -20,4 +20,3 @@ export default createBoard({
   },
   isSnippet: true,
 });
-‰
