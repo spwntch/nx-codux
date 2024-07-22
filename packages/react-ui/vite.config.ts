@@ -52,6 +52,7 @@ export default defineConfig({
         'clsx',
         'embla-carousel-react',
         'lucide-react',
+        'next-themes',
         'react',
         'react-dom',
         'react/jsx-runtime',
