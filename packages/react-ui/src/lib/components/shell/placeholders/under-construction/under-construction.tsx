@@ -5,7 +5,7 @@ export const UnderConstruction = forwardRef<HTMLDivElement, PropsWithChildren>(
   ({ children, ...props }, ref) => {
     return (
       <div
-        className="m-4 p-4 h-full w-full flex flex-col items-center justify-center border-4 border-dashed border-muted text-muted-foreground"
+        className="m-4 p-4 h-full flex flex-col items-center justify-center border-4 border-dashed border-muted text-muted-foreground"
         ref={ref}
         {...props}
       >

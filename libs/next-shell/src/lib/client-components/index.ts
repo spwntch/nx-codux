@@ -1,1 +1,1 @@
-export * from './shell/shell';
+export * from './site-shell/site.shell';
