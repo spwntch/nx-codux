@@ -16,7 +16,12 @@ const HomePage = () => {
         'Transform your marketing and product strategies with our comprehensive playbook.',
       className: 'text-white',
     },
-    body: { content: ['Achieve higher conversion rates, improved team alignment, and faster, data-driven results with our playbook.'], className: 'text-white' },
+    body: {
+      content: [
+        'Achieve higher conversion rates, improved team alignment, and faster, data-driven results with our playbook.',
+      ],
+      className: 'text-white',
+    },
     bullets: [
       {
         body: 'Struggling to identify and target the right customers?',
@@ -36,7 +41,13 @@ const HomePage = () => {
       },
     ],
   };
-  return <Hero image={heroImage} content={heroContent} />;
+  return (
+    <>
+      <Hero image={heroImage} content={heroContent} />
+      <Hero image={heroImage} content={heroContent} />
+      <Hero image={heroImage} content={heroContent} />
+    </>
+  );
 };
 
 export default HomePage;
