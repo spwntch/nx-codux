@@ -1,5 +1,5 @@
 import { IContent, IImage } from '@spwntch/react-ui';
-import { Hero } from '../../client-components';
+import { Hero, LogoCarousel } from '../../client-components';
 
 const HomePage = () => {
   const heroImage: IImage = {
@@ -41,11 +41,22 @@ const HomePage = () => {
       },
     ],
   };
+
+  const clientLogos = [
+    '/client-logos/brooklyn-colored.svg',
+    '/client-logos/hamilton-colored.svg',
+    '/client-logos/milano-colored.svg',
+    '/client-logos/nairobi-colored.svg',
+    '/client-logos/oslo-colored.svg',
+    '/client-logos/phoenix-colored.svg',
+    '/client-logos/san-francisco-colored.svg',
+    '/client-logos/scale-colored.svg',
+    '/client-logos/theo-colored.svg',
+  ];
   return (
     <>
       <Hero image={heroImage} content={heroContent} />
-      <Hero image={heroImage} content={heroContent} />
-      <Hero image={heroImage} content={heroContent} />
+      <LogoCarousel logos={clientLogos} />
     </>
   );
 };
