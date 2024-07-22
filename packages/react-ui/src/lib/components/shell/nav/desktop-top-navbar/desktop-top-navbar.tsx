@@ -31,7 +31,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     ref
   ) => {
     return (
-      <header className={cn('sticky top-0',className)}
+      <header className={cn('sticky top-0 z-50',className)}
       ref={ref}
       {...props}
       >
