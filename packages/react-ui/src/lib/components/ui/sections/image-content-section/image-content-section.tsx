@@ -24,7 +24,7 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={cn('w-full', hero && 'h-screen', className)}
+      className={cn('w-full isolate relative', hero && 'h-[calc(100vh-88px)]', className)}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <ImageContainer image={image}>

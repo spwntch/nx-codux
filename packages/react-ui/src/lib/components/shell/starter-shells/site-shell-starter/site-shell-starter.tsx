@@ -1,13 +1,14 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useState } from 'react';
+import { cn } from '../../../../utils';
 import { RegularFooter, UnderConstructionFooter } from '../../footer';
 import { DesktopTopNavbar } from '../../nav';
-import { cn } from '../../../../utils';
 
 export interface SiteShellProps {
   navbar: {
     classNames?: string;
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
+    autoHide?: boolean;
   };
   underContruction?: boolean;
   githubUrl?: string;
@@ -21,6 +22,8 @@ export const SiteShellStarter = ({
   onNavbarLinkTo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
+  const [scrollData, setScrollData] = useState({ y: 0, lastY: 0 });
+
   return (
     <div className="h-screen flex flex-col">
       <DesktopTopNavbar

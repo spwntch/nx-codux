@@ -7,9 +7,9 @@ const HomePage = () => {
     darken: true,
   };
   const heroContent: IContent = {
-    title: 'Hero',
-    subTitle: 'Hero Subtitle',
-    body: ['Hero Body'],
+    title: { content: 'Hero', className: 'text-white' },
+    subTitle: { content: 'Hero Subtitle', className: 'text-white' },
+    body: { content: ['Hero Body'], className: 'text-white' },
   };
   return <Hero image={heroImage} content={heroContent} />;
 };

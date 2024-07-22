@@ -4,9 +4,9 @@ import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
 import { ButtonGroup } from '../../../ui';
 import { Logo } from '../../brand';
-import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 import { GithubButton, ThemeToggleButton } from '../../buttons';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
+import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   classNames?: string;
