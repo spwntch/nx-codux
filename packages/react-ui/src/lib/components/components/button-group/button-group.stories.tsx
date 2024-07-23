@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import ButtonGroup, { IButtonGroupProps } from './button-group';
-import { Button } from '../../../shadcn-ui';
+import { Button } from '../../shadcn-ui';
 import { playBasic, playStacked } from './button-group.specs';
 
 const componentDescription = `

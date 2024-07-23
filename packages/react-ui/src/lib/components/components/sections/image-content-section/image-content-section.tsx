@@ -3,7 +3,7 @@ import { IContent, IImage } from '../../../../types';
 import { cn } from '../../../../utils';
 import { ContentContainer, ImageContainer } from '../../../brochureware';
 import { Button } from '../../../shadcn-ui';
-import { ButtonGroup } from '../../groups';
+import ButtonGroup from '../../button-group/button-group';
 
 interface IImageContentBlockProps {
   image: IImage;
