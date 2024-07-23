@@ -2,9 +2,9 @@ import { cn } from '../../../../utils';
 // import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
-import { ButtonGroup } from '../../../components';
+import { ButtonGroup, GithubButton } from '../../../components';
 import { Logo } from '../../brand';
-import { GithubButton, ThemeToggleButton } from '../../buttons';
+import { ThemeToggleButton } from '../../buttons';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 

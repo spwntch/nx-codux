@@ -1,5 +1,5 @@
-import { Button, ButtonProps } from '../../../shadcn-ui';
 import { forwardRef } from 'react';
+import { Button, ButtonProps } from '../../shadcn-ui';
 import { GithubIcon } from './github-icon';
 
 export interface GithubButtonProps extends ButtonProps {
