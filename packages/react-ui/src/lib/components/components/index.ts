@@ -3,6 +3,6 @@ export * from './button-group/button-group';
 export * from './tags/tags';
 
 export * from './layouts';
-export * from './media';
+export * from '../brochureware/media';
 export * from './sections';
 

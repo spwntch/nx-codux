@@ -1,4 +1,6 @@
 export * from './containers';
 export * from './headers';
-export * from './text';
+export * from './media';
 export * from './page-sections';
+export * from './text';
+
