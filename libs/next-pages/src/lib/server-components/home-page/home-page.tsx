@@ -1,7 +1,14 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 import { Benefits, Hero, LogoCarousel } from '../../client-components';
 
-const HomePage = () => {
+export interface HomePageProps {
+  hero: {
+    image: IImage;
+    content: IContent;
+  };
+}
+
+const HomePage = ({ hero }: HomePageProps) => {
   const heroImage: IImage = {
     src: '/images/coworkers-in-casual-workshop.webp',
     darken: true,
@@ -61,7 +68,7 @@ const HomePage = () => {
     },
     {
       image: { src: '/images/purchase.webp' },
-      content: { title: 'Increased Conversions'},
+      content: { title: 'Increased Conversions' },
     },
     {
       image: { src: '/images/teamwork.webp' },
@@ -74,7 +81,7 @@ const HomePage = () => {
   ];
   return (
     <>
-      {/* <Hero image={heroImage} content={heroContent} /> */}
+      <Hero image={heroImage} content={hero.content} />
       {/* <LogoCarousel logos={clientLogos} /> */}
       {/* <Benefits benefits={benefits} /> */}
     </>
