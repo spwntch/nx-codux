@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Header } from './header';
-import { playBasic, playWithTags } from './header.specs';
+import { BasicSectionHeader } from './basic-section-header';
+import { playBasic, playWithTags } from './basic-section-header.specs';
 
 const componentDescription = `
 ### Overview
@@ -29,9 +29,9 @@ The \`Header\` component displays a section header with a title, subtitle, and o
 Use this component to display the main header for a section of your site.
 `;
 
-const meta: Meta<typeof Header> = {
+const meta: Meta<typeof BasicSectionHeader> = {
   title: 'components/content/header',
-  component: Header,
+  component: BasicSectionHeader,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
@@ -77,12 +77,13 @@ const meta: Meta<typeof Header> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Header>;
+type Story = StoryObj<typeof BasicSectionHeader>;
 
 export const Basic: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',
-    subTitleContent: 'Pioneering a transformative approach to software development',
+    subTitleContent:
+      'Pioneering a transformative approach to software development',
     alignment: 'center',
   },
   play: playBasic,
@@ -90,9 +91,10 @@ export const Basic: Story = {
 
 export const HeroHeader: Story = {
   args: {
-    hero:true,
+    hero: true,
     titleContent: 'Spawntech Company Overview',
-    subTitleContent: 'Pioneering a transformative approach to software development',
+    subTitleContent:
+      'Pioneering a transformative approach to software development',
     alignment: 'center',
   },
   play: playBasic,
@@ -101,7 +103,8 @@ export const HeroHeader: Story = {
 export const WithTags: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',
-    subTitleContent: 'Pioneering a transformative approach to software development',
+    subTitleContent:
+      'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'center',
   },
@@ -111,7 +114,8 @@ export const WithTags: Story = {
 export const LeftAligned: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',
-    subTitleContent: 'Pioneering a transformative approach to software development',
+    subTitleContent:
+      'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'left',
   },
@@ -121,7 +125,8 @@ export const LeftAligned: Story = {
 export const RightAligned: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',
-    subTitleContent: 'Pioneering a transformative approach to software development',
+    subTitleContent:
+      'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'right',
   },

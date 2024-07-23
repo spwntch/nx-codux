@@ -31,11 +31,11 @@ const HomePage = ({
 }: HomePageProps) => {
   return (
     <>
-      <Hero image={hero.image} content={hero.content} />
+      {/* <Hero image={hero.image} content={hero.content} /> */}
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <ProductSummary content={productSummary} />
-      <HowItWorks content={howItWorks} />
-      <Benefits benefits={benefits} />
+      {/* <ProductSummary content={productSummary} /> */}
+      {/* <HowItWorks content={howItWorks} /> */}
+      {/* <Benefits benefits={benefits} /> */}
       {/* <HowItWorks content={testimonials} /> */}
       {/* <HowItWorks content={caseStudies} /> */}
     </>

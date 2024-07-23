@@ -1,11 +1,11 @@
 import React from 'react';
 import { cn } from '../../../../utils';
-import { Tags } from '../tags/tags';
+import { Tags } from '../../../components';
 import HeaderTitle from './components/header-title';
 import HeaderSubtitle from './components/header-subtitle';
 // import { Tags } from '../../content/tags/tags';
 
-interface IHeaderProps {
+interface IBasicSectionHeaderProps {
   hero?: boolean;
   titleContent?: string;
   titleClassName?: string;
@@ -16,7 +16,7 @@ interface IHeaderProps {
   alignment?: 'left' | 'center' | 'right';
 }
 
-export const Header: React.FC<IHeaderProps> = ({
+export const BasicSectionHeader: React.FC<IBasicSectionHeaderProps> = ({
   hero = false,
   titleContent,
   titleClassName,
@@ -63,4 +63,4 @@ export const Header: React.FC<IHeaderProps> = ({
   );
 };
 
-export default Header;
+export default BasicSectionHeader;
