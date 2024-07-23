@@ -24,13 +24,18 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={cn('w-full isolate relative', hero && 'h-[calc(100vh-88px)]', className)}
+      className={cn(
+        'w-full isolate relative',
+        hero && 'h-[calc(100vh-88px)]',
+        className
+      )}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <ImageContainer image={image}>
         {innerContent && (
           <ContentContainer
             innerContent={innerContent}
+            hero={hero}
             hAlign={hAlign}
             vAlign={vAlign}
           />

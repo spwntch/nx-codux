@@ -19,6 +19,7 @@ export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
     PropsWithChildren {
   innerContent: IContent;
+  hero?: boolean;
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
   className?: string;
@@ -31,6 +32,7 @@ export const ContentContainer = forwardRef<
   (
     {
       innerContent,
+      hero = false,
       hAlign = 'center',
       vAlign = 'middle',
       className,
@@ -90,6 +92,7 @@ export const ContentContainer = forwardRef<
           />
         )}
         <Header
+          hero={hero}
           titleContent={titleContent}
           titleClassName={titleClassName}
           subTitleContent={subTitleContent}

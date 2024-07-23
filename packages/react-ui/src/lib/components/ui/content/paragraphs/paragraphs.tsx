@@ -15,7 +15,7 @@ export const Paragraphs: React.FC<IParagraphsProps> = ({
 }) => (
   <div
     className={cn(
-      'mt-4 mb-8 max-w-3xl',
+      'mt-4 mb-8 max-w-3xl space-y-4',
       {
         'text-left': alignment === 'left',
         'text-center': alignment === 'center',
