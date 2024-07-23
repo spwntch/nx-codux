@@ -1,4 +1,5 @@
 import { IContent, IImage } from '@spwntch/react-ui';
+import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
   src: '/images/coworkers-in-casual-workshop.webp',
@@ -6,6 +7,11 @@ export const HOME_HERO_IMAGE: IImage = {
 };
 
 export const HOME_HERO_CONTENT: IContent = {
+  // announcement: {
+  //   message: "Limited Time Offer: Get 10% Off the ICP Playbook!",
+  //   className: "mx-auto text-xl",
+  //   href: "#"
+  // },
   title: {
     content: 'Unlock Your Ideal Customers with the ICP Playbook',
     // className: 'text-4xl font-bold text-center',
@@ -22,26 +28,26 @@ export const HOME_HERO_CONTENT: IContent = {
     ],
     // className: 'text-lg text-center mt-6',
   },
-  // bullets: [
-  //   {
-  //     //   icon: <IconTarget />,
-  //     body: 'Achieve higher conversion rates',
-  //     // className: 'flex items-center',
-  //   },
-  //   {
-  //     //   icon: <IconUsers />,
-  //     body: 'Improved team alignment',
-  //     // className: 'flex items-center',
-  //   },
-  //   {
-  //     //   icon: <IconBarChart2 />,
-  //     body: 'Faster, data-driven results',
-  //     // className: 'flex items-center',
-  //   },
-  // ],
+  bullets: [
+    {
+      icon: <Crosshair />,
+      body: 'Achieve higher conversion rates',
+      className: 'text-xl',
+    },
+    {
+      icon: <Users />,
+      body: 'Improved team alignment',
+      className: 'text-xl',
+    },
+    {
+      icon: <TrendingUp />,
+      body: 'Faster, data-driven results',
+      className: 'text-xl',
+    },
+  ],
   ctas: [
-    { label: 'Unlock Playbook Results', variant: { size: 'xl' } },
-    { label: 'Contact Us', variant: { size: 'xl', variant: 'ghost' } },
+    { label: 'UNLOCK PLAYBOOK RESULTS', variant: { size: 'xl' } },
+    { label: 'CONTACT US', variant: { size: 'xl', variant: 'ghost' } },
   ],
   // tags: {
   //   content: ['Get Started Today', 'Learn More'],

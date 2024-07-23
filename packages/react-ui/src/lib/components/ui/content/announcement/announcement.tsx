@@ -13,7 +13,7 @@ export const Announcement: React.FC<IAnnouncementProps> = ({
 }) => (
   <div
     className={cn(
-      'relative rounded-full px-3 py-1 text-sm leading-6 text-foreground ring-1 ring-ring/20 hover:ring-ring/30 mb-4 w-fit max-w-5xl flex items-center',
+      'relative rounded-full px-3 py-1 text-sm leading-6 text-foreground border-1 border mb-4 w-fit max-w-5xl flex items-center',
       className
     )}
   >

@@ -28,7 +28,7 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
     <div
       className={cn(
         'w-full isolate relative',
-        hero && 'h-[calc(100vh-88px)]',
+        hero && 'h-[calc(100vh-72px)]',
         className
       )}
       style={!hero ? { height: `${height}px` } : undefined}
