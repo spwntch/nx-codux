@@ -1,7 +1,7 @@
 import Autoplay from 'embla-carousel-autoplay';
 import { useRef } from 'react';
-import { cn } from '../../../../utils';
-import { Carousel, CarouselContent, CarouselItem } from '../../../shadcn-ui';
+import { cn } from '../../../../../utils';
+import { Carousel, CarouselContent, CarouselItem } from '../../../../shadcn-ui';
 
 export interface LogoCarouselProps {
   title?: string;
