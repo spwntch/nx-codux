@@ -1,8 +1,10 @@
 import { INavItem } from '@spwntch/react-ui';
 
 export const primaryNav: INavItem[] = [
-  { label: 'Our Backstory', href: '/about' },
-  { label: 'Docs', href: '/docs' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about' },
+  { label: 'The Playbook', href: '/playbook' },
+  { label: 'Pricing', href: '/pricing' },
   {
     label: 'Resources',
     children: [
@@ -12,16 +14,11 @@ export const primaryNav: INavItem[] = [
         href: '/blog',
       },
       {
-        label: 'Case Studies',
-        description: 'ipsum lorem and that sh*t',
-        href: '/case-studies',
-      },
-      {
-        label: 'White Papers',
+        label: 'Downloads',
         description: 'ipsum lorem and that sh*t',
         href: '/white-papers',
       },
     ],
   },
-  { label: 'Hire Us', href: '/services' },
+  { label: 'Contact Us', href: '/contact' },
 ];
