@@ -10,10 +10,10 @@ import {
 import {
   Announcement,
   ContentChildren,
-  Header,
   List,
   Paragraphs,
-} from '../../content';
+} from '../../../components';
+import { BasicSectionHeader } from '../../headers';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -91,7 +91,7 @@ export const ContentContainer = forwardRef<
             className={innerContent.announcement.className}
           />
         )}
-        <Header
+        <BasicSectionHeader
           hero={hero}
           titleContent={titleContent}
           titleClassName={titleClassName}

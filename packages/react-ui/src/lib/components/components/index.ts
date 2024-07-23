@@ -1,5 +1,4 @@
 export * from './carousels';
-export * from './containers';
 export * from './content';
 export * from './grids';
 export * from './groups';

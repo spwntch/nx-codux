@@ -1,4 +1,4 @@
-import { IBrand } from '../../components/brand/brand-provider/brand-provider';
+import { IBrand } from '../../types';
 
 export const brand: IBrand = {
   logoUrl: {

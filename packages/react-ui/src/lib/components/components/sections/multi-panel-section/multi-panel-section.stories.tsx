@@ -3,7 +3,7 @@ import React from 'react';
 import { withFullPage } from '../../../../storybook';
 import { MultiPanelSection } from './multi-panel-section';
 import { playBasic } from './multi-panel-section.specs';
-import { ContentContainer, ImageContainer } from '../../containers';
+import { ContentContainer, ImageContainer } from '../../../brochureware';
 import { Button, Card } from '../../../shadcn-ui';
 import { List } from '../../content';
 

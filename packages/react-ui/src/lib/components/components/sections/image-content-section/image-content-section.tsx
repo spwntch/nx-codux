@@ -1,9 +1,9 @@
 import React from 'react';
 import { IContent, IImage } from '../../../../types';
 import { cn } from '../../../../utils';
-import { ContentContainer, ImageContainer } from '../../containers';
-import { ButtonGroup } from '../../groups';
+import { ContentContainer, ImageContainer } from '../../../brochureware';
 import { Button } from '../../../shadcn-ui';
+import { ButtonGroup } from '../../groups';
 
 interface IImageContentBlockProps {
   image: IImage;
@@ -26,10 +26,7 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={cn(
-        'w-full isolate relative',
-        hero && 'h-[calc(100vh-72px)]',
-      )}
+      className={cn('w-full isolate relative', hero && 'h-[calc(100vh-72px)]')}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <ImageContainer image={image}>

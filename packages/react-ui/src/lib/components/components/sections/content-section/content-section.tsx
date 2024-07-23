@@ -1,7 +1,7 @@
 import React from 'react';
 import { IContent } from '../../../../types';
 import { cn } from '../../../../utils';
-import { ContentContainer } from '../../containers';
+import { ContentContainer } from '../../../brochureware';
 
 interface IContentSectionProps {
   innerContent: IContent;

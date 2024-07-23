@@ -1,8 +1,8 @@
 import React from 'react';
 import { IContent, IImage } from '../../../../types';
-import { ContentContainer, ImageContainer } from '../../containers';
-import { SplitLayout } from '../../layouts';
 import { cn } from '../../../../utils';
+import { ContentContainer, ImageContainer } from '../../../brochureware';
+import { SplitLayout } from '../../layouts';
 
 interface ISplitImageContentSectionProps {
   image: IImage;
@@ -16,7 +16,9 @@ interface ISplitImageContentSectionProps {
   vAlign?: 'top' | 'middle' | 'bottom';
 }
 
-export const SplitImageContentSection: React.FC<ISplitImageContentSectionProps> = ({
+export const SplitImageContentSection: React.FC<
+  ISplitImageContentSectionProps
+> = ({
   image,
   innerContent,
   split = 'horizontal',
@@ -38,7 +40,7 @@ export const SplitImageContentSection: React.FC<ISplitImageContentSectionProps> 
 
   return (
     <div
-      className={cn("w-full", { 'h-screen': hero })}
+      className={cn('w-full', { 'h-screen': hero })}
       style={!hero ? { height: `${height}px` } : undefined}
     >
       <SplitLayout
