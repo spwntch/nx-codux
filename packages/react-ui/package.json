@@ -13,8 +13,8 @@
       "require": "./shadcn.js"
     },
     "./components": {
-      "import": "./ui.mjs",
-      "require": "./ui.js"
+      "import": "./components.mjs",
+      "require": "./components.js"
     },
     "./shell": {
       "import": "./shell.mjs",

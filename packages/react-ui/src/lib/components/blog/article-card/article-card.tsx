@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '../../shadcn-ui';
-import { Tags } from '../../ui';
+import { Tags } from '../../components';
 
 interface IPostCardProps extends IMdxDocMeta {
   onClick: (slug: string) => void;

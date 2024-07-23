@@ -2,7 +2,7 @@ import { cn } from '../../../../utils';
 // import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
 // import { GithubButton } from '../../buttons';
-import { ButtonGroup } from '../../../ui';
+import { ButtonGroup } from '../../../components';
 import { Logo } from '../../brand';
 import { GithubButton, ThemeToggleButton } from '../../buttons';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
@@ -31,9 +31,10 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     ref
   ) => {
     return (
-      <header className={cn('sticky top-0 z-50',className)}
-      ref={ref}
-      {...props}
+      <header
+        className={cn('sticky top-0 z-50', className)}
+        ref={ref}
+        {...props}
       >
         <div className="flex p-2 pb-4 items-center">
           <Logo
