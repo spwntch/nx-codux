@@ -2,35 +2,36 @@ import { IBrand } from '@spwntch/react-ui';
 
 export const brand: IBrand = {
   logoUrl: {
-    light: '/brand/logo-primary.webp',
+    light: '/brand/logo-light.webp',
     dark: '/brand/logo-dark.webp',
   },
   markUrl: {
-    light: '/brand/mark-primary.webp',
-    dark: '/brand/mark-dark.webp',
+    light: '/brand/mark.webp',
+    dark: '/brand/mark.webp',
   },
   underConstructionUrl: {
-    light: '/under-construction/powered-by-spawntech-primary.webp',
+    light: '/under-construction/powered-by-spawntech-light.webp',
     dark: '/under-construction/powered-by-spawntech-dark.webp',
   },
-  tagline: '{ experience in code }',
+  tagline: 'Unlock Your Ideal Customers, Elevate Your Success',
   about: {
     body: [
-      'Spawntech specializes in agile software development with a robust UX focus, leveraging reusable Node.js libraries to deliver custom, efficient solutions. We champion innovation and a seamless user experience, ensuring our clients stay ahead in the digital race.',
+      'Welcome to Interact RDT, South Africa’s leading CX/UX consultancy since 2004. We enhance customer and user experiences across industries like financial services, telecom, insurance, hospitality, and entertainment.',
+      'At Interact RDT, we turn data into actionable strategies that transform brand perceptions and customer experiences. With a focus on professionalism, quality, and long-term client partnerships, we deliver high-quality results that align with our clients’ goals. Join us to uncover business opportunities and achieve tangible results.',
     ],
   },
   contact: {
-    website: 'www.spawntech.io', // Placeholder, adjust as necessary
-    mail: 'hello@spawntech.io', // Placeholder, adjust as necessary
-    phone: '+27 11 994 9960', // Placeholder, adjust as necessary
+    website: 'www.interactrdt.com',
+    mail: 'hello@interactrdt.com',
+    phone: '+27 11 994 9960',
   },
   social: {
-    linkedin: 'https://www.linkedin.com/company/spawntech-io',
-    // youtube: 'https://www.youtube.com',
-    // facebook: 'https://www.facebook.com',
+    linkedin: 'https://www.linkedin.com/company/interact-rdt',
+    youtube: 'https://www.youtube.com/@Interactrdt',
+    facebook: 'https://www.facebook.com/InteractRDT/',
   },
   legal: {
-    companyName: 'Spawntech',
+    companyName: 'Interact RDT',
     copyrightYear: '2024',
   },
 };

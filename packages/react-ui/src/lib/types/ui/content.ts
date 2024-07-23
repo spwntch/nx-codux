@@ -19,7 +19,7 @@ export type ParapgraphsWithClassName = {
 };
 
 export interface IContent {
-  announcement?: { message: string; className?: string; href: string }; // Time-related information
+  announcement?: { message: string; className?: string; href: string }; // Time-related information or used for promotions
   title?: string | TextWithClassName; // H2 tag
   subTitle?: string | TextWithClassName; // H3 tag
   body?: string[] | ParapgraphsWithClassName; // Array of P tags

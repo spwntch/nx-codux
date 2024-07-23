@@ -74,9 +74,9 @@ const HomePage = () => {
   ];
   return (
     <>
-      <Hero image={heroImage} content={heroContent} />
-      <LogoCarousel logos={clientLogos} />
-      <Benefits benefits={benefits} />
+      {/* <Hero image={heroImage} content={heroContent} /> */}
+      {/* <LogoCarousel logos={clientLogos} /> */}
+      {/* <Benefits benefits={benefits} /> */}
     </>
   );
 };

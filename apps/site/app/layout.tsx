@@ -23,7 +23,6 @@ export default function RootLayout({
           brand={brand}
           navItems={primaryNav}
           navbar={navbar}
-          underContruction
         >
           {children}
         </SiteShell>
