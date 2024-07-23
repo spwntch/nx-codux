@@ -15,7 +15,7 @@ const Hero = ({ image, content }: IHeroProps) => {
       hero
       hAlign="left"
       vAlign="bottom"
-      className="text-white"
+      className="text-white max-w-2xl"
     />
   );
 };

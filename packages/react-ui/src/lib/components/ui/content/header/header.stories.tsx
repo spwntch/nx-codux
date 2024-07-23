@@ -88,6 +88,16 @@ export const Basic: Story = {
   play: playBasic,
 };
 
+export const HeroHeader: Story = {
+  args: {
+    hero:true,
+    titleContent: 'Spawntech Company Overview',
+    subTitleContent: 'Pioneering a transformative approach to software development',
+    alignment: 'center',
+  },
+  play: playBasic,
+};
+
 export const WithTags: Story = {
   args: {
     titleContent: 'Spawntech Company Overview',

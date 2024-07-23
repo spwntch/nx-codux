@@ -15,7 +15,7 @@ const HeaderTitle = ({ hero, text, className }: Props) => {
         </h1>
       )}
       {text && !hero && (
-        <h2 className={cn('text-2xl font-bold mb-2 mt-6', className)}>
+        <h2 className={cn('text-3xl font-bold mb-2 mt-6', className)}>
           {text}
         </h2>
       )}

@@ -29,7 +29,6 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
       className={cn(
         'w-full isolate relative',
         hero && 'h-[calc(100vh-72px)]',
-        className
       )}
       style={!hero ? { height: `${height}px` } : undefined}
     >
@@ -40,6 +39,7 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
             hero={hero}
             hAlign={hAlign}
             vAlign={vAlign}
+            className={className}
           >
             {innerContent.ctas?.length && (
               <ButtonGroup>

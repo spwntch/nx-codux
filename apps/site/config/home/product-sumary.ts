@@ -17,28 +17,28 @@ export const THE_ICP_PLAYBOOK: IContent = {
   },
   bullets: [
     {
-      title: 'Key Components',
-      body: 'Workshops, Worksheets, Templates, Whiteboard Templates, Survey Scripts and Questions',
-      className: 'text-lg font-bold mt-6',
-    },
-    {
-      body: 'Workshops: Guided sessions to help your team define and refine your Ideal Customer Profile.',
+      title: 'Wprkshops',
+      body: 'Guided sessions to help your team define and refine your Ideal Customer Profile.',
       className: 'text-lg mt-2',
     },
     {
-      body: 'Worksheets: Practical tools to collect and analyze customer data effectively.',
+      title: 'Worksheets',
+      body: 'Practical tools to collect and analyze customer data effectively.',
       className: 'text-lg mt-2',
     },
     {
-      body: 'Templates: Ready-to-use formats to create detailed customer profiles and personas.',
+      title: 'Templates',
+      body: 'Ready-to-use formats to create detailed customer profiles and personas.',
       className: 'text-lg mt-2',
     },
     {
-      body: 'Whiteboard Templates: Miro and Mural templates for interactive and collaborative sessions.',
+      title: 'Whiteboard Templates',
+      body: 'Miro and Mural templates for interactive and collaborative sessions.',
       className: 'text-lg mt-2',
     },
     {
-      body: 'Survey Scripts and Questions: Pre-made scripts and questions for running effective online customer surveys.',
+      title: 'Survey Scripts and Questions',
+      body: 'Pre-made scripts and questions for running effective online customer surveys.',
       className: 'text-lg mt-2',
     },
   ],
