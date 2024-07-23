@@ -5,10 +5,11 @@ import { LogoCarousel as SpwnLogoCarousel } from '@spwntch/react-ui';
 export interface ILogoCarouselProps {
   title?: string;
   logos: string[];
+  className?: string;
 }
 
-const LogoCarousel = ({ title, logos }: ILogoCarouselProps) => {
-  return <SpwnLogoCarousel title={title} logos={logos} />;
+const LogoCarousel = ({ title, logos, className }: ILogoCarouselProps) => {
+  return <SpwnLogoCarousel title={title} logos={logos} className={className} />;
 };
 
 export default LogoCarousel;

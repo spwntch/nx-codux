@@ -22,23 +22,23 @@ export const HOME_HERO_CONTENT: IContent = {
     ],
     // className: 'text-lg text-center mt-6',
   },
-  bullets: [
-    {
-      //   icon: <IconTarget />,
-      body: 'Achieve higher conversion rates',
-      // className: 'flex items-center',
-    },
-    {
-      //   icon: <IconUsers />,
-      body: 'Improved team alignment',
-      // className: 'flex items-center',
-    },
-    {
-      //   icon: <IconBarChart2 />,
-      body: 'Faster, data-driven results',
-      // className: 'flex items-center',
-    },
-  ],
+  // bullets: [
+  //   {
+  //     //   icon: <IconTarget />,
+  //     body: 'Achieve higher conversion rates',
+  //     // className: 'flex items-center',
+  //   },
+  //   {
+  //     //   icon: <IconUsers />,
+  //     body: 'Improved team alignment',
+  //     // className: 'flex items-center',
+  //   },
+  //   {
+  //     //   icon: <IconBarChart2 />,
+  //     body: 'Faster, data-driven results',
+  //     // className: 'flex items-center',
+  //   },
+  // ],
   ctas: [
     { label: 'Unlock Playbook Results', variant: { size: 'xl' } },
     { label: 'Contact Us', variant: { size: 'xl', variant: 'ghost' } },

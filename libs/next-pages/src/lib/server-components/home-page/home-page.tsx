@@ -10,15 +10,14 @@ export interface HomePageProps {
 
 const HomePage = ({ hero }: HomePageProps) => {
   const clientLogos = [
-    '/client-logos/brooklyn-colored.svg',
-    '/client-logos/hamilton-colored.svg',
-    '/client-logos/milano-colored.svg',
-    '/client-logos/nairobi-colored.svg',
-    '/client-logos/oslo-colored.svg',
-    '/client-logos/phoenix-colored.svg',
-    '/client-logos/san-francisco-colored.svg',
-    '/client-logos/scale-colored.svg',
-    '/client-logos/theo-colored.svg',
+    '/client-logos/aldor.svg',
+    '/client-logos/hollard.svg',
+    '/client-logos/media-24.svg',
+    '/client-logos/nedbank.svg',
+    '/client-logos/old-mutual.svg',
+    '/client-logos/sanlam.svg',
+    '/client-logos/vodacom.svg',
+    '/client-logos/woolworths.svg',
   ];
 
   const benefits: { image: IImage; content: IContent }[] = [
@@ -42,7 +41,7 @@ const HomePage = ({ hero }: HomePageProps) => {
   return (
     <>
       <Hero image={hero.image} content={hero.content} />
-      {/* <LogoCarousel logos={clientLogos} /> */}
+      <LogoCarousel logos={clientLogos} className='bg-white'  />
       {/* <Benefits benefits={benefits} /> */}
     </>
   );
