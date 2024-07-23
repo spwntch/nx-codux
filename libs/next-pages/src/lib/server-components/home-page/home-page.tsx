@@ -14,24 +14,30 @@ export interface HomePageProps {
   };
   clientLogos: string[];
   productSummary: IContent;
-  howItWorls: IContent;
+  howItWorks: IContent;
   benefits: { image: IImage; content: IContent }[];
+  testimonials: IContent[];
+  caseStudies: IContent[];
 }
 
 const HomePage = ({
   hero,
   clientLogos,
   productSummary,
-  howItWorls,
+  howItWorks,
   benefits,
+  testimonials,
+  caseStudies,
 }: HomePageProps) => {
   return (
     <>
       <Hero image={hero.image} content={hero.content} />
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <ProductSummary content={productSummary} />
-      <HowItWorks content={howItWorls} />
+      <HowItWorks content={howItWorks} />
       <Benefits benefits={benefits} />
+      {/* <HowItWorks content={testimonials} /> */}
+      {/* <HowItWorks content={caseStudies} /> */}
     </>
   );
 };

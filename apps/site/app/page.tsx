@@ -1,10 +1,12 @@
 import { HomePage } from '@/next-pages/server';
 import {
   BENEFITS,
+  CASE_STUDIES,
   CLIENT_LOGOS,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   HOW_IT_WORKS,
+  TESTIMONIALS,
   THE_ICP_PLAYBOOK,
 } from '../config';
 
@@ -18,7 +20,9 @@ export default function Index() {
       clientLogos={CLIENT_LOGOS}
       benefits={BENEFITS}
       productSummary={THE_ICP_PLAYBOOK}
-      howItWorls={HOW_IT_WORKS}
+      howItWorks={HOW_IT_WORKS}
+      testimonials={TESTIMONIALS}
+      caseStudies={CASE_STUDIES}
     />
   );
 }
