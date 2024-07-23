@@ -1,6 +1,5 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 
-
 export const HOME_HERO_IMAGE: IImage = {
   src: '/images/coworkers-in-casual-workshop.webp',
   darken: true,
@@ -39,6 +38,10 @@ export const HOME_HERO_CONTENT: IContent = {
       body: 'Faster, data-driven results',
       // className: 'flex items-center',
     },
+  ],
+  ctas: [
+    { label: 'Unlock Playbook Results', variant: { size: 'xl' } },
+    { label: 'Contact Us', variant: { size: 'xl', variant: 'ghost' } },
   ],
   // tags: {
   //   content: ['Get Started Today', 'Learn More'],

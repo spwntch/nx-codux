@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { IImage } from './image';
+import { ICtaButton } from './cta';
 
 // If there is no icon, image, or emoji, the bullet will be a simple list-disc.
 export interface IBullet {
@@ -25,4 +26,5 @@ export interface IContent {
   body?: string[] | ParapgraphsWithClassName; // Array of P tags
   bullets?: IBullet[];
   tags?: string[] | ParapgraphsWithClassName;
+  ctas?: ICtaButton[];
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import { IContent, IImage } from '../../../../types';
 import { cn } from '../../../../utils';
 import { ContentContainer, ImageContainer } from '../../containers';
+import { ButtonGroup } from '../../groups';
+import { Button } from '../../../shadcn-ui';
 
 interface IImageContentBlockProps {
   image: IImage;
@@ -38,7 +40,20 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
             hero={hero}
             hAlign={hAlign}
             vAlign={vAlign}
-          />
+          >
+            {innerContent.ctas?.length && (
+              <ButtonGroup>
+                {innerContent.ctas.map((cta) => (
+                  <Button
+                    size={cta.variant?.size || 'default'}
+                    variant={cta.variant?.variant || 'default'}
+                  >
+                    {cta.label}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            )}
+          </ContentContainer>
         )}
       </ImageContainer>
     </div>
