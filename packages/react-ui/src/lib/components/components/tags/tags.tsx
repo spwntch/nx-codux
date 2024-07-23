@@ -1,4 +1,4 @@
-import { Badge } from '../../../shadcn-ui/badge/badge';
+import { Badge } from '../../shadcn-ui/badge/badge';
 
 interface ITagsProps {
   tags: string[];

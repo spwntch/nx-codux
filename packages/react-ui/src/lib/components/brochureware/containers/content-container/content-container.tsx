@@ -7,9 +7,10 @@ import {
   getTagsContentAndClassName,
   getTitleContentAndClassName,
 } from '../../../../utils';
-import { Announcement, List, Paragraphs } from '../../../components';
+import { Announcement } from '../../../components';
 import { BasicSectionHeader } from '../../headers';
 import ContentChildren from './content-children';
+import { List, Paragraphs } from '../../text';
 
 export interface ContentContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,

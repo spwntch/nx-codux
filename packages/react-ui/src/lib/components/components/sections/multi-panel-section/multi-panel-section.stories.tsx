@@ -3,9 +3,8 @@ import React from 'react';
 import { withFullPage } from '../../../../storybook';
 import { MultiPanelSection } from './multi-panel-section';
 import { playBasic } from './multi-panel-section.specs';
-import { ContentContainer, ImageContainer } from '../../../brochureware';
+import { ContentContainer, ImageContainer, List } from '../../../brochureware';
 import { Button, Card } from '../../../shadcn-ui';
-import { List } from '../../content';
 
 const componentDescription = `
 ### Overview
