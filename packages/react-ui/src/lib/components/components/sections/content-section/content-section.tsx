@@ -25,11 +25,7 @@ export const ContentSection: React.FC<IContentSectionProps> = ({
       className={cn('w-full', { 'h-screen': hero }, className)}
       style={!hero ? { height: `${height}px` } : undefined}
     >
-      <ContentContainer
-        innerContent={innerContent}
-        hAlign={hAlign}
-        vAlign={vAlign}
-      />
+      <ContentContainer text={innerContent} hAlign={hAlign} vAlign={vAlign} />
     </div>
   );
 };

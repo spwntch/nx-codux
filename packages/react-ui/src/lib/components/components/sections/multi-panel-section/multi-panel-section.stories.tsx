@@ -93,11 +93,7 @@ const mainPanel = (
     }}
     className="h-full w-full relative text-white"
   >
-    <ContentContainer
-      innerContent={innerContent}
-      hAlign="center"
-      vAlign="bottom"
-    />
+    <ContentContainer text={innerContent} hAlign="center" vAlign="bottom" />
   </ImageContainer>
 );
 

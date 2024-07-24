@@ -55,7 +55,7 @@ export const ContentContainer = forwardRef<
     return (
       <div
         className={cn(
-          'w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-3 mx-auto md:mx-8',
+          'w-full h-full flex flex-col px-1.5 py-1 sm:p-1.5 md:p-2 lg:p-8 mx-auto md:mx-8',
           {
             'justify-start items-start text-left':
               alignmentClass === 'top-left',

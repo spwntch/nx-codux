@@ -31,11 +31,7 @@ export const SplitImageContentSection: React.FC<
 }) => {
   const imagePane = <ImageContainer image={image} className={className} />;
   const contentPane = innerContent && (
-    <ContentContainer
-      innerContent={innerContent}
-      hAlign={hAlign}
-      vAlign={vAlign}
-    />
+    <ContentContainer text={innerContent} hAlign={hAlign} vAlign={vAlign} />
   );
 
   return (

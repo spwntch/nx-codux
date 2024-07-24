@@ -1,10 +1,10 @@
+'use client';
+
 import { IContent, IImage } from '@spwntch/react-ui';
+
+import { FullImageHero } from '@spwntch/react-ui';
 import {
-  Benefits,
-  Hero,
-  HowItWorks,
-  LogoCarousel,
-  ProductSummary,
+  LogoCarousel
 } from '../../client-components';
 
 export interface HomePageProps {
@@ -31,6 +31,7 @@ const HomePage = ({
 }: HomePageProps) => {
   return (
     <>
+      <FullImageHero image={hero.image} innerContent={hero.content} hAlign='left' vAlign="bottom"/>
       {/* <Hero image={hero.image} content={hero.content} /> */}
       <LogoCarousel logos={clientLogos} className="bg-white" />
       {/* <ProductSummary content={productSummary} /> */}

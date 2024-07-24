@@ -32,7 +32,7 @@ export const ImageContentSection: React.FC<IImageContentBlockProps> = ({
       <ImageContainer image={image}>
         {innerContent && (
           <ContentContainer
-            innerContent={innerContent}
+            text={innerContent}
             hero={hero}
             hAlign={hAlign}
             vAlign={vAlign}
