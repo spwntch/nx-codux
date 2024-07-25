@@ -8,6 +8,7 @@ import { Container } from './Container';
 import { DesktopNav } from './desktop-nav/DesktopNav';
 import { MobileNav } from './mobile-nav/MobileNav';
 import { ThemeToggle } from './theme-toggle/theme-toggle';
+import { removeDocumentProperty, setDocumentProperty } from '../utils';
 
 function clamp(number: number, a: number, b: number) {
   const min = Math.min(a, b);
@@ -23,14 +24,6 @@ export function Header() {
     const downDelay = 0;
     const upDelay = 64;
 
-    function setProperty(property: string, value: string) {
-      document.documentElement.style.setProperty(property, value);
-    }
-
-    function removeProperty(property: string) {
-      document.documentElement.style.removeProperty(property);
-    }
-
     function updateHeaderStyles() {
       if (!headerRef.current) {
         return;
@@ -44,31 +37,31 @@ export function Header() {
       );
 
       if (isInitial.current) {
-        setProperty('--header-position', 'sticky');
+        setDocumentProperty('--header-position', 'sticky');
       }
 
-      setProperty('--content-offset', `${downDelay}px`);
+      setDocumentProperty('--content-offset', `${downDelay}px`);
 
       if (isInitial.current || scrollY < downDelay) {
-        setProperty('--header-height', `${downDelay + height}px`);
-        setProperty('--header-mb', `${-downDelay}px`);
+        setDocumentProperty('--header-height', `${downDelay + height}px`);
+        setDocumentProperty('--header-mb', `${-downDelay}px`);
       } else if (top + height < -upDelay) {
         const offset = Math.max(height, scrollY - upDelay);
-        setProperty('--header-height', `${offset}px`);
-        setProperty('--header-mb', `${height - offset}px`);
+        setDocumentProperty('--header-height', `${offset}px`);
+        setDocumentProperty('--header-mb', `${height - offset}px`);
       } else if (top === 0) {
-        setProperty('--header-height', `${scrollY + height}px`);
-        setProperty('--header-mb', `${-scrollY}px`);
+        setDocumentProperty('--header-height', `${scrollY + height}px`);
+        setDocumentProperty('--header-mb', `${-scrollY}px`);
       }
 
       if (top === 0 && scrollY > 0 && scrollY >= downDelay) {
-        setProperty('--header-inner-position', 'fixed');
-        removeProperty('--header-top');
-        removeProperty('--avatar-top');
+        setDocumentProperty('--header-inner-position', 'fixed');
+        removeDocumentProperty('--header-top');
+        removeDocumentProperty('--avatar-top');
       } else {
-        removeProperty('--header-inner-position');
-        setProperty('--header-top', '0px');
-        setProperty('--avatar-top', '0px');
+        removeDocumentProperty('--header-inner-position');
+        setDocumentProperty('--header-top', '0px');
+        setDocumentProperty('--avatar-top', '0px');
       }
     }
 
