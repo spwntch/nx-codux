@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-export function AvatarContainer({
+export function LogoContainer({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<'div'>) {

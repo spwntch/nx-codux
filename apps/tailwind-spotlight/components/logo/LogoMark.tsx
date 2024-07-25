@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import avatarImage from '../../images/avatar.jpg';
+import logoMark from '../../public/brand/mark-light.webp';
 
-export function Avatar({
+export function LogoMark({
   large = false,
   className,
   ...props
@@ -18,7 +18,7 @@ export function Avatar({
       {...props}
     >
       <Image
-        src={avatarImage}
+        src={logoMark}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(

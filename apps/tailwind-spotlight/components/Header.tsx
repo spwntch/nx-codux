@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react';
 
 import { updateDocumentHeaderStyles } from '../utils';
-import { Avatar } from './avatar/Avatar';
-import { AvatarContainer } from './avatar/AvatarContainer';
 import { Container } from './Container';
 import { DesktopNav } from './desktop-nav/DesktopNav';
+import { LogoContainer } from './logo/LogoContainer';
+import { LogoMark } from './logo/LogoMark';
 import { MobileNav } from './mobile-nav/MobileNav';
 import { ThemeToggle } from './theme-toggle/theme-toggle';
 
@@ -56,9 +56,9 @@ export function Header() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
-                <AvatarContainer>
-                  <Avatar />
-                </AvatarContainer>
+                <LogoContainer>
+                  <LogoMark />
+                </LogoContainer>
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNav className="pointer-events-auto md:hidden" />
