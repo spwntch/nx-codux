@@ -6,7 +6,7 @@ export default function Index() {
    */
   return (
     <div className="text-4xl">
-      {/* <p>START</p>
+      <p>START</p>
       <p>MID</p>
       <p>MID</p>
       <p>MID</p>
@@ -51,7 +51,7 @@ export default function Index() {
       <p>MID</p>
       <p>MID</p>
       <p>MID</p>
-      <p>END</p> */}
+      <p>END</p>
     </div>
   );
 }
