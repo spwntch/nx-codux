@@ -1,6 +1,5 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
 import { Avatar } from './avatar/Avatar';
@@ -17,14 +16,11 @@ function clamp(number: number, a: number, b: number) {
 }
 
 export function Header() {
-  const isHomePage = usePathname() === '/';
-
   const headerRef = useRef<React.ElementRef<'div'>>(null);
-  const avatarRef = useRef<React.ElementRef<'div'>>(null);
   const isInitial = useRef(true);
 
   useEffect(() => {
-    const downDelay = avatarRef.current?.offsetTop ?? 0;
+    const downDelay = 0;
     const upDelay = 64;
 
     function setProperty(property: string, value: string) {
@@ -76,40 +72,8 @@ export function Header() {
       }
     }
 
-    function updateAvatarStyles() {
-      if (!isHomePage) {
-        return;
-      }
-
-      const fromScale = 1;
-      const toScale = 36 / 64;
-      const fromX = 0;
-      const toX = 2 / 16;
-
-      const scrollY = downDelay - window.scrollY;
-
-      let scale = (scrollY * (fromScale - toScale)) / downDelay + toScale;
-      scale = clamp(scale, fromScale, toScale);
-
-      let x = (scrollY * (fromX - toX)) / downDelay + toX;
-      x = clamp(x, fromX, toX);
-
-      setProperty(
-        '--avatar-image-transform',
-        `translate3d(${x}rem, 0, 0) scale(${scale})`
-      );
-
-      const borderScale = 1 / (toScale / scale);
-      const borderX = (-toX + x) * borderScale;
-      const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
-
-      setProperty('--avatar-border-transform', borderTransform);
-      setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0');
-    }
-
     function updateStyles() {
       updateHeaderStyles();
-      updateAvatarStyles();
       isInitial.current = false;
     }
 
@@ -121,7 +85,7 @@ export function Header() {
       window.removeEventListener('scroll', updateStyles);
       window.removeEventListener('resize', updateStyles);
     };
-  }, [isHomePage]);
+  }, []);
 
   return (
     <>
@@ -149,9 +113,9 @@ export function Header() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
+                <AvatarContainer>
+                  <Avatar />
+                </AvatarContainer>
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNav className="pointer-events-auto md:hidden" />
