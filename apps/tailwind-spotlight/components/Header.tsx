@@ -2,71 +2,21 @@
 
 import { useEffect, useRef } from 'react';
 
+import { updateDocumentHeaderStyles } from '../utils';
 import { Avatar } from './avatar/Avatar';
 import { AvatarContainer } from './avatar/AvatarContainer';
 import { Container } from './Container';
 import { DesktopNav } from './desktop-nav/DesktopNav';
 import { MobileNav } from './mobile-nav/MobileNav';
 import { ThemeToggle } from './theme-toggle/theme-toggle';
-import { removeDocumentProperty, setDocumentProperty } from '../utils';
-
-function clamp(number: number, a: number, b: number) {
-  const min = Math.min(a, b);
-  const max = Math.max(a, b);
-  return Math.min(Math.max(number, min), max);
-}
 
 export function Header() {
   const headerRef = useRef<React.ElementRef<'div'>>(null);
   const isInitial = useRef(true);
 
   useEffect(() => {
-    const downDelay = 0;
-    const upDelay = 64;
-
-    function updateHeaderStyles() {
-      if (!headerRef.current) {
-        return;
-      }
-
-      const { top, height } = headerRef.current.getBoundingClientRect();
-      const scrollY = clamp(
-        window.scrollY,
-        0,
-        document.body.scrollHeight - window.innerHeight
-      );
-
-      if (isInitial.current) {
-        setDocumentProperty('--header-position', 'sticky');
-      }
-
-      setDocumentProperty('--content-offset', `${downDelay}px`);
-
-      if (isInitial.current || scrollY < downDelay) {
-        setDocumentProperty('--header-height', `${downDelay + height}px`);
-        setDocumentProperty('--header-mb', `${-downDelay}px`);
-      } else if (top + height < -upDelay) {
-        const offset = Math.max(height, scrollY - upDelay);
-        setDocumentProperty('--header-height', `${offset}px`);
-        setDocumentProperty('--header-mb', `${height - offset}px`);
-      } else if (top === 0) {
-        setDocumentProperty('--header-height', `${scrollY + height}px`);
-        setDocumentProperty('--header-mb', `${-scrollY}px`);
-      }
-
-      if (top === 0 && scrollY > 0 && scrollY >= downDelay) {
-        setDocumentProperty('--header-inner-position', 'fixed');
-        removeDocumentProperty('--header-top');
-        removeDocumentProperty('--avatar-top');
-      } else {
-        removeDocumentProperty('--header-inner-position');
-        setDocumentProperty('--header-top', '0px');
-        setDocumentProperty('--avatar-top', '0px');
-      }
-    }
-
     function updateStyles() {
-      updateHeaderStyles();
+      updateDocumentHeaderStyles(headerRef, isInitial, { down: 0, up: 64 });
       isInitial.current = false;
     }
 
