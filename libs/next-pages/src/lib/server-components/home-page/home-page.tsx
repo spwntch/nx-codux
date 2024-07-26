@@ -1,12 +1,13 @@
 'use client';
 
-import { FullImageHero, IContent, IImage, LogoCarousel } from '@spwntch/react-ui';
-
 import {
-  Benefits,
-  HowItWorks,
-  ProductSummary
-} from '../../client-components';
+  FullImageHero,
+  IContent,
+  IImage,
+  LogoCarousel,
+} from '@spwntch/react-ui';
+
+import { Benefits, Faqs, HowItWorks, ProductSummary } from '../../client-components';
 
 export interface HomePageProps {
   hero: {
@@ -17,6 +18,7 @@ export interface HomePageProps {
   productSummary: IContent;
   howItWorks: IContent;
   benefits: IContent;
+  faqs: IContent;
   testimonials: IContent[];
   caseStudies: IContent[];
 }
@@ -27,6 +29,7 @@ const HomePage = ({
   productSummary,
   howItWorks,
   benefits,
+  faqs,
   testimonials,
   caseStudies,
 }: HomePageProps) => {
@@ -42,11 +45,12 @@ const HomePage = ({
 
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div className="px-3 md:container">
-      <ProductSummary content={productSummary} />
-      {/* <HowItWorks content={howItWorks} /> */}
-      <Benefits content={benefits} />
-      {/* <HowItWorks content={testimonials} /> */}
-      {/* <HowItWorks content={caseStudies} /> */}
+        <ProductSummary content={productSummary} />
+        {/* <HowItWorks content={howItWorks} /> */}
+        <Benefits content={benefits} />
+        <Faqs content={faqs} />
+        {/* <HowItWorks content={testimonials} /> */}
+        {/* <HowItWorks content={caseStudies} /> */}
       </div>
     </>
   );

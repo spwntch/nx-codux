@@ -1,5 +1,5 @@
 import { SiteShell } from '@/next-shell';
-import { brand, primaryNav } from '../config';
+import { brand } from '../config';
 import './global.css';
 
 export const metadata = {
@@ -14,6 +14,7 @@ export default function RootLayout({
 }) {
   const navbar = {
     logoHeight: 40,
+    // disableThemeToggle: true,
   };
 
   return (
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body >
         <SiteShell
           brand={brand}
-          navItems={primaryNav}
+          // navItems={primaryNav}
           navbar={navbar}
         >
           {children}

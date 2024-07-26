@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren } from 'react';
 import { cn } from '../../../../utils';
 import { RegularFooter, UnderConstructionFooter } from '../../footer';
 import { DesktopTopNavbar } from '../../nav';
@@ -7,7 +7,7 @@ export interface SiteShellProps {
   navbar: {
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
-    autoHide?: boolean;
+    disableThemeToggle?: boolean;
     className?: string;
   };
   underContruction?: boolean;
@@ -58,6 +58,7 @@ export const SiteShellStarter = ({
         )}
         navAlignment={navbar?.alignment}
         logoHeight={navbar?.logoHeight}
+        disableThemeToggle={navbar?.disableThemeToggle}
         githubUrl={githubUrl}
         onLinkTo={onNavbarLinkTo}
       />

@@ -9,6 +9,7 @@ import {
   TESTIMONIALS,
   THE_ICP_PLAYBOOK,
 } from '../config';
+import { FAQ } from '../config/home/faqs';
 
 export default function Index() {
   return (
@@ -18,9 +19,10 @@ export default function Index() {
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
-      benefits={BENEFITS}
       productSummary={THE_ICP_PLAYBOOK}
+      benefits={BENEFITS}
       howItWorks={HOW_IT_WORKS}
+      faqs={FAQ}
       testimonials={TESTIMONIALS}
       caseStudies={CASE_STUDIES}
     />

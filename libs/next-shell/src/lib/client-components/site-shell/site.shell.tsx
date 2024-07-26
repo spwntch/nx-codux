@@ -11,6 +11,7 @@ export interface SiteShellProps extends IShellProviderProps {
     classNames?: string;
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
+    disableThemeToggle?: boolean;
   };
   underContruction?: boolean;
   githubUrl?: string;

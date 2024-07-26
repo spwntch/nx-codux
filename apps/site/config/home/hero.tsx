@@ -18,7 +18,7 @@ export const HOME_HERO_CONTENT: IContent = {
   },
   subheading: {
     content:
-    'Transform your marketing and product strategies with our comprehensive playbook.',
+      'Transform your marketing and product strategies with our comprehensive playbook.',
     className: 'max-w-2xl',
   },
   body: {
@@ -34,22 +34,22 @@ export const HOME_HERO_CONTENT: IContent = {
   bullets: [
     {
       icon: <Crosshair />,
-      body: 'Achieve higher conversion rates',
+      body: ['Achieve higher conversion rates'],
       className: 'text-xl',
     },
     {
       icon: <Users />,
-      body: 'Improved team alignment',
+      body: ['Improved team alignment'],
       className: 'text-xl',
     },
     {
       icon: <TrendingUp />,
-      body: 'Faster, data-driven results',
+      body: ['Faster, data-driven results'],
       className: 'text-xl',
     },
   ],
   ctas: [
     { label: 'UNLOCK PLAYBOOK RESULTS', variant: { size: '2xl' } },
-    { label: 'CONTACT US', variant: { size: '2xl', variant: 'ghost' } },
+    { label: 'LEARN MORE', variant: { size: '2xl', variant: 'ghost' } },
   ],
 };
