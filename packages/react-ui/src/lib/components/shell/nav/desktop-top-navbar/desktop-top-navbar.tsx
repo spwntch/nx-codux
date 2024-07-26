@@ -36,7 +36,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         ref={ref}
         {...props}
       >
-        <nav className="flex p-4 lg:p-8 items-center justify-between">
+        <nav className="flex p-4 lg:p-6 items-center justify-between">
           <Logo
             height={logoHeight || 36}
             className="cursor-pointer hidden lg:block"
@@ -51,7 +51,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           <div className="flex-1">
             <nav
               className={cn(
-                'hidden md:flex mx-10',
+                'hidden lg:flex mx-10',
                 navAlignment === 'start'
                   ? 'justify-start'
                   : navAlignment === 'end'
@@ -67,11 +67,11 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
               {!disableThemeToggle && <ThemeToggleButton />}
             </ButtonGroup>
           </div>
-          <div className="hidden md:block"></div>
+          <div className="hidden lg:block"></div>
           <div className="ml-2">
             {githubUrl && <GithubButton url={githubUrl} />}
           </div>
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <ButtonGroup>
               <MobileNavDrawer onLinkTo={onLinkTo} />
             </ButtonGroup>

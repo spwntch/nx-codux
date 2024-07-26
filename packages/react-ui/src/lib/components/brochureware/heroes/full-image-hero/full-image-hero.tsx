@@ -23,7 +23,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
       <div
         className={cn(
           'w-full isolate relative',
-          height ? `h-[${height}]` : 'h-[calc(100vh-72px)]',
+          height ? `h-[${height}]` : 'h-[calc(100vh-100px)]',
           className
         )}
         ref={ref}

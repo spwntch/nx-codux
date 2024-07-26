@@ -16,7 +16,7 @@ export const NavToolbarLink = ({
   return (
     <NavigationMenuItem className="cursor-pointer">
       <NavigationMenuLink
-        className={cn(navigationMenuTriggerStyle(), 'text-lg font-semibold')}
+        className={cn(navigationMenuTriggerStyle(), 'text-base font-semibold')}
         onSelect={() => onLinkTo(href)}
       >
         {label}

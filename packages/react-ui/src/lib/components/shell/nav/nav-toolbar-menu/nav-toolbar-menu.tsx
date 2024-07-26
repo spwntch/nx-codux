@@ -36,7 +36,7 @@ export const NavToolbarMenu = ({
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger
-        className={cn(navigationMenuTriggerStyle(), 'text-lg font-semibold')}
+        className={cn(navigationMenuTriggerStyle(), 'text-base font-semibold')}
       >
         {label}{' '}
       </NavigationMenuTrigger>
