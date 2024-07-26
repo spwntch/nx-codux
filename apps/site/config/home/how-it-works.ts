@@ -1,4 +1,6 @@
-export const HOW_IT_WORKS = {
+import { IContent } from "@spwntch/react-ui";
+
+export const HOW_IT_WORKS:IContent = {
   title: {
     content: 'How It Works',
     className: 'text-3xl font-bold text-center mt-10',
@@ -25,9 +27,9 @@ export const HOW_IT_WORKS = {
       className: 'text-lg mt-2',
     },
   ],
-  callToAction: {
-    message: 'Learn More About the ICP Playbook',
-    href: '/learn-more',
-    className: 'text-xl font-bold text-center mt-6 underline',
-  },
+  // callToAction: {
+  //   message: 'Learn More About the ICP Playbook',
+  //   href: '/learn-more',
+  //   className: 'text-xl font-bold text-center mt-6 underline',
+  // },
 };
