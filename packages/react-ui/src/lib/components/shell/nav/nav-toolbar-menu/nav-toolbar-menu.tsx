@@ -9,10 +9,12 @@ import {
 import { NavToolbarMenuLink } from '../nav-toolbar-menu-link/nav-toolbar-menu-link';
 
 interface ITopNavMenuProps extends INavMenu {
+  floating?: boolean;
   onLinkTo: (href: string) => void;
 }
 
 export const NavToolbarMenu = ({
+  floating,
   label,
   onLinkTo,
   children,
@@ -36,7 +38,11 @@ export const NavToolbarMenu = ({
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger
-        className={cn(navigationMenuTriggerStyle(), 'text-base font-semibold')}
+        className={cn(
+          navigationMenuTriggerStyle(),
+          'text-base font-semibold',
+          floating && 'bg-transparent text-white'
+        )}
       >
         {label}{' '}
       </NavigationMenuTrigger>

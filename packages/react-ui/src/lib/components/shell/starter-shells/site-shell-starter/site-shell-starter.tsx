@@ -5,6 +5,7 @@ import { DesktopTopNavbar } from '../../nav';
 
 export interface SiteShellProps {
   navbar: {
+    floating?: boolean;
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
     disableThemeToggle?: boolean;
@@ -22,39 +23,13 @@ export const SiteShellStarter = ({
   onNavbarLinkTo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
-  // const [scrollData, setScrollData] = useState({ y: 0, lastY: 0 });
-  // const [showNavbar, setShowNavbar] = useState(true);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollData((prev) => ({
-  //       y: window.scrollY,
-  //       lastY: prev.y,
-  //     }));
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
-  // useEffect(() => {
-  //   // console.log(scrollData);
-  //   if (scrollData.y > 500 || scrollData.y > scrollData.lastY) {
-  //     setShowNavbar(true);
-  //   } else {
-  //     setShowNavbar(false);
-  //   }
-  // }, [scrollData]);
-
   return (
     <div className="h-screen">
       <DesktopTopNavbar
+        floating={navbar.floating}
         className={cn(
-          // 'transition duration-500 ease-in-out',
-          // showNavbar && 'transform translate-y-[-100%]',
-          'bg-background',
-          navbar?.className,
+          navbar.floating ? 'bg-transparent absolute w-full' : 'bg-background',
+          navbar?.className
         )}
         navAlignment={navbar?.alignment}
         logoHeight={navbar?.logoHeight}
@@ -63,7 +38,7 @@ export const SiteShellStarter = ({
         onLinkTo={onNavbarLinkTo}
       />
 
-      <main >{children}</main>
+      <main>{children}</main>
       {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
     </div>
   );

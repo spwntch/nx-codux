@@ -1,7 +1,5 @@
-import { cn } from '../../../../utils';
-// import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
-// import { GithubButton } from '../../buttons';
+import { cn } from '../../../../utils';
 import { ButtonGroup, GithubButton } from '../../../components';
 import { Logo } from '../../brand';
 import { ThemeToggleButton } from '../../buttons';
@@ -9,6 +7,7 @@ import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
+  floating?: boolean;
   className?: string;
   logoHeight?: number;
   navAlignment?: 'start' | 'center' | 'end';
@@ -20,6 +19,7 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
 export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
   (
     {
+      floating,
       className,
       logoHeight,
       navAlignment,
@@ -59,7 +59,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
                   : 'justify-center'
               )}
             >
-              <NavToolbar onLinkTo={onLinkTo} />
+              <NavToolbar floating={floating} onLinkTo={onLinkTo} />
             </nav>
           </div>
           <div>

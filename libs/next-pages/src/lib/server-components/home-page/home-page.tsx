@@ -7,7 +7,7 @@ import {
   LogoCarousel,
 } from '@spwntch/react-ui';
 
-import { Benefits, Faqs, ProductSummary, Testimonials, } from '../../client-components';
+import { Benefits, Faqs, ProductSummary } from '../../client-components';
 
 export interface HomePageProps {
   hero: {
@@ -36,9 +36,8 @@ const HomePage = ({
       <FullImageHero
         image={hero.image}
         innerContent={hero.content}
-        // hAlign="left"
-        // vAlign="top"
         className="text-white"
+        vAlign='bottom'
       />
 
       <LogoCarousel logos={clientLogos} className="bg-white" />

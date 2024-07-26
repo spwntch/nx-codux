@@ -4,7 +4,7 @@ export const primaryNav: INavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'The Playbook', href: '/playbook' },
-  { label: 'Pricing', href: '/pricing' },
+  // { label: 'Pricing', href: '/pricing' },
   {
     label: 'Resources',
     children: [

@@ -1,5 +1,5 @@
 import { SiteShell } from '@/next-shell';
-import { brand } from '../config';
+import { brand, primaryNav } from '../config';
 import './global.css';
 
 export const metadata = {
@@ -13,18 +13,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const navbar = {
+    floating:true,
     logoHeight: 52,
-    // disableThemeToggle: true,
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body >
-        <SiteShell
-          brand={brand}
-          // navItems={primaryNav}
-          navbar={navbar}
-        >
+      <body>
+        <SiteShell brand={brand} navItems={primaryNav} navbar={navbar}>
           {children}
         </SiteShell>
       </body>

@@ -2,7 +2,7 @@ import { IBrand } from '@spwntch/react-ui';
 
 export const brand: IBrand = {
   logoUrl: {
-    light: '/brand/logo-light.webp',
+    light: '/brand/logo-dark.webp',
     dark: '/brand/logo-dark.webp',
   },
   markUrl: {

@@ -6,6 +6,7 @@ import { Button } from '../../../shadcn-ui';
 import { ContentContainer, ImageContainer } from '../../containers';
 
 export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
+  navbarHeight?: number;
   image: IImage;
   innerContent: IContent;
   height?: string;
@@ -16,14 +17,27 @@ export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
 
 export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
   (
-    { image, innerContent, height, hAlign, vAlign, className, ...props },
+    {
+      navbarHeight,
+      image,
+      innerContent,
+      height,
+      hAlign,
+      vAlign,
+      className,
+      ...props
+    },
     ref
   ) => {
     return (
       <div
         className={cn(
           'w-full isolate relative',
-          height ? `h-[${height}]` : 'h-[calc(100vh-100px)]',
+          height
+            ? `h-[${height}]`
+            : navbarHeight
+            ? `h-[calc(100vh-${navbarHeight}px)]`
+            : 'h-screen',
           className
         )}
         ref={ref}
@@ -38,10 +52,9 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             className={className}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup stacked>
+              <ButtonGroup>
                 {innerContent.ctas.map((cta, index) => (
                   <Button
-                  
                     key={index}
                     size={cta.variant?.size || 'default'}
                     variant={cta.variant?.variant || 'default'}

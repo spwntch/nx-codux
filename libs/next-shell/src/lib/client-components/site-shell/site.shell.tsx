@@ -8,6 +8,7 @@ import { PropsWithChildren } from 'react';
 
 export interface SiteShellProps extends IShellProviderProps {
   navbar: {
+    floating?: boolean;
     classNames?: string;
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
