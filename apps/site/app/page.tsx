@@ -5,6 +5,7 @@ import {
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   HOW_IT_WORKS,
+  TELL_ME_MORE,
   TESTIMONIALS,
   THE_ICP_PLAYBOOK,
 } from '../config';
@@ -19,6 +20,7 @@ export default function Index() {
       }}
       clientLogos={CLIENT_LOGOS}
       productSummary={THE_ICP_PLAYBOOK}
+      tellMeMore={TELL_ME_MORE}
       benefits={BENEFITS}
       howItWorks={HOW_IT_WORKS}
       faqs={FAQ}

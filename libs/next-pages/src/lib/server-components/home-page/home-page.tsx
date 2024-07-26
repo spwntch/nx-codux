@@ -7,7 +7,12 @@ import {
   LogoCarousel,
 } from '@spwntch/react-ui';
 
-import { Benefits, Faqs, ProductSummary } from '../../client-components';
+import {
+  Benefits,
+  Faqs,
+  ProductSummary,
+  TellMeMore,
+} from '../../client-components';
 
 export interface HomePageProps {
   hero: {
@@ -16,6 +21,7 @@ export interface HomePageProps {
   };
   clientLogos: string[];
   productSummary: IContent;
+  tellMeMore: IContent;
   howItWorks: IContent;
   benefits: IContent;
   faqs: IContent;
@@ -26,6 +32,7 @@ const HomePage = ({
   hero,
   clientLogos,
   productSummary,
+  tellMeMore,
   howItWorks,
   benefits,
   faqs,
@@ -37,12 +44,14 @@ const HomePage = ({
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
-        vAlign='bottom'
+        vAlign="bottom"
+        hAlign="left"
       />
 
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div className="px-3 md:container">
         <ProductSummary content={productSummary} />
+        <TellMeMore content={tellMeMore} />
         {/* <HowItWorks content={howItWorks} /> */}
         <Benefits content={benefits} />
         <Faqs content={faqs} />
