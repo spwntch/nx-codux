@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { IImage } from './image';
 import { ICtaButton } from './cta';
+import { IImage } from './image';
 
 // If there is no icon, image, or emoji, the bullet will be a simple list-disc.
 export interface IBullet {
@@ -8,9 +8,9 @@ export interface IBullet {
   image?: IImage; // renders a Avatar for the bullet
   emoji?: string; // Renders a span with the emoji, eg "👋"
   numbered?: boolean; // display numbers instead of bullets
-  heading?: string | TextWithClassName; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
-  body: string[] | ParapgraphsWithClassName; // the main bullet text.
-  bullets?: IBullet[]
+  heading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
+  body: string[]; // the main bullet text.
+  bullets?: IBullet[];
   className?: string;
 }
 

@@ -48,7 +48,7 @@ export const SiteShellStarter = ({
   // }, [scrollData]);
 
   return (
-    <div className="h-screen container">
+    <div className="h-screen">
       <DesktopTopNavbar
         className={cn(
           // 'transition duration-500 ease-in-out',
@@ -62,7 +62,7 @@ export const SiteShellStarter = ({
         onLinkTo={onNavbarLinkTo}
       />
 
-      <main className="">{children}</main>
+      <main >{children}</main>
       {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
     </div>
   );

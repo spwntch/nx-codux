@@ -1,6 +1,6 @@
 'use client';
 
-import { IContent, IImage } from '@spwntch/react-ui';
+import { FullImageHero, IContent, IImage, LogoCarousel } from '@spwntch/react-ui';
 
 import {
   Benefits,
@@ -32,19 +32,22 @@ const HomePage = ({
 }: HomePageProps) => {
   return (
     <>
-      {/* <FullImageHero
+      <FullImageHero
         image={hero.image}
         innerContent={hero.content}
-        hAlign="left"
-        vAlign="bottom"
+        // hAlign="left"
+        // vAlign="top"
         className="text-white"
       />
-      <LogoCarousel logos={clientLogos} className="bg-white" /> */}
+
+      <LogoCarousel logos={clientLogos} className="bg-white" />
+      <div className="px-3 md:container">
       <ProductSummary content={productSummary} />
       {/* <HowItWorks content={howItWorks} /> */}
       <Benefits content={benefits} />
       {/* <HowItWorks content={testimonials} /> */}
       {/* <HowItWorks content={caseStudies} /> */}
+      </div>
     </>
   );
 };

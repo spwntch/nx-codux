@@ -38,9 +38,10 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             className={className}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup>
+              <ButtonGroup stacked>
                 {innerContent.ctas.map((cta, index) => (
                   <Button
+                  
                     key={index}
                     size={cta.variant?.size || 'default'}
                     variant={cta.variant?.variant || 'default'}
