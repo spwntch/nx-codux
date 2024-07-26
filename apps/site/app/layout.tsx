@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const navbar = {
-    logoHeight: 40,
+    logoHeight: 52,
     // disableThemeToggle: true,
   };
 

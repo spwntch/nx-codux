@@ -1,7 +1,6 @@
 import { HomePage } from '@/next-pages/server';
 import {
   BENEFITS,
-  CASE_STUDIES,
   CLIENT_LOGOS,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
@@ -24,7 +23,6 @@ export default function Index() {
       howItWorks={HOW_IT_WORKS}
       faqs={FAQ}
       testimonials={TESTIMONIALS}
-      caseStudies={CASE_STUDIES}
     />
   );
 }

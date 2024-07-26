@@ -18,7 +18,7 @@ const Faqs = ({ content }: BenefitsProps) => {
     body: content.body,
   };
   return (
-    <div className="flex-col pt-16">
+    <div className="flex-col py-12 px-6">
       <ContentContainer innerContent={header} />
       {content.bullets && <FaqAccordion faqs={content.bullets} />}
     </div>

@@ -7,7 +7,7 @@ import {
   LogoCarousel,
 } from '@spwntch/react-ui';
 
-import { Benefits, Faqs, HowItWorks, ProductSummary } from '../../client-components';
+import { Benefits, Faqs, ProductSummary, Testimonials, } from '../../client-components';
 
 export interface HomePageProps {
   hero: {
@@ -19,8 +19,7 @@ export interface HomePageProps {
   howItWorks: IContent;
   benefits: IContent;
   faqs: IContent;
-  testimonials: IContent[];
-  caseStudies: IContent[];
+  testimonials: IContent;
 }
 
 const HomePage = ({
@@ -31,7 +30,6 @@ const HomePage = ({
   benefits,
   faqs,
   testimonials,
-  caseStudies,
 }: HomePageProps) => {
   return (
     <>
@@ -49,8 +47,8 @@ const HomePage = ({
         {/* <HowItWorks content={howItWorks} /> */}
         <Benefits content={benefits} />
         <Faqs content={faqs} />
+        {/* <Testimonials content={testimonials} /> */}
         {/* <HowItWorks content={testimonials} /> */}
-        {/* <HowItWorks content={caseStudies} /> */}
       </div>
     </>
   );

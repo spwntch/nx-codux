@@ -9,7 +9,7 @@ const AlternatingSplitBenefits = ({
   benefits,
 }: IAlternatingSplitBenefitsProps) => {
   return (
-    <div className=" space-y-16">
+    <div className=" space-y-16 ">
       {benefits.map((benefit, benefitIdx) => (
         <div
           key={benefit.heading}
@@ -26,7 +26,7 @@ const AlternatingSplitBenefits = ({
             <h3 className="text-lg font-medium text-foreground">
               {benefit.heading}
             </h3>
-            <p className="mt-2 text-sm text-gray-500">{benefit.body}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{benefit.body}</p>
           </div>
           <div
             className={cn(
@@ -36,7 +36,7 @@ const AlternatingSplitBenefits = ({
               'flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8'
             )}
           >
-            <div className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100">
+            <div className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg ">
               <img
                 alt={benefit.image?.alt || benefit.heading}
                 src={benefit.image?.src}

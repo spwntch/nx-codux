@@ -12,7 +12,7 @@ const Benefits = ({ content }: BenefitsProps) => {
     subheading: content.subheading,
     body: content.body,
   };
-  return <div className="flex-col pt-16">
+  return <div className="flex-col py-12 px-6 bg-muted">
     <ContentContainer innerContent={header}  />
     {content.bullets && <AlternatingSplitBenefits benefits={content.bullets} />}
   </div>;
