@@ -12,12 +12,14 @@ export const HOME_HERO_CONTENT: IContent = {
   //   className: "mx-auto text-xl",
   //   href: "#"
   // },
-  heading: {
+  title: {
     content: 'Unlock Your Ideal Customers with the ICP Playbook',
+    className: 'max-w-3xl',
   },
   subheading: {
     content:
-      'Transform your marketing and product strategies with our comprehensive playbook.',
+    'Transform your marketing and product strategies with our comprehensive playbook.',
+    className: 'max-w-2xl',
   },
   body: {
     content: [

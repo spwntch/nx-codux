@@ -3,9 +3,10 @@ import { IContent } from '../../../../types';
 import {
   cn,
   getBodyContentAndClassName,
-  getSubTitleContentAndClassName,
+  getSubheadingContentAndClassName,
   getTagsContentAndClassName,
   getTitleContentAndClassName,
+  getHeadingContentAndClassName,
 } from '../../../../utils';
 import { Announcement } from '../../../components';
 import { BasicSectionHeader } from '../../headers';
@@ -41,10 +42,13 @@ export const ContentContainer = forwardRef<
     const alignmentClass = `${vAlign}-${hAlign}`;
 
     const { titleContent, titleClassName } = getTitleContentAndClassName(
+      innerContent.title
+    );
+    const { headingContent, headingClassName } = getHeadingContentAndClassName(
       innerContent.heading
     );
-    const { subTitleContent, subTitleClassName } =
-      getSubTitleContentAndClassName(innerContent.subheading);
+    const { subheadingContent, subheadingClassName } =
+      getSubheadingContentAndClassName(innerContent.subheading);
     const { bodyContent, bodyClassName } = getBodyContentAndClassName(
       innerContent.body
     );
@@ -92,8 +96,10 @@ export const ContentContainer = forwardRef<
           hero={hero}
           titleContent={titleContent}
           titleClassName={titleClassName}
-          subTitleContent={subTitleContent}
-          subTitleClassName={subTitleClassName}
+          headingContent={headingContent}
+          headingClassName={headingClassName}
+          subheadingContent={subheadingContent}
+          subheadingClassName={subheadingClassName}
           tagsContent={tagsContent}
           tagsClassName={tagsClassName}
           alignment={hAlign}

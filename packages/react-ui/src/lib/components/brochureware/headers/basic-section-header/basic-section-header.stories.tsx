@@ -42,19 +42,19 @@ const meta: Meta<typeof BasicSectionHeader> = {
     },
   },
   argTypes: {
-    titleContent: {
+    headingContent: {
       description: 'The main title text',
       control: 'text',
     },
-    titleClassName: {
+    headingClassName: {
       description: 'Additional class name(s) for the title',
       control: 'text',
     },
-    subTitleContent: {
+    subheadingContent: {
       description: 'The subtitle text',
       control: 'text',
     },
-    subTitleClassName: {
+    subheadingClassName: {
       description: 'Additional class name(s) for the subtitle',
       control: 'text',
     },
@@ -81,8 +81,8 @@ type Story = StoryObj<typeof BasicSectionHeader>;
 
 export const Basic: Story = {
   args: {
-    titleContent: 'Spawntech Company Overview',
-    subTitleContent:
+    headingContent: 'Spawntech Company Overview',
+    subheadingContent:
       'Pioneering a transformative approach to software development',
     alignment: 'center',
   },
@@ -92,8 +92,8 @@ export const Basic: Story = {
 export const HeroHeader: Story = {
   args: {
     hero: true,
-    titleContent: 'Spawntech Company Overview',
-    subTitleContent:
+    headingContent: 'Spawntech Company Overview',
+    subheadingContent:
       'Pioneering a transformative approach to software development',
     alignment: 'center',
   },
@@ -102,8 +102,8 @@ export const HeroHeader: Story = {
 
 export const WithTags: Story = {
   args: {
-    titleContent: 'Spawntech Company Overview',
-    subTitleContent:
+    headingContent: 'Spawntech Company Overview',
+    subheadingContent:
       'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'center',
@@ -113,8 +113,8 @@ export const WithTags: Story = {
 
 export const LeftAligned: Story = {
   args: {
-    titleContent: 'Spawntech Company Overview',
-    subTitleContent:
+    headingContent: 'Spawntech Company Overview',
+    subheadingContent:
       'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'left',
@@ -124,8 +124,8 @@ export const LeftAligned: Story = {
 
 export const RightAligned: Story = {
   args: {
-    titleContent: 'Spawntech Company Overview',
-    subTitleContent:
+    headingContent: 'Spawntech Company Overview',
+    subheadingContent:
       'Pioneering a transformative approach to software development',
     tagsContent: ['DevOps', 'UX/UI', 'Lean Innovation', 'Node.js'],
     alignment: 'right',
