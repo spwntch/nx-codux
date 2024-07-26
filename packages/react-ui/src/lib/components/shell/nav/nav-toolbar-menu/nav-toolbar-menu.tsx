@@ -1,8 +1,10 @@
+import { cn } from '../../../../utils';
 import { INavLink, INavMenu } from '../../../../types';
 import {
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from '../../../shadcn-ui';
 import { NavToolbarMenuLink } from '../nav-toolbar-menu-link/nav-toolbar-menu-link';
 
@@ -33,9 +35,13 @@ export const NavToolbarMenu = ({
 
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger>{label} </NavigationMenuTrigger>
+      <NavigationMenuTrigger
+        className={cn(navigationMenuTriggerStyle(), 'text-lg font-semibold')}
+      >
+        {label}{' '}
+      </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+        <ul className="flex flex-col w-[320px] gap-3 p-4">
           {children?.map((item) => pickMenuItem(item))}
         </ul>
       </NavigationMenuContent>

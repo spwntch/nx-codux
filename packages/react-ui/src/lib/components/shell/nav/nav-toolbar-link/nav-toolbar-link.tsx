@@ -1,3 +1,4 @@
+import { cn } from '../../../../utils';
 import { INavLink } from '../../../../types';
 import {
   NavigationMenuItem,
@@ -15,7 +16,7 @@ export const NavToolbarLink = ({
   return (
     <NavigationMenuItem className="cursor-pointer">
       <NavigationMenuLink
-        className={navigationMenuTriggerStyle()}
+        className={cn(navigationMenuTriggerStyle(), 'text-lg font-semibold')}
         onSelect={() => onLinkTo(href)}
       >
         {label}

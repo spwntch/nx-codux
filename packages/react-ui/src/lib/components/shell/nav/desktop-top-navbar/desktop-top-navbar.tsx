@@ -36,7 +36,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         ref={ref}
         {...props}
       >
-        <div className="flex p-2 pb-4 items-center">
+        <nav className="flex p-4 lg:p-8 items-center justify-between">
           <Logo
             height={logoHeight || 36}
             className="cursor-pointer hidden lg:block"
@@ -76,7 +76,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
               <MobileNavDrawer onLinkTo={onLinkTo} />
             </ButtonGroup>
           </div>
-        </div>
+        </nav>
       </header>
     );
   }
