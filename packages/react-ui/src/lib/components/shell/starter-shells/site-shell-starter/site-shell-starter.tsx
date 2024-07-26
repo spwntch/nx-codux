@@ -22,37 +22,38 @@ export const SiteShellStarter = ({
   onNavbarLinkTo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
-  const [scrollData, setScrollData] = useState({ y: 0, lastY: 0 });
-  const [showNavbar, setShowNavbar] = useState(true);
+  // const [scrollData, setScrollData] = useState({ y: 0, lastY: 0 });
+  // const [showNavbar, setShowNavbar] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollData((prev) => ({
-        y: window.scrollY,
-        lastY: prev.y,
-      }));
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollData((prev) => ({
+  //       y: window.scrollY,
+  //       lastY: prev.y,
+  //     }));
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
-  useEffect(() => {
-    // console.log(scrollData);
-    if (scrollData.y > 500 || scrollData.y > scrollData.lastY) {
-      setShowNavbar(true);
-    } else {
-      setShowNavbar(false);
-    }
-  }, [scrollData]);
+  // useEffect(() => {
+  //   // console.log(scrollData);
+  //   if (scrollData.y > 500 || scrollData.y > scrollData.lastY) {
+  //     setShowNavbar(true);
+  //   } else {
+  //     setShowNavbar(false);
+  //   }
+  // }, [scrollData]);
 
   return (
-    <div className="h-screen ">
+    <div className="h-screen container">
       <DesktopTopNavbar
         className={cn(
-          'transition duration-500 ease-in-out',
-          showNavbar && 'transform translate-y-[-100%]',
+          // 'transition duration-500 ease-in-out',
+          // showNavbar && 'transform translate-y-[-100%]',
+          'bg-background',
           navbar?.className,
         )}
         navAlignment={navbar?.alignment}

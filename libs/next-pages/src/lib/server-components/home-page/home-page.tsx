@@ -4,7 +4,8 @@ import { IContent, IImage } from '@spwntch/react-ui';
 
 import { FullImageHero } from '@spwntch/react-ui';
 import {
-  LogoCarousel
+  LogoCarousel,
+  ProductSummary
 } from '../../client-components';
 
 export interface HomePageProps {
@@ -31,10 +32,10 @@ const HomePage = ({
 }: HomePageProps) => {
   return (
     <>
-      <FullImageHero image={hero.image} innerContent={hero.content} hAlign='left' vAlign="bottom"/>
+      <FullImageHero image={hero.image} innerContent={hero.content} hAlign='left' vAlign="bottom" className='text-white'/>
       {/* <Hero image={hero.image} content={hero.content} /> */}
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      {/* <ProductSummary content={productSummary} /> */}
+      <ProductSummary content={productSummary} />
       {/* <HowItWorks content={howItWorks} /> */}
       {/* <Benefits benefits={benefits} /> */}
       {/* <HowItWorks content={testimonials} /> */}
