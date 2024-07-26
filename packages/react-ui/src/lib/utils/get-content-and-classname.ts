@@ -4,7 +4,7 @@ import {
   ParapgraphsWithClassName,
 } from '../types';
 
-export const getTitleContentAndClassName = (title: IContent['title']) => {
+export const getTitleContentAndClassName = (title: IContent['heading']) => {
   const titleContent =
     (title as TextWithClassName)?.content || (title as string);
   const titleClassName = (title as TextWithClassName)?.className || '';
@@ -12,7 +12,7 @@ export const getTitleContentAndClassName = (title: IContent['title']) => {
 };
 
 export const getSubTitleContentAndClassName = (
-  subTitle: IContent['subTitle']
+  subTitle: IContent['subheading']
 ) => {
   const subTitleContent =
     (subTitle as TextWithClassName)?.content || (subTitle as string);

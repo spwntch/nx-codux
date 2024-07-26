@@ -4,7 +4,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/improved-targeting.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Improved Targeting',
         className: 'text-2xl font-bold text-center mt-10',
       },
@@ -29,7 +29,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/increased-conversions.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Increased Conversions',
         className: 'text-2xl font-bold text-center mt-10',
       },
@@ -54,7 +54,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/team-alignment.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Team Alignment',
         className: 'text-2xl font-bold text-center mt-10',
       },
@@ -79,7 +79,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/professional-growth.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Professional Growth',
         className: 'text-2xl font-bold text-center mt-10',
       },
@@ -104,7 +104,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/enhanced-cx-ux.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Enhanced CX/UX',
         className: 'text-2xl font-bold text-center mt-10',
       },
@@ -129,7 +129,7 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
   {
     image: { src: 'images/data-driven-decision-making.webp' },
     content: {
-      title: {
+      heading: {
         content: 'Data-Driven Decision Making',
         className: 'text-2xl font-bold text-center mt-10',
       },

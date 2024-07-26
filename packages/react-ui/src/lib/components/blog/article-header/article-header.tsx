@@ -1,5 +1,5 @@
 import { ArrowBigLeft } from 'lucide-react';
-import { ImageContentSection } from '../../components';
+// import { ImageContentSection } from '../../components';
 import { Button } from '../../shadcn-ui';
 import { IMdxDocMeta } from '../../../types';
 import { cn } from '../../../utils';
@@ -33,7 +33,7 @@ export const ArticleHeader = ({
           <span>{backTo.label || 'Back'}</span>
         </Button>
       )}
-      {coverImage && (
+      {/* {coverImage && (
         <ImageContentSection
           image={{ src: coverImage, darken: true }}
           innerContent={{
@@ -46,7 +46,7 @@ export const ArticleHeader = ({
           vAlign={vAlign}
           height={300}
         />
-      )}
+      )} */}
     </div>
   );
 };

@@ -41,10 +41,10 @@ export const ContentContainer = forwardRef<
     const alignmentClass = `${vAlign}-${hAlign}`;
 
     const { titleContent, titleClassName } = getTitleContentAndClassName(
-      innerContent.title
+      innerContent.heading
     );
     const { subTitleContent, subTitleClassName } =
-      getSubTitleContentAndClassName(innerContent.subTitle);
+      getSubTitleContentAndClassName(innerContent.subheading);
     const { bodyContent, bodyClassName } = getBodyContentAndClassName(
       innerContent.body
     );

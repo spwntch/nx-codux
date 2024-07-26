@@ -12,10 +12,10 @@ export const HOME_HERO_CONTENT: IContent = {
   //   className: "mx-auto text-xl",
   //   href: "#"
   // },
-  title: {
+  heading: {
     content: 'Unlock Your Ideal Customers with the ICP Playbook',
   },
-  subTitle: {
+  subheading: {
     content:
       'Transform your marketing and product strategies with our comprehensive playbook.',
   },
@@ -27,7 +27,7 @@ export const HOME_HERO_CONTENT: IContent = {
       // "Perhaps you're overwhelmed by the vast amounts of data available but unsure how to leverage it effectively?",
       'With the ICP Playbook, you can achieve higher conversion rates, improve team alignment, and see faster, data-driven results. Our comprehensive playbook provides the tools and strategies you need to transform your marketing efforts and reach your ideal customers efficiently.',
     ],
-    className: 'max-w-3xl'
+    className: 'max-w-3xl',
   },
   bullets: [
     {

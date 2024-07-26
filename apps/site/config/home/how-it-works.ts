@@ -1,7 +1,7 @@
-import { IContent } from "@spwntch/react-ui";
+import { IContent } from '@spwntch/react-ui';
 
-export const HOW_IT_WORKS:IContent = {
-  title: {
+export const HOW_IT_WORKS: IContent = {
+  heading: {
     content: 'How It Works',
     className: 'text-3xl font-bold text-center mt-10',
   },

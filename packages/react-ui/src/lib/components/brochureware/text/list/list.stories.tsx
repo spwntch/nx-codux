@@ -159,12 +159,12 @@ export const LargeEmojiBullets: Story = {
     bullets: [
       {
         emoji: '🌟',
-        title: 'Star Title',
+        heading: 'Star Title',
         body: 'This is the body of the star bullet',
       },
       {
         emoji: '🔥',
-        title: 'Fire Title',
+        heading: 'Fire Title',
         body: 'This is the body of the fire bullet',
       },
     ],

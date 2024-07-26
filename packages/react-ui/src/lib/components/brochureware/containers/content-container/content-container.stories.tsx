@@ -70,25 +70,25 @@ const innerContent: IContent = {
     message: 'Spawntech is transforming software development',
     href: '/news',
   },
-  title: 'Spawntech Company Overview',
-  subTitle: 'Pioneering a transformative approach to software development',
+  heading: 'Spawntech Company Overview',
+  subheading: 'Pioneering a transformative approach to software development',
   body: [
     'Spawntech pioneers transformative software development, blending advanced DevOps, precise UX implementation, and customized development with reusable packages. Our approach integrates the latest technologies to ensure robust and scalable solutions that meet the evolving needs of our clients. By utilizing a comprehensive library of reusable packages, we can accelerate the development process and maintain high standards of quality and performance.',
   ],
   bullets: [
     {
       emoji: '🚀',
-      title: 'Custom Software Development',
+      heading: 'Custom Software Development',
       body: 'Combining lean UX philosophies with agile and innovative methodologies.',
     },
     {
       emoji: '⭐',
-      title: 'DevOps and Lean CI/CD',
+      heading: 'DevOps and Lean CI/CD',
       body: 'Implementing advanced DevOps practices to streamline development and reduce time-to-market.',
     },
     {
       emoji: '🔧',
-      title: 'Technical Excellence',
+      heading: 'Technical Excellence',
       body: 'Ensuring high standards of quality and performance through continuous improvement.',
     },
   ],

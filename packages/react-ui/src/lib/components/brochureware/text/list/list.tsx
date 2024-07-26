@@ -33,7 +33,7 @@ export const List: React.FC<IBulletsProps> = ({
         {list.emoji && (
           <div
             className={cn('flex-shrink-0', {
-              'text-3xl': list.title,
+              'text-3xl': list.heading,
             })}
           >
             <span>{list.emoji}</span>
@@ -46,7 +46,7 @@ export const List: React.FC<IBulletsProps> = ({
         )}
         {!list.icon && !list.image && !list.emoji && !numbered && <Dot />}
         <div className="flex-grow">
-          {list.title && <div className="font-bold">{list.title}</div>}
+          {list.heading && <div className="font-bold">{list.heading}</div>}
           <div>{list.body}</div>
         </div>
       </li>
