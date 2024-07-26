@@ -1,9 +1,23 @@
-import { IContent, IImage } from '@spwntch/react-ui';
+import { IContent } from '@spwntch/react-ui';
 
-export const BENEFITS: { image: IImage; content: IContent }[] = [
-  {
-    image: { src: 'images/improved-targeting.webp' },
-    content: {
+export const BENEFITS: IContent = {
+  heading: {
+    content: 'Key Benefits of the ICP Playbook',
+    // className: 'text-3xl font-bold text-center mt-10',
+  },
+  subheading: {
+    content: 'Maximize Your Marketing and Product Effectiveness',
+    // className: 'text-xl text-center mt-4',
+  },
+  body: {
+    content: [
+      'Discover how the ICP Playbook can transform your business by enhancing targeting, boosting conversions, aligning teams, and more. Each feature is designed to deliver actionable insights and strategies, ensuring you reach your goals efficiently and effectively.',
+    ],
+    className: 'text-lg text-center max-w-4xl',
+  },
+  bullets: [
+    {
+      image: { src: 'images/improved-targeting.webp' },
       heading: {
         content: 'Improved Targeting',
         className: 'text-2xl font-bold text-center mt-10',
@@ -16,19 +30,17 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Enhanced precision in targeting efforts.',
+          body: ['Enhanced precision in targeting efforts.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'Reduce wasted marketing spend.',
+          body: ['Reduce wasted marketing spend.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-  {
-    image: { src: 'images/increased-conversions.webp' },
-    content: {
+    {
+      image: { src: 'images/increased-conversions.webp' },
       heading: {
         content: 'Increased Conversions',
         className: 'text-2xl font-bold text-center mt-10',
@@ -41,19 +53,17 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Higher lead quality.',
+          body: ['Higher lead quality.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'Improved conversion rates.',
+          body: ['Improved conversion rates.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-  {
-    image: { src: 'images/team-alignment.webp' },
-    content: {
+    {
+      image: { src: 'images/team-alignment.webp' },
       heading: {
         content: 'Team Alignment',
         className: 'text-2xl font-bold text-center mt-10',
@@ -66,19 +76,17 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Unified strategy for all teams.',
+          body: ['Unified strategy for all teams.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'Improved collaboration and efficiency.',
+          body: ['Improved collaboration and efficiency.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-  {
-    image: { src: 'images/professional-growth.webp' },
-    content: {
+    {
+      image: { src: 'images/professional-growth.webp' },
       heading: {
         content: 'Professional Growth',
         className: 'text-2xl font-bold text-center mt-10',
@@ -91,19 +99,17 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Access to the latest strategies.',
+          body: ['Access to the latest strategies.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'Enhance your professional skills.',
+          body: ['Enhance your professional skills.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-  {
-    image: { src: 'images/enhanced-cx-ux.webp' },
-    content: {
+    {
+      image: { src: 'images/enhanced-cx-ux.webp' },
       heading: {
         content: 'Enhanced CX/UX',
         className: 'text-2xl font-bold text-center mt-10',
@@ -116,19 +122,17 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Deeper customer insights.',
+          body: ['Deeper customer insights.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'More personalized experiences.',
+          body: ['More personalized experiences.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-  {
-    image: { src: 'images/data-driven-decision-making.webp' },
-    content: {
+    {
+      image: { src: 'images/data-driven-decision-making.webp' },
       heading: {
         content: 'Data-Driven Decision Making',
         className: 'text-2xl font-bold text-center mt-10',
@@ -141,14 +145,14 @@ export const BENEFITS: { image: IImage; content: IContent }[] = [
       },
       bullets: [
         {
-          body: 'Leverage analytics for better decisions.',
+          body: ['Leverage analytics for better decisions.'],
           className: 'flex items-center mt-2',
         },
         {
-          body: 'Refine customer profiles effectively.',
+          body: ['Refine customer profiles effectively.'],
           className: 'flex items-center mt-2',
         },
       ],
     },
-  },
-];
+  ],
+};
