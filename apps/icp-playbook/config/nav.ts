@@ -21,5 +21,5 @@ export const primaryNav: INavItem[] = [
     // },
     // ],
   },
-  { label: 'Get Started', href: '#get-started' },
+  // { label: 'Get Started', href: '#get-started' },
 ];

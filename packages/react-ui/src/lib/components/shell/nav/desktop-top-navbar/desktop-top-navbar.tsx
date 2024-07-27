@@ -6,6 +6,7 @@ import { Logo } from '../../brand';
 import { ThemeToggleButton } from '../../buttons';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
+import { Button } from '../../../shadcn-ui';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   floating?: boolean;
@@ -42,7 +43,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         <nav className="flex p-4 lg:p-6 items-center justify-between">
           <Logo
             height={logoHeight || 36}
-            className="cursor-pointer block lg:hidden"
+            className="cursor-pointer "
             onClick={() => onLinkTo('/')}
             variant={isMobile ? 'mark' : 'logo'}
           />
@@ -61,14 +62,14 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
             </nav>
           </div>
           <div>
+            <Button>GET STARTED</Button>
+          </div>
+          <div className="ml-8">
             <ButtonGroup>
               {!disableThemeToggle && <ThemeToggleButton />}
             </ButtonGroup>
           </div>
-          <div className="hidden lg:block"></div>
-          <div className="ml-2">
-            {githubUrl && <GithubButton url={githubUrl} />}
-          </div>
+          <div>{githubUrl && <GithubButton url={githubUrl} />}</div>
           <div className="block lg:hidden">
             <ButtonGroup>
               <MobileNavDrawer onLinkTo={onLinkTo} />
