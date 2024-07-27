@@ -49,15 +49,17 @@ const HomePage = ({
       />
 
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <div >
+      <div id="product">
         <ProductSummary content={productSummary} />
-        <TellMeMore content={tellMeMore} />
         {/* <HowItWorks content={howItWorks} /> */}
         <Benefits content={benefits} />
-        <Faqs content={faqs} />
-        {/* <Testimonials content={testimonials} /> */}
-        {/* <HowItWorks content={testimonials} /> */}
+        <TellMeMore content={tellMeMore} />
       </div>
+      <div id="faq">
+        <Faqs content={faqs} />
+      </div>
+      {/* <Testimonials content={testimonials} /> */}
+      {/* <HowItWorks content={testimonials} /> */}
     </>
   );
 };

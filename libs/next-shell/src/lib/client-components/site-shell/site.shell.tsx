@@ -1,8 +1,8 @@
 'use client';
 import {
-    IShellProviderProps,
-    ShellProvider,
-    SiteShellStarter
+  IShellProviderProps,
+  ShellProvider,
+  SiteShellStarter,
 } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
@@ -27,9 +27,9 @@ export const SiteShell = ({
   githubUrl,
   children,
 }: SiteShellProps & PropsWithChildren) => {
-  const router = useRouter()
+  const router = useRouter();
   const handleLinkTo = (url: string) => {
-    router.push(url)
+    router.push(url);
   };
 
   return (
