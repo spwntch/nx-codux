@@ -26,7 +26,6 @@ export const CardGrid = ({ cards }: ICardGridProps) => {
             {card.body.map((paragraph, pIndex) => (
               <p className='mb-6'>{paragraph}</p>
             ))}
-            {card.body}
           </CardContent>
         </Card>
       ))}
