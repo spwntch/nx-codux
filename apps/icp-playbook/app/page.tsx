@@ -2,6 +2,7 @@ import { HomePage } from '@/next-pages/server';
 import {
   BENEFITS,
   CLIENT_LOGOS,
+  DIVE_IN,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   HOW_IT_WORKS,
@@ -20,9 +21,10 @@ export default function Index() {
       }}
       clientLogos={CLIENT_LOGOS}
       productSummary={THE_ICP_PLAYBOOK}
-      tellMeMore={TELL_ME_MORE}
       benefits={BENEFITS}
+      tellMeMore={TELL_ME_MORE}
       howItWorks={HOW_IT_WORKS}
+      diveIn={DIVE_IN}
       faqs={FAQ}
       testimonials={TESTIMONIALS}
     />
