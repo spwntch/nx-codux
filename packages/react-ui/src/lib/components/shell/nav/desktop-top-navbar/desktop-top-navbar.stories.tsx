@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { withBrandProvider, withFullWidth, withNavProvider } from '../../../../storybook';
+import {
+  withBrandProvider,
+  withFullWidth,
+  withNavProvider,
+} from '../../../../storybook';
 import { DesktopTopNavbar } from './desktop-top-navbar';
 import { playBasic } from './desktop-top-navbar.specs';
 
@@ -54,7 +58,7 @@ const meta: Meta<typeof DesktopTopNavbar> = {
       description: 'URL for the GitHub button',
       control: 'text',
     },
-    classNames: {
+    className: {
       description: 'Additional class names for the component',
       control: 'text',
     },

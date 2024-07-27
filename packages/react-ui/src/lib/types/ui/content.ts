@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { ICtaButton } from './cta';
 import { IImage } from './image';
 
 // If there is no icon, image, or emoji, the bullet will be a simple list-disc.
@@ -7,8 +8,9 @@ export interface IBullet {
   image?: IImage; // renders a Avatar for the bullet
   emoji?: string; // Renders a span with the emoji, eg "👋"
   numbered?: boolean; // display numbers instead of bullets
-  title?: string; // An optional title for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the title and body are on separate lines
-  body: string; // the main bullet text.
+  heading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
+  body: string[]; // the main bullet text.
+  bullets?: IBullet[];
   className?: string;
 }
 
@@ -19,10 +21,12 @@ export type ParapgraphsWithClassName = {
 };
 
 export interface IContent {
-  announcement?: { message: string; className?: string; href: string }; // Time-related information
-  title?: string | TextWithClassName; // H2 tag
-  subTitle?: string | TextWithClassName; // H3 tag
+  announcement?: { message: string; className?: string; href: string }; // Time-related information or used for promotions
+  title?: string | TextWithClassName; // H1 tag, use for page heading
+  heading?: string | TextWithClassName; // H2 tag, use for section heading
+  subheading?: string | TextWithClassName; // H3 tag
   body?: string[] | ParapgraphsWithClassName; // Array of P tags
   bullets?: IBullet[];
   tags?: string[] | ParapgraphsWithClassName;
+  ctas?: ICtaButton[];
 }

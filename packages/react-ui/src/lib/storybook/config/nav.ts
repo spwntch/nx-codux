@@ -1,4 +1,4 @@
-import { INavItem } from "../../components/nav/nav-provider/nav-provider";
+import { INavItem } from '../../types';
 
 export const primaryNav: INavItem[] = [
   { label: 'Docs', href: '/docs' },

@@ -13,16 +13,16 @@
       "require": "./shadcn.js"
     },
     "./components": {
-      "import": "./ui.mjs",
-      "require": "./ui.js"
+      "import": "./components.mjs",
+      "require": "./components.js"
     },
     "./shell": {
       "import": "./shell.mjs",
       "require": "./shell.js"
     },
-    "./articles": {
-      "import": "./articles.mjs",
-      "require": "./articles.js"
+    "./blog": {
+      "import": "./blog.mjs",
+      "require": "./blog.js"
     },
     "./styles": {
       "default": "./style.css"

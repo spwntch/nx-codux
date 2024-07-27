@@ -17,8 +17,8 @@ export const RegularFooter = forwardRef<HTMLElement, IRegularFooterProps>(
         {...props}
       >
         <div className="mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-            <About />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+            <About className='md:col-span-2'/>
             <Contact />
             <Social />
           </div>

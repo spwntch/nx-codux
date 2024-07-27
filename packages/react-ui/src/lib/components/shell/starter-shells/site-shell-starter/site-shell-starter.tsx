@@ -1,13 +1,15 @@
 import { PropsWithChildren } from 'react';
+import { cn } from '../../../../utils';
 import { RegularFooter, UnderConstructionFooter } from '../../footer';
 import { DesktopTopNavbar } from '../../nav';
-import { cn } from '../../../../utils';
 
 export interface SiteShellProps {
   navbar: {
-    classNames?: string;
+    floating?: boolean;
     logoHeight?: number;
     alignment?: 'start' | 'center' | 'end';
+    disableThemeToggle?: boolean;
+    className?: string;
   };
   underContruction?: boolean;
   githubUrl?: string;
@@ -22,16 +24,21 @@ export const SiteShellStarter = ({
   children,
 }: SiteShellProps & PropsWithChildren) => {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen">
       <DesktopTopNavbar
-        classNames={cn(navbar?.classNames, 'bg-background')}
+        floating={navbar.floating}
+        className={cn(
+          navbar.floating ? 'bg-transparent absolute w-full' : 'bg-background',
+          navbar?.className
+        )}
         navAlignment={navbar?.alignment}
         logoHeight={navbar?.logoHeight}
+        disableThemeToggle={navbar?.disableThemeToggle}
         githubUrl={githubUrl}
         onLinkTo={onNavbarLinkTo}
       />
 
-      <main className="flex-1">{children}</main>
+      <main>{children}</main>
       {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
     </div>
   );

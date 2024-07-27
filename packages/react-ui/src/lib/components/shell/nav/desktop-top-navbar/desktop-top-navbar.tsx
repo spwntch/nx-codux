@@ -1,15 +1,14 @@
-import { cn } from '../../../../utils';
-// import { ButtonGroup } from '@spwntch/components';
 import React, { forwardRef } from 'react';
-// import { GithubButton } from '../../buttons';
-import { ButtonGroup } from '../../../ui';
+import { cn } from '../../../../utils';
+import { ButtonGroup, GithubButton } from '../../../components';
 import { Logo } from '../../brand';
-import { NavToolbar } from '../nav-toolbar/nav-toolbar';
-import { GithubButton, ThemeToggleButton } from '../../buttons';
+import { ThemeToggleButton } from '../../buttons';
 import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
+import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
-  classNames?: string;
+  floating?: boolean;
+  className?: string;
   logoHeight?: number;
   navAlignment?: 'start' | 'center' | 'end';
   disableThemeToggle?: boolean;
@@ -20,7 +19,8 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
 export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
   (
     {
-      classNames,
+      floating,
+      className,
       logoHeight,
       navAlignment,
       disableThemeToggle = false,
@@ -32,11 +32,11 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
   ) => {
     return (
       <header
-        className={cn('sticky top-0 z-50', classNames)}
+        className={cn('sticky top-0 z-50', className)}
         ref={ref}
         {...props}
       >
-        <div className="flex p-2 pb-4 items-center">
+        <nav className="flex p-4 lg:p-6 items-center justify-between">
           <Logo
             height={logoHeight || 36}
             className="cursor-pointer hidden lg:block"
@@ -51,7 +51,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           <div className="flex-1">
             <nav
               className={cn(
-                'hidden md:flex mx-10',
+                'hidden lg:flex mx-10',
                 navAlignment === 'start'
                   ? 'justify-start'
                   : navAlignment === 'end'
@@ -59,7 +59,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
                   : 'justify-center'
               )}
             >
-              <NavToolbar onLinkTo={onLinkTo} />
+              <NavToolbar floating={floating} onLinkTo={onLinkTo} />
             </nav>
           </div>
           <div>
@@ -67,16 +67,16 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
               {!disableThemeToggle && <ThemeToggleButton />}
             </ButtonGroup>
           </div>
-          <div className="hidden md:block"></div>
+          <div className="hidden lg:block"></div>
           <div className="ml-2">
             {githubUrl && <GithubButton url={githubUrl} />}
           </div>
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <ButtonGroup>
               <MobileNavDrawer onLinkTo={onLinkTo} />
             </ButtonGroup>
           </div>
-        </div>
+        </nav>
       </header>
     );
   }

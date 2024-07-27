@@ -30,9 +30,9 @@ export default defineConfig({
       entry: {
         index: 'src/index.ts',
         shadcn: 'src/lib/components/shadcn-ui/index.ts',
-        components: 'src/lib/components/ui/index.ts',
+        components: 'src/lib/components/components/index.ts',
         shell: 'src/lib/components/shell/index.ts',
-        articles: 'src/lib/components/articles/index.ts',
+        blog: 'src/lib/components/blog/index.ts',
         utils: 'src/lib/utils/index.ts',
       },
       name: 'react-ui',

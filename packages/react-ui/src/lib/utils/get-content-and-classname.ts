@@ -10,14 +10,21 @@ export const getTitleContentAndClassName = (title: IContent['title']) => {
   const titleClassName = (title as TextWithClassName)?.className || '';
   return { titleContent, titleClassName };
 };
+export const getHeadingContentAndClassName = (heading: IContent['heading']) => {
+  const headingContent =
+    (heading as TextWithClassName)?.content || (heading as string);
+  const headingClassName = (heading as TextWithClassName)?.className || '';
+  return { headingContent, headingClassName };
+};
 
-export const getSubTitleContentAndClassName = (
-  subTitle: IContent['subTitle']
+export const getSubheadingContentAndClassName = (
+  subheading: IContent['subheading']
 ) => {
-  const subTitleContent =
-    (subTitle as TextWithClassName)?.content || (subTitle as string);
-  const subTitleClassName = (subTitle as TextWithClassName)?.className || '';
-  return { subTitleContent, subTitleClassName };
+  const subheadingContent =
+    (subheading as TextWithClassName)?.content || (subheading as string);
+  const subheadingClassName =
+    (subheading as TextWithClassName)?.className || '';
+  return { subheadingContent, subheadingClassName };
 };
 
 export const getBodyContentAndClassName = (body: IContent['body']) => {

@@ -20,7 +20,7 @@ export interface IImage {
   fallback?: string;
   alt?: string;
   backgroundPattern?: ReactNode;
-  darken?: boolean;
+  darken?: '25%' | '50%' | '75%';
   attribution?: IImageAttribution;
   coverage?: ImageCoverage;
 }

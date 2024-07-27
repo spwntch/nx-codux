@@ -1,3 +1,4 @@
+import { cn } from '../../../../utils';
 import { INavLink } from '../../../../types';
 import {
   NavigationMenuItem,
@@ -5,9 +6,10 @@ import {
   navigationMenuTriggerStyle,
 } from '../../../shadcn-ui';
 
-type INavToolbarLinkProps = INavLink;
+type INavToolbarLinkProps = INavLink & { floating?: boolean };
 
 export const NavToolbarLink = ({
+  floating,
   label,
   href,
   onLinkTo,
@@ -15,7 +17,11 @@ export const NavToolbarLink = ({
   return (
     <NavigationMenuItem className="cursor-pointer">
       <NavigationMenuLink
-        className={navigationMenuTriggerStyle()}
+        className={cn(
+          navigationMenuTriggerStyle(),
+          'text-base font-semibold',
+          floating && 'bg-transparent text-white'
+        )}
         onSelect={() => onLinkTo(href)}
       >
         {label}

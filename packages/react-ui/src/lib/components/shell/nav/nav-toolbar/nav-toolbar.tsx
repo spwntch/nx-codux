@@ -6,13 +6,14 @@ import { NavToolbarMenu } from '../nav-toolbar-menu/nav-toolbar-menu';
 // import { NavToolbarLink } from './components/nav-toolbar-link';
 // import { NavToolbarMenu } from './components/nav-toolbar-menu';
 
-export interface ITopNavProps {
+export interface INavToolbarProps {
+  floating?: boolean;
   items?: INavItem[];
 
   onLinkTo: (href: string) => void;
 }
 
-export const NavToolbar = ({ items, onLinkTo }: ITopNavProps) => {
+export const NavToolbar = ({ floating, items, onLinkTo }: INavToolbarProps) => {
   const { navItems } = useNav();
 
   items = items || navItems;
@@ -22,6 +23,7 @@ export const NavToolbar = ({ items, onLinkTo }: ITopNavProps) => {
       return (
         <NavToolbarMenu
           key={(item as INavMenu).label || ''}
+          floating={floating}
           {...(item as INavMenu)}
           onLinkTo={onLinkTo}
         />
@@ -29,6 +31,7 @@ export const NavToolbar = ({ items, onLinkTo }: ITopNavProps) => {
     return (
       <NavToolbarLink
         key={(item as INavLink).href || ''}
+        floating={floating}
         {...(item as INavLink)}
         onLinkTo={onLinkTo}
       />

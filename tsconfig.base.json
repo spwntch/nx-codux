@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@/codux": ["codux/src/index.ts"],
+      "@/next-pages": ["libs/next-pages/src/index.ts"],
+      "@/next-pages/server": ["libs/next-pages/src/server.ts"],
       "@/next-shell": ["libs/next-shell/src/index.ts"],
       "@/next-shell/server": ["libs/next-shell/src/server.ts"],
       "@/storybook": ["storybook/src/index.ts"],

@@ -1,0 +1,35 @@
+{
+  "name": "icp-playbook",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/icp-playbook",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "options": {
+        "assets": [
+          {
+            "input": "assets/spwn/under-construction/public",
+            "glob": "*.webp",
+            "output": "under-construction"
+          },
+          {
+            "input": "assets/interact/brand/public",
+            "glob": "*.webp",
+            "output": "brand"
+          },
+          {
+            "input": "assets/interact/images/public",
+            "glob": "*.webp",
+            "output": "images"
+          },
+          {
+            "input": "assets/interact/client-logos/svg",
+            "glob": "*.svg",
+            "output": "client-logos"
+          }
+        ]
+      }
+    }
+  }
+}
