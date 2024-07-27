@@ -10,11 +10,11 @@
     "shadcn-ui": "pnpm dlx shadcn-ui@latest add",
     "webp": "scripts/webp.sh ",
     "clean": "pnpm run rm:dist && pnpm run rm:node-modules && pnpm run rm:tmp && pnpm run rm:lockfile",
-    "build": "pnpm dlx nx run-many -t build",
     "registry": "pnpm dlx nx local-registry",
     "release": "pnpm dlx nx release",
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run storybook:storybook",
+    "build": "pnpm dlx nx run site:build",
     "dev": "pnpm dlx nx run site:dev",
     "ci": "pnpm dlx nx run-many -t build lint test build-storybook"
   },

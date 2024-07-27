@@ -11,19 +11,27 @@ export const HOW_IT_WORKS: IContent = {
   },
   bullets: [
     {
-      body: 'Identify: Gather and analyze data to pinpoint high-potential customers.',
+      body: [
+        'Identify: Gather and analyze data to pinpoint high-potential customers.',
+      ],
       className: 'text-lg mt-2',
     },
     {
-      body: 'Profile: Create detailed customer profiles using our proven templates.',
+      body: [
+        'Profile: Create detailed customer profiles using our proven templates.',
+      ],
       className: 'text-lg mt-2',
     },
     {
-      body: 'Align: Ensure marketing, sales, and product teams are on the same page.',
+      body: [
+        'Align: Ensure marketing, sales, and product teams are on the same page.',
+      ],
       className: 'text-lg mt-2',
     },
     {
-      body: 'Optimize: Continuously refine your profiles based on data-driven insights.',
+      body: [
+        'Optimize: Continuously refine your profiles based on data-driven insights.',
+      ],
       className: 'text-lg mt-2',
     },
   ],
