@@ -1,5 +1,5 @@
 'use client';
-import { ContentContainer, IContent } from '@spwntch/react-ui';
+import { ContentContainer, IContent, CardGrid } from '@spwntch/react-ui';
 
 type Props = { content: IContent };
 
@@ -13,6 +13,7 @@ const HowItWorks = ({ content }: Props) => {
     <div className="flex-col pt-12 pb-28 bg-muted">
       <div className="container">
         <ContentContainer innerContent={header} />
+        <CardGrid cards={content.bullets} />
       </div>
     </div>
   );
