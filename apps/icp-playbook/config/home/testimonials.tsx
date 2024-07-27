@@ -8,14 +8,14 @@ export const TESTIMONIALS: IContent = {
   body: {
     content: [
       'Discover how the ICP Playbook has transformed the marketing strategies and business outcomes of our clients.',
-      'Our comprehensive guide has helped companies across various industries achieve remarkable results by improving their customer profiling and targeting efforts.'
+      'Our comprehensive guide has helped companies across various industries achieve remarkable results by improving their customer profiling and targeting efforts.',
     ],
     className: 'text-lg text-center mt-4',
   },
   bullets: [
     {
       body: [
-        'The ICP Playbook revolutionized our marketing strategy. We\'ve seen a 30% increase in qualified leads.',
+        "The ICP Playbook revolutionized our marketing strategy. We've seen a 30% increase in qualified leads.",
       ],
       className: 'text-lg mt-2',
       heading: 'Jane Doe, CMO of XYZ Corp.',
@@ -36,7 +36,7 @@ export const TESTIMONIALS: IContent = {
     },
     {
       body: [
-        'Thanks to the ICP Playbook, our team is now better aligned, and we\'ve achieved a 25% increase in conversion rates.',
+        "Thanks to the ICP Playbook, our team is now better aligned, and we've achieved a 25% increase in conversion rates.",
       ],
       className: 'text-lg mt-2',
       heading: 'Michael Brown, VP of Marketing at GHI Solutions.',

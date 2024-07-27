@@ -14,8 +14,8 @@
     "release": "pnpm dlx nx release",
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run storybook:storybook",
-    "build": "pnpm dlx nx run site:build",
-    "dev": "pnpm dlx nx run site:dev",
+    "build": "pnpm dlx nx run icp-playbook:build",
+    "dev": "pnpm dlx nx run icp-playbook:dev",
     "ci": "pnpm dlx nx run-many -t build lint test build-storybook"
   },
   "private": true,
