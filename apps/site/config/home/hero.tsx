@@ -3,7 +3,7 @@ import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
   src: '/images/home-page-collage.webp',
-  darken: '50%',
+  darken: '75%',
 };
 
 export const HOME_HERO_CONTENT: IContent = {

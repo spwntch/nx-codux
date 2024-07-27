@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@react-hooks-library/core';
 import { forwardRef, HTMLAttributes } from 'react';
 import { IContent, IImage } from '../../../../types';
 import { cn } from '../../../../utils';
@@ -29,6 +30,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
     },
     ref
   ) => {
+    const isMobile = useMediaQuery('(max-width: 640px)');
     return (
       <div
         className={cn(
@@ -48,15 +50,15 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             innerContent={innerContent}
             hero={true}
             hAlign={hAlign}
-            vAlign={vAlign}
-            className={className}
+            vAlign={isMobile ? 'middle' : vAlign}
+            className={cn(isMobile && 'items-center', className)}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup>
+              <ButtonGroup stacked={isMobile}>
                 {innerContent.ctas.map((cta, index) => (
                   <Button
                     key={index}
-                    size={cta.variant?.size || 'default'}
+                    size={isMobile ? 'default' : cta.variant?.size || 'default'}
                     variant={cta.variant?.variant || 'default'}
                   >
                     {cta.label}

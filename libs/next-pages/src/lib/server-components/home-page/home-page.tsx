@@ -44,12 +44,12 @@ const HomePage = ({
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
-        vAlign="bottom"
+        vAlign="middle"
         hAlign="left"
       />
 
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <div className="px-3">
+      <div >
         <ProductSummary content={productSummary} />
         <TellMeMore content={tellMeMore} />
         {/* <HowItWorks content={howItWorks} /> */}
