@@ -52,8 +52,8 @@ const HomePage = ({
       <div id="product">
         <ProductSummary content={productSummary} />
         <HowItWorks content={howItWorks} />
-        <Benefits content={benefits} />
         <TellMeMore content={tellMeMore} />
+        <Benefits content={benefits} />
       </div>
       <div id="faq">
         <Faqs content={faqs} />
