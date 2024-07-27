@@ -9,6 +9,7 @@ export interface IBullet {
   emoji?: string; // Renders a span with the emoji, eg "👋"
   numbered?: boolean; // display numbers instead of bullets
   heading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
+  subheading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
   body: string[]; // the main bullet text.
   bullets?: IBullet[];
   className?: string;

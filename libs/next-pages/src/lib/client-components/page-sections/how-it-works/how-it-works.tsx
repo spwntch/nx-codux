@@ -11,7 +11,7 @@ const HowItWorks = ({ content }: Props) => {
   };
   return (
     <div className="flex-col pt-12 pb-28 bg-muted">
-      <div className="container">
+      <div className="container w-full">
         <ContentContainer innerContent={header} />
         <CardGrid cards={content.bullets} />
       </div>
