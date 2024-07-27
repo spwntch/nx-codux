@@ -1,13 +1,19 @@
 'use client';
 
 import {
+  FullImageHero,
   IContent,
-  IImage
+  IImage,
+  LogoCarousel,
 } from '@spwntch/react-ui';
 
 import {
+  Benefits,
   DiveIn,
-  Faqs
+  Faqs,
+  HowItWorks,
+  ProductSummary,
+  TellMeMore,
 } from '../../client-components';
 
 export interface HomePageProps {
@@ -38,21 +44,22 @@ const HomePage = ({
 }: HomePageProps) => {
   return (
     <div className="flex flex-col">
-      {/* <FullImageHero
+      <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
         vAlign="middle"
         hAlign="left"
       />
-      <LogoCarousel logos={clientLogos} className="bg-white" /> */}
+      <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
-        {/* <ProductSummary content={productSummary} />
+        <ProductSummary content={productSummary} />
         <Benefits content={benefits} />
-        <TellMeMore content={tellMeMore} /> */}
-        {/* <HowItWorks content={howItWorks} /> */}
-        <DiveIn content={diveIn} />
+        <TellMeMore content={tellMeMore} />
       </div>
+      <div id="process"></div>
+      <HowItWorks content={howItWorks} />
+      <DiveIn content={diveIn} />
       <div id="faq">
         <Faqs content={faqs} />
       </div>

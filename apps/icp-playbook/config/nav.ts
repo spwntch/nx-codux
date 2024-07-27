@@ -2,7 +2,8 @@ import { INavItem } from '@spwntch/react-ui';
 
 export const primaryNav: INavItem[] = [
   // { label: 'Home', href: '/' },
-  { label: 'The Playbook', href: '#product' },
+  { label: 'What it is', href: '#product' },
+  { label: 'How it works', href: '#process' },
   { label: 'FAQ', href: '#faq' },
   { label: 'About Us', href: '#about' },
   { label: 'Pricing', href: '#pricing' },
