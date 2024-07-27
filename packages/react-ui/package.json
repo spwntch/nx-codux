@@ -34,6 +34,7 @@
     "@radix-ui/react-context": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-menubar": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
@@ -45,9 +46,12 @@
     "tailwind-merge": "^2.4.0"
   },
   "peerDependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@react-hooks-library/core": "^0.6.2",
     "next-themes": "^0.3.0",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "react-hook-form": "^7.52.1",
+    "zod": "^3.23.8"
   }
 }
