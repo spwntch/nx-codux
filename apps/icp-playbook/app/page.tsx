@@ -6,6 +6,7 @@ import {
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   HOW_IT_WORKS,
+  PRICING,
   TELL_ME_MORE,
   TESTIMONIALS,
   THE_ICP_PLAYBOOK,
@@ -26,6 +27,7 @@ export default function Index() {
       howItWorks={HOW_IT_WORKS}
       diveIn={DIVE_IN}
       faqs={FAQ}
+      pricing={PRICING}
       testimonials={TESTIMONIALS}
     />
   );

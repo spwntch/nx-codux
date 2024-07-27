@@ -7,4 +7,5 @@ export * from './home/product-sumary';
 export * from './home/testimonials';
 export * from './home/tell-me-more';
 export * from './home/dive-in';
+export * from './home/pricing';
 export * from './nav';

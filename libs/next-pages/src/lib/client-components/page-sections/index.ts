@@ -1,5 +1,6 @@
 export { default as Hero } from './hero/hero';
 export { default as Faqs } from './faqs/faqs';
+export { default as Pricing } from './pricing/pricing';
 export { default as LogoCarousel } from './logo-carousel/logo-carousel';
 export { default as Benefits } from './benefits/benefits';
 export { default as DiveIn } from './ctas/dive-in';

@@ -10,7 +10,7 @@ const DiveIn = ({ content }: Props) => {
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28 bg-muted">
+    <div className="flex-col pt-12 pb-28 ">
       <div className="container">
         <SimpleJustifiedBanner innerContent={content} />
       </div>

@@ -12,6 +12,7 @@ import {
   DiveIn,
   Faqs,
   HowItWorks,
+  Pricing,
   ProductSummary,
   TellMeMore,
 } from '../../client-components';
@@ -28,6 +29,7 @@ export interface HomePageProps {
   howItWorks: IContent;
   diveIn: IContent;
   faqs: IContent;
+  pricing: IContent;
   testimonials: IContent;
 }
 
@@ -40,6 +42,7 @@ const HomePage = ({
   howItWorks,
   diveIn,
   faqs,
+  pricing,
   testimonials,
 }: HomePageProps) => {
   return (
@@ -60,6 +63,7 @@ const HomePage = ({
       </div>
       <div id="faq">
         <Faqs content={faqs} />
+        <Pricing content={pricing} />
         <DiveIn content={diveIn} />
       </div>
       {/* <Testimonials content={testimonials} /> */}
