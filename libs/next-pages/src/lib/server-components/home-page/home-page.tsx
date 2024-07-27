@@ -54,8 +54,8 @@ const HomePage = ({
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
         <ProductSummary content={productSummary} />
-        <HowItWorks content={howItWorks} />
         <Benefits content={benefits} />
+        <HowItWorks content={howItWorks} />
         <TellMeMore content={tellMeMore} />
       </div>
       <div id="faq">
