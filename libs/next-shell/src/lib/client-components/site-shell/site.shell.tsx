@@ -4,6 +4,7 @@ import {
     ShellProvider,
     SiteShellStarter
 } from '@spwntch/react-ui';
+import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
 export interface SiteShellProps extends IShellProviderProps {
@@ -26,8 +27,9 @@ export const SiteShell = ({
   githubUrl,
   children,
 }: SiteShellProps & PropsWithChildren) => {
+  const router = useRouter()
   const handleLinkTo = (url: string) => {
-    console.log({ url });
+    router.push(url)
   };
 
   return (

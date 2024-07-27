@@ -10,7 +10,7 @@ const ProductSummary = ({ content }: Props) => {
     body: content.body,
   };
   return (
-    <div className="flex-col py-12">
+    <div id="product"className="flex-col py-12">
       <div className="container">
 
       <ContentContainer innerContent={header}  />
