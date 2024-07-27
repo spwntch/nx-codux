@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@react-hooks-library/core';
 import React, { forwardRef } from 'react';
 import { cn } from '../../../../utils';
 import { ButtonGroup, GithubButton } from '../../../components';
@@ -30,6 +31,8 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     },
     ref
   ) => {
+    const isMobile = useMediaQuery('(max-width: 640px)');
+
     return (
       <header
         className={cn('sticky top-0 z-50', className)}
@@ -39,14 +42,9 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         <nav className="flex p-4 lg:p-6 items-center justify-between">
           <Logo
             height={logoHeight || 36}
-            className="cursor-pointer hidden lg:block"
-            onClick={() => onLinkTo('/')}
-          />
-          <Logo
-            height={logoHeight || 36}
             className="cursor-pointer block lg:hidden"
             onClick={() => onLinkTo('/')}
-            variant="mark"
+            variant={isMobile ? 'mark' : 'logo'}
           />
           <div className="flex-1">
             <nav
