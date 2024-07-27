@@ -9,6 +9,7 @@ import {
 
 import {
   Benefits,
+  DiveIn,
   Faqs,
   HowItWorks,
   ProductSummary,
@@ -22,9 +23,10 @@ export interface HomePageProps {
   };
   clientLogos: string[];
   productSummary: IContent;
+  benefits: IContent;
   tellMeMore: IContent;
   howItWorks: IContent;
-  benefits: IContent;
+  diveIn: IContent;
   faqs: IContent;
   testimonials: IContent;
 }
@@ -33,9 +35,10 @@ const HomePage = ({
   hero,
   clientLogos,
   productSummary,
+  benefits,
   tellMeMore,
   howItWorks,
-  benefits,
+  diveIn,
   faqs,
   testimonials,
 }: HomePageProps) => {
@@ -51,10 +54,12 @@ const HomePage = ({
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
         <ProductSummary content={productSummary} />
-        <HowItWorks content={howItWorks} />
         <Benefits content={benefits} />
         <TellMeMore content={tellMeMore} />
       </div>
+      <div id="process"></div>
+      <HowItWorks content={howItWorks} />
+      <DiveIn content={diveIn} />
       <div id="faq">
         <Faqs content={faqs} />
       </div>
