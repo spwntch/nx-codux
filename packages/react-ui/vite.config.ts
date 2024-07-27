@@ -48,6 +48,7 @@ export default defineConfig({
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
         '@radix-ui/react-slot',
+        '@react-hooks-library/core',
         'class-variance-authority',
         'clsx',
         'embla-carousel-react',
