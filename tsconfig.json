@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@react-ui/*": ["libs/react-ui/src/*"]
+      "@react-ui/*": ["packages/react-ui/src/*"]
     }
   },
   "ts-node": {
