@@ -1,7 +1,7 @@
 
 'use client';
 
-import { ContentContainer, IContent } from '@spwntch/react-ui';
+import { ContentContainer, IContent, SimplePricing } from '@spwntch/react-ui';
 
 export interface BenefitsProps {
   content: IContent;
@@ -17,6 +17,7 @@ const Pricing = ({ content }: BenefitsProps) => {
     <div className="flex-col pt-12 pb-28 bg-muted">
       <div className="container">
         <ContentContainer innerContent={header} />
+        <SimplePricing/>
         {/* {content.bullets && <FaqAccordion faqs={content.bullets} />} */}
       </div>
     </div>
