@@ -11,8 +11,11 @@ const ProductSummary = ({ content }: Props) => {
   };
   return (
     <div className="flex-col py-12">
+      <div className="container">
+
       <ContentContainer innerContent={header}  />
       {content.bullets && <FeatureGrid features={content.bullets} />}
+      </div>
     </div>
   );
 };

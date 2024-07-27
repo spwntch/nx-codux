@@ -49,7 +49,7 @@ const HomePage = ({
       />
 
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <div className="px-3 md:container">
+      <div className="px-3">
         <ProductSummary content={productSummary} />
         <TellMeMore content={tellMeMore} />
         {/* <HowItWorks content={howItWorks} /> */}

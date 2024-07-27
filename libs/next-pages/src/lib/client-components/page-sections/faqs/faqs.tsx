@@ -1,10 +1,9 @@
 'use client';
 
 import {
-  AlternatingSplitBenefits,
   ContentContainer,
   FaqAccordion,
-  IContent,
+  IContent
 } from '@spwntch/react-ui';
 
 export interface BenefitsProps {
@@ -18,9 +17,11 @@ const Faqs = ({ content }: BenefitsProps) => {
     body: content.body,
   };
   return (
-    <div className="flex-col py-12 px-6">
-      <ContentContainer innerContent={header} />
-      {content.bullets && <FaqAccordion faqs={content.bullets} />}
+    <div className="flex-col py-12 px-6 bg-muted">
+      <div className="container">
+        <ContentContainer innerContent={header} />
+        {content.bullets && <FaqAccordion faqs={content.bullets} />}
+      </div>
     </div>
   );
 };
