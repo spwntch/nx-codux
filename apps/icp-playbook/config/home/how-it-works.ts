@@ -1,43 +1,49 @@
 import { IContent } from '@spwntch/react-ui';
 
 export const HOW_IT_WORKS: IContent = {
-  heading: {
-    content: 'How It Works',
-    className: 'text-3xl font-bold text-center mt-10',
+  heading: 'How It Works',
+  subheading: {
+    content: 'A Step-by-Step Guide to Using the ICP Playbook',
+    // Add any necessary className here
   },
   body: {
-    content: ['Identify, Profile, Align, Optimize'],
-    className: 'text-lg text-center mt-4',
+    content: [
+      'With the ICP Playbook, you’ll be fully supported every step of the way. From orientation to implementation, we ensure you and your team have the tools and knowledge needed to succeed.',
+      'Here’s how our process unfolds:',
+    ],
+    className: 'text-lg text-center max-w-4xl',
   },
   bullets: [
     {
+      heading: 'PROJECT PHASE 1',
+      subheading: 'Introduction and Setup',
       body: [
-        'Identify: Gather and analyze data to pinpoint high-potential customers.',
+        "Begin with an orientation session to understand the playbook's framework and set up your team.",
       ],
-      className: 'text-lg mt-2',
     },
     {
+      heading: 'PROJECT PHASE 2',
+      subheading: 'Workshops and Interactive Sessions',
       body: [
-        'Profile: Create detailed customer profiles using our proven templates.',
+        'Participate in structured workshops that cover different aspects of customer profiling.',
+        'Engage in group activities and discussions to gain diverse perspectives.',
       ],
-      className: 'text-lg mt-2',
     },
     {
+      heading: 'PROJECT PHASE 3',
+      subheading: 'Utilizing Worksheets and Templates',
       body: [
-        'Align: Ensure marketing, sales, and product teams are on the same page.',
+        'Apply the provided worksheets and templates to gather and analyze customer data.',
+        'Use these tools to develop detailed and actionable customer profiles.',
       ],
-      className: 'text-lg mt-2',
     },
     {
+      heading: 'PROJECT PHASE 4',
+      subheading: 'Implementation and Review',
       body: [
-        'Optimize: Continuously refine your profiles based on data-driven insights.',
+        'Implement the developed ICPs into your marketing and product strategies.',
+        'Regularly review and refine the profiles based on new data and insights.',
       ],
-      className: 'text-lg mt-2',
     },
   ],
-  // callToAction: {
-  //   message: 'Learn More About the ICP Playbook',
-  //   href: '/learn-more',
-  //   className: 'text-xl font-bold text-center mt-6 underline',
-  // },
 };

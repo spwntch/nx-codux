@@ -1,10 +1,22 @@
 'use client';
-import { ContentSection, IContent } from '@spwntch/react-ui';
+import { ContentContainer, IContent, CardGrid } from '@spwntch/react-ui';
 
 type Props = { content: IContent };
 
 const HowItWorks = ({ content }: Props) => {
-  return <ContentSection innerContent={content} />;
+  const header: IContent = {
+    heading: content.heading,
+    subheading: content.subheading,
+    body: content.body,
+  };
+  return (
+    <div className="flex-col pt-12 pb-28 bg-muted">
+      <div className="container w-full">
+        <ContentContainer innerContent={header} />
+        <CardGrid cards={content.bullets} />
+      </div>
+    </div>
+  );
 };
 
 export default HowItWorks;

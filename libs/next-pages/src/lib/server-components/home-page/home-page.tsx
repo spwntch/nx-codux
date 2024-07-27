@@ -10,6 +10,7 @@ import {
 import {
   Benefits,
   Faqs,
+  HowItWorks,
   ProductSummary,
   TellMeMore,
 } from '../../client-components';
@@ -39,7 +40,7 @@ const HomePage = ({
   testimonials,
 }: HomePageProps) => {
   return (
-    <>
+    <div className="flex flex-col">
       <FullImageHero
         image={hero.image}
         innerContent={hero.content}
@@ -47,11 +48,10 @@ const HomePage = ({
         vAlign="middle"
         hAlign="left"
       />
-
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
         <ProductSummary content={productSummary} />
-        {/* <HowItWorks content={howItWorks} /> */}
+        <HowItWorks content={howItWorks} />
         <Benefits content={benefits} />
         <TellMeMore content={tellMeMore} />
       </div>
@@ -60,7 +60,7 @@ const HomePage = ({
       </div>
       {/* <Testimonials content={testimonials} /> */}
       {/* <HowItWorks content={testimonials} /> */}
-    </>
+    </div>
   );
 };
 

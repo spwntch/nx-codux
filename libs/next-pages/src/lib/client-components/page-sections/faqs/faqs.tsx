@@ -1,10 +1,6 @@
 'use client';
 
-import {
-  ContentContainer,
-  FaqAccordion,
-  IContent
-} from '@spwntch/react-ui';
+import { ContentContainer, FaqAccordion, IContent } from '@spwntch/react-ui';
 
 export interface BenefitsProps {
   content: IContent;
@@ -17,7 +13,7 @@ const Faqs = ({ content }: BenefitsProps) => {
     body: content.body,
   };
   return (
-    <div  className="flex-col py-12 px-6 bg-muted">
+    <div className="flex-col pt-12 pb-28 ">
       <div className="container">
         <ContentContainer innerContent={header} />
         {content.bullets && <FaqAccordion faqs={content.bullets} />}
