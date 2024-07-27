@@ -34,7 +34,9 @@ export const ImageContainer = forwardRef<
           rounded === 'xl' && 'rounded-2xl',
           rounded === 'xxl' && 'rounded-3xl',
           rounded === 'full' && 'rounded-full',
-          darken && 'brightness-50',
+          darken === '25%' && 'brightness-75',
+          darken === '50%' && 'brightness-50',
+          darken === '75%' && 'brightness-[25%]',
           blur === 'edges'
             ? 'filter blur-none'
             : blur === true && 'filter blur-md'
@@ -50,7 +52,7 @@ export const ImageContainer = forwardRef<
             : {}
         }
       />
-      <div className="relative h-full w-full">{children}</div>
+      <div className="relative h-full w-full ">{children}</div>
     </div>
   );
 });
