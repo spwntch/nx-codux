@@ -1,4 +1,5 @@
 import { CheckIcon } from 'lucide-react';
+import { Button } from '../../../shadcn-ui';
 
 const includedFeatures = [
   'Private forum access',
@@ -55,12 +56,11 @@ export const SimplePricing = () => {
                     USD
                   </span>
                 </p>
-                <a
-                  href="#"
-                  className="mt-10 block w-full rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                <Button
+                className="mt-10"
                 >
-                  Get access
-                </a>
+                  GET ACCESS
+                </Button>
                 <p className="mt-6 text-xs leading-5 text-muted-foreground">
                   Invoices and receipts available for easy company reimbursement
                 </p>
