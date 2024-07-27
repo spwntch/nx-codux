@@ -8,18 +8,7 @@ export const primaryNav: INavItem[] = [
   { label: 'About Us', href: '#about' },
   {
     label: 'Free Resources',
-    // children: [
-    // {
-    //   label: 'Blog',
-    //   description: 'ipsum lorem and that sh*t',
-    //   href: '/blog',
-    // },
-    // {
-    //   label: 'Downloads',
-    //   description: 'ipsum lorem and that sh*t',
-    //   href: '/white-papers',
-    // },
-    // ],
+    href: '#resources',
   },
   // { label: 'Get Started', href: '#get-started' },
 ];

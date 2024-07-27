@@ -63,11 +63,13 @@ const HomePage = ({
       </div>
       <div id="faq">
         <Faqs content={faqs} />
+      </div>
+      <div id="pricing">
         <Pricing content={pricing} />
         <DiveIn content={diveIn} />
       </div>
-      {/* <Testimonials content={testimonials} /> */}
-      {/* <HowItWorks content={testimonials} /> */}
+      <div id="about">{/* <Testimonials content={testimonials} /> */}</div>
+      <div id="resources"></div>
     </div>
   );
 };
