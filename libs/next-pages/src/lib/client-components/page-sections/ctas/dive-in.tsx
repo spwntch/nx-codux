@@ -1,8 +1,5 @@
 'use client';
-import {
-  IContent,
-  SimpleJustifiedBanner
-} from '@spwntch/react-ui';
+import { IContent, SimpleJustifiedBanner } from '@spwntch/react-ui';
 
 type Props = { content: IContent };
 
@@ -13,7 +10,7 @@ const DiveIn = ({ content }: Props) => {
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28">
+    <div className="flex-col pt-12 pb-28 bg-muted">
       <div className="container">
         <SimpleJustifiedBanner innerContent={content} />
       </div>

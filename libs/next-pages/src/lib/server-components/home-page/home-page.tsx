@@ -54,14 +54,13 @@ const HomePage = ({
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
         <ProductSummary content={productSummary} />
+        <HowItWorks content={howItWorks} />
         <Benefits content={benefits} />
         <TellMeMore content={tellMeMore} />
       </div>
-      <div id="process"></div>
-      <HowItWorks content={howItWorks} />
-      <DiveIn content={diveIn} />
       <div id="faq">
         <Faqs content={faqs} />
+        <DiveIn content={diveIn} />
       </div>
       {/* <Testimonials content={testimonials} /> */}
       {/* <HowItWorks content={testimonials} /> */}
