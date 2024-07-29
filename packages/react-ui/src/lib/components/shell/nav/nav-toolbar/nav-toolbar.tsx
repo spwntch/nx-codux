@@ -4,14 +4,12 @@ import { cn } from '../../../../utils';
 import { NavigationMenu, NavigationMenuList } from '../../../shadcn-ui';
 import { NavToolbarLink } from '../nav-toolbar-link/nav-toolbar-link';
 import { NavToolbarMenu } from '../nav-toolbar-menu/nav-toolbar-menu';
-// import { NavToolbarLink } from './components/nav-toolbar-link';
-// import { NavToolbarMenu } from './components/nav-toolbar-menu';
 
 export interface INavToolbarProps {
   alignment?: 'start' | 'center' | 'end';
   floating?: boolean;
   items?: INavItem[];
-
+  className?: string;
   onLinkTo: (href: string) => void;
 }
 
@@ -19,6 +17,7 @@ export const NavToolbar = ({
   alignment = 'center',
   floating,
   items,
+  className,
   onLinkTo,
 }: INavToolbarProps) => {
   const { navItems } = useNav();
@@ -46,21 +45,20 @@ export const NavToolbar = ({
   };
 
   return (
-    <div
+    <NavigationMenu
       className={cn(
-        'hidden lg:flex  w-full',
+        'hidden lg:flex',
         alignment === 'start'
           ? 'justify-start'
           : alignment === 'end'
           ? 'justify-end'
-          : 'justify-center'
+          : 'justify-center',
+        className
       )}
     >
-      <NavigationMenu>
-        <NavigationMenuList className="flex max-w-none w-[210px]">
-          {items.map((item) => pickNavItem(item))}
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+      <NavigationMenuList className="flex max-w-none w-[210px]">
+        {items.map((item) => pickNavItem(item))}
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 };
