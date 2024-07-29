@@ -51,6 +51,23 @@ export const BENEFITS: IContent = {
       ],
     },
     {
+      image: { src: 'images/data-driven-decision-making.webp' },
+      heading: 'Data-Driven Decision Making',
+      body: [
+        'Utilize analytics and data to refine customer profiles and improve business outcomes. The ICP Playbook empowers you with the insights needed to make informed decisions.',
+      ],
+      bullets: [
+        {
+          body: ['Leverage analytics for better decisions.'],
+          className: 'flex items-center mt-2',
+        },
+        {
+          body: ['Refine customer profiles effectively.'],
+          className: 'flex items-center mt-2',
+        },
+      ],
+    },
+    {
       image: { src: 'images/team-alignment.webp' },
       heading: 'Team Alignment',
       body: [
@@ -63,6 +80,23 @@ export const BENEFITS: IContent = {
         },
         {
           body: ['Improved collaboration and efficiency.'],
+          className: 'flex items-center mt-2',
+        },
+      ],
+    },
+    {
+      image: { src: 'images/better-features.webp' },
+      heading: 'Better Feature Identification',
+      body: [
+        'Empower product owners to identify and prioritize features that resonate with their perfect customers. The ICP Playbook provides the tools and insights needed to enhance product development strategies.',
+      ],
+      bullets: [
+        {
+          body: ['Prioritize features that resonate with customers.'],
+          className: 'flex items-center mt-2',
+        },
+        {
+          body: ['Enhance product development strategies.'],
           className: 'flex items-center mt-2',
         },
       ],
@@ -97,23 +131,6 @@ export const BENEFITS: IContent = {
         },
         {
           body: ['More personalized experiences.'],
-          className: 'flex items-center mt-2',
-        },
-      ],
-    },
-    {
-      image: { src: 'images/data-driven-decision-making.webp' },
-      heading: 'Data-Driven Decision Making',
-      body: [
-        'Utilize analytics and data to refine customer profiles and improve business outcomes. The ICP Playbook empowers you with the insights needed to make informed decisions.',
-      ],
-      bullets: [
-        {
-          body: ['Leverage analytics for better decisions.'],
-          className: 'flex items-center mt-2',
-        },
-        {
-          body: ['Refine customer profiles effectively.'],
           className: 'flex items-center mt-2',
         },
       ],
