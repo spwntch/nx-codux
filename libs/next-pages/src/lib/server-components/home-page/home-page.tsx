@@ -58,6 +58,7 @@ const HomePage = ({
       <div id="product">
         <ProductSummary content={productSummary} />
         <Benefits content={benefits} />
+        <DiveIn content={diveIn} />
         <HowItWorks content={howItWorks} />
         <TellMeMore content={tellMeMore} />
       </div>
@@ -66,7 +67,6 @@ const HomePage = ({
       </div>
       <div id="pricing">
         <Pricing content={pricing} />
-        <DiveIn content={diveIn} />
       </div>
       <div id="about">{/* <Testimonials content={testimonials} /> */}</div>
       <div id="resources"></div>

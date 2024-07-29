@@ -40,42 +40,33 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         ref={ref}
         {...props}
       >
-        <nav className="flex p-4 lg:p-6 items-center justify-between">
+        <div className="flex p-4 lg:p-6 items-center justify-between">
           <Logo
             height={logoHeight || 36}
-            className="cursor-pointer "
+            className="cursor-pointer"
             onClick={() => onLinkTo('/')}
             variant={isMobile ? 'mark' : 'logo'}
           />
-          <div className="flex-1">
-            <nav
-              className={cn(
-                'hidden lg:flex mx-10',
-                navAlignment === 'start'
-                  ? 'justify-start'
-                  : navAlignment === 'end'
-                  ? 'justify-end'
-                  : 'justify-center'
-              )}
-            >
-              <NavToolbar floating={floating} onLinkTo={onLinkTo} />
-            </nav>
-          </div>
-          {/* <div>
-            <Button>GET STARTED</Button>
-          </div> */}
-          <div className="ml-8">
+          <nav className="flex-1 w-full">
+            <NavToolbar
+              alignment={navAlignment}
+              floating={floating}
+              onLinkTo={onLinkTo}
+            />
+          </nav>
+          <div className="flex">
+            {/* <Button>GET STARTED</Button> */}
             <ButtonGroup>
               {!disableThemeToggle && <ThemeToggleButton />}
             </ButtonGroup>
+            <div>{githubUrl && <GithubButton url={githubUrl} />}</div>
+            <div className="block lg:hidden">
+              <ButtonGroup>
+                <MobileNavDrawer onLinkTo={onLinkTo} />
+              </ButtonGroup>
+            </div>
           </div>
-          <div>{githubUrl && <GithubButton url={githubUrl} />}</div>
-          <div className="block lg:hidden">
-            <ButtonGroup>
-              <MobileNavDrawer onLinkTo={onLinkTo} />
-            </ButtonGroup>
-          </div>
-        </nav>
+        </div>
       </header>
     );
   }
