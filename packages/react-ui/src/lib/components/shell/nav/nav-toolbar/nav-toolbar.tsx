@@ -4,8 +4,6 @@ import { cn } from '../../../../utils';
 import { NavigationMenu, NavigationMenuList } from '../../../shadcn-ui';
 import { NavToolbarLink } from '../nav-toolbar-link/nav-toolbar-link';
 import { NavToolbarMenu } from '../nav-toolbar-menu/nav-toolbar-menu';
-// import { NavToolbarLink } from './components/nav-toolbar-link';
-// import { NavToolbarMenu } from './components/nav-toolbar-menu';
 
 export interface INavToolbarProps {
   alignment?: 'start' | 'center' | 'end';
