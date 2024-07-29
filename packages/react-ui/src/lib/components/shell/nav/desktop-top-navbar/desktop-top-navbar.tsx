@@ -41,31 +41,31 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
 
     return (
       <header
-        className={cn('sticky top-0 z-50', className)}
+        className={cn(
+          'sticky top-0 z-50 flex p-4 lg:p-6 items-center justify-between',
+          className
+        )}
         ref={ref}
         {...props}
       >
-        <div className="flex p-4 lg:p-6 items-center justify-between">
-          <Logo
-            height={logoHeight || 36}
-            className="cursor-pointer"
-            onClick={() => onLinkTo('/')}
-            variant={isMobile ? 'mark' : 'logo'}
-          />
-          <nav className="flex-1 w-full">
-            <NavToolbar
-              alignment={navAlignment}
-              floating={floating}
-              onLinkTo={onLinkTo}
-            />
-          </nav>
-          <ButtonGroup>
-            {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
-            {!disableThemeToggle && <ThemeToggleButton />}
-            {githubUrl && <GithubButton url={githubUrl} />}
-            {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
-          </ButtonGroup>
-        </div>
+        <Logo
+          height={logoHeight || 36}
+          className="cursor-pointer"
+          onClick={() => onLinkTo('/')}
+          variant={isMobile ? 'mark' : 'logo'}
+        />
+        <NavToolbar
+          alignment={navAlignment}
+          floating={floating}
+          onLinkTo={onLinkTo}
+          className="flex-1 w-full"
+        />
+        <ButtonGroup>
+          {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
+          {!disableThemeToggle && <ThemeToggleButton />}
+          {githubUrl && <GithubButton url={githubUrl} />}
+          {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
+        </ButtonGroup>
       </header>
     );
   }

@@ -11,7 +11,7 @@ export interface INavToolbarProps {
   alignment?: 'start' | 'center' | 'end';
   floating?: boolean;
   items?: INavItem[];
-
+  className?: string;
   onLinkTo: (href: string) => void;
 }
 
@@ -19,6 +19,7 @@ export const NavToolbar = ({
   alignment = 'center',
   floating,
   items,
+  className,
   onLinkTo,
 }: INavToolbarProps) => {
   const { navItems } = useNav();
@@ -46,21 +47,20 @@ export const NavToolbar = ({
   };
 
   return (
-    <div
+    <NavigationMenu
       className={cn(
         'hidden lg:flex  w-full',
         alignment === 'start'
           ? 'justify-start'
           : alignment === 'end'
           ? 'justify-end'
-          : 'justify-center'
+          : 'justify-center',
+        className
       )}
     >
-      <NavigationMenu>
-        <NavigationMenuList className="flex max-w-none w-[210px]">
-          {items.map((item) => pickNavItem(item))}
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+      <NavigationMenuList className="flex max-w-none w-[210px]">
+        {items.map((item) => pickNavItem(item))}
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 };
