@@ -59,7 +59,7 @@ export const SimplePricing = () => {
                 <Button
                 className="mt-10"
                 >
-                  GET ACCESS
+                  UNLOCK ACCESS TODAY
                 </Button>
                 <p className="mt-6 text-xs leading-5 text-muted-foreground">
                   Invoices and receipts available for easy company reimbursement

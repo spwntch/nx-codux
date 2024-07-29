@@ -55,7 +55,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
             />
           </nav>
           <div className="flex">
-            <Button>GET STARTED</Button>
+            {/* <Button>GET STARTED</Button> */}
             <ButtonGroup>
               {!disableThemeToggle && <ThemeToggleButton />}
             </ButtonGroup>
