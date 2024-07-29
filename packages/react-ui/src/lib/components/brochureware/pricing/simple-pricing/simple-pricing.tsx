@@ -13,7 +13,11 @@ const includedFeatures1 = [
   'Facilitated workshops',
   '24/7 support',
 ];
-const includedFeatures2 = ['Continually growing Discord community', 'Your next big opportunity, perhaps?'];
+const includedFeatures2 = [
+  'Perpetual license to use our templates',
+  'Continually growing Discord community',
+  'Your next big opportunity, perhaps?',
+];
 
 export const SimplePricing = () => {
   return (
