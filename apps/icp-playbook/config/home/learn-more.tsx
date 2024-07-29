@@ -1,6 +1,6 @@
 import { IContent } from '@spwntch/react-ui';
 
-export const TELL_ME_MORE: IContent = {
+export const LEARN_MORE: IContent = {
   heading: {
     content: 'I want more information',
   },

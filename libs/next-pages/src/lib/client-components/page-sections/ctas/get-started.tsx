@@ -3,7 +3,7 @@ import { ContentContainer, IContent, InlineForm } from '@spwntch/react-ui';
 
 type Props = { content: IContent };
 
-const TellMeMore = ({ content }: Props) => {
+const GetStarted = ({ content }: Props) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -19,4 +19,4 @@ const TellMeMore = ({ content }: Props) => {
   );
 };
 
-export default TellMeMore;
+export default GetStarted;

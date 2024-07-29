@@ -14,6 +14,7 @@ export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
   className?: string;
+  onCtaClick: (ctaIndex: number) => void;
 }
 
 export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
@@ -26,6 +27,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
       hAlign,
       vAlign,
       className,
+      onCtaClick,
       ...props
     },
     ref
@@ -60,6 +62,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
                     key={index}
                     size={isMobile ? 'default' : cta.variant?.size || 'default'}
                     variant={cta.variant?.variant || 'default'}
+                    onClick={() => onCtaClick(index)}
                   >
                     {cta.label}
                   </Button>

@@ -1,1 +1,1 @@
-export {default as YoutubPlayer} from './youtube-player/youtube-player'
+export { default as YoutubePlayer } from './youtube-player/youtube-player';
