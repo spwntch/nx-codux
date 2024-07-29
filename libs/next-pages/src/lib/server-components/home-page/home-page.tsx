@@ -7,6 +7,7 @@ import {
   LogoCarousel,
 } from '@spwntch/react-ui';
 
+import { useRouter } from 'next/navigation';
 import {
   AboutUs,
   Benefits,
@@ -15,7 +16,6 @@ import {
   HowItWorks,
   Pricing,
   ProductSummary,
-  Resources,
   TellMeMore,
 } from '../../client-components';
 
@@ -54,6 +54,11 @@ const HomePage = ({
   about,
   testimonials,
 }: HomePageProps) => {
+  const router = useRouter();
+  const handleLinkTo = (url: string) => {
+    router.push(url);
+  };
+
   return (
     <div className="flex flex-col">
       <FullImageHero
@@ -62,28 +67,41 @@ const HomePage = ({
         className="text-white"
         vAlign="middle"
         hAlign="left"
+        onCtaClick={(ctaIndex: number) => {
+          if (ctaIndex === 0) handleLinkTo('#get-started');
+          // if (ctaIndex === 1) handleLinkTo('#product');
+        }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <div id="product">
         <ProductSummary content={productSummary} />
         <Benefits content={benefits} />
-        <DiveIn content={diveIn} />
+        <DiveIn
+          content={diveIn}
+          onCtaClick={() => handleLinkTo('#get-started')}
+        />
         <HowItWorks content={howItWorks} />
+      </div>
+      <div id="learn-more">
         <TellMeMore content={tellMeMore} />
       </div>
       <div id="faq">
         <Faqs content={faqs} />
       </div>
       <div id="pricing">
-        <Pricing content={pricing} />
+        <Pricing
+          content={pricing}
+          onCtaClick={() => handleLinkTo('#get-started')}
+        />
       </div>
       <div id="about">
         <AboutUs {...about} />
         {/* <Testimonials content={testimonials} /> */}
       </div>
-      <div id="resources">
+      {/* <div id="resources">
         <Resources />
-      </div>
+      </div> */}
+      <div id="get-started"></div>
     </div>
   );
 };

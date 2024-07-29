@@ -1,18 +1,13 @@
 'use client';
 import { IContent, SimpleJustifiedBanner } from '@spwntch/react-ui';
 
-type Props = { content: IContent };
+type Props = { content: IContent; onCtaClick: () => void };
 
-const DiveIn = ({ content }: Props) => {
-  const header: IContent = {
-    heading: content.heading,
-    subheading: content.subheading,
-    body: content.body,
-  };
+const DiveIn = ({ content, onCtaClick }: Props) => {
   return (
     <div className="flex-col pt-12 pb-28 ">
       <div className="container">
-        <SimpleJustifiedBanner innerContent={content} />
+        <SimpleJustifiedBanner innerContent={content} onCtaClick={onCtaClick} />
       </div>
     </div>
   );

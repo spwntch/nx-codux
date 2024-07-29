@@ -19,7 +19,11 @@ const includedFeatures2 = [
   'Your next big opportunity, perhaps?',
 ];
 
-export const SimplePricing = () => {
+type Props = {
+  onCtaClick: () => void;
+};
+
+export const SimplePricing = ({ onCtaClick }: Props) => {
   return (
     <div className="mx-auto  max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none">
       <div>
@@ -108,7 +112,9 @@ export const SimplePricing = () => {
                 USD
               </span>
             </p>
-            <Button className="mt-10">UNLOCK ACCESS TODAY</Button>
+            <Button className="mt-10" onClick={onCtaClick}>
+              UNLOCK ACCESS TODAY
+            </Button>
             <p className="mt-6 text-xs leading-5 text-muted-foreground">
               Invoices and receipts available for easy company reimbursement
             </p>
