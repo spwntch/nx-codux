@@ -29,16 +29,13 @@ export const SimplePricing = () => {
           </h3>
           <p className="mt-6 text-base leading-7 text-muted-foreground">
             Full access to everything we've learned about leveraging customers
-            for maximum profitability and retention over 20 years or consulting
-            to brand across a multitude of industries.
+            for maximum profitability and retention over 20 years of consulting
+            to leading brands across a multitude of industries.
           </p>
           <div className=" flex items-center gap-x-4">
             <div className="h-px flex-auto bg-popover" />
           </div>
-          <ul
-            role="list"
-            className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6"
-          >
+          <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
             {includedFeatures0.map((feature) => (
               <li key={feature} className="flex gap-x-3">
                 <CheckIcon
@@ -55,16 +52,13 @@ export const SimplePricing = () => {
             A guided learning journey
           </h3>
           <p className="mt-6 text-base leading-7 text-muted-foreground">
-            We take customer experience serioulsy, and we hop this will be the
-            best learning journey you'll ever have!
+            We take customer experience serioulsy, and we hope this'll be the
+            best learning journey you've ever had!
           </p>
           <div className="flex items-center gap-x-4">
             <div className="h-px flex-auto bg-popover" />
           </div>
-          <ul
-            role="list"
-            className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6"
-          >
+          <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
             {includedFeatures1.map((feature) => (
               <li key={feature} className="flex gap-x-3">
                 <CheckIcon
@@ -87,10 +81,7 @@ export const SimplePricing = () => {
           <div className="flex items-center gap-x-4">
             <div className="h-px flex-auto bg-popover" />
           </div>
-          <ul
-            role="list"
-            className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6"
-          >
+          <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
             {includedFeatures2.map((feature) => (
               <li key={feature} className="flex gap-x-3">
                 <CheckIcon
