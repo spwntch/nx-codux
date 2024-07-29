@@ -8,12 +8,14 @@ import {
 } from '@spwntch/react-ui';
 
 import {
+  AboutUs,
   Benefits,
   DiveIn,
   Faqs,
   HowItWorks,
   Pricing,
   ProductSummary,
+  Resources,
   TellMeMore,
 } from '../../client-components';
 
@@ -68,8 +70,13 @@ const HomePage = ({
       <div id="pricing">
         <Pricing content={pricing} />
       </div>
-      <div id="about">{/* <Testimonials content={testimonials} /> */}</div>
-      <div id="resources"></div>
+      <div id="about">
+        <AboutUs />
+        {/* <Testimonials content={testimonials} /> */}
+      </div>
+      <div id="resources">
+        <Resources />
+      </div>
     </div>
   );
 };
