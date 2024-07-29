@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../../utils';
 
 export interface IButtonGroupProps {
   stacked?: boolean;
@@ -13,9 +14,11 @@ export const ButtonGroup: React.FC<IButtonGroupProps> = ({
 }) => {
   return (
     <div
-      className={`flex items-center gap-x-4 gap-y-2 ${
-        stacked ? 'flex-col' : ''
-      } ${className}`}
+      className={cn(
+        `flex items-center gap-x-4 gap-y-2`,
+        stacked && 'flex-col',
+        className
+      )}
     >
       {children}
     </div>
