@@ -13,10 +13,11 @@ import {
   Benefits,
   DiveIn,
   Faqs,
+  GetStarted,
   HowItWorks,
+  LearnMore,
   Pricing,
   ProductSummary,
-  TellMeMore,
 } from '../../client-components';
 
 export interface HomePageProps {
@@ -27,7 +28,7 @@ export interface HomePageProps {
   clientLogos: string[];
   productSummary: IContent;
   benefits: IContent;
-  tellMeMore: IContent;
+  learnMore: IContent;
   howItWorks: IContent;
   diveIn: IContent;
   faqs: IContent;
@@ -37,8 +38,9 @@ export interface HomePageProps {
     content: IContent;
     stats: { label: string; value: string }[];
   };
+  getStarted: IContent;
 
-  testimonials: IContent;
+  // testimonials: IContent;
 }
 
 const HomePage = ({
@@ -46,13 +48,13 @@ const HomePage = ({
   clientLogos,
   productSummary,
   benefits,
-  tellMeMore,
+  learnMore,
   howItWorks,
   diveIn,
   faqs,
   pricing,
   about,
-  testimonials,
+  getStarted
 }: HomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -83,7 +85,7 @@ const HomePage = ({
         <HowItWorks content={howItWorks} />
       </div>
       <div id="learn-more">
-        <TellMeMore content={tellMeMore} />
+        <LearnMore content={learnMore} />
       </div>
       <div id="faq">
         <Faqs content={faqs} />
@@ -101,7 +103,9 @@ const HomePage = ({
       {/* <div id="resources">
         <Resources />
       </div> */}
-      <div id="get-started"></div>
+      <div id="get-started">
+        <GetStarted content={getStarted} />
+      </div>
     </div>
   );
 };
