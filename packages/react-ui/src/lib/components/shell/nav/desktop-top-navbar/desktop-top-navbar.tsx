@@ -61,9 +61,9 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
               <NavToolbar floating={floating} onLinkTo={onLinkTo} />
             </nav>
           </div>
-          <div>
+          {/* <div>
             <Button>GET STARTED</Button>
-          </div>
+          </div> */}
           <div className="ml-8">
             <ButtonGroup>
               {!disableThemeToggle && <ThemeToggleButton />}

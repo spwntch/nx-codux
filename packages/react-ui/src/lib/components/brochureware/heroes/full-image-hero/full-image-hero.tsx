@@ -54,7 +54,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             className={cn(isMobile && 'items-center', className)}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup stacked={isMobile}>
+              <ButtonGroup>
                 {innerContent.ctas.map((cta, index) => (
                   <Button
                     key={index}
