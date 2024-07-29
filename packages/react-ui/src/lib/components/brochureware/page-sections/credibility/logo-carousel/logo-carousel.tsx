@@ -20,19 +20,19 @@ export const LogoCarousel: React.FC<LogoCarouselProps> = ({
 
   return (
     <Carousel
-      className={cn('mx-auto', className)}
+      className={cn('w-screen mx-auto', className)}
       opts={carouselOptions}
       plugins={[plugin.current]}
     >
       {title && <h2 className="text-primary text-center">{title}</h2>}
-      <CarouselContent className="py-8 px-8">
+      <CarouselContent className="py-3">
         {logos.map((logo, index) => (
           <CarouselItem
             key={index}
-            className="flex justify-center basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+            className="flex justify-center basis-1/1 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 "
           >
             <div className="p-4">
-              <img
+              < img
                 src={logo}
                 alt={`Logo ${index + 1}`}
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
