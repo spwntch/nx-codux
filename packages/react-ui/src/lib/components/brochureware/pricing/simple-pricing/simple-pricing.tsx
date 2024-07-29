@@ -116,7 +116,7 @@ export const SimplePricing = ({ onCtaClick }: Props) => {
               UNLOCK ACCESS TODAY
             </Button>
             <p className="mt-6 text-xs leading-5 text-muted-foreground">
-              Invoices and receipts available for easy company reimbursement
+              We're used to working with procurement departments. We'll help you deal with that.
             </p>
           </div>
         </div>
