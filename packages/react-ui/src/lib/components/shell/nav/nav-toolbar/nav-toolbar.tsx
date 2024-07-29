@@ -49,7 +49,7 @@ export const NavToolbar = ({
   return (
     <NavigationMenu
       className={cn(
-        'hidden lg:flex  w-full',
+        'hidden lg:flex',
         alignment === 'start'
           ? 'justify-start'
           : alignment === 'end'
