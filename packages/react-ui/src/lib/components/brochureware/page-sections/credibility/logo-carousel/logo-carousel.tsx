@@ -27,7 +27,10 @@ export const LogoCarousel: React.FC<LogoCarouselProps> = ({
       {title && <h2 className="text-primary text-center">{title}</h2>}
       <CarouselContent className="py-8 px-8">
         {logos.map((logo, index) => (
-          <CarouselItem key={index} className="flex justify-center basis-1/5">
+          <CarouselItem
+            key={index}
+            className="flex justify-center basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+          >
             <div className="p-4">
               <img
                 src={logo}
