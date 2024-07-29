@@ -32,6 +32,12 @@ export interface HomePageProps {
   diveIn: IContent;
   faqs: IContent;
   pricing: IContent;
+  about: {
+    youtubeId: string;
+    content: IContent;
+    stats: { label: string; value: string }[];
+  };
+
   testimonials: IContent;
 }
 
@@ -45,6 +51,7 @@ const HomePage = ({
   diveIn,
   faqs,
   pricing,
+  about,
   testimonials,
 }: HomePageProps) => {
   return (
@@ -71,7 +78,7 @@ const HomePage = ({
         <Pricing content={pricing} />
       </div>
       <div id="about">
-        <AboutUs />
+        <AboutUs {...about} />
         {/* <Testimonials content={testimonials} /> */}
       </div>
       <div id="resources">

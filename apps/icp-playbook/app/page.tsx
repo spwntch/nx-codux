@@ -1,5 +1,8 @@
 import { HomePage } from '@/next-pages/server';
 import {
+  ABOUT_CONTENT,
+  ABOUT_STATS,
+  ABOUT_YOUTUBE,
   BENEFITS,
   CLIENT_LOGOS,
   DIVE_IN,
@@ -28,6 +31,11 @@ export default function Index() {
       diveIn={DIVE_IN}
       faqs={FAQ}
       pricing={PRICING}
+      about={{
+        youtubeId: ABOUT_YOUTUBE,
+        content: ABOUT_CONTENT,
+        stats: ABOUT_STATS,
+      }}
       testimonials={TESTIMONIALS}
     />
   );
