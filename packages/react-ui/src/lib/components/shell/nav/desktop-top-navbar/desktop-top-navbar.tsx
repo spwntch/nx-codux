@@ -58,7 +58,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           alignment={navAlignment}
           floating={floating}
           onLinkTo={onLinkTo}
-          className="flex-1 w-full"
+          className="flex-1"
         />
         <ButtonGroup>
           {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
