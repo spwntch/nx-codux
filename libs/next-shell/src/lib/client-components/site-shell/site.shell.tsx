@@ -33,7 +33,7 @@ export const SiteShell = ({
   };
 
   return (
-    <ShellProvider brand={brand} navItems={navItems}>
+    <ShellProvider brand={brand} navItems={navItems} defaultTheme='dark'>
       <SiteShellStarter
         navbar={navbar}
         underContruction={underContruction}
