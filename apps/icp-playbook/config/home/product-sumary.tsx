@@ -12,9 +12,9 @@ export const THE_ICP_PLAYBOOK: IContent = {
   },
   body: {
     content: [
-      'The ICP Playbook is a comprehensive toolkit designed to help you identify and target your ideal customers with precision. Developed for marketing, sales, and product teams, it includes structured workshops, worksheets, templates, and more to streamline your customer profiling process.',
+      'The ICP (Ideal Customer Profile) Playbook is a comprehensive toolkit designed to help you identify and target your ideal customers with precision.','Developed for marketing, sales, and product teams, it includes structured workshops, worksheets, templates, and more to streamline your customer profiling process.',
     ],
-    className: 'text-lg text-center max-w-4xl',
+    className: 'text-lg text-left max-w-3xl',
   },
   bullets: [
     {

@@ -9,7 +9,7 @@ const includedFeatures0 = [
 ];
 const includedFeatures1 = [
   'Concierge account management',
-  'Subjext matter experts',
+  'Subject matter experts',
   'Facilitated workshops',
   '24/7 support',
 ];
