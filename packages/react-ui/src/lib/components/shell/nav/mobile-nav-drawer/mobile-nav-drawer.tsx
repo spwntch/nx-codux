@@ -49,7 +49,7 @@ export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({
         <NavMenu
           onLinkTo={(href) => {
             setOpen(false);
-            onLinkTo(href);
+            setTimeout(() => onLinkTo(href), 500);
           }}
         />
       </SheetContent>
