@@ -11,7 +11,7 @@ export const HOW_IT_WORKS: IContent = {
       'With the ICP Playbook, you’ll be fully supported every step of the way. From orientation to implementation, we ensure you and your team have the tools and knowledge needed to succeed.',
       'Here’s how our process unfolds:',
     ],
-    className: 'text-lg text-center max-w-4xl',
+    className: 'text-lg text-left max-w-4xl',
   },
   bullets: [
     {

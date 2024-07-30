@@ -13,7 +13,7 @@ export const BENEFITS: IContent = {
     content: [
       'Discover how the ICP Playbook can transform your business by enhancing targeting, boosting conversions, aligning teams, and more. Each feature is designed to deliver actionable insights and strategies, ensuring you reach your goals efficiently and effectively.',
     ],
-    className: 'text-lg text-center max-w-4xl',
+    className: 'text-lg text-left max-w-4xl',
   },
   bullets: [
     {
