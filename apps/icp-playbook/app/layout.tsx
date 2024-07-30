@@ -1,13 +1,12 @@
 import { SiteShell } from '@/next-shell';
-import { ParapgraphsWithClassName, TextWithClassName } from '@spwntch/react-ui';
-import { brand, HOME_HERO_CONTENT, primaryNav } from '../config';
+import { brand, primaryNav } from '../config';
 import './global.css';
 
 export const metadata = {
-  title: 'ICP Playbook | Interact RDT',
-  description: `${(HOME_HERO_CONTENT.title as TextWithClassName).content} - ${
-    (HOME_HERO_CONTENT.body as ParapgraphsWithClassName).content[0]
-  }`,
+  metadataBase:
+    (process.env.NEXT_PUBLIC_SITE_URL &&
+      new URL(process.env.NEXT_PUBLIC_SITE_URL)) ||
+    '',
 };
 
 export default function RootLayout({
