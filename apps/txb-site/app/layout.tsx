@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const navbar = {
-    floating: false,
+    floating: true,
     logoHeight: 52,
   };
 
