@@ -1,16 +1,16 @@
 'use client';
-import { ContentContainer, FeatureGrid, IContent } from '@spwntch/react-ui';
+import { cn, ContentContainer, FeatureGrid, IContent } from '@spwntch/react-ui';
 
-type Props = { content: IContent };
+type Props = { id: string; content: IContent; className?: string };
 
-const ProductSummary = ({ content }: Props) => {
+const ProductSummary = ({ id, content, className }: Props) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28">
+    <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="container">
         <ContentContainer innerContent={header} />
         {content.bullets && <FeatureGrid features={content.bullets} />}

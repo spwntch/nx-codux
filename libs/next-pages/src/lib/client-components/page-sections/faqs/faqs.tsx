@@ -1,19 +1,26 @@
 'use client';
 
-import { ContentContainer, FaqAccordion, IContent } from '@spwntch/react-ui';
+import {
+  cn,
+  ContentContainer,
+  FaqAccordion,
+  IContent,
+} from '@spwntch/react-ui';
 
-export interface BenefitsProps {
+export interface FaqsProps {
+  id: string;
   content: IContent;
+  className?: string;
 }
 
-const Faqs = ({ content }: BenefitsProps) => {
+const Faqs = ({ id, content, className }: FaqsProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28 bg-muted">
+    <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="container">
         <ContentContainer innerContent={header} />
         {content.bullets && <FaqAccordion faqs={content.bullets} />}

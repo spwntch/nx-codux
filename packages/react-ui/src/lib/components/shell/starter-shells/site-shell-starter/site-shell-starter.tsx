@@ -24,11 +24,11 @@ export const SiteShellStarter = ({
   children,
 }: SiteShellProps & PropsWithChildren) => {
   return (
-    <div className="h-screen">
+    <>
       <DesktopTopNavbar
         floating={navbar.floating}
         className={cn(
-          navbar.floating ? 'bg-transparent absolute w-full' : 'bg-background',
+          navbar.floating ? 'bg-transparent w-full' : 'bg-background',
           navbar?.className
         )}
         navAlignment={navbar?.alignment}
@@ -38,9 +38,11 @@ export const SiteShellStarter = ({
         onLinkTo={onNavbarLinkTo}
       />
 
-      <main>{children}</main>
+      <main className={cn(navbar.floating && 'relative -top-[100px]')}>
+        {children}
+      </main>
       {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useMediaQuery } from '@react-hooks-library/core';
-import React, { forwardRef } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import React, { forwardRef, useState } from 'react';
 import { cn } from '../../../../utils';
 import { ButtonGroup, GithubButton } from '../../../components';
 import { Button } from '../../../shadcn-ui';
@@ -38,15 +39,46 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     ref
   ) => {
     const isMobile = useMediaQuery('(max-width: 640px)');
+    const { scrollY } = useScroll();
+    const [hideNavbar, setHideNavbar] = useState(false);
+    const [initialNavbar, setInitialNavbar] = useState(true);
+    useMotionValueEvent(scrollY, 'change', (y) => {
+      if (y < 100) setInitialNavbar(true);
+      else setInitialNavbar(false);
+      const prevY = scrollY.getPrevious() || 0;
+      if (y > prevY && y > 100) setHideNavbar(true);
+      else setHideNavbar(false);
+      console.log(y, prevY);
+    });
 
     return (
-      <header
+      <motion.nav
+        variants={{
+          initial: {
+            y: 0,
+            backgroundColor: floating
+              ? 'transparent'
+              : 'hsl(var(--background))',
+          },
+          solid: {
+            y: 0,
+            backgroundColor: 'hsl(var(--background))',
+          },
+          hidden: {
+            y: '-100%',
+            backgroundColor: floating
+              ? 'transparent'
+              : 'hsl(var(--background))',
+          },
+        }}
+        animate={hideNavbar ? 'hidden' : initialNavbar ? 'initial' : 'solid'}
+        transition={{ duration: 0.35, ease: 'easeInOut' }}
         className={cn(
           'sticky top-0 z-50 flex p-4 lg:p-6 items-center justify-between',
           className
         )}
         ref={ref}
-        {...props}
+        // {...props}
       >
         <Logo
           height={logoHeight || 36}
@@ -56,7 +88,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         />
         <NavToolbar
           alignment={navAlignment}
-          floating={floating}
+          floating={initialNavbar && floating}
           onLinkTo={onLinkTo}
           className="flex-1"
         />
@@ -66,7 +98,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           {githubUrl && <GithubButton url={githubUrl} />}
           {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
         </ButtonGroup>
-      </header>
+      </motion.nav>
     );
   }
 );

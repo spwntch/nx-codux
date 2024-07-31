@@ -1,16 +1,16 @@
 'use client';
-import { ContentContainer, IContent, InlineForm } from '@spwntch/react-ui';
+import { cn, ContentContainer, IContent, InlineForm } from '@spwntch/react-ui';
 
-type Props = { content: IContent };
+type Props = { id: string; content: IContent; className?: string };
 
-const GetStarted = ({ content }: Props) => {
+const GetStarted = ({ id, content, className }: Props) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28 ">
+    <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
       <div className="container">
         <ContentContainer innerContent={header} />
         <InlineForm className="max-w-4xl mx-auto" />

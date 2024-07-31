@@ -21,13 +21,13 @@ export const ThemeToggleButton: React.FC<{ className?: string }> = ({
         <Button variant="outline" size="icon" className={className}>
           <Sun
             className={cn(
-              'h-[1.2rem] w-[1.2rem] transition-all',
+              'h-[1.2rem] w-[1.2rem] transition-all text-foreground',
               'dark:hidden'
             )}
           />
           <Moon
             className={cn(
-              'h-[1.2rem] w-[1.2rem] transition-all',
+              'h-[1.2rem] w-[1.2rem] transition-all text-foreground',
               'hidden dark:block'
             )}
           />
