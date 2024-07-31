@@ -18,9 +18,9 @@ export const BENEFITS: IContent = {
   bullets: [
     {
       image: { src: 'images/improved-targeting.webp' },
-      heading: 'Improved Targeting',
+      heading: 'Improved Targeting & Conversions',
       body: [
-        'Identify and focus on high-potential customers, reducing wasted marketing spend. With the ICP Playbook, gain precision in your targeting efforts, ensuring every marketing dollar is well spent.',
+        'Identify and focus on high-potential customers, reducing wasted marketing spend and boosting conversion rates. With the ICP Playbook, gain precision in your targeting efforts, leading to higher lead quality, increased engagement, and more successful sales.',
       ],
       bullets: [
         {
@@ -28,24 +28,7 @@ export const BENEFITS: IContent = {
           className: 'flex items-center mt-2',
         },
         {
-          body: ['Reduce wasted marketing spend.'],
-          className: 'flex items-center mt-2',
-        },
-      ],
-    },
-    {
-      image: { src: 'images/increased-conversions.webp' },
-      heading: 'Increased Conversions',
-      body: [
-        'Boost lead quality and conversion rates through precise customer profiling. The ICP Playbook helps you understand your customers better, leading to higher engagement and more successful sales.',
-      ],
-      bullets: [
-        {
-          body: ['Higher lead quality.'],
-          className: 'flex items-center mt-2',
-        },
-        {
-          body: ['Improved conversion rates.'],
+          body: ['Higher lead quality and improved conversion rates.'],
           className: 'flex items-center mt-2',
         },
       ],
