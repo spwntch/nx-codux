@@ -43,10 +43,10 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     const [hideNavbar, setHideNavbar] = useState(false);
     const [initialNavbar, setInitialNavbar] = useState(true);
     useMotionValueEvent(scrollY, 'change', (y) => {
-      if (y < 100) setInitialNavbar(true);
+      if (y < 50) setInitialNavbar(true);
       else setInitialNavbar(false);
       const prevY = scrollY.getPrevious() || 0;
-      if (y > prevY && y > 100) setHideNavbar(true);
+      if (y > prevY && y > 50) setHideNavbar(true);
       else setHideNavbar(false);
       console.log(y, prevY);
     });
@@ -66,9 +66,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           },
           hidden: {
             y: '-100%',
-            backgroundColor: floating
-              ? 'transparent'
-              : 'hsl(var(--background))',
+            backgroundColor: 'hsl(var(--background))',
           },
         }}
         animate={hideNavbar ? 'hidden' : initialNavbar ? 'initial' : 'solid'}
