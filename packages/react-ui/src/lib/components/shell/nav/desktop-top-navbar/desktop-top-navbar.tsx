@@ -1,5 +1,6 @@
 import { useMediaQuery } from '@react-hooks-library/core';
-import React, { forwardRef } from 'react';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import React, { forwardRef, useState } from 'react';
 import { cn } from '../../../../utils';
 import { ButtonGroup, GithubButton } from '../../../components';
 import { Button } from '../../../shadcn-ui';
@@ -38,15 +39,30 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     ref
   ) => {
     const isMobile = useMediaQuery('(max-width: 640px)');
+    const { scrollY } = useScroll();
+    const [hideNavbar, setHideNavbar] = useState(false);
+    useMotionValueEvent(scrollY, 'change', (y) => {
+      const prevY = scrollY.getPrevious() || 0;
+      if (y > prevY) setHideNavbar(true);
+      else setHideNavbar(false);
+      console.log(y, prevY);
+    });
 
     return (
-      <header
+      <motion.nav
+        variants={{
+          initial: { y: 0 },
+          visible: { y: 0 },
+          hidden: { y: '-100%' },
+        }}
+        animate={hideNavbar ? 'hidden' : 'visible'}
+        transition={{ duration: 0.35, ease: 'easeInOut' }}
         className={cn(
           'sticky top-0 z-50 flex p-4 lg:p-6 items-center justify-between',
           className
         )}
         ref={ref}
-        {...props}
+        // {...props}
       >
         <Logo
           height={logoHeight || 36}
@@ -66,7 +82,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           {githubUrl && <GithubButton url={githubUrl} />}
           {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
         </ButtonGroup>
-      </header>
+      </motion.nav>
     );
   }
 );
