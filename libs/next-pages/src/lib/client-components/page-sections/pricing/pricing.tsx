@@ -7,7 +7,7 @@ import {
   SimplePricing,
 } from '@spwntch/react-ui';
 
-export interface PricingProps {
+interface Props {
   id: string;
   pricingContent: IContent;
   valueContent: IContent[];
@@ -21,16 +21,11 @@ const Pricing = ({
   valueContent,
   className,
   onCtaClick,
-}: PricingProps) => {
-  const header: IContent = {
-    heading: pricingContent.heading,
-    subheading: pricingContent.subheading,
-    body: pricingContent.body,
-  };
+}: Props) => {
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="container">
-        <ContentContainer innerContent={header} />
+        <ContentContainer innerContent={pricingContent} />
         <SimplePricing valueContent={valueContent} onCtaClick={onCtaClick} />
         {/* {content.bullets && <FaqAccordion faqs={content.bullets} />} */}
       </div>
