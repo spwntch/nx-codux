@@ -1,20 +1,27 @@
 'use client';
 
-import { ContentContainer, IContent, SimplePricing } from '@spwntch/react-ui';
+import {
+  cn,
+  ContentContainer,
+  IContent,
+  SimplePricing,
+} from '@spwntch/react-ui';
 
-export interface BenefitsProps {
+export interface PricingProps {
+  id: string;
   content: IContent;
+  className?: string;
   onCtaClick: () => void;
 }
 
-const Pricing = ({ content, onCtaClick }: BenefitsProps) => {
+const Pricing = ({ id, content, className, onCtaClick }: PricingProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
     body: content.body,
   };
   return (
-    <div className="flex-col pt-12 pb-28">
+    <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="container">
         <ContentContainer innerContent={header} />
         <SimplePricing onCtaClick={onCtaClick} />

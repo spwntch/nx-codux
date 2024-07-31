@@ -54,7 +54,7 @@ const HomePage = ({
   faqs,
   pricing,
   about,
-  getStarted
+  getStarted,
 }: HomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -71,41 +71,28 @@ const HomePage = ({
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) handleLinkTo('#get-started');
-          // if (ctaIndex === 1) handleLinkTo('#product');
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <div id="product">
-        <ProductSummary content={productSummary} />
-        <Benefits content={benefits} />
-        <DiveIn
-          content={diveIn}
-          onCtaClick={() => handleLinkTo('#get-started')}
-        />
-        <HowItWorks content={howItWorks} />
-      </div>
-      <div id="learn-more">
-        <LearnMore content={learnMore} />
-      </div>
-      <div id="faq">
-        <Faqs content={faqs} />
-      </div>
-      <div id="pricing">
-        <Pricing
-          content={pricing}
-          onCtaClick={() => handleLinkTo('#get-started')}
-        />
-      </div>
-      <div id="about">
-        <AboutUs {...about} />
-        {/* <Testimonials content={testimonials} /> */}
-      </div>
-      {/* <div id="resources">
-        <Resources />
-      </div> */}
-      <div id="get-started">
-        <GetStarted content={getStarted} />
-      </div>
+      <ProductSummary id="product" content={productSummary} />
+      <HowItWorks content={howItWorks} className="bg-muted" />
+      <Benefits content={benefits} />
+      <DiveIn
+        content={diveIn}
+        className="bg-muted"
+        onCtaClick={() => handleLinkTo('#get-started')}
+      />
+      {/* <LearnMore content={learnMore} /> */}
+      <Faqs id="faq" content={faqs} />
+      <Pricing
+        id="pricing"
+        content={pricing}
+        className="bg-muted"
+        onCtaClick={() => handleLinkTo('#get-started')}
+      />
+      <AboutUs id="about" {...about} />
+      {/* <Resources id="resources" /> */}
+      <GetStarted id="get-started" content={getStarted} className="bg-muted" />
     </div>
   );
 };
