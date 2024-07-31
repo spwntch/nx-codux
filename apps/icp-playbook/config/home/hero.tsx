@@ -2,7 +2,7 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
-  src: '/images/home-page-collage.webp',
+  src: '/images/home/hero/all-benefits-landscape.webp',
   darken: '75%',
 };
 
@@ -10,7 +10,7 @@ export const HOME_HERO_CONTENT: IContent = {
   // announcement: {
   //   message: "Limited Time Offer: Get 10% Off the ICP Playbook!",
   //   className: "mx-auto text-xl",
-  //   href: "#"
+  //   href: "#" 
   // },
   title: {
     content: 'Unlock Your Ideal Customers with the ICP Playbook',
