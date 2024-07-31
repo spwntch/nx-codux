@@ -38,7 +38,9 @@ export const SiteShellStarter = ({
         onLinkTo={onNavbarLinkTo}
       />
 
-      <main className=" relative -top-[100px]">{children}</main>
+      <main className={cn(navbar.floating && 'relative -top-[100px]')}>
+        {children}
+      </main>
       {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
     </>
   );
