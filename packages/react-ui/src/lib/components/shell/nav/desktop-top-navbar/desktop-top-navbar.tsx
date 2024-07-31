@@ -66,9 +66,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           },
           hidden: {
             y: '-100%',
-            backgroundColor: floating
-              ? 'transparent'
-              : 'hsl(var(--background))',
+            backgroundColor: 'hsl(var(--background))',
           },
         }}
         animate={hideNavbar ? 'hidden' : initialNavbar ? 'initial' : 'solid'}
