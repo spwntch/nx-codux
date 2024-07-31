@@ -28,7 +28,7 @@ export const SiteShellStarter = ({
       <DesktopTopNavbar
         floating={navbar.floating}
         className={cn(
-          navbar.floating ? 'bg-background w-full' : 'bg-background',
+          navbar.floating ? 'bg-transparent w-full' : 'bg-background',
           navbar?.className
         )}
         navAlignment={navbar?.alignment}

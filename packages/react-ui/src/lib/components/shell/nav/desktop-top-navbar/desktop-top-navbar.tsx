@@ -41,9 +41,12 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
     const isMobile = useMediaQuery('(max-width: 640px)');
     const { scrollY } = useScroll();
     const [hideNavbar, setHideNavbar] = useState(false);
+    const [initialNavbar, setInitialNavbar] = useState(true);
     useMotionValueEvent(scrollY, 'change', (y) => {
+      if (y < 100) setInitialNavbar(true);
+      else setInitialNavbar(false);
       const prevY = scrollY.getPrevious() || 0;
-      if (y > prevY) setHideNavbar(true);
+      if (y > prevY && y > 50) setHideNavbar(true);
       else setHideNavbar(false);
       console.log(y, prevY);
     });
@@ -52,10 +55,14 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
       <motion.nav
         variants={{
           initial: { y: 0 },
-          visible: { y: 0 },
+          solid: {
+            y: 0,
+            backgroundColor: 'hsl(var(--background))',
+            borderBottom: '1px solid hsl(var(--foreground))',
+          },
           hidden: { y: '-100%' },
         }}
-        animate={hideNavbar ? 'hidden' : 'visible'}
+        animate={hideNavbar ? 'hidden' : initialNavbar ? 'initial' : 'solid'}
         transition={{ duration: 0.35, ease: 'easeInOut' }}
         className={cn(
           'sticky top-0 z-50 flex p-4 lg:p-6 items-center justify-between',
