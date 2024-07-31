@@ -6,8 +6,8 @@ export const brand: IBrand = {
     dark: '/brand/logo-dark.webp',
   },
   markUrl: {
-    light: '/brand/mark.webp',
-    dark: '/brand/mark.webp',
+    light: '/brand/mark-light.webp',
+    dark: '/brand/mark-dark.webp',
   },
   underConstructionUrl: {
     light: '/under-construction/powered-by-spawntech-light.webp',
@@ -17,7 +17,7 @@ export const brand: IBrand = {
   about: {
     body: [
       'Welcome to The Experience Business (or TXB as we like to call it).',
-      `We're a leading African CX/UX consultancy since 2004. We enhance customer and user experiences across industries like financial services, telecom, insurance, hospitality, and entertainment.`,
+      `We're a leading African consultancy since 2004. We enhance customer and user experiences across industries like financial services, telecom, insurance, hospitality, and entertainment.`,
       'At TXB, we turn data into actionable strategies that transform brand perceptions and customer experiences. With a focus on professionalism, quality, and long-term client partnerships, we deliver high-quality results that align with our clients’ goals.',
       'Join us to uncover business opportunities and achieve tangible results.',
     ],
