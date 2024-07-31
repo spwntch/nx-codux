@@ -1,32 +1,22 @@
 import { CheckIcon } from 'lucide-react';
+import { IContent } from '../../../../types';
 import { Button } from '../../../shadcn-ui';
-
-const includedFeatures0 = [
-  'Background theory',
-  'Methods that work',
-  'Workshop materials',
-  'Analysis templates',
-];
-const includedFeatures1 = [
-  'Concierge account management',
-  'Subject matter experts',
-  'Facilitated workshops',
-  '24/7 support',
-];
-const includedFeatures2 = [
-  'Perpetual license to use our templates',
-  'Continually growing Discord community',
-  'Your next big opportunity, perhaps?',
-];
+import { ContentContainer } from '../../containers';
 
 type Props = {
+  valueContent: IContent[];
   onCtaClick: () => void;
 };
 
-export const SimplePricing = ({ onCtaClick }: Props) => {
+export const SimplePricing = ({ valueContent, onCtaClick }: Props) => {
   return (
     <div className="mx-auto  max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none">
       <div>
+        {valueContent?.map((proposition, index) => (
+          <div className="p-8 sm:p-10 lg:flex-auto">
+            <ContentContainer innerContent={proposition} hAlign='left'/>
+          </div>
+        ))}
         <div className="p-8 sm:p-10 lg:flex-auto">
           <h3 className="text-2xl font-bold tracking-tight text-foreground">
             A ton of knowledge
@@ -40,60 +30,14 @@ export const SimplePricing = ({ onCtaClick }: Props) => {
             <div className="h-px flex-auto bg-popover" />
           </div>
           <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
-            {includedFeatures0.map((feature) => (
-              <li key={feature} className="flex gap-x-3">
+            {valueContent?.[0].bullets?.map((bullet, index) => (
+              <li key={index} className="flex gap-x-3">
                 <CheckIcon
                   aria-hidden="true"
                   className="h-6 w-5 flex-none text-primary"
                 />
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="p-8 sm:p-10 lg:flex-auto">
-          <h3 className="text-2xl font-bold tracking-tight text-foreground">
-            A guided learning journey
-          </h3>
-          <p className="mt-6 text-base leading-7 text-muted-foreground">
-            We take customer experience serioulsy, and we hope this'll be the
-            best learning journey you've ever had!
-          </p>
-          <div className="flex items-center gap-x-4">
-            <div className="h-px flex-auto bg-popover" />
-          </div>
-          <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
-            {includedFeatures1.map((feature) => (
-              <li key={feature} className="flex gap-x-3">
-                <CheckIcon
-                  aria-hidden="true"
-                  className="h-6 w-5 flex-none text-primary"
-                />
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="p-8 sm:p-10 lg:flex-auto">
-          <h3 className="text-2xl font-bold tracking-tight text-foreground">
-            Free access, forever...
-          </h3>
-          <p className="mt-6 text-base leading-7 text-muted-foreground">
-            Join our ever-growing community of learners and experts in the
-            field. Engage in conversation with leaders in your space.
-          </p>
-          <div className="flex items-center gap-x-4">
-            <div className="h-px flex-auto bg-popover" />
-          </div>
-          <ul className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
-            {includedFeatures2.map((feature) => (
-              <li key={feature} className="flex gap-x-3">
-                <CheckIcon
-                  aria-hidden="true"
-                  className="h-6 w-5 flex-none text-primary"
-                />
-                {feature}
-              </li>
+        {bullet.body}
+        </li>
             ))}
           </ul>
         </div>
@@ -116,7 +60,8 @@ export const SimplePricing = ({ onCtaClick }: Props) => {
               UNLOCK ACCESS TODAY
             </Button>
             <p className="mt-6 text-xs leading-5 text-muted-foreground">
-              We're used to working with procurement departments. We'll help you deal with that.
+              We're used to working with procurement departments. We'll help you
+              deal with that.
             </p>
           </div>
         </div>

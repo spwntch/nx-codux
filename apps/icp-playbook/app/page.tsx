@@ -12,6 +12,7 @@ import {
   HOW_IT_WORKS,
   LEARN_MORE,
   PRICING,
+  VALUE,
   THE_ICP_PLAYBOOK,
 } from '../config';
 import { FAQ } from '../config/home/faqs';
@@ -75,6 +76,7 @@ export default function Index() {
       diveIn={DIVE_IN}
       faqs={FAQ}
       pricing={PRICING}
+      value={VALUE}
       about={{
         youtubeId: ABOUT_YOUTUBE,
         content: ABOUT_CONTENT,

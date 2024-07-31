@@ -33,6 +33,7 @@ export interface HomePageProps {
   diveIn: IContent;
   faqs: IContent;
   pricing: IContent;
+  value: IContent[];
   about: {
     youtubeId: string;
     content: IContent;
@@ -53,6 +54,7 @@ const HomePage = ({
   diveIn,
   faqs,
   pricing,
+  value,
   about,
   getStarted,
 }: HomePageProps) => {
@@ -63,7 +65,7 @@ const HomePage = ({
 
   return (
     <div className="flex flex-col">
-      <FullImageHero
+      {/* <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
@@ -81,12 +83,13 @@ const HomePage = ({
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
-      />
+      /> */}
       {/* <LearnMore content={learnMore} /> */}
-      <Faqs id="faq" content={faqs} />
+      {/* <Faqs id="faq" content={faqs} /> */}
       <Pricing
         id="pricing"
-        content={pricing}
+        pricingContent={pricing}
+        valueContent={value}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
