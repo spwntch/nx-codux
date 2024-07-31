@@ -58,7 +58,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           solid: {
             y: 0,
             backgroundColor: 'hsl(var(--background))',
-            borderBottom: '1px solid hsl(var(--foreground))',
+            borderBottom: '1px solid hsl(var(--muted-foreground))',
           },
           hidden: { y: '-100%' },
         }}
@@ -79,7 +79,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         />
         <NavToolbar
           alignment={navAlignment}
-          floating={floating}
+          floating={initialNavbar && floating}
           onLinkTo={onLinkTo}
           className="flex-1"
         />
