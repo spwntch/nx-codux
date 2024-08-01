@@ -14,7 +14,12 @@ import {
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import {
+  GetStartedFormInputs,
+  getStartedFormSchema,
+} from '../../../types/get-started-form';
+
+import { getStarted } from '../../../server-actions/get-started';
 
 type Props = { id: string; content: IContent; className?: string };
 
@@ -25,14 +30,7 @@ const GetStarted = ({ id, content, className }: Props) => {
     body: content.body,
   };
 
-  const getStartedFormSchema = z.object({
-    first_name: z.string().min(1, { message: 'Required' }),
-    email: z.string().email(),
-  });
-
-  type GetStartedFormInputs = z.infer<typeof getStartedFormSchema>;
-
-  const form = useForm<z.infer<typeof getStartedFormSchema>>({
+  const form = useForm<GetStartedFormInputs>({
     resolver: zodResolver(getStartedFormSchema),
     defaultValues: {
       first_name: '',
@@ -42,6 +40,8 @@ const GetStarted = ({ id, content, className }: Props) => {
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
     console.log(values);
+    const { data } = await getStarted();
+    console.log(data);
   };
 
   return (
