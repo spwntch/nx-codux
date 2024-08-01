@@ -15,39 +15,63 @@ export const VALUE: IContent[] = [
   {
     heading: {
       content: 'A ton of knowledge',
-      className: 'text-2xl font-bold tracking-tight text-foreground',
+      className: 'md:text-2xl font-bold tracking-tight mb-0',
     },
-    body: [
-      "Full access to everything we've learned about leveraging customers for maximum profitability and retention over 20 years of consulting to leading brands across a multitude of industries.",
-    ],
-    bullets: [
-      { icon, body: ['Background theory'] },
-      { icon, body: ['Methods that work'] },
-      { icon, body: ['Workshop materials'] },
-      { icon, body: ['Analysis templates'] },
-    ],
+    body: {
+      content: [
+        "Full access to everything we've learned about leveraging customers for maximum profitability and retention over 20 years of consulting to leading brands across a multitude of industries.",
+      ],
+      className: 'text-sm leading-6 text-muted-foreground mt-2',
+    },
+    bullets: {
+      content: [
+        { icon, body: ['Background theory'] },
+        { icon, body: ['Methods that work'] },
+        { icon, body: ['Workshop materials'] },
+        { icon, body: ['Analysis templates'] },
+      ],
+      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+    },
   },
-  // {
-  //   heading: 'A guided learning journey',
-  //   body: [
-  //     "We take customer experience serioulsy, and we hope this'll be the best learning journey you've ever had!",
-  //   ],
-  //   bullets: [
-  //     { icon, body: ['Concierge account management'] },
-  //     { icon, body: ['Subject matter experts'] },
-  //     { icon, body: ['Facilitated workshops'] },
-  //     { icon, body: ['24/7 support'] },
-  //   ],
-  // },
-  // {
-  //   heading: 'Free access, forever...',
-  //   body: [
-  //     'Join our ever-growing community of learners and experts in the field. Engage in conversation with leaders in your space.',
-  //   ],
-  //   bullets: [
-  //     { icon, body: ['Perpetual license to use our templates'] },
-  //     { icon, body: ['Continually growing Discord community'] },
-  //     { icon, body: ['Your next big opportunity, perhaps?'] },
-  //   ],
-  // },
+  {
+    heading: {
+      content: 'A guided learning journey',
+      className: 'md:text-2xl font-bold tracking-tight mb-0',
+    },
+    body: {
+      content: [
+        "We take customer experience serioulsy, and we hope this'll be the best learning journey you've ever had!",
+      ],
+      className: 'text-sm leading-6 text-muted-foreground mt-2',
+    },
+    bullets: {
+      content: [
+        { icon, body: ['Concierge account management'] },
+        { icon, body: ['Subject matter experts'] },
+        { icon, body: ['Facilitated workshops'] },
+        { icon, body: ['24/7 support'] },
+      ],
+      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+    },
+  },
+  {
+    heading: {
+      content: 'Free access, forever...',
+      className: 'md:text-2xl font-bold tracking-tight mb-0',
+    },
+    body: {
+      content: [
+        'Join our ever-growing community of learners and experts in the field. Engage in conversation with leaders in your space.',
+      ],
+      className: 'text-sm leading-6 text-muted-foreground mt-2',
+    },
+    bullets: {
+      content: [
+        { icon, body: ['Perpetual license to use our templates'] },
+        { icon, body: ['Continually growing Discord community'] },
+        { icon, body: ['Your next big opportunity, perhaps?'] },
+      ],
+      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+    },
+  },
 ];

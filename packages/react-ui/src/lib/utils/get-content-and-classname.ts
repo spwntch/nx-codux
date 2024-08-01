@@ -2,6 +2,8 @@ import {
   IContent,
   TextWithClassName,
   ParapgraphsWithClassName,
+  BulletsWithClassName,
+  IBullet,
 } from '../types';
 
 export const getTitleContentAndClassName = (title: IContent['title']) => {
@@ -34,6 +36,12 @@ export const getBodyContentAndClassName = (body: IContent['body']) => {
   return { bodyContent, bodyClassName };
 };
 
+export const getBulletsContentAndClassName = (bullets: IContent['bullets']) => {
+  const bulletsContent =
+    (bullets as BulletsWithClassName)?.content || (bullets as IBullet[]);
+  const bulletsClassName = (bullets as BulletsWithClassName)?.className || '';
+  return { bulletsContent, bulletsClassName };
+};
 export const getTagsContentAndClassName = (tags: IContent['tags']) => {
   const tagsContent =
     (tags as ParapgraphsWithClassName)?.content || (tags as string[]);
