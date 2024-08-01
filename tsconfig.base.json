@@ -18,9 +18,6 @@
       "@/codux": ["codux/src/index.ts"],
       "@/crm": ["libs/crm/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
-      "@spwntch/react-integrations": [
-        "packages/react-integrations/src/index.ts"
-      ],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
     }
   },
