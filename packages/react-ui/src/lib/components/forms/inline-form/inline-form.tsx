@@ -9,7 +9,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  Input
+  Input,
 } from '../../shadcn-ui';
 
 import { useForm } from 'react-hook-form';
@@ -21,9 +21,12 @@ const formSchema = z.object({
 });
 
 interface InlineFormProps {
+  submitButton: {
+    label: string;
+  };
   className?: string;
 }
-const InlineForm = ({ className }: InlineFormProps) => {
+const InlineForm = ({ submitButton, className }: InlineFormProps) => {
   const isMobile = useMediaQuery('(max-width: 640px)');
 
   // 1. Define your form.
@@ -78,7 +81,9 @@ const InlineForm = ({ className }: InlineFormProps) => {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <Button type="submit" size="lg">
+            {submitButton.label}
+          </Button>
         </form>
       </Form>
     </div>

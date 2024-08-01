@@ -13,7 +13,10 @@ const GetStarted = ({ id, content, className }: Props) => {
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
       <div className="container">
         <ContentContainer innerContent={header} />
-        <InlineForm className="max-w-4xl mx-auto" />
+        <InlineForm
+          submitButton={{ label: 'GET STARTED NOW' }}
+          className="max-w-4xl mx-auto"
+        />
       </div>
     </div>
   );
