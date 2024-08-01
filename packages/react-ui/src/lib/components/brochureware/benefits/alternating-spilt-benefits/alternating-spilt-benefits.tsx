@@ -1,16 +1,18 @@
-import { IBullet } from '../../../../types';
-import { cn } from '../../../../utils';
+import { BulletsWithClassName, IBullet } from '../../../../types';
+import { cn, getBulletsContentAndClassName } from '../../../../utils';
 
 interface IAlternatingSplitBenefitsProps {
-  benefits: IBullet[];
+  benefits: IBullet[] | BulletsWithClassName;
 }
 
 const AlternatingSplitBenefits = ({
   benefits,
 }: IAlternatingSplitBenefitsProps) => {
+  const { bulletsContent } = getBulletsContentAndClassName(benefits);
+
   return (
     <div className=" space-y-16 ">
-      {benefits.map((benefit, benefitIdx) => (
+      {bulletsContent.map((benefit, benefitIdx) => (
         <div
           key={benefit.heading}
           className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
