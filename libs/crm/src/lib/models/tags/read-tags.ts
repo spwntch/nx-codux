@@ -1,6 +1,6 @@
 'use server';
 
-import { CustomField } from '../../integrations/activecampaign/types';
+import { CustomField } from '../../types';
 import { readAll } from '../../integrations/activecampaign/utils';
 
 export const readTags = async (): Promise<CustomField[]> => {

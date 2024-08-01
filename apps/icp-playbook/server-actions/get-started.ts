@@ -1,5 +1,26 @@
 'use server';
 
-export const getStarted = async (): Promise<{ data: { ping: string } }> => {
-  return { data: { ping: 'pong' } };
+import { Contact } from '@/crm';
+import { getErrorMessage } from '../lib';
+
+export const getStarted = async (
+  first_name: string,
+  email: string
+): Promise<{
+  data: { ping: string } | null;
+  error: string | null;
+}> => {
+  try {
+    console.log(first_name, email);
+
+    const crmContact: Partial<Contact> = {
+      firstName: first_name,
+      email,
+    };
+
+    return { data: { ping: 'pong' }, error: null };
+  } catch (error) {
+    const message = getErrorMessage(error);
+    return { data: null, error: message };
+  }
 };
