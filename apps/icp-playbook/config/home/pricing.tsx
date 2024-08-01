@@ -1,4 +1,4 @@
-import { IContent } from '@spwntch/react-ui';
+import { IContent, IPricing } from '@spwntch/react-ui';
 
 export const PRICING: IContent = {
   heading: 'Pricing',
@@ -10,6 +10,14 @@ import { CheckIcon } from 'lucide-react';
 const icon = (
   <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
 );
+
+export const COST: IPricing = {
+  heading: 'Pay once, own it forever',
+  price: '$4,999',
+  currency: 'USD',
+  cta: { label: 'UNLOCK ACCESS TODAY' },
+  note: `We're used to working with procurement departments. We'll help you deal with that.`,
+};
 
 export const VALUE: IContent[] = [
   {

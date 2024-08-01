@@ -4,6 +4,7 @@ import {
   FullImageHero,
   IContent,
   IImage,
+  IPricing,
   LogoCarousel,
 } from '@spwntch/react-ui';
 
@@ -34,6 +35,7 @@ export interface HomePageProps {
   faqs: IContent;
   pricing: IContent;
   value: IContent[];
+  cost: IPricing;
   about: {
     youtubeId: string;
     content: IContent;
@@ -55,6 +57,7 @@ const HomePage = ({
   faqs,
   pricing,
   value,
+  cost,
   about,
   getStarted,
 }: HomePageProps) => {
@@ -65,7 +68,7 @@ const HomePage = ({
 
   return (
     <div className="flex flex-col">
-      {/* <FullImageHero
+      <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
@@ -83,13 +86,14 @@ const HomePage = ({
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
-      /> */}
+      />
       {/* <LearnMore content={learnMore} /> */}
-      {/* <Faqs id="faq" content={faqs} /> */}
+      <Faqs id="faq" content={faqs} />
       <Pricing
         id="pricing"
         pricingContent={pricing}
         valueContent={value}
+        costContent={cost}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
