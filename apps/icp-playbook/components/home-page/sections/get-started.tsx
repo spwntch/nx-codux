@@ -40,8 +40,8 @@ const GetStarted = ({ id, content, className }: Props) => {
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
     const { first_name, email } = values;
-    const { data } = await getStarted(first_name, email);
-    console.log(data);
+    const { data, error } = await getStarted(first_name, email);
+    console.log({ data, error });
   };
 
   return (
