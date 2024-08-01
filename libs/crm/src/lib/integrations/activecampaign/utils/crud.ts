@@ -4,11 +4,11 @@ export const createOne = async <T>(
   responseKey: string,
   model: Partial<T>
 ): Promise<{ data: T | null; error: string | null; status: '200' | '409' }> => {
-  const endpoint = `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_URL}/api/3/${endPointPath}`;
+  const endpoint = `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_URL']}/api/3/${endPointPath}`;
   const response = await fetch(endpoint, {
     method: 'POST',
     headers: {
-      'Api-Token': `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY}`,
+      'Api-Token': `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY']}`,
       'content-type': 'application/json',
       accept: 'application/json',
     },
@@ -22,11 +22,11 @@ export const createOne = async <T>(
 };
 
 export const readAll = async <T>(endPointPath: string, responseKey: string) => {
-  const endpoint = `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_URL}/api/3/${endPointPath}?limit=1000`;
+  const endpoint = `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_URL']}/api/3/${endPointPath}?limit=1000`;
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {
-      'Api-Token': `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY}`,
+      'Api-Token': `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY']}`,
     },
   });
   const data = await response.json();
@@ -43,11 +43,11 @@ export const readOneByField = async <T, K>(
     value: K;
   }
 ): Promise<{ data: T | null; error: string | null; status: '200' }> => {
-  const endpoint = `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_URL}/api/3/${endPointPath}?${field.name}=${field.value}`;
+  const endpoint = `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_URL']}/api/3/${endPointPath}?${field.name}=${field.value}`;
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {
-      'Api-Token': `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY}`,
+      'Api-Token': `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY']}`,
     },
   });
   const data = await response.json();
@@ -61,11 +61,11 @@ export const updateOneById = async <T>(
   id: string,
   update: Partial<T>
 ): Promise<{ data: T | null; error: string | null; status: '200' | '404' }> => {
-  const endpoint = `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_URL}/api/3/${endPointPath}/${id}`;
+  const endpoint = `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_URL']}/api/3/${endPointPath}/${id}`;
   const response = await fetch(endpoint, {
     method: 'PUT',
     headers: {
-      'Api-Token': `${process.env.NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY}`,
+      'Api-Token': `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_API_KEY']}`,
       'content-type': 'application/json',
       accept: 'application/json',
     },
@@ -76,4 +76,3 @@ export const updateOneById = async <T>(
     return { data: null, error: data.errors[0].title, status: '404' };
   return { data: data[responseKey] as T, status: '200', error: null };
 };
-

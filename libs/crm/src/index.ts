@@ -1,1 +1,1 @@
-export * from './lib/crm';
+export * from './lib/models';
