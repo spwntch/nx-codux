@@ -7,7 +7,6 @@ export { default as LogoCarousel } from './logo-carousel/logo-carousel';
 export { default as Benefits } from './benefits/benefits';
 export { default as DiveIn } from './ctas/dive-in';
 export { default as GetStarted } from './ctas/get-started';
-export { default as LearnMore } from './ctas/learn-more';
 export { default as Testimonials } from './testimonials/testimonials';
 export { default as ProductSummary } from './product-summary/product-summary';
 export { default as HowItWorks } from './how-it-works/how-it-works';

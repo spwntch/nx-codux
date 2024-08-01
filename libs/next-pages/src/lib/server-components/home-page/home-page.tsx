@@ -16,9 +16,8 @@ import {
   Faqs,
   GetStarted,
   HowItWorks,
-  LearnMore,
   Pricing,
-  ProductSummary,
+  ProductSummary
 } from '../../client-components';
 
 export interface HomePageProps {
@@ -68,7 +67,7 @@ const HomePage = ({
 
   return (
     <div className="flex flex-col">
-      <FullImageHero
+      {/* <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
@@ -86,10 +85,10 @@ const HomePage = ({
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
-      />
+      /> */}
       {/* <LearnMore content={learnMore} /> */}
-      <Faqs id="faq" content={faqs} />
-      <Pricing
+      {/* <Faqs id="faq" content={faqs} /> */}
+      {/* <Pricing
         id="pricing"
         pricingContent={pricing}
         valueContent={value}
@@ -97,7 +96,7 @@ const HomePage = ({
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <AboutUs id="about" {...about} />
+      <AboutUs id="about" {...about} /> */}
       {/* <Resources id="resources" /> */}
       <GetStarted id="get-started" content={getStarted} className="bg-muted" />
     </div>

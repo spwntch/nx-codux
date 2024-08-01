@@ -1,46 +1,27 @@
-import { zodResolver } from '@hookform/resolvers/zod';
 import { useMediaQuery } from '@react-hooks-library/core';
 import { cn } from '../../../utils';
-import {
-  Button,
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-  Input
-} from '../../shadcn-ui';
+import { Button, Form } from '../../shadcn-ui';
 
-import { useForm } from 'react-hook-form';
+import { PropsWithChildren } from 'react';
+import { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 
-const formSchema = z.object({
-  first_name: z.string(),
-  email: z.string().email(),
-});
-
 interface InlineFormProps {
+  form: UseFormReturn<any, any, undefined>;
+  submitButton: {
+    label: string;
+  };
+  onSubmit: (values: z.infer<any>) => void;
   className?: string;
 }
-const InlineForm = ({ className }: InlineFormProps) => {
+const InlineForm = ({
+  form,
+  children,
+  submitButton,
+  onSubmit,
+  className,
+}: InlineFormProps & PropsWithChildren) => {
   const isMobile = useMediaQuery('(max-width: 640px)');
-
-  // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      first_name: '',
-      email: '',
-    },
-  });
-
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
 
   return (
     <div className="mx-auto w-fit">
@@ -52,33 +33,10 @@ const InlineForm = ({ className }: InlineFormProps) => {
             isMobile && 'flex-col'
           )}
         >
-          <FormField
-            control={form.control}
-            name="first_name"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>First Name</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>Business Email Address</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit">Submit</Button>
+          {children}
+          <Button type="submit" size="xl">
+            {submitButton.label}
+          </Button>
         </form>
       </Form>
     </div>
