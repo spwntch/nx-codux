@@ -34,12 +34,13 @@ const GetStarted = ({ id, content, className }: Props) => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       first_name: '',
-      // email: '',
+      email: '',
     },
   });
 
-  const handleFormSubmit = (values: z.infer<typeof formSchema>) =>
+  const handleFormSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
+  };
 
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
