@@ -48,7 +48,6 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
       const prevY = scrollY.getPrevious() || 0;
       if (y > prevY && y > 50) setHideNavbar(true);
       else setHideNavbar(false);
-      console.log(y, prevY);
     });
 
     return (

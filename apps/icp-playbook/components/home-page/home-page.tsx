@@ -9,16 +9,14 @@ import {
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
-import {
-  AboutUs,
-  Benefits,
-  DiveIn,
-  Faqs,
-  GetStarted,
-  HowItWorks,
-  Pricing,
-  ProductSummary
-} from '../../client-components';
+import ProductSummary from './sections/product-summary';
+import HowItWorks from './sections/how-it-works';
+import AboutUs from './sections/about-us';
+import Benefits from './sections/benefits';
+import Faqs from './sections/faqs';
+import GetStarted from './sections/get-started';
+import Pricing from './sections/pricing';
+import DiveIn from './sections/dive-in';
 
 export interface HomePageProps {
   hero: {
@@ -28,7 +26,6 @@ export interface HomePageProps {
   clientLogos: string[];
   productSummary: IContent;
   benefits: IContent;
-  learnMore: IContent;
   howItWorks: IContent;
   diveIn: IContent;
   faqs: IContent;
@@ -50,7 +47,6 @@ const HomePage = ({
   clientLogos,
   productSummary,
   benefits,
-  learnMore,
   howItWorks,
   diveIn,
   faqs,

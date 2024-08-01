@@ -1,6 +1,6 @@
 'use server';
 
-import { Contact } from '../../integrations/activecampaign/types';
+import { Contact } from '../../types';
 import { updateOneById } from '../../integrations/activecampaign/utils';
 
 export const updateContact = async (

@@ -14,7 +14,12 @@ import {
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import {
+  GetStartedFormInputs,
+  getStartedFormSchema,
+} from '../../../types/get-started-form';
+
+import { getStarted } from '../../../server-actions/get-started';
 
 type Props = { id: string; content: IContent; className?: string };
 
@@ -25,21 +30,19 @@ const GetStarted = ({ id, content, className }: Props) => {
     body: content.body,
   };
 
-  const formSchema = z.object({
-    first_name: z.string().min(1, { message: 'Required' }),
-    email: z.string().email(),
-  });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<GetStartedFormInputs>({
+    resolver: zodResolver(getStartedFormSchema),
     defaultValues: {
       first_name: '',
-      // email: '',
+      email: '',
     },
   });
 
-  const handleFormSubmit = (values: z.infer<typeof formSchema>) =>
-    console.log(values);
+  const handleFormSubmit = async (values: GetStartedFormInputs) => {
+    const { first_name, email } = values;
+    const { data, error } = await getStarted(first_name, email);
+    console.log({ data, error });
+  };
 
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>

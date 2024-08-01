@@ -1,6 +1,7 @@
 'use server';
 
-import { Contact, createOne } from '../../integrations';
+import {  createOne } from '../../integrations';
+import { Contact } from '../../types';
 
 export const createContact = async (
   model: Partial<Contact>

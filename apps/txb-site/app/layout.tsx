@@ -1,4 +1,4 @@
-import { SiteShell } from '@/next-shell';
+import SiteShell from '../components/site-shell/site.shell';
 import { brand } from '../config';
 import './global.css';
 

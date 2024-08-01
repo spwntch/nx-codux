@@ -1,6 +1,6 @@
 'use server';
 
-import { Contact } from '../../integrations';
+import { Contact } from '../../types';
 import { createContact } from './create-contact';
 import { readContactByEmail } from './read-contact-by-email';
 export const readOrCreateContact = async (

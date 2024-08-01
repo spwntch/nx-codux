@@ -19,7 +19,7 @@ export interface SiteShellProps extends IShellProviderProps {
   githubUrl?: string;
 }
 
-export const SiteShell = ({
+ const SiteShell = ({
   brand,
   navItems,
   underContruction,

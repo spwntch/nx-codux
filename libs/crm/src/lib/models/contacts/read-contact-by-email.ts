@@ -1,5 +1,6 @@
 'use server';
-import { Contact, readOneByField } from '../../integrations';
+import {  readOneByField } from '../../integrations';
+import { Contact } from '../../types';
 
 export const readContactByEmail = async (
   email: string
