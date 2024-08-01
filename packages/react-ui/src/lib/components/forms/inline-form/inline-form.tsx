@@ -16,7 +16,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 const formSchema = z.object({
-  first_name: z.string(),
+  first_name: z.string().min(1, { message: 'Required' }),
   email: z.string().email(),
 });
 
@@ -34,7 +34,7 @@ const InlineForm = ({ submitButton, className }: InlineFormProps) => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       first_name: '',
-      email: '',
+      // email: '',
     },
   });
 
