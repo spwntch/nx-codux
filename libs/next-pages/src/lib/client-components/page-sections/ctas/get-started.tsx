@@ -25,20 +25,22 @@ const GetStarted = ({ id, content, className }: Props) => {
     body: content.body,
   };
 
-  const formSchema = z.object({
+  const getStartedFormSchema = z.object({
     first_name: z.string().min(1, { message: 'Required' }),
     email: z.string().email(),
   });
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  type GetStartedFormInputs = z.infer<typeof getStartedFormSchema>;
+
+  const form = useForm<z.infer<typeof getStartedFormSchema>>({
+    resolver: zodResolver(getStartedFormSchema),
     defaultValues: {
       first_name: '',
       email: '',
     },
   });
 
-  const handleFormSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleFormSubmit = async (values: GetStartedFormInputs) => {
     console.log(values);
   };
 
