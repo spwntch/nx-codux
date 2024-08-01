@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/codux": ["codux/src/index.ts"],
+      "@/crm": ["libs/crm/src/index.ts"],
       "@/next-pages": ["libs/next-pages/src/index.ts"],
       "@/next-pages/server": ["libs/next-pages/src/server.ts"],
       "@/next-shell": ["libs/next-shell/src/index.ts"],
