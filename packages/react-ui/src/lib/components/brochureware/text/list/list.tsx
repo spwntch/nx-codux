@@ -8,46 +8,46 @@ import {
 } from '../../../shadcn-ui/avatar/avatar';
 
 export interface IBulletsProps {
-  bullets: IBullet[];
+  content: IBullet[];
   className?: string;
   numbered?: boolean;
 }
 
 export const List: React.FC<IBulletsProps> = ({
-  bullets,
+  content,
   className,
   numbered,
 }) => (
   <ul className={cn('flex flex-col gap-2 text-left', className)}>
-    {bullets.map((list, index) => (
-      <li key={index} className={cn('flex gap-3 items-center', list.className)}>
-        {list.icon && <div className="flex-shrink-0">{list.icon}</div>}
-        {list.image && (
+    {content.map((bullet, index) => (
+      <li key={index} className={cn('flex gap-3 items-center', bullet.className)}>
+        {bullet.icon && <div className="flex-shrink-0">{bullet.icon}</div>}
+        {bullet.image && (
           <div className="flex-shrink-0">
             <Avatar className="h-6 w-6 text-xs">
-              <AvatarImage src={list.image.src} alt={list.image.alt} />
-              <AvatarFallback>{list.image.fallback}</AvatarFallback>
+              <AvatarImage src={bullet.image.src} alt={bullet.image.alt} />
+              <AvatarFallback>{bullet.image.fallback}</AvatarFallback>
             </Avatar>
           </div>
         )}
-        {list.emoji && (
+        {bullet.emoji && (
           <div
             className={cn('flex-shrink-0', {
-              'text-3xl': list.heading,
+              'text-3xl': bullet.heading,
             })}
           >
-            <span>{list.emoji}</span>
+            <span>{bullet.emoji}</span>
           </div>
         )}
-        {!list.icon && !list.image && !list.emoji && numbered && (
+        {!bullet.icon && !bullet.image && !bullet.emoji && numbered && (
           <div className="flex-shrink-0">
             <span>{index + 1}.</span>
           </div>
         )}
-        {!list.icon && !list.image && !list.emoji && !numbered && <Dot />}
+        {!bullet.icon && !bullet.image && !bullet.emoji && !numbered && <Dot />}
         <div className="flex-grow">
-          {list.heading && <div className="font-bold">{list.heading}</div>}
-          <div>{list.body}</div>
+          {bullet.heading && <div className="font-bold">{bullet.heading}</div>}
+          <div>{bullet.body}</div>
         </div>
       </li>
     ))}

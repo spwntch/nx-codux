@@ -38,7 +38,7 @@ const meta: Meta<typeof List> = {
     },
   },
   argTypes: {
-    bullets: {
+    content: {
       description: 'An array of bullet objects to display',
       control: { type: 'object' },
       defaultValue: [
@@ -61,7 +61,7 @@ type Story = StoryObj<typeof List>;
 
 export const Basic: Story = {
   args: {
-    bullets: [
+    content: [
       { body: 'A first thought' },
       { body: 'A second' },
       { body: 'Yet another' },
@@ -76,7 +76,7 @@ export const Basic: Story = {
  */
 export const NumberedBullets: Story = {
   args: {
-    bullets: [
+    content: [
       { body: 'First item' },
       { body: 'Second item' },
       { body: 'Third item' },
@@ -92,7 +92,7 @@ export const NumberedBullets: Story = {
  */
 export const AvatarBullets: Story = {
   args: {
-    bullets: [
+    content: [
       {
         image: {
           src: 'https://avatar.iran.liara.run/public/boy',
@@ -128,7 +128,7 @@ export const AvatarBullets: Story = {
  */
 export const IconBullets: Story = {
   args: {
-    bullets: [
+    content: [
       { icon: <Rocket className="h-5 w-5" />, body: 'Rocket to the moon' },
       { icon: <Star className="h-5 w-5" />, body: 'Reach for the stars' },
     ],
@@ -142,7 +142,7 @@ export const IconBullets: Story = {
  */
 export const EmojiBullets: Story = {
   args: {
-    bullets: [
+    content: [
       { emoji: '🚀', body: 'Rocket to the moon' },
       { emoji: '⭐', body: 'Reach for the stars' },
     ],
@@ -156,7 +156,7 @@ export const EmojiBullets: Story = {
  */
 export const LargeEmojiBullets: Story = {
   args: {
-    bullets: [
+    content: [
       {
         emoji: '🌟',
         heading: 'Star Title',
@@ -177,7 +177,7 @@ export const LargeEmojiBullets: Story = {
  */
 export const Accessible: Story = {
   args: {
-    bullets: [
+    content: [
       { emoji: '🚀', body: 'Accessible rocket' },
       { emoji: '⭐', body: 'Accessible star' },
     ],

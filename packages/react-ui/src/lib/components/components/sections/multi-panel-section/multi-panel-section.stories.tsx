@@ -124,7 +124,7 @@ const subPanel2 = (
       <Card className="p-4">
         <h3 className="mb-4">Why Choose Us?</h3>
         <List
-          bullets={[
+          content={[
             { body: 'Expert Craftsmanship' },
             { body: 'Sustainable Materials' },
             { body: 'Custom Designs' },

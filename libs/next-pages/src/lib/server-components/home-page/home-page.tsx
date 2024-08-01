@@ -4,6 +4,7 @@ import {
   FullImageHero,
   IContent,
   IImage,
+  IPricing,
   LogoCarousel,
 } from '@spwntch/react-ui';
 
@@ -33,6 +34,8 @@ export interface HomePageProps {
   diveIn: IContent;
   faqs: IContent;
   pricing: IContent;
+  value: IContent[];
+  cost: IPricing;
   about: {
     youtubeId: string;
     content: IContent;
@@ -53,6 +56,8 @@ const HomePage = ({
   diveIn,
   faqs,
   pricing,
+  value,
+  cost,
   about,
   getStarted,
 }: HomePageProps) => {
@@ -86,7 +91,9 @@ const HomePage = ({
       <Faqs id="faq" content={faqs} />
       <Pricing
         id="pricing"
-        content={pricing}
+        pricingContent={pricing}
+        valueContent={value}
+        costContent={cost}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />

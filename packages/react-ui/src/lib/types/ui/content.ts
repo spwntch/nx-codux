@@ -20,6 +20,10 @@ export type ParapgraphsWithClassName = {
   content: string[];
   className?: string;
 };
+export type BulletsWithClassName = {
+  content: IBullet[];
+  className?: string;
+};
 
 export interface IContent {
   announcement?: { message: string; className?: string; href: string }; // Time-related information or used for promotions
@@ -27,7 +31,7 @@ export interface IContent {
   heading?: string | TextWithClassName; // H2 tag, use for section heading
   subheading?: string | TextWithClassName; // H3 tag
   body?: string[] | ParapgraphsWithClassName; // Array of P tags
-  bullets?: IBullet[];
+  bullets?: IBullet[] | BulletsWithClassName;
   tags?: string[] | ParapgraphsWithClassName;
   ctas?: ICtaButton[];
 }

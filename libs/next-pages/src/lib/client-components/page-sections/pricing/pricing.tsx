@@ -4,27 +4,36 @@ import {
   cn,
   ContentContainer,
   IContent,
+  IPricing,
   SimplePricing,
 } from '@spwntch/react-ui';
 
-export interface PricingProps {
+interface Props {
   id: string;
-  content: IContent;
+  pricingContent: IContent;
+  valueContent: IContent[];
+  costContent: IPricing;
   className?: string;
   onCtaClick: () => void;
 }
 
-const Pricing = ({ id, content, className, onCtaClick }: PricingProps) => {
-  const header: IContent = {
-    heading: content.heading,
-    subheading: content.subheading,
-    body: content.body,
-  };
+const Pricing = ({
+  id,
+  pricingContent,
+  valueContent,
+  costContent,
+  className,
+  onCtaClick,
+}: Props) => {
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="container">
-        <ContentContainer innerContent={header} />
-        <SimplePricing onCtaClick={onCtaClick} />
+        <ContentContainer innerContent={pricingContent} />
+        <SimplePricing
+          valueContent={valueContent}
+          costContent={costContent}
+          onCtaClick={onCtaClick}
+        />
         {/* {content.bullets && <FaqAccordion faqs={content.bullets} />} */}
       </div>
     </div>

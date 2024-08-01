@@ -7,6 +7,7 @@ import {
   getTagsContentAndClassName,
   getTitleContentAndClassName,
   getHeadingContentAndClassName,
+  getBulletsContentAndClassName,
 } from '../../../../utils';
 import { Announcement } from '../../../components';
 import { BasicSectionHeader } from '../../headers';
@@ -51,6 +52,9 @@ export const ContentContainer = forwardRef<
       getSubheadingContentAndClassName(innerContent.subheading);
     const { bodyContent, bodyClassName } = getBodyContentAndClassName(
       innerContent.body
+    );
+    const { bulletsContent, bulletsClassName } = getBulletsContentAndClassName(
+      innerContent.bullets
     );
     const { tagsContent, tagsClassName } = getTagsContentAndClassName(
       innerContent.tags
@@ -107,7 +111,9 @@ export const ContentContainer = forwardRef<
         {bodyContent && (
           <Paragraphs content={bodyContent} className={bodyClassName} />
         )}
-        {innerContent.bullets && <List bullets={innerContent.bullets} />}
+        {innerContent.bullets && (
+          <List content={bulletsContent} className={bulletsClassName} />
+        )}
         {children && (
           <ContentChildren alignmentClass={alignmentClass}>
             {children}
