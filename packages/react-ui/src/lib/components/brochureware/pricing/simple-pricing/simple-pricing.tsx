@@ -18,7 +18,7 @@ export const SimplePricing = ({
       <div>
         {valueContent?.map((proposition, index) => {
           return (
-            <div className="p-8 sm:p-10 lg:flex-auto">
+            <div key={index} className="p-8 sm:p-10 lg:flex-auto">
               <ContentContainer
                 innerContent={proposition}
                 hAlign="left"
