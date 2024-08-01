@@ -1,6 +1,6 @@
 'use server';
 
-import { Contact, readOrCreateContact } from '@/crm';
+import { Contact, readOrCreateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../lib';
 
 export const getStarted = async (
@@ -11,12 +11,15 @@ export const getStarted = async (
   error: string | null;
 }> => {
   try {
-    const crmContactModel: Partial<Contact> = {
+    const crmContact = await readOrCreateContact({
       firstName: first_name,
       email,
-    };
+    });
+    await tagContact(
+      crmContact.id,
+      'start-automation_icp-playbook-get-started-form'
+    );
 
-    const crmContact = await readOrCreateContact(crmContactModel);
     return { data: { contact: crmContact }, error: null };
   } catch (error) {
     const message = getErrorMessage(error);
