@@ -1,4 +1,4 @@
-import HomePage from '../components/home-page';
+import HomePage from '../components/home-page/home-page';
 import { HOME_HERO_CONTENT, HOME_HERO_IMAGE } from '../config';
 
 export default function Index() {
