@@ -73,7 +73,7 @@
     }
   },
   "release": {
-    "projects": ["packages/*"],
+    "projects": ["packages/*", "crm"],
     "version": {
       "preVersionCommand": "pnpm dlx nx run-many -t build",
       "generatorOptions": {
@@ -87,6 +87,11 @@
       "options": {
         "packageRoot": "dist/packages/{projectName}"
       }
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   }
 }
