@@ -55,8 +55,6 @@ const HomePage = ({
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
-        vAlign="middle"
-        hAlign="left"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) handleLinkTo('#get-started');
         }}
