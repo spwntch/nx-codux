@@ -19,7 +19,7 @@ export interface SiteShellProps extends IShellProviderProps {
   githubUrl?: string;
 }
 
- const SiteShell = ({
+const SiteShell = ({
   brand,
   navItems,
   underContruction,
@@ -28,14 +28,17 @@ export interface SiteShellProps extends IShellProviderProps {
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
-  const pathname = usePathname()
-  console.log(pathname)
+  const pathname = usePathname();
   const handleLinkTo = (url: string) => {
     router.push(url);
   };
 
   return (
-    <ShellProvider brand={brand} navItems={pathname === '/' ? navItems : undefined} defaultTheme='dark'>
+    <ShellProvider
+      brand={brand}
+      navItems={pathname === '/' ? navItems : undefined}
+      defaultTheme="dark"
+    >
       <SiteShellStarter
         navbar={navbar}
         underContruction={underContruction}

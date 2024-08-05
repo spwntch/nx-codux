@@ -5,6 +5,7 @@ import { Button, Form } from '../../shadcn-ui';
 import { PropsWithChildren } from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
+import SubmitButton from '../../components/submit-button/submit-button';
 
 interface InlineFormProps {
   form: UseFormReturn<any, any, undefined>;
@@ -34,9 +35,9 @@ const InlineForm = ({
           )}
         >
           {children}
-          <Button type="submit" size="xl">
+          <SubmitButton size="xl" processing={form.formState.isSubmitting}>
             {submitButton.label}
-          </Button>
+          </SubmitButton>
         </form>
       </Form>
     </div>

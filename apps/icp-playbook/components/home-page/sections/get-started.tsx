@@ -19,11 +19,13 @@ import {
   getStartedFormSchema,
 } from '../../../types/get-started-form';
 
+import { useRouter } from 'next/navigation';
 import { getStarted } from '../../../server-actions/get-started';
 
 type Props = { id: string; content: IContent; className?: string };
 
 const GetStarted = ({ id, content, className }: Props) => {
+  const router = useRouter();
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -31,17 +33,21 @@ const GetStarted = ({ id, content, className }: Props) => {
   };
 
   const form = useForm<GetStartedFormInputs>({
+    mode: 'onSubmit',
     resolver: zodResolver(getStartedFormSchema),
     defaultValues: {
-      first_name: '',
+      firstName: '',
       email: '',
     },
   });
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
-    const { first_name, email } = values;
-    const { data, error } = await getStarted(first_name, email);
+    const { firstName, email } = values;
+    console.log(firstName, email);
+    const { data, error } = await getStarted(firstName, email);
     console.log({ data, error });
+    form.reset();
+    router.push(`/thank-you?name=${firstName}`);
   };
 
   return (
@@ -56,12 +62,12 @@ const GetStarted = ({ id, content, className }: Props) => {
         >
           <FormField
             control={form.control}
-            name="first_name"
+            name="firstName"
             render={({ field }) => (
               <FormItem className="min-w-64">
                 <FormLabel>First Name</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input disabled={form.formState.isSubmitting} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -74,7 +80,7 @@ const GetStarted = ({ id, content, className }: Props) => {
               <FormItem className="min-w-64">
                 <FormLabel>Business Email Address</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input disabled={form.formState.isSubmitting} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

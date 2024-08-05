@@ -1,4 +1,4 @@
-import ThankYouPage from '../components/home-page/home-page';
+import HomePage from '../components/home-page/home-page';
 import {
   ABOUT_CONTENT,
   ABOUT_STATS,
@@ -63,7 +63,7 @@ export const metadata = {
 
 export default function Index() {
   return (
-    <ThankYouPage
+    <HomePage
       hero={{
         image: HOME_HERO_IMAGE,
         content: HOME_HERO_CONTENT,

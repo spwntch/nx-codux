@@ -3,10 +3,11 @@
 import {
   FullImageHero,
   IContent,
-  IImage
+  IImage,
+  TextWithClassName,
 } from '@spwntch/react-ui';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export interface HomePageProps {
   hero: {
@@ -16,6 +17,17 @@ export interface HomePageProps {
 }
 
 const ThankYouPage = ({ hero }: HomePageProps) => {
+  const searchParams = useSearchParams();
+  const name = searchParams.get('name');
+
+  const content = {
+    ...hero.content,
+    title: {
+      content: `${(hero.content.title as TextWithClassName).content}, ${name}!`,
+      className: (hero.content.title as TextWithClassName).className,
+    },
+  };
+
   const router = useRouter();
   const handleGohome = () => {
     router.push('/');
@@ -25,7 +37,7 @@ const ThankYouPage = ({ hero }: HomePageProps) => {
     <div className="flex flex-col">
       <FullImageHero
         image={hero.image}
-        innerContent={hero.content}
+        innerContent={content}
         className="text-white"
         vAlign="middle"
         hAlign="left"

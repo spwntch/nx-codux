@@ -9,15 +9,14 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   // announcement: {
   //   message: "Limited Time Offer: Get 10% Off the ICP Playbook!",
   //   className: "mx-auto text-xl",
-  //   href: "#" 
+  //   href: "#"
   // },
   title: {
-    content: 'Get Ready to Unlock the Full Potential of Your Target Audience',
+    content: 'Welcome aboard',
     className: 'max-w-3xl',
   },
   subheading: {
-    content:
-      'Your journey to exceptional customer profiling starts now',
+    content: 'Get ready to unlock the full potential of your target audience',
     className: 'max-w-2xl',
   },
   body: {
