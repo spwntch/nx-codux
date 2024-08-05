@@ -20,7 +20,7 @@ export const SubmitButton = forwardRef<HTMLButtonElement, SubmitButtonProps>(
         ref={ref}
         {...props}
       >
-        {processing ? <PulseLoader /> : props.children || 'SUBMIT'}
+        {processing ? <PulseLoader color='#ffffff' /> : props.children || 'SUBMIT'}
       </Button>
     );
   }
