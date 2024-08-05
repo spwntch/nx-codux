@@ -42,7 +42,7 @@ export const FAQ: IContent = {
       heading: 'Is the ICP Playbook customizable to my business needs?',
       body: [
         'Yes, the ICP Playbook includes customizable templates and worksheets tailored to fit various business models and industries. You can adapt the resources to meet your specific requirements and ensure they align with your business goals.',
-        'The playbook\'s flexibility makes it suitable for a wide range of applications, from small startups to large enterprises. By customizing the templates and worksheets, you can create a customer profiling process that works best for your organization and integrate seamlessly with your existing systems and tools.',
+        "The playbook's flexibility makes it suitable for a wide range of applications, from small startups to large enterprises. By customizing the templates and worksheets, you can create a customer profiling process that works best for your organization and integrate seamlessly with your existing systems and tools.",
       ],
       className: 'text-lg mt-2',
     },
@@ -66,7 +66,8 @@ export const FAQ: IContent = {
       heading: 'How can I get started?',
       body: [
         'Getting started with the ICP Playbook is easy. Click "Get Started" to purchase the playbook and begin your journey towards better customer profiling and marketing efficiency.',
-        'If you would like to learn more before committing, click "Learn More" to explore the features and benefits of the ICP Playbook in greater detail. We also offer demos to help you understand how the playbook can transform your business and provide case studies demonstrating its success in various industries.',
+        `If you would like to learn more before committing, we're available to help you explore the features and benefits of the ICP Playbook in greater detail.`,
+        `We also offer demos to help you understand how the playbook can transform your business and provide case studies demonstrating its success in various industries.`,
       ],
       className: 'text-lg mt-2',
     },
