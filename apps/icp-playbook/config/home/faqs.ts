@@ -49,7 +49,7 @@ export const FAQ: IContent = {
     {
       heading: 'How much does the ICP Playbook cost?',
       body: [
-        'The ICP Playbook is priced at $4,999, which includes all the resources, templates, and support you need to successfully implement the playbook in your business. This one-time fee provides you with lifetime access to the playbook and all future updates.',
+        'The ICP Playbook is priced at $3,999, which includes all the resources, templates, and support you need to successfully implement the playbook in your business. This one-time fee provides you with lifetime access to the playbook and all future updates.',
         'We believe this investment will provide significant returns by improving your customer profiling, targeting, and overall marketing efficiency, leading to increased conversions and business growth. The return on investment (ROI) of using the ICP Playbook can be significant, as many users report seeing a positive ROI within a few months of implementation.',
       ],
       className: 'text-lg mt-2',
