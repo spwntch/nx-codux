@@ -65,7 +65,7 @@ export const FAQ: IContent = {
     {
       heading: 'How can I get started?',
       body: [
-        'Getting started with the ICP Playbook is easy. Click "Get Started Today" to purchase the playbook and begin your journey towards better customer profiling and marketing efficiency.',
+        'Getting started with the ICP Playbook is easy. Click "Get Started" to purchase the playbook and begin your journey towards better customer profiling and marketing efficiency.',
         'If you would like to learn more before committing, click "Learn More" to explore the features and benefits of the ICP Playbook in greater detail. We also offer demos to help you understand how the playbook can transform your business and provide case studies demonstrating its success in various industries.',
       ],
       className: 'text-lg mt-2',

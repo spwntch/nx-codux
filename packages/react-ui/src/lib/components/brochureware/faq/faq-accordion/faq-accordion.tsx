@@ -14,7 +14,7 @@ interface IFqAccordion {
 const FaqAccordion = ({ faqs }: IFqAccordion) => {
   const { bulletsContent } = getBulletsContentAndClassName(faqs);
   return (
-    <Accordion type="single">
+    <Accordion type="single" collapsible={true}>
       {bulletsContent.map((faq, index) => (
         <AccordionItem value={index.toString()} key={index}>
           <AccordionTrigger className="font-semibold">
