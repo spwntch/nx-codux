@@ -24,7 +24,7 @@ export const HOME_HERO_CONTENT: IContent = {
   body: {
     content: [
       // 'With the Ideal Customer Profile (ICP) Playbook, you can achieve higher conversion rates, improve team alignment, and see faster, data-driven results.',
-      ' Our comprehensive playbook provides the tools and strategies you need to transform your efforts and reach your ideal customers efficiently.',
+      'Our comprehensive playbook provides the tools and strategies you need to transform your efforts and reach your ideal customers efficiently.',
     ],
     className: 'max-w-3xl',
   },
