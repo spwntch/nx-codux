@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ThankYouPage from '../../components/thank-you-page/thank-you-page';
 import { THANK_YOU_HERO_CONTENT, THANK_YOU_HERO_IMAGE } from '../../config';
 
@@ -47,11 +48,13 @@ export const metadata = {
 
 export default function Index() {
   return (
-    <ThankYouPage
-      hero={{
-        image: THANK_YOU_HERO_IMAGE,
-        content: THANK_YOU_HERO_CONTENT,
-      }}
-    />
+    <Suspense>
+      <ThankYouPage
+        hero={{
+          image: THANK_YOU_HERO_IMAGE,
+          content: THANK_YOU_HERO_CONTENT,
+        }}
+      />
+    </Suspense>
   );
 }
