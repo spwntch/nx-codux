@@ -11,8 +11,11 @@ export const SubmitButton = forwardRef<HTMLButtonElement, SubmitButtonProps>(
     return (
       <Button
         type="submit"
-        disabled={ props.disabled}
-        className={cn(processing && 'animate-pulse', className)}
+        disabled={props.disabled || processing}
+        className={cn(
+          processing && 'disabled:cursor-not-allowed animate-pulse',
+          className
+        )}
         ref={ref}
         {...props}
       >

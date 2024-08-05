@@ -11,6 +11,7 @@ import {
   IContent,
   InlineForm,
   Input,
+  SplitLayout,
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
@@ -21,6 +22,7 @@ import {
 
 import { useRouter } from 'next/navigation';
 import { getStarted } from '../../../server-actions/get-started';
+import Link from 'next/link';
 
 type Props = { id: string; content: IContent; className?: string };
 
@@ -53,40 +55,57 @@ const GetStarted = ({ id, content, className }: Props) => {
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
       <div className="container">
-        <ContentContainer innerContent={header} />
-        <InlineForm
-          form={form}
-          submitButton={{ label: 'GET STARTED NOW' }}
-          onSubmit={handleFormSubmit}
-          className="max-w-4xl mx-auto"
-        >
-          <FormField
-            control={form.control}
-            name="firstName"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>First Name</FormLabel>
-                <FormControl>
-                  <Input disabled={form.formState.isSubmitting} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>Business Email Address</FormLabel>
-                <FormControl>
-                  <Input disabled={form.formState.isSubmitting} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </InlineForm>
+        <SplitLayout
+          containers={[
+            <ContentContainer key={0} innerContent={header} />,
+            <div key={1}>
+              <InlineForm
+                form={form}
+                submitButton={{ label: 'GET STARTED NOW' }}
+                onSubmit={handleFormSubmit}
+                className="max-w-4xl mx-auto"
+              >
+                <FormField
+                  control={form.control}
+                  name="firstName"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64">
+                      <FormLabel>First Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64">
+                      <FormLabel>Business Email Address</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </InlineForm>
+              <div className="flex justfiy-center pt-8 text-sm text-muted-foreground underline hover:text-foreground">
+                <Link href="mailto:hello@interactrdt.com" className="mx-auto">
+                  I still have questions
+                </Link>
+              </div>
+            </div>,
+          ]}
+        />
       </div>
     </div>
   );
