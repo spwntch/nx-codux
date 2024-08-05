@@ -4,7 +4,7 @@ import {
   ShellProvider,
   SiteShellStarter,
 } from '@spwntch/react-ui';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
 export interface SiteShellProps extends IShellProviderProps {
@@ -19,7 +19,7 @@ export interface SiteShellProps extends IShellProviderProps {
   githubUrl?: string;
 }
 
- const SiteShell = ({
+const SiteShell = ({
   brand,
   navItems,
   underContruction,
@@ -28,12 +28,17 @@ export interface SiteShellProps extends IShellProviderProps {
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
+  const pathname = usePathname();
   const handleLinkTo = (url: string) => {
     router.push(url);
   };
 
   return (
-    <ShellProvider brand={brand} navItems={navItems} defaultTheme='dark'>
+    <ShellProvider
+      brand={brand}
+      navItems={pathname === '/' ? navItems : undefined}
+      defaultTheme="dark"
+    >
       <SiteShellStarter
         navbar={navbar}
         underContruction={underContruction}

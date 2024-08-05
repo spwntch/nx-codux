@@ -10,5 +10,6 @@ export * from './home/product-sumary';
 export * from './home/learn-more';
 export * from './home/get-started';
 export * from './home/testimonials';
+export * from './thank-you/hero';
 export * from './nav';
 

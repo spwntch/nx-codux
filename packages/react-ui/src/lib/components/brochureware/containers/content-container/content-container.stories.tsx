@@ -101,7 +101,7 @@ const innerContent: IContent = {
  */
 export const Basic: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'center',
     vAlign: 'middle',
     children: (
@@ -120,7 +120,7 @@ export const Basic: Story = {
  */
 export const TopLeft: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'left',
     vAlign: 'top',
     children: (
@@ -139,7 +139,7 @@ export const TopLeft: Story = {
  */
 export const TopCenter: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'center',
     vAlign: 'top',
     children: (
@@ -158,7 +158,7 @@ export const TopCenter: Story = {
  */
 export const TopRight: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'right',
     vAlign: 'top',
     children: (
@@ -177,7 +177,7 @@ export const TopRight: Story = {
  */
 export const MiddleLeft: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'left',
     vAlign: 'middle',
     children: (
@@ -196,7 +196,7 @@ export const MiddleLeft: Story = {
  */
 export const MiddleRight: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'right',
     vAlign: 'middle',
     children: (
@@ -215,7 +215,7 @@ export const MiddleRight: Story = {
  */
 export const BottomLeft: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'left',
     vAlign: 'bottom',
     children: (
@@ -234,7 +234,7 @@ export const BottomLeft: Story = {
  */
 export const BottomCenter: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'center',
     vAlign: 'bottom',
     children: (
@@ -253,7 +253,7 @@ export const BottomCenter: Story = {
  */
 export const BottomRight: Story = {
   args: {
-    text: innerContent,
+    innerContent,
     hAlign: 'right',
     vAlign: 'bottom',
     children: (

@@ -3,5 +3,7 @@ export interface Contact {
   email: string;
   firstName: string | null;
   lastName: string | null;
+  fullName: string | null;
+  company: string | null;
   spwntch_contact_id?: string;
 }

@@ -1,13 +1,12 @@
-import { useMediaQuery } from '@react-hooks-library/core';
 import { cn } from '../../../utils';
-import { Button, Form } from '../../shadcn-ui';
+import { Form } from '../../shadcn-ui';
 
 import { PropsWithChildren } from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 import SubmitButton from '../../components/submit-button/submit-button';
 
-interface InlineFormProps {
+interface StackedFormProps {
   form: UseFormReturn<any, any, undefined>;
   submitButton: {
     label: string;
@@ -15,27 +14,29 @@ interface InlineFormProps {
   onSubmit: (values: z.infer<any>) => void;
   className?: string;
 }
-const InlineForm = ({
+const StackedForm = ({
   form,
   children,
   submitButton,
   onSubmit,
   className,
-}: InlineFormProps & PropsWithChildren) => {
-  const isMobile = useMediaQuery('(max-width: 640px)');
-
+}: StackedFormProps & PropsWithChildren) => {
   return (
-    <div className="mx-auto w-fit">
+    <div className={cn('', className)}>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className={cn(
-            'flex space-between gap-x-16 gap-y-8 items-center',
-            isMobile && 'flex-col'
+            'flex flex-col space-between gap-x-16 gap-y-8 items-center px-4'
+            // isMobile && 'flex-col',
           )}
         >
           {children}
-          <SubmitButton size="xl" processing={form.formState.isSubmitting}>
+          <SubmitButton
+            size="xl"
+            processing={form.formState.isSubmitting}
+            className="w-full"
+          >
             {submitButton.label}
           </SubmitButton>
         </form>
@@ -44,4 +45,4 @@ const InlineForm = ({
   );
 };
 
-export default InlineForm;
+export default StackedForm;

@@ -1,21 +1,6 @@
-import HomePage from '../components/home-page/home-page';
-import {
-  ABOUT_CONTENT,
-  ABOUT_STATS,
-  ABOUT_YOUTUBE,
-  BENEFITS,
-  CLIENT_LOGOS,
-  COST,
-  DIVE_IN,
-  GET_STARTED,
-  HOME_HERO_CONTENT,
-  HOME_HERO_IMAGE,
-  HOW_IT_WORKS,
-  PRICING,
-  THE_ICP_PLAYBOOK,
-  VALUE,
-} from '../config';
-import { FAQ } from '../config/home/faqs';
+import { Suspense } from 'react';
+import ThankYouPage from '../../components/thank-you-page/thank-you-page';
+import { THANK_YOU_HERO_CONTENT, THANK_YOU_HERO_IMAGE } from '../../config';
 
 const title =
   'Unlock Your Ideal Customers with the ICP Playbook | Interact RDT';
@@ -63,27 +48,13 @@ export const metadata = {
 
 export default function Index() {
   return (
-    <HomePage
-      hero={{
-        image: HOME_HERO_IMAGE,
-        content: HOME_HERO_CONTENT,
-      }}
-      clientLogos={CLIENT_LOGOS}
-      productSummary={THE_ICP_PLAYBOOK}
-      benefits={BENEFITS}
-      howItWorks={HOW_IT_WORKS}
-      diveIn={DIVE_IN}
-      faqs={FAQ}
-      pricing={PRICING}
-      value={VALUE}
-      cost={COST}
-      about={{
-        youtubeId: ABOUT_YOUTUBE,
-        content: ABOUT_CONTENT,
-        stats: ABOUT_STATS,
-      }}
-      getStarted={GET_STARTED}
-      // testimonials={TESTIMONIALS}
-    />
+    <Suspense>
+      <ThankYouPage
+        hero={{
+          image: THANK_YOU_HERO_IMAGE,
+          content: THANK_YOU_HERO_CONTENT,
+        }}
+      />
+    </Suspense>
   );
 }

@@ -7,10 +7,10 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
   IContent,
-  InlineForm,
   Input,
+  SplitLayout,
+  StackedForm,
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
@@ -19,11 +19,13 @@ import {
   getStartedFormSchema,
 } from '../../../types/get-started-form';
 
+import { useRouter } from 'next/navigation';
 import { getStarted } from '../../../server-actions/get-started';
 
 type Props = { id: string; content: IContent; className?: string };
 
 const GetStarted = ({ id, content, className }: Props) => {
+  const router = useRouter();
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -31,56 +33,114 @@ const GetStarted = ({ id, content, className }: Props) => {
   };
 
   const form = useForm<GetStartedFormInputs>({
+    mode: 'onSubmit',
     resolver: zodResolver(getStartedFormSchema),
     defaultValues: {
-      first_name: '',
+      firstName: '',
+      lastName: '',
+      company: '',
       email: '',
     },
   });
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
-    const { first_name, email } = values;
-    const { data, error } = await getStarted(first_name, email);
+    const { firstName, lastName, company, email } = values;
+    const { data, error } = await getStarted(
+      firstName,
+      lastName,
+      company,
+      email
+    );
     console.log({ data, error });
+    form.reset();
+    router.push(`/thank-you?name=${firstName}`);
   };
 
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
       <div className="container">
-        <ContentContainer innerContent={header} />
-        <InlineForm
-          form={form}
-          submitButton={{ label: 'GET STARTED NOW' }}
-          onSubmit={handleFormSubmit}
-          className="max-w-4xl mx-auto"
-        >
-          <FormField
-            control={form.control}
-            name="first_name"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>First Name</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem className="min-w-64">
-                <FormLabel>Business Email Address</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </InlineForm>
+        <SplitLayout
+          className="gap-6"
+          mainPaneCoverage={70}
+          containers={[
+            <ContentContainer key={0} hAlign="left" innerContent={header} />,
+            <div key={1} className="mt-8  flex flex-col justify-center h-full">
+              <StackedForm
+                form={form}
+                submitButton={{ label: 'GET STARTED NOW' }}
+                onSubmit={handleFormSubmit}
+                className="w-full"
+              >
+                <FormField
+                  control={form.control}
+                  name="firstName"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>First Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="lastName"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>Last Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>Company</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>Business Email Address</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+              </StackedForm>
+              <div className="flex flex-col justfiy-center pt-8 text-sm text-muted-foreground">
+                <p className="mx-auto">NO CREDIT CARD REQUIRED</p>
+                {/* <Link href="mailto:hello@interactrdt.com" className="mx-auto underline hover:text-foreground">
+                  I still have questions
+                </Link> */}
+              </div>
+            </div>,
+          ]}
+        />
       </div>
     </div>
   );
