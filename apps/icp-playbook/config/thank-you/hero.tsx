@@ -1,5 +1,4 @@
 import { IContent, IImage } from '@spwntch/react-ui';
-import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const THANK_YOU_HERO_IMAGE: IImage = {
   src: '/images/benefits/data-driven-decisions.webp',

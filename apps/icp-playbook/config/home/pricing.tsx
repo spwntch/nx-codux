@@ -13,7 +13,7 @@ const icon = (
 
 export const COST: IPricing = {
   heading: 'Pay once, own it forever',
-  price: '$4,999',
+  price: '$3,999',
   currency: 'USD',
   cta: { label: 'UNLOCK ACCESS TODAY' },
   note: `We're used to working with procurement departments. We'll help you deal with that.`,
