@@ -1,4 +1,5 @@
 export interface IBrand {
+  transparentMode? : 'light' | 'dark';
   logoUrl?: { light?: string; dark?: string };
   markUrl?: { light?: string; dark?: string };
   underConstructionUrl?: { light?: string; dark?: string };
