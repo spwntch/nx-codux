@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@/react-tracking';
 import SiteShell from '../components/site-shell/site.shell';
 import { brand, primaryNav } from '../config';
 import './global.css';
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <SiteShell brand={brand} navItems={primaryNav} navbar={navbar}>
           {children}
+          <GoogleAnalytics />
         </SiteShell>
       </body>
     </html>

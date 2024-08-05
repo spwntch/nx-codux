@@ -17,6 +17,7 @@
     "paths": {
       "@/codux": ["codux/src/index.ts"],
       "@/crm": ["libs/crm/src/index.ts"],
+      "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
     }
