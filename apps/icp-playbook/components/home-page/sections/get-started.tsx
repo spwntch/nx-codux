@@ -21,6 +21,7 @@ import {
 
 import { useRouter } from 'next/navigation';
 import { getStarted } from '../../../server-actions/get-started';
+import { logProductRequestEvent } from '@/react-tracking';
 
 type Props = { id: string; content: IContent; className?: string };
 
@@ -51,9 +52,12 @@ const GetStarted = ({ id, content, className }: Props) => {
       company,
       email
     );
-    console.log({ data, error });
-    form.reset();
-    router.push(`/thank-you?name=${firstName}`);
+    if (error) console.log(error);
+    if (data) {
+      logProductRequestEvent(data.contact);
+      form.reset();
+      router.push(`/thank-you?name=${firstName}`);
+    }
   };
 
   return (
