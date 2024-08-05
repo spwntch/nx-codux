@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import { Button, ButtonProps } from '../../shadcn-ui';
 import { cn } from '../../../utils';
+import { PulseLoader } from 'react-spinners';
 
 export interface SubmitButtonProps extends ButtonProps {
   processing?: boolean;
@@ -19,7 +20,7 @@ export const SubmitButton = forwardRef<HTMLButtonElement, SubmitButtonProps>(
         ref={ref}
         {...props}
       >
-        {props.children || 'SUBMIT'}
+        {processing ? <PulseLoader /> : props.children || 'SUBMIT'}
       </Button>
     );
   }

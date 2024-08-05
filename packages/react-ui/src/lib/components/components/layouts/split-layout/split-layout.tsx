@@ -35,8 +35,8 @@ export const SplitLayout = forwardRef<HTMLDivElement, ISplitLayoutProps>(
     return (
       <div
         className={cn(
-          'flex w-full h-full',
-          isHorizontal ? 'flex-row' : 'flex-col',
+          'flex flex-col w-full h-full',
+          isHorizontal ? 'md:flex-row' : 'md:flex-col',
           flip && (isHorizontal ? 'flex-row-reverse' : 'flex-col-reverse'),
           className
         )}

@@ -4,7 +4,9 @@ import { Contact, readOrCreateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../lib';
 
 export const getStarted = async (
-  first_name: string,
+  firstName: string,
+  lastName: string,
+  company: string,
   email: string
 ): Promise<{
   data: { contact: Contact } | null;
@@ -12,7 +14,9 @@ export const getStarted = async (
 }> => {
   try {
     const crmContact = await readOrCreateContact({
-      firstName: first_name,
+      firstName,
+      lastName,
+      company,
       email,
     });
     await tagContact(
