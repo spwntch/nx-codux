@@ -2,7 +2,6 @@ import { PropsWithChildren, createContext, useContext } from 'react';
 import { IBrand } from '../../types';
 
 export const DEFAULT_BRAND: IBrand = {
-  transparentMode: 'dark',
 };
 
 export const Brand = createContext<IBrand>(DEFAULT_BRAND);
