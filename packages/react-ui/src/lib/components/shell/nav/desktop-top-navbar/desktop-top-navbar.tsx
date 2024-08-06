@@ -78,6 +78,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         // {...props}
       >
         <Logo
+          floating={floating && initialNavbar}
           height={logoHeight || 36}
           className="cursor-pointer"
           onClick={() => onLinkTo('/')}

@@ -2,12 +2,14 @@ import { IBrand } from '@spwntch/react-ui';
 
 export const brand: IBrand = {
   logoUrl: {
-    light: '/brand/logo-dark.webp',
+    light: '/brand/logo-light.webp',
     dark: '/brand/logo-dark.webp',
+    floating: '/brand/logo-dark.webp',
   },
   markUrl: {
     light: '/brand/mark.webp',
     dark: '/brand/mark.webp',
+    floating: '/brand/mark.webp',
   },
   underConstructionUrl: {
     light: '/under-construction/powered-by-spawntech-light.webp',

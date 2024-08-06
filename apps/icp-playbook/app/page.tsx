@@ -21,7 +21,7 @@ const title =
   'Unlock Your Ideal Customers with the ICP Playbook | Interact RDT';
 const description =
   'Transform your marketing and product strategies with the ICP Playbook. Identify, profile, and engage high-potential customers with precision. Discover how our comprehensive guide helps improve targeting, increase conversions, align teams, and drive data-driven decision making. Get started today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/increaed-conversions.png`;
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/benefits/increaed-sales.png`;
 const keywords: string[] = [
   'ICP Playbook',
   'customer profiling',
