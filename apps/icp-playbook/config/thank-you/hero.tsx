@@ -41,7 +41,7 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   //   },
   // ],
   ctas: [
-    { label: 'BACK TO HOME', variant: { size: 'xl' } },
+    { label: 'EXPLORE MORE', variant: { size: 'xl' } },
     // { label: 'LEARN MORE', variant: { size: 'xl', variant: 'ghost' } },
   ],
 };
