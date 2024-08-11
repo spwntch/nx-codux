@@ -17,16 +17,15 @@ export const FAQ: IContent = {
     {
       heading: 'How does the ICP Playbook work?',
       body: [
-        'The ICP Playbook includes structured workshops, detailed worksheets, and customizable templates to guide you through the customer profiling process. These resources are designed to be easy to use and adaptable to your specific business needs.',
-        'The playbook starts with an orientation session to help you understand its framework and set up your team. Then, you will participate in interactive workshops that cover different aspects of customer profiling. You will use the provided worksheets and templates to gather and analyze customer data, develop detailed customer profiles, and implement these profiles into your marketing and product strategies. Regular reviews and refinements ensure your profiles remain accurate and effective.',
+        'The ICP Playbook includes structured workshops, detailed worksheets, and customizable templates to guide you through the customer profiling process. It starts with an orientation session to help you understand its framework, followed by interactive workshops and practical tools to gather and analyze customer data, develop detailed profiles, and implement these profiles into your strategies.',
+        'Regular reviews and refinements ensure your profiles remain accurate and effective, driving sustained improvements in targeting and conversions over time.',
       ],
       className: 'text-lg mt-2',
     },
     {
       heading: 'Who should use the ICP Playbook?',
       body: [
-        'The ICP Playbook is ideal for marketing leaders, product managers, and growth strategists looking to improve targeting and conversions. It is particularly beneficial for those in large enterprises, B2B businesses, professional service firms, and tech startups.',
-        'Whether you are a Chief Marketing Officer, Marketing Director, Vice President of Marketing, Head of Growth, Senior Marketing Manager, Chief Digital Officer, or Director of Product, the ICP Playbook provides the tools and insights you need to succeed. It is also valuable for any team looking to achieve better alignment and efficiency in their customer profiling efforts.',
+        'The ICP Playbook is ideal for marketing leaders, product managers, and growth strategists looking to improve targeting and conversions. It’s particularly beneficial for large enterprises, B2B businesses, professional service firms, and tech startups seeking to align their teams and enhance their marketing efficiency.',
       ],
       className: 'text-lg mt-2',
     },
@@ -34,39 +33,38 @@ export const FAQ: IContent = {
       heading: 'What outcomes can I expect?',
       body: [
         'By using the ICP Playbook, you can expect improved targeting, increased conversions, better team alignment, and actionable insights from data. The playbook helps you focus on high-potential customers, reducing wasted marketing spend and increasing your return on investment.',
-        'Many users see significant improvements in their marketing and product strategies within a few weeks of implementation. The structured approach and practical tools provided by the playbook make it easier to achieve quick wins and sustained improvements over time, driving long-term success in your marketing and product strategies.',
+        'Many users see significant improvements in their marketing and product strategies within a few weeks of implementation, with the structured approach and practical tools enabling quick wins and sustained success.',
       ],
       className: 'text-lg mt-2',
     },
     {
       heading: 'Is the ICP Playbook customizable to my business needs?',
       body: [
-        'Yes, the ICP Playbook includes customizable templates and worksheets tailored to fit various business models and industries. You can adapt the resources to meet your specific requirements and ensure they align with your business goals.',
-        "The playbook's flexibility makes it suitable for a wide range of applications, from small startups to large enterprises. By customizing the templates and worksheets, you can create a customer profiling process that works best for your organization and integrate seamlessly with your existing systems and tools.",
+        'Yes, the ICP Playbook includes customizable templates and worksheets tailored to fit various business models and industries. You can adapt these resources to meet your specific requirements, ensuring they align with your business goals and integrate seamlessly with your existing systems.',
       ],
       className: 'text-lg mt-2',
     },
     {
       heading: 'How much does the ICP Playbook cost?',
       body: [
-        'The ICP Playbook is priced at $3,999, which includes all the resources, templates, and support you need to successfully implement the playbook in your business. This one-time fee provides you with lifetime access to the playbook and all future updates.',
-        'We believe this investment will provide significant returns by improving your customer profiling, targeting, and overall marketing efficiency, leading to increased conversions and business growth. The return on investment (ROI) of using the ICP Playbook can be significant, as many users report seeing a positive ROI within a few months of implementation.',
+        'The ICP Playbook offers tailored solutions designed to fit businesses of all sizes and budgets. Whether you are a startup looking for scalable strategies or a large enterprise seeking comprehensive customer profiling tools, we have a package that aligns with your needs.',
+        'Contact our sales team for a personalized, obligation-free quote to find the best option for your business.',
       ],
       className: 'text-lg mt-2',
     },
     {
-      heading: 'Do you offer support after purchase?',
+      heading: 'Do you offer support after engaging with the ICP Playbook?',
       body: [
-        'Yes, we provide ongoing support and updates to ensure you get the most out of your ICP Playbook. Our team is available to answer any questions you may have and provide guidance as you implement the playbook in your business.',
-        'We also offer regular updates to the playbook to keep it current with the latest trends and best practices in customer profiling and marketing strategy. This ensures you always have access to the most effective tools and insights.',
+        'Yes, we provide ongoing support and updates to ensure you get the most out of your ICP Playbook. Our team is available to answer any questions and offer guidance as you implement the playbook.',
+        'We also provide regular updates to keep the playbook current with the latest trends and best practices, ensuring you always have access to the most effective tools and insights.',
       ],
       className: 'text-lg mt-2',
     },
     {
-      heading: 'How can I get started?',
+      heading: 'How can I get started with the ICP Playbook?',
       body: [
-        'Getting started with the ICP Playbook is easy. Click "Get Started" to purchase the playbook and begin your journey towards better customer profiling and marketing efficiency.',
-        `If you would like to learn more before committing, we're available to help you explore the features and benefits of the ICP Playbook in greater detail.`,
+        'Getting started with the ICP Playbook is easy. Click "Contact Sales" to request an obligation-free quote and learn how the playbook can help your business thrive.',
+        `If you would like to explore the playbook's features and benefits further, we’re available to provide a detailed walkthrough.`,
         `We also offer demos to help you understand how the playbook can transform your business and provide case studies demonstrating its success in various industries.`,
       ],
       className: 'text-lg mt-2',
@@ -80,7 +78,7 @@ export const FAQ: IContent = {
       className: 'text-lg mt-2',
     },
     {
-      heading: 'Can I get a demo before purchasing?',
+      heading: 'Can I get a demo before requesting a quote?',
       body: [
         'Yes, we offer demos to help you understand how the ICP Playbook can transform your business. Click "Learn More" to request a demo and see the playbook in action.',
         'During the demo, you will have the opportunity to explore the features and benefits of the playbook in detail and ask any questions you may have. This will give you a clear understanding of how the playbook can help you achieve your customer profiling and marketing goals.',
