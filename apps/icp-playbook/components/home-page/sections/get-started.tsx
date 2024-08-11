@@ -7,6 +7,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
   IContent,
   Input,
   SplitLayout,
@@ -41,16 +42,18 @@ const GetStarted = ({ id, content, className }: Props) => {
       lastName: '',
       company: '',
       email: '',
+      phone: ''
     },
   });
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
-    const { firstName, lastName, company, email } = values;
+    const { firstName, lastName, company, email, phone } = values;
     const { data, error } = await getStarted(
       firstName,
       lastName,
       company,
-      email
+      email,
+      phone
     );
     if (error) console.log(error);
     if (data) {
@@ -126,6 +129,21 @@ const GetStarted = ({ id, content, className }: Props) => {
                   render={({ field }) => (
                     <FormItem className="min-w-64 w-full">
                       <FormLabel>Business Email Address</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>Contact Number (Optional)</FormLabel>
                       <FormControl>
                         <Input
                           disabled={form.formState.isSubmitting}
