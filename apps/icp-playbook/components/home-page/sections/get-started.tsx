@@ -71,7 +71,7 @@ const GetStarted = ({ id, content, className }: Props) => {
             <div key={1} className="mt-8  flex flex-col justify-center h-full">
               <StackedForm
                 form={form}
-                submitButton={{ label: 'GET STARTED NOW' }}
+                submitButton={{ label: content?.ctas?.[0].label ||  'GET STARTED'}}
                 onSubmit={handleFormSubmit}
                 className="w-full"
               >
@@ -137,7 +137,8 @@ const GetStarted = ({ id, content, className }: Props) => {
                 />
               </StackedForm>
               <div className="flex flex-col justfiy-center pt-8 text-sm text-muted-foreground">
-                <p className="mx-auto">NO CREDIT CARD REQUIRED</p>
+                <p className="mx-auto">We&apos;ll be in touch to schedule a chat</p>
+                {/* <p className="mx-auto">NO CREDIT CARD REQUIRED</p> */}
                 {/* <Link href="mailto:hello@interactrdt.com" className="mx-auto underline hover:text-foreground">
                   I still have questions
                 </Link> */}

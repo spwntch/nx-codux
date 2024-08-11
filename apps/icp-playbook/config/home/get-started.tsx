@@ -15,4 +15,9 @@ export const GET_STARTED: IContent = {
     ],
     className: 'text-lg text-left max-w-4xl',
   },
+  ctas:[
+    {
+      label: `LET'S CHAT`,
+    },
+  ]
 };
