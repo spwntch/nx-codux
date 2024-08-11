@@ -9,14 +9,14 @@ import {
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export interface HomePageProps {
+export interface ThankYouPageProps {
   hero: {
     image: IImage;
     content: IContent;
   };
 }
 
-const ThankYouPage = ({ hero }: HomePageProps) => {
+const ThankYouPage = ({ hero }: ThankYouPageProps) => {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
 
@@ -31,7 +31,7 @@ const ThankYouPage = ({ hero }: HomePageProps) => {
   };
 
   const router = useRouter();
-  const handleGohome = () => {
+  const handleGotoPrimaryWebsite = () => {
     router.push('https://www.interactrdt.com');
   };
 
@@ -44,7 +44,7 @@ const ThankYouPage = ({ hero }: HomePageProps) => {
         vAlign="middle"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleGohome();
+          if (ctaIndex === 0) handleGotoPrimaryWebsite();
         }}
       />
     </div>
