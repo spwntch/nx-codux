@@ -23,14 +23,16 @@ const ThankYouPage = ({ hero }: HomePageProps) => {
   const content = {
     ...hero.content,
     title: {
-      content: `${(hero.content.title as TextWithClassName).content}, ${name} 🥳`,
+      content: `${(hero.content.title as TextWithClassName).content}${
+        name ? ', ' + name : ''
+      } 🥳`,
       className: (hero.content.title as TextWithClassName).className,
     },
   };
 
   const router = useRouter();
   const handleGohome = () => {
-    router.push('/');
+    router.push('https://www.interactrdt.com');
   };
 
   return (
