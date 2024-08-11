@@ -21,7 +21,8 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   },
   body: {
     content: [
-      `Thank you for your interest in the ICP Playbook with Interact. We're excited to help you to transform your marketing strategy and unlock new profits!`,
+      `Thank you for your interest in the ICP Playbook with Interact.`,
+      `We're excited to help you to transform your sales, marketing and product strategies to unlock new profits!`,
       'Expect to hear from one of our account managers in the next few hours, who will guide you through the next steps.',
     ],
     className: 'max-w-3xl',
@@ -42,7 +43,7 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   // ],
   ctas: [
     { label: 'EXPLORE MORE', variant: { size: 'xl' } },
-    { label: 'GO HOME', variant: { variant:'link', size: 'xl' } },
+    { label: 'GO HOME', variant: { variant: 'link', size: 'xl' } },
     // { label: 'LEARN MORE', variant: { size: 'xl', variant: 'ghost' } },
   ],
 };
