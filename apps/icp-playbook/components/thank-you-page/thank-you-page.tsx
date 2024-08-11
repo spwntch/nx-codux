@@ -17,6 +17,7 @@ export interface ThankYouPageProps {
 }
 
 const ThankYouPage = ({ hero }: ThankYouPageProps) => {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
 
@@ -30,21 +31,17 @@ const ThankYouPage = ({ hero }: ThankYouPageProps) => {
     },
   };
 
-  const router = useRouter();
-  const handleGotoPrimaryWebsite = () => {
-    router.push('https://www.interactrdt.com');
-  };
-
   return (
     <div className="flex flex-col">
       <FullImageHero
         image={hero.image}
         innerContent={content}
         className="text-white"
-        vAlign="middle"
+        vAlign="bottom"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleGotoPrimaryWebsite();
+          if (ctaIndex === 0) router.push('https://www.interactrdt.com');
+          if (ctaIndex === 1) router.push('/');
         }}
       />
     </div>
