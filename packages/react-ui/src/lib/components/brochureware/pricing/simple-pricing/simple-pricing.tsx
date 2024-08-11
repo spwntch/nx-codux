@@ -34,15 +34,17 @@ export const SimplePricing = ({
             <p className="text-base font-semibold text-muted-foreground">
               {costContent.heading}
             </p>
-            <p className="mt-6 flex items-baseline justify-center gap-x-2">
-              <span className="text-5xl font-bold tracking-tight text-foreground">
-                {costContent.price}
-              </span>
-              <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
-                {costContent.currency}
-              </span>
-            </p>
-            <Button className="mt-10" onClick={onCtaClick}>
+            {costContent.price && (
+              <p className="mt-6 flex items-baseline justify-center gap-x-2">
+                <span className="text-5xl font-bold tracking-tight text-foreground">
+                  {costContent.price}
+                </span>
+                <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
+                  {costContent.currency}
+                </span>
+              </p>
+            )}
+            <Button className="mt-10" size="xl" onClick={onCtaClick}>
               {costContent.cta.label}
             </Button>
             <p className="mt-6 text-xs leading-5 text-muted-foreground">

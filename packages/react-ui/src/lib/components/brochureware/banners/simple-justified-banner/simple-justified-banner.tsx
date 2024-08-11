@@ -9,7 +9,7 @@ export interface ISimpleJustifiedBannerProps {
 
 export const SimpleJustifiedBanner = ({
   innerContent,
-  onCtaClick
+  onCtaClick,
 }: ISimpleJustifiedBannerProps) => {
   const message: IContent = {
     heading: {
@@ -31,7 +31,9 @@ export const SimpleJustifiedBanner = ({
     <div className="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:justify-between lg:px-8">
       <ContentContainer innerContent={message} hAlign="left" />
       <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-        <Button size="2xl" onClick={onCtaClick}>GET STARTED</Button>
+        <Button size="2xl" onClick={onCtaClick}>
+          {innerContent.ctas?.[0]?.label || 'GET STARTED'}
+        </Button>
       </div>
     </div>
   );

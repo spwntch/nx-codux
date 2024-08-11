@@ -43,7 +43,7 @@ export const HOME_HERO_CONTENT: IContent = {
     },
   ],
   ctas: [
-    { label: 'GET STARTED', variant: { size: 'xl' } },
+    { label: 'CONTACT SALES', variant: { size: 'xl' } },
     // { label: 'LEARN MORE', variant: { size: 'xl', variant: 'ghost' } },
   ],
 };

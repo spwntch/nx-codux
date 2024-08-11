@@ -12,8 +12,8 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   //   href: "#"
   // },
   title: {
-    content: 'Welcome aboard',
-    className: 'max-w-3xl',
+    content: 'We look forward to meeting you',
+    className: 'max-w-6xl',
   },
   subheading: {
     content: 'Get ready to unlock the full potential of your target audience',
@@ -21,7 +21,7 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   },
   body: {
     content: [
-      'Thank you for choosing the ICP Playbook to transform your marketing strategy! We’re excited to partner with you in identifying and targeting your ideal customers with precision.',
+      `Thank you for your interest in the ICP Playbook with Interact. We're excited to help you to transform your marketing strategy and unlock new profits!`,
       'Expect to hear from one of our account managers in the next few hours, who will guide you through the next steps.',
     ],
     className: 'max-w-3xl',

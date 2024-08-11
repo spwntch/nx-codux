@@ -7,7 +7,8 @@ export const getStarted = async (
   firstName: string,
   lastName: string,
   company: string,
-  email: string
+  email: string,
+  phone?:string
 ): Promise<{
   data: { contact: Contact } | null;
   error: string | null;
@@ -18,6 +19,7 @@ export const getStarted = async (
       lastName,
       company,
       email,
+      phone
     });
     await tagContact(
       crmContact.id,

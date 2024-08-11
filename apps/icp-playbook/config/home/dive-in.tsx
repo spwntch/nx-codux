@@ -9,7 +9,7 @@ export const DIVE_IN: IContent = {
   },
   ctas: [
     {
-      label: 'GET STARTED',
+      label: 'CONTACT SALES',
     },
   ],
 };

@@ -1,7 +1,7 @@
 import { IContent, IPricing } from '@spwntch/react-ui';
 
 export const PRICING: IContent = {
-  heading: 'Pricing',
+  heading: 'Obligation Free Quote',
   subheading: 'Simple Pricing. Pay once. Use forever.',
 };
 
@@ -12,11 +12,11 @@ const icon = (
 );
 
 export const COST: IPricing = {
-  heading: 'Pay once, own it forever',
-  price: '$3,999',
-  currency: 'USD',
-  cta: { label: 'UNLOCK ACCESS TODAY' },
-  note: `We're used to working with procurement departments. We'll help you deal with that.`,
+  heading: 'Contact us now for an obligation free quote',
+  // price: '$3,999',
+  // currency: 'USD',
+  cta: { label: `CONTACT SALES` },
+  note: `We'll just need a few details from you and one of our professional consultants will be in touch to discuss your needs.`,
 };
 
 export const VALUE: IContent[] = [

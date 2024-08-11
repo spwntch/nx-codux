@@ -7,6 +7,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
   IContent,
   Input,
   SplitLayout,
@@ -41,16 +42,18 @@ const GetStarted = ({ id, content, className }: Props) => {
       lastName: '',
       company: '',
       email: '',
+      phone: ''
     },
   });
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
-    const { firstName, lastName, company, email } = values;
+    const { firstName, lastName, company, email, phone } = values;
     const { data, error } = await getStarted(
       firstName,
       lastName,
       company,
-      email
+      email,
+      phone
     );
     if (error) console.log(error);
     if (data) {
@@ -71,7 +74,7 @@ const GetStarted = ({ id, content, className }: Props) => {
             <div key={1} className="mt-8  flex flex-col justify-center h-full">
               <StackedForm
                 form={form}
-                submitButton={{ label: 'GET STARTED NOW' }}
+                submitButton={{ label: content?.ctas?.[0].label ||  'GET STARTED'}}
                 onSubmit={handleFormSubmit}
                 className="w-full"
               >
@@ -135,9 +138,25 @@ const GetStarted = ({ id, content, className }: Props) => {
                     </FormItem>
                   )}
                 />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem className="min-w-64 w-full">
+                      <FormLabel>Contact Number (Optional)</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={form.formState.isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
               </StackedForm>
               <div className="flex flex-col justfiy-center pt-8 text-sm text-muted-foreground">
-                <p className="mx-auto">NO CREDIT CARD REQUIRED</p>
+                <p className="mx-auto">We&apos;ll be in touch to schedule a chat</p>
+                {/* <p className="mx-auto">NO CREDIT CARD REQUIRED</p> */}
                 {/* <Link href="mailto:hello@interactrdt.com" className="mx-auto underline hover:text-foreground">
                   I still have questions
                 </Link> */}
