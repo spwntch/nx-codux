@@ -23,7 +23,7 @@ const ThankYouPage = ({ hero }: HomePageProps) => {
   const content = {
     ...hero.content,
     title: {
-      content: `${(hero.content.title as TextWithClassName).content}, ${name}!`,
+      content: `${(hero.content.title as TextWithClassName).content}, ${name} 🥳`,
       className: (hero.content.title as TextWithClassName).className,
     },
   };
