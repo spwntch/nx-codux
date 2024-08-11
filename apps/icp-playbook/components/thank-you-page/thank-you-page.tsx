@@ -38,7 +38,7 @@ const ThankYouPage = ({ hero }: ThankYouPageProps) => {
         innerContent={content}
         className="text-white"
         vAlign="bottom"
-        hAlign="left"
+        hAlign="right"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) router.push('https://www.interactrdt.com');
           if (ctaIndex === 1) router.push('/');
