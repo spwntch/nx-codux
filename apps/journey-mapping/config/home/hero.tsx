@@ -2,48 +2,54 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
-  src: '/images/benefits/increased-sales.webp',
+  src: '/images/home/hero/home-hero.webp',
   darken: '75%',
 };
 
 export const HOME_HERO_CONTENT: IContent = {
-  // announcement: {
-  //   message: "Limited Time Offer: Get 10% Off the ICP Playbook!",
-  //   className: "mx-auto text-xl",
-  //   href: "#" 
-  // },
   title: {
-    content: 'Unlock Your Ideal Customers with the ICP Playbook',
-    className: 'max-w-3xl',
+    content: 'Transform Your Customer Experience with Expert Journey Mapping',
+    className: 'max-w-3xl text-4xl font-bold tracking-tight mb-4',
   },
   subheading: {
     content:
-      'Transform your marketing and product strategies with our comprehensive playbook.',
-    className: 'max-w-2xl',
+      'Optimize every touchpoint and drive growth with data-driven insights that elevate customer satisfaction.',
+    className: 'max-w-2xl text-xl text-muted-foreground mb-6',
   },
   body: {
     content: [
-      // 'With the Ideal Customer Profile (ICP) Playbook, you can achieve higher conversion rates, improve team alignment, and see faster, data-driven results.',
-      'Our comprehensive playbook provides the tools and strategies you need to transform your efforts and reach your ideal customers efficiently.',
+      'We understand that each customer interaction is crucial to your business success.',
+      'Our Journey Mapping service empowers you to visualize and refine every step of the customer journey, ensuring that your customers have a seamless and satisfying experience from start to finish.',
     ],
-    className: 'max-w-3xl',
+    className: 'max-w-3xl text-lg text-muted-foreground mb-8',
   },
   bullets: [
     {
-      icon: <Crosshair />,
-      body: ['Achieve higher conversion rates'],
+      icon: <Crosshair className="h-6 w-6 text-primary" />,
+      body: [
+        "Gain a deep understanding of your customers' needs and behaviors.",
+      ],
+      className: 'flex items-start space-x-3 mb-4',
     },
     {
-      icon: <Users />,
-      body: ['Improved team alignment'],
+      icon: <Users className="h-6 w-6 text-primary" />,
+      body: [
+        'Identify and eliminate pain points to create frictionless experiences.',
+      ],
+      className: 'flex items-start space-x-3 mb-4',
     },
     {
-      icon: <TrendingUp />,
-      body: ['Faster, data-driven results'],
+      icon: <TrendingUp className="h-6 w-6 text-primary" />,
+      body: [
+        'Align your entire team around a unified vision of the customer journey.',
+      ],
+      className: 'flex items-start space-x-3 mb-4',
     },
   ],
   ctas: [
-    { label: 'CONTACT SALES', variant: { size: 'xl' } },
-    // { label: 'LEARN MORE', variant: { size: 'xl', variant: 'ghost' } },
+    {
+      label: 'CONTACT SALES',
+      variant: { size: 'xl' }, // Adjust this based on your buttonVariants definition
+    },
   ],
 };

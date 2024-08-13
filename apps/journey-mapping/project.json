@@ -19,7 +19,7 @@
             "output": "brand"
           },
           {
-            "input": "assets/interact/images/public",
+            "input": "assets/interact/journey-mapping/images/public",
             "glob": "*.webp",
             "output": "images"
           },

@@ -19,7 +19,7 @@
             "output": "brand"
           },
           {
-            "input": "assets/interact/images/public",
+            "input": "assets/interact/icp-playbook/images/public",
             "glob": "*.webp",
             "output": "images"
           },
