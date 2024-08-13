@@ -1,7 +1,7 @@
 {
-  "name": "icp-playbook",
+  "name": "journey-mapping",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/icp-playbook",
+  "sourceRoot": "apps/journey-mapping",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -19,7 +19,7 @@
             "output": "brand"
           },
           {
-            "input": "assets/interact/icp-playbook/images/public",
+            "input": "assets/interact/journey-mapping/images/public",
             "glob": "*.webp",
             "output": "images"
           },
