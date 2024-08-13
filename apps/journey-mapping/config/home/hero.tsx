@@ -9,7 +9,7 @@ export const HOME_HERO_IMAGE: IImage = {
 export const HOME_HERO_CONTENT: IContent = {
   title: {
     content: 'Transform Your Customer Experience with Expert Journey Mapping',
-    className: 'max-w-3xl text-4xl font-bold tracking-tight mb-4',
+    className: 'max-w-4xl text-4xl font-bold tracking-tight mb-4',
   },
   subheading: {
     content:
@@ -21,7 +21,7 @@ export const HOME_HERO_CONTENT: IContent = {
       'We understand that each customer interaction is crucial to your business success.',
       'Our Journey Mapping service empowers you to visualize and refine every step of the customer journey, ensuring that your customers have a seamless and satisfying experience from start to finish.',
     ],
-    className: 'max-w-3xl text-lg text-muted-foreground mb-8',
+    className: 'max-w-4xl text-lg text-muted-foreground mb-8',
   },
   bullets: [
     {
