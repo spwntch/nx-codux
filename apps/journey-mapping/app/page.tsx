@@ -18,21 +18,21 @@ import {
 import { FAQ } from '../config/home/faqs';
 
 const title =
-  'Unlock Your Ideal Customers with the ICP Playbook | Interact RDT';
+  'Optimize Your Customer Journey with Expert Mapping | Interact RDT';
 const description =
-  'Transform your marketing and product strategies with the ICP Playbook. Identify, profile, and engage high-potential customers with precision. Discover how our comprehensive guide helps improve targeting, increase conversions, align teams, and drive data-driven decision making. Get started today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/benefits/increased-sales.png`;
+  'Enhance customer experiences with our Journey Mapping service. Gain insights, align teams, and make data-driven decisions to improve customer satisfaction and drive growth. Discover how our comprehensive tools and strategies help you visualize and refine every step of the customer journey. Start optimizing today!';
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/home-hero.png`;
 const keywords: string[] = [
-  'ICP Playbook',
-  'customer profiling',
-  'marketing strategy',
-  'product strategy',
-  'customer engagement',
+  'Journey Mapping',
+  'customer journey',
+  'customer experience',
+  'CX strategy',
   'team alignment',
-  'data-driven marketing',
+  'data-driven decision making',
   'customer insights',
-  'marketing efficiency',
-  'customer segmentation',
+  'customer satisfaction',
+  'customer touchpoints',
+  'customer persona development',
 ];
 
 export const metadata = {
@@ -44,7 +44,7 @@ export const metadata = {
       title,
       description,
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      siteName: 'ICP Playbook | Interact RDT',
+      siteName: 'Journey Mapping | Interact RDT',
       images: [{ url: image, width: 1200, height: 630 }],
       locale: 'en_US',
       type: 'website',
@@ -60,7 +60,6 @@ export const metadata = {
     }) ||
     null,
 };
-
 export default function Index() {
   return (
     <HomePage
