@@ -74,15 +74,14 @@ const HomePage = ({
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <ProductSummary id="product" content={productSummary} />
-      <HowItWorks content={howItWorks} className="bg-muted" />
       <Benefits content={benefits} />
+      {/* <ProductSummary id="product" content={productSummary} />
+      <HowItWorks content={howItWorks} className="bg-muted" />
       <DiveIn
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      {/* <LearnMore content={learnMore} /> */}
       <Faqs id="faq" content={faqs} />
       <Pricing
         id="pricing"
@@ -93,8 +92,7 @@ const HomePage = ({
         onCtaClick={() => handleLinkTo('#get-started')}
       />
       <AboutUs id="about" {...about} />
-      {/* <Resources id="resources" /> */}
-      <GetStarted id="get-started" content={getStarted} className="bg-muted" />
+      <GetStarted id="get-started" content={getStarted} className="bg-muted" /> */}
     </div>
   );
 };
