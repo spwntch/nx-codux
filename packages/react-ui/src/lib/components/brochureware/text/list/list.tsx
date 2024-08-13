@@ -18,9 +18,9 @@ export const List: React.FC<IBulletsProps> = ({
   className,
   numbered,
 }) => (
-  <ul className={cn('flex flex-col gap-2 text-left', className)}>
+  <ul className={cn('flex flex-col gap-1 text-left', className)}>
     {content.map((bullet, index) => (
-      <li key={index} className={cn('flex gap-3 items-center', bullet.className)}>
+      <li key={index} className={cn('flex gap-3 items-center !mb-2', bullet.className)}>
         {bullet.icon && <div className="flex-shrink-0">{bullet.icon}</div>}
         {bullet.image && (
           <div className="flex-shrink-0">
