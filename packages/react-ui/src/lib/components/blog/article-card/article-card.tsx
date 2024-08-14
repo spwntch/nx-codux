@@ -26,7 +26,7 @@ export const ArticleCard = ({
 }: IPostCardProps) => {
   return (
     <Card
-      className={cn('max-w-2xl mx-auto cursor-pointer', className)} // Use className prop
+      className={cn('max-w-2xl mx-auto cursor-pointer rounded', className)} // Use className prop
       onClick={() => onClick(slug)}
     >
       <CardContent className={cn('m-0 p-0')}>
