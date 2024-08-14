@@ -69,7 +69,7 @@ const FinalCta = ({ id, content, className }: Props) => {
           className="gap-6"
           mainPaneCoverage={70}
           containers={[
-            <ContentContainer key={0} hAlign="left" innerContent={header} />,
+            <ContentContainer key={0} hAlign="left" vAlign='top' innerContent={header} />,
             <div key={1} className="mt-8  flex flex-col justify-center h-full">
               <StackedForm
                 form={form}
