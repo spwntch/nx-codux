@@ -52,22 +52,37 @@ export const ImageContainer = forwardRef<
             : {}
         }
       />
-      {attribution?.photographer && attribution?.url && (
+      {attribution?.photographer && (
         <div
           className={`absolute bottom-2 right-1 text-xs pb-1 pr-6 text-white z-50`}
         >
-          Photo by{' '}
-          <a
-            href={attribution?.photographer.url}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {attribution?.photographer.name}
-          </a>{' '}
-          on{' '}
-          <a href={attribution?.url} target="_blank" rel="noreferrer noopener">
-            Unsplash
-          </a>
+          <span>Photo by</span>
+          <span>&nbsp;</span>
+          <span>
+            <a
+              href={attribution?.photographer.url}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {attribution?.photographer.name}
+            </a>
+          </span>
+          {attribution?.url && (
+            <>
+              <span>&nbsp;</span>
+              <span>on</span>
+              <span>&nbsp;</span>
+              <span>
+                <a
+                  href={attribution?.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Unsplash
+                </a>
+              </span>
+            </>
+          )}
         </div>
       )}
       <div className="relative h-full w-full ">{children}</div>
