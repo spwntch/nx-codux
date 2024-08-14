@@ -11,7 +11,7 @@ const title =
   'Optimize Your Customer Journey with Expert Mapping | Interact RDT';
 const description =
   'Enhance customer experiences with our Journey Mapping service. Gain insights, align teams, and make data-driven decisions to improve customer satisfaction and drive growth. Discover how our comprehensive tools and strategies help you visualize and refine every step of the customer journey. Start optimizing today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/home-hero.png`;
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/home/hero/vlad-bagacian-d1eaoAabeXs-unsplash.jpg`;
 const keywords: string[] = [
   'Journey Mapping',
   'customer journey',
