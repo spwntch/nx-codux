@@ -3,7 +3,7 @@ import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
   src: '/images/home/hero/vlad-bagacian-d1eaoAabeXs-unsplash.webp',
-  darken: '75%',
+  darken: '50%',
   attribution: {
     url: 'https://unsplash.com/photos/woman-sitting-on-grey-cliff-d1eaoAabeXs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash',
     photographer: {
