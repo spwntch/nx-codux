@@ -7,11 +7,10 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
   IContent,
   Input,
   SplitLayout,
-  StackedForm,
+  StackedForm
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
@@ -20,13 +19,13 @@ import {
   getStartedFormSchema,
 } from '../../../types/get-started-form';
 
+import { logProductRequestEvent } from '@/react-tracking';
 import { useRouter } from 'next/navigation';
 import { getStarted } from '../../../server-actions/get-started';
-import { logProductRequestEvent } from '@/react-tracking';
 
 type Props = { id: string; content: IContent; className?: string };
 
-const GetStarted = ({ id, content, className }: Props) => {
+const FinalCta = ({ id, content, className }: Props) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -169,4 +168,4 @@ const GetStarted = ({ id, content, className }: Props) => {
   );
 };
 
-export default GetStarted;
+export default FinalCta;

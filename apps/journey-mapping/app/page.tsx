@@ -2,10 +2,16 @@ import HomePage from '../components/home-page/home-page';
 import {
   BENEFITS,
   CLIENT_LOGOS,
+  COST,
   HOME_HERO_CONTENT,
-  HOME_HERO_IMAGE
+  HOME_HERO_IMAGE,
+  PRICING,
+  VALUE,
+  FINAL_CTA,
 } from '../config';
 import { CASE_STUDIES, CASE_STUDIES_GRID } from '../config/home/case-studies';
+import FAQS from '../config/home/faqs';
+import HOW_IT_WORKS from '../config/home/how-it-works';
 
 const title =
   'Optimize Your Customer Journey with Expert Mapping | Interact RDT';
@@ -63,20 +69,12 @@ export default function Index() {
         content: CASE_STUDIES,
         articles: CASE_STUDIES_GRID,
       }}
-      // productSummary={THE_ICP_PLAYBOOK}
-      // howItWorks={HOW_IT_WORKS}
-      // diveIn={DIVE_IN}
-      // faqs={FAQ}
-      // pricing={PRICING}
-      // value={VALUE}
-      // cost={COST}
-      // about={{
-      //   youtubeId: ABOUT_YOUTUBE,
-      //   content: ABOUT_CONTENT,
-      //   stats: ABOUT_STATS,
-      // }}
-      // getStarted={GET_STARTED}
-      // testimonials={TESTIMONIALS}
+      howItWorks={HOW_IT_WORKS}
+      faqs={FAQS}
+      pricing={PRICING}
+      value={VALUE}
+      cost={COST}
+      finalCta={FINAL_CTA}
     />
   );
 }

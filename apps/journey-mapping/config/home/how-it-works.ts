@@ -1,49 +1,56 @@
-import { IContent } from '@spwntch/react-ui';
+import { IContent } from '@spwntch/react-ui'; // Adjust the import path as needed
 
-export const HOW_IT_WORKS: IContent = {
-  heading: 'How It Works',
+const HOW_IT_WORKS: IContent = {
+  heading: { content: 'Our Journey Mapping Process' },
   subheading: {
-    content: 'A Step-by-Step Guide to Using the ICP Playbook',
-    // Add any necessary className here
+    content: 'Charting the Path to Unforgettable Customer Experiences',
   },
   body: {
     content: [
-      'With the ICP Playbook, you’ll be fully supported every step of the way. From orientation to implementation, we ensure you and your team have the tools and knowledge needed to succeed.',
-      'Here’s how our process unfolds:',
+      'Imagine a world where every interaction with your brand is purposeful, impactful, and leaves a lasting impression. Our journey mapping process is designed to guide you toward that reality.',
+      'By shedding light on every step your customers take, we help you uncover hidden opportunities and craft experiences that truly resonate. With each map we create, we empower you to connect more deeply with your audience, turning insights into transformative customer journeys that set your brand apart.',
     ],
-    className: 'text-lg text-left max-w-4xl',
+    className:'max-w-4xl text-center'
   },
   bullets: [
     {
-      heading: 'PROJECT PHASE 1',
-      subheading: 'Introduction and Setup',
+      numbered: true,
+      heading: 'Deep Dive Discovery',
+      subheading: 'Uncovering Key Insights',
       body: [
-        "Begin with an orientation session to understand the playbook's framework and set up your team.",
+        'We begin by immersing ourselves in your business to understand your objectives and customer expectations.',
+        'Our research captures the essence of your customer’s needs, laying the groundwork for a journey map that reflects real-world experiences.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 2',
-      subheading: 'Workshops and Interactive Sessions',
+      numbered: true,
+      heading: 'Journey Mapping Excellence',
+      subheading: 'Visualizing Every Touchpoint',
       body: [
-        'Participate in structured workshops that cover different aspects of customer profiling.',
-        'Engage in group activities and discussions to gain diverse perspectives.',
+        'With advanced tools, we create a detailed map of your customer’s journey.',
+        'Every touchpoint, channel, and interaction is meticulously charted to provide a holistic view of the customer experience, highlighting moments that matter.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 3',
-      subheading: 'Utilizing Worksheets and Templates',
+      numbered: true,
+      heading: 'Insightful Analysis',
+      subheading: 'Turning Data into Direction',
       body: [
-        'Apply the provided worksheets and templates to gather and analyze customer data.',
-        'Use these tools to develop detailed and actionable customer profiles.',
+        'Our experts analyze the journey map to reveal patterns and opportunities.',
+        'We transform data into actionable insights, giving you the knowledge to refine and optimize your customer journey for greater satisfaction and engagement.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 4',
-      subheading: 'Implementation and Review',
+      numbered: true,
+      heading: 'Future-Focused Mapping',
+      subheading: 'Envisioning Tomorrow’s Journeys',
       body: [
-        'Implement the developed ICPs into your marketing and product strategies.',
-        'Regularly review and refine the profiles based on new data and insights.',
+        'For those looking to innovate, we help envision future customer journeys.',
+        'By anticipating trends and customer needs, we design pathways that keep you ahead of the curve, ensuring your brand continues to deliver standout experiences.',
       ],
     },
   ],
+  // Visuals can be added here if required by the component (e.g., infographics or flowcharts)
 };
+
+export default HOW_IT_WORKS;
