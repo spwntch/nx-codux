@@ -4,8 +4,9 @@ const SANLAM: IMdxDoc = {
   meta: {
     slug: 'sanlam',
     date: '2023-09-27',
-    coverImage: '/images/case-studies/sanlam.webp',
+    coverImage: '/images/case-studies/sanlam-cover.webp',
     authorName: 'Wagieda P.',
+    authorAvatar: '/images/case-studies/sanlam-icon.webp',
     title: 'A Unified Client Experience',
     abstract: [
       'Discover how Sanlam, a centennial beacon in financial services, collaborated with Interact RDT, pioneers in behavioral insights. Together, they decoded the African financial psyche, crafted a unified client journey, and deepened market trust.',
@@ -51,8 +52,10 @@ const LIBERTY: IMdxDoc = {
   meta: {
     slug: 'liberty',
     date: '2018-07-23',
-    coverImage: '/images/case-studies/liberty.webp',
+    coverImage: '/images/case-studies/liberty-cover.webp',
     authorName: 'Graham E.',
+    authorAvatar: '/images/case-studies/liberty-icon.webp',
+
     title: 'Digital Mastery',
     abstract: [
       'The digital age demands flawless online interactions. When Liberty, a premier financial institution in South Africa, aimed to perfect its user experience and customer journey, the choice was clear: Interact RDT. Journey with Graham Easton as he recounts a collaboration defined by professionalism, invaluable insights, and grounded realism.',
