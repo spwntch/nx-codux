@@ -67,11 +67,12 @@ const HomePage = ({
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
-        vAlign="middle"
+        // vAlign="middle"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) handleLinkTo('#get-started');
         }}
+        
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <Benefits content={benefits} />

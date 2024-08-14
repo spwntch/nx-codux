@@ -15,7 +15,7 @@ export const ImageContainer = forwardRef<
   HTMLDivElement,
   IBackgroundImageContainerProps
 >(({ className, image, rounded, blur, children, ...props }, ref) => {
-  const { src, alt, darken } = image;
+  const { src, alt, darken, attribution } = image;
   return (
     <div
       className={cn('relative h-full w-full', className)}
@@ -52,6 +52,24 @@ export const ImageContainer = forwardRef<
             : {}
         }
       />
+      {attribution?.photographer && attribution?.url && (
+        <div
+          className={`absolute bottom-2 right-1 text-xs pb-1 pr-6 text-white z-50`}
+        >
+          Photo by{' '}
+          <a
+            href={attribution?.photographer.url}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {attribution?.photographer.name}
+          </a>{' '}
+          on{' '}
+          <a href={attribution?.url} target="_blank" rel="noreferrer noopener">
+            Unsplash
+          </a>
+        </div>
+      )}
       <div className="relative h-full w-full ">{children}</div>
     </div>
   );

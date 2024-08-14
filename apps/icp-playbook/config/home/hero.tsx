@@ -2,7 +2,7 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
-  src: '/images/benefits/increased-sales.webp',
+  src: '/images/home/hero/coworkers-in-casual-workshop.webp',
   darken: '75%',
 };
 
