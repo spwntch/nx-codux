@@ -1,6 +1,6 @@
-import { IContent } from "./contentInterfaces"; // Adjust the import path as needed
+import { IContent } from "@spwntch/react-ui";
 
-const FAQS = {
+const FAQS:IContent = {
   heading: { content: "Frequently Asked Questions" },
   bullets: [
     {
