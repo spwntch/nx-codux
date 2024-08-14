@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface IImageAttribution {
-  url: string;
+  url?: string;
   photographer?: {
     name: string;
     url: string;
@@ -24,3 +24,4 @@ export interface IImage {
   attribution?: IImageAttribution;
   coverage?: ImageCoverage;
 }
+// Photo by Valentin Antonucci: https://www.pexels.com/photo/person-holding-compass-691637/

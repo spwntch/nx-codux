@@ -2,15 +2,22 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
-  src: '/images/benefits/increased-sales.webp',
+  src: '/images/home/hero/analytics-and-reporting.webp',
   darken: '75%',
+  // attribution: {
+  //   photographer: {
+  //     name: 'Tim Douglas',
+  //     url: 'https://www.pexels.com/photo/happy-woman-jumping-with-shopping-bags-6567607',
+  //   },
+  // },
 };
+
 
 export const HOME_HERO_CONTENT: IContent = {
   // announcement: {
   //   message: "Limited Time Offer: Get 10% Off the ICP Playbook!",
   //   className: "mx-auto text-xl",
-  //   href: "#" 
+  //   href: "#"
   // },
   title: {
     content: 'Unlock Your Ideal Customers with the ICP Playbook',
