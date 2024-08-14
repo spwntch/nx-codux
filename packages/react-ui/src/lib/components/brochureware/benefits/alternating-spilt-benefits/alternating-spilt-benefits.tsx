@@ -42,7 +42,7 @@ const AlternatingSplitBenefits = ({
               <img
                 alt={benefit.image?.alt || benefit.heading}
                 src={benefit.image?.src}
-                className="object-cover object-center brightness-50"
+                className="object-cover object-center brightness-[0.75]"
               />
             </div>
           </div>

@@ -56,7 +56,7 @@ export const BENEFITS: IContent = {
         'Create detailed personas to better understand and target your customers.',
       ],
       image: {
-        src: '/images/benefits/nik-5dgHxsvJ170-unsplash.webp',
+        src: '/images/benefits/pexels-cottonbro-4855325.webp',
         attribution: { photographer: { name: '', url: '' } },
       },
     },

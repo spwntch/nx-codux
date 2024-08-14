@@ -2,14 +2,14 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Crosshair, Users, TrendingUp } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
-  src: '/images/home/pexels-tim-douglas-6567607.webp',
+  src: '/images/home/hero/analytics-and-reporting.webp',
   darken: '75%',
-  attribution: {
-    photographer: {
-      name: 'Tim Douglas',
-      url: 'https://www.pexels.com/photo/happy-woman-jumping-with-shopping-bags-6567607',
-    },
-  },
+  // attribution: {
+  //   photographer: {
+  //     name: 'Tim Douglas',
+  //     url: 'https://www.pexels.com/photo/happy-woman-jumping-with-shopping-bags-6567607',
+  //   },
+  // },
 };
 
 
