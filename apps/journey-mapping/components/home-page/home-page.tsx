@@ -5,14 +5,17 @@ import {
   IContent,
   IImage,
   IMdxDoc,
+  IPricing,
   LogoCarousel,
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
 import Benefits from './sections/benefits';
 import CaseStudies from './sections/case-studies';
-import HowItWorks from './sections/how-it-works';
 import Faqs from './sections/faqs';
+import FinalCta from './sections/final-cta';
+import HowItWorks from './sections/how-it-works';
+import Pricing from './sections/pricing';
 
 export interface HomePageProps {
   hero: {
@@ -27,17 +30,17 @@ export interface HomePageProps {
   };
   howItWorks: IContent;
   faqs: IContent;
+  pricing: IContent;
+  value: IContent[];
+  cost: IPricing;
+  finalCta: IContent;
   // productSummary: IContent;
   // diveIn: IContent;
-  // pricing: IContent;
-  // value: IContent[];
-  // cost: IPricing;
   // about: {
   //   youtubeId: string;
   //   content: IContent;
   //   stats: { label: string; value: string }[];
   // };
-  // getStarted: IContent;
 
   // testimonials: IContent;
 }
@@ -48,7 +51,11 @@ const HomePage = ({
   benefits,
   caseStudies,
   howItWorks,
-  faqs
+  faqs,
+  pricing,
+  value,
+  cost,
+  finalCta,
 }: HomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -68,16 +75,13 @@ const HomePage = ({
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <Benefits content={benefits} className="bg-muted"/>
-      <CaseStudies content={caseStudies.content} articles={caseStudies.articles} />
+      <Benefits content={benefits} className="bg-muted" />
+      <CaseStudies
+        content={caseStudies.content}
+        articles={caseStudies.articles}
+      />
       <HowItWorks content={howItWorks} className="bg-muted" />
       <Faqs id="faq" content={faqs} />
-      {/* <ProductSummary id="product" content={productSummary} />
-      <DiveIn
-        content={diveIn}
-        className="bg-muted"
-        onCtaClick={() => handleLinkTo('#get-started')}
-      />
       <Pricing
         id="pricing"
         pricingContent={pricing}
@@ -86,8 +90,7 @@ const HomePage = ({
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <AboutUs id="about" {...about} />
-      <GetStarted id="get-started" content={getStarted} className="bg-muted" /> */}
+      {/* <FinalCta id="get-started" content={finalCta} /> */}
     </div>
   );
 };

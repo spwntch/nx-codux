@@ -42,7 +42,7 @@ const FAQS = {
       heading:
         "How does Journey Mapping help with cross-departmental alignment?",
       body: [
-        "Journey Mapping creates a unified view of the customer experience that can be shared across different departments. This shared understanding ensures that marketing, sales, and product teams are all aligned in their strategies, leading to more consistent and effective customer interactions. By having a common reference point, teams can collaborate more efficiently and avoid the silos that often hinder customer experience improvements.",
+        "Journ  ey Mapping creates a unified view of the customer experience that can be shared across different departments. This shared understanding ensures that marketing, sales, and product teams are all aligned in their strategies, leading to more consistent and effective customer interactions. By having a common reference point, teams can collaborate more efficiently and avoid the silos that often hinder customer experience improvements.",
         "Additionally, Journey Mapping fosters a customer-centric culture within the organization. By placing the customer at the center of all decision-making processes, teams are encouraged to work together towards a common goal—enhancing the overall customer experience. This alignment not only improves internal collaboration but also results in a more cohesive and satisfying experience for customers.",
       ],
     },

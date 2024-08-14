@@ -2,8 +2,12 @@ import HomePage from '../components/home-page/home-page';
 import {
   BENEFITS,
   CLIENT_LOGOS,
+  COST,
   HOME_HERO_CONTENT,
-  HOME_HERO_IMAGE
+  HOME_HERO_IMAGE,
+  PRICING,
+  VALUE,
+  FINAL_CTA,
 } from '../config';
 import { CASE_STUDIES, CASE_STUDIES_GRID } from '../config/home/case-studies';
 import FAQS from '../config/home/faqs';
@@ -67,18 +71,10 @@ export default function Index() {
       }}
       howItWorks={HOW_IT_WORKS}
       faqs={FAQS}
-      // productSummary={THE_ICP_PLAYBOOK}
-      // diveIn={DIVE_IN}
-      // pricing={PRICING}
-      // value={VALUE}
-      // cost={COST}
-      // about={{
-      //   youtubeId: ABOUT_YOUTUBE,
-      //   content: ABOUT_CONTENT,
-      //   stats: ABOUT_STATS,
-      // }}
-      // getStarted={GET_STARTED}
-      // testimonials={TESTIMONIALS}
+      pricing={PRICING}
+      value={VALUE}
+      cost={COST}
+      finalCta={FINAL_CTA}
     />
   );
 }
