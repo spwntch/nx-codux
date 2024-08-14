@@ -14,7 +14,8 @@ import { join } from 'path';
 // import { footer } from '../../../config/footer';
 // import { problemsWeSolve } from '../../../config/problems-we-solve';
 import { CASE_STUDIES_GRID } from '../../../config/home/case-studies';
-import { Article } from '@spwntch/react-ui';
+import { Article, parseMdxFileBuffer } from '@spwntch/react-ui';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: { slug: string };
@@ -68,8 +69,11 @@ const getBuffer = (slug: string) => {
   return readFileSync(filePath);
 };
 
-const CaseStudyPage = ({ params: { slug } }: Props) => {
+const CaseStudyPage = async ({ params: { slug } }: Props) => {
   const buffer = getBuffer(slug);
+  const doc = await parseMdxFileBuffer(buffer);
+  // if (!doc)
+     return notFound();
 
   return (
     <div className="flex flex-col">

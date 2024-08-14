@@ -14,6 +14,7 @@ export interface IMdxDoc {
 }
 
 export interface IMdxDocFrontMatter {
+  path?: string;
   slug: string;
   date: string;
   title: string;
@@ -25,7 +26,7 @@ export interface IMdxDocFrontMatter {
   categories?: string[];
   keywords?: string[];
   abstract?: string[];
-  testimonial?: string
+  testimonial?: string;
   published?: boolean;
 }
 
