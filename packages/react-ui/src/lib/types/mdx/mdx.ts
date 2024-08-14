@@ -25,6 +25,7 @@ export interface IMdxDocFrontMatter {
   categories?: string[];
   keywords?: string[];
   abstract?: string[];
+  testimonial?: string
   published?: boolean;
 }
 
