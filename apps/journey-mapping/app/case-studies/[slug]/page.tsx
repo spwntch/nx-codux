@@ -13,7 +13,7 @@ import { join } from 'path';
 // } from '~next/integrations/calendly/server';
 // import { footer } from '../../../config/footer';
 // import { problemsWeSolve } from '../../../config/problems-we-solve';
-import CaseStudy from 'apps/journey-mapping/components/case-study/case-study';
+import CaseStudy from '../../../components/case-study/case-study';
 import { notFound } from 'next/navigation';
 import { CASE_STUDIES_GRID } from '../../../config/home/case-studies';
 import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
@@ -26,6 +26,7 @@ const docPath = join(process.cwd(), `public/case-studies`);
 
 export async function generateStaticParams() {
   const params = readdirSync(docPath)
+  .filter(path => path.includes('/images'))
     .map((path) => path.replace(/\.mdx?$/, ''))
     .map((slug) => ({ slug }));
 
