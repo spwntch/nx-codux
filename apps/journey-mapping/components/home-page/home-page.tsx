@@ -16,6 +16,7 @@ import Faqs from './sections/faqs';
 import FinalCta from './sections/final-cta';
 import HowItWorks from './sections/how-it-works';
 import Pricing from './sections/pricing';
+import DiveIn from './sections/dive-in';
 
 export interface HomePageProps {
   hero: {
@@ -28,6 +29,7 @@ export interface HomePageProps {
     content: IContent;
     articles: IMdxDoc[];
   };
+  diveIn: IContent;
   howItWorks: IContent;
   faqs: IContent;
   pricing: IContent;
@@ -35,7 +37,6 @@ export interface HomePageProps {
   cost: IPricing;
   finalCta: IContent;
   // productSummary: IContent;
-  // diveIn: IContent;
   // about: {
   //   youtubeId: string;
   //   content: IContent;
@@ -50,6 +51,7 @@ const HomePage = ({
   clientLogos,
   benefits,
   caseStudies,
+  diveIn,
   howItWorks,
   faqs,
   pricing,
@@ -80,17 +82,21 @@ const HomePage = ({
         content={caseStudies.content}
         articles={caseStudies.articles}
       />
-      <HowItWorks content={howItWorks} className="bg-muted" />
-      <Faqs id="faq" content={faqs} />
+      <DiveIn
+        content={diveIn}
+        onCtaClick={() => handleLinkTo('#get-started')}
+        className="bg-muted"
+      />
+      <HowItWorks content={howItWorks} />
+      <Faqs id="faq" content={faqs} className="bg-muted" />
       <Pricing
         id="pricing"
         pricingContent={pricing}
         valueContent={value}
         costContent={cost}
-        className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <FinalCta id="get-started" content={finalCta} />
+      <FinalCta id="get-started" content={finalCta} className="bg-muted" />
     </div>
   );
 };
