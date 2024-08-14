@@ -15,9 +15,9 @@
     --card-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
     --popover: 0 0% 100%; /* #FFFFFF (White) */
     --popover-foreground: 210 20% 20%; /* #333333 (Dark Gray) */
-    --primary: 207 64% 60%; /* #3598dc (Light Blue) */
+    --primary: 205 100% 36%; /* #0072bb (Medium Blue) */
     --primary-foreground: 210 100% 100%; /* #FFFFFF (White) */
-    --secondary: 205 100% 36%; /* #0072bb (Medium Blue) */
+    --secondary: 207 64% 60%; /* #3598dc (Light Blue) */
     --secondary-foreground: 210 100% 100%; /* #FFFFFF (White) */
     --muted: 210 16% 96%; /* #F9F9F9 (Light Gray) */
     --muted-foreground: 210 8.9% 46.1%; /* #666666 (Medium Gray) */
@@ -38,9 +38,9 @@
     --card-foreground: 210 20% 98%; /* #FFFFFF (White for card text) */
     --popover: 210 20% 12%; /* #212121 (Slightly lighter dark gray for popovers) */
     --popover-foreground: 210 20% 98%; /* #FFFFFF (White for popover text) */
-    --primary: 207 64% 60%; /* #3598dc (Light Blue) */
+    --primary: 205 100% 36%; /* #0072bb (Medium Blue) */
     --primary-foreground: 210 20% 98%; /* #FFFFFF (White for primary foreground) */
-    --secondary: 205 100% 36%; /* #0072bb (Medium Blue) */
+    --secondary: 207 64% 60%; /* #3598dc (Light Blue) */
     --secondary-foreground: 210 20% 98%; /* #FFFFFF (White for secondary foreground) */
     --muted: 210 20% 20%; /* #333333 (Medium dark gray for muted elements) */
     --muted-foreground: 210 20% 80%; /* #CCCCCC (Light gray for muted text) */

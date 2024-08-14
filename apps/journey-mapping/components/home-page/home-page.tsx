@@ -53,18 +53,18 @@ const HomePage = ({
 
   return (
     <div className="flex flex-col">
-      {/* <FullImageHero
+      <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
-        // vAlign="middle"
+        // vAlign="bottom"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) handleLinkTo('#get-started');
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <Benefits content={benefits} /> */}
+      <Benefits content={benefits} className="bg-muted"/>
       <CaseStudies content={caseStudies.content} articles={caseStudies.articles} />
       {/* <ProductSummary id="product" content={productSummary} />
       <HowItWorks content={howItWorks} className="bg-muted" />

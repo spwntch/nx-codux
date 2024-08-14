@@ -1,6 +1,13 @@
 'use client';
 
-import { ArticleGrid, cn, ContentContainer, IContent, IMdxDoc } from '@spwntch/react-ui';
+import {
+  ArticleGrid,
+  cn,
+  ContentContainer,
+  IContent,
+  IMdxDoc,
+} from '@spwntch/react-ui';
+import { useRouter } from 'next/navigation';
 
 export interface CaseStudiesProps {
   content: IContent;
@@ -9,6 +16,7 @@ export interface CaseStudiesProps {
 }
 
 const CaseStudies = ({ content, articles, className }: CaseStudiesProps) => {
+  const router = useRouter();
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -20,9 +28,7 @@ const CaseStudies = ({ content, articles, className }: CaseStudiesProps) => {
         <ContentContainer innerContent={header} />
         <ArticleGrid
           articles={articles}
-          onClickArticle={(slug) =>
-            console.log(`Navigating to article: ${slug}`)
-          }
+          onClickArticle={(slug) => router.push(`/case-studies/${slug}`)}
         />
       </div>
     </div>
