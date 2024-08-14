@@ -8,6 +8,7 @@ import {
   PRICING,
   VALUE,
   FINAL_CTA,
+  DIVE_IN,
 } from '../config';
 import { CASE_STUDIES, CASE_STUDIES_GRID } from '../config/home/case-studies';
 import FAQS from '../config/home/faqs';
@@ -69,6 +70,7 @@ export default function Index() {
         content: CASE_STUDIES,
         articles: CASE_STUDIES_GRID,
       }}
+      diveIn={DIVE_IN}
       howItWorks={HOW_IT_WORKS}
       faqs={FAQS}
       pricing={PRICING}
