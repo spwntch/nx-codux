@@ -1,6 +1,6 @@
 'use client';
 import { Article, IMdxDocFrontMatter } from '@spwntch/react-ui';
-import { notFound } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
 import React, { JSXElementConstructor, ReactElement } from 'react';
 
 type Props = {
@@ -9,9 +9,17 @@ type Props = {
 };
 
 const CaseStudy = ({ meta, content }: Props) => {
+  const router = useRouter();
   if (!content) return notFound();
 
-  return <Article meta={meta} content={content} />;
+  return (
+    <Article
+      meta={meta}
+      content={content}
+      backTo={{ label: 'BACK', href: '/' }}
+      onBackTo={(href) => router.push(href)}
+    />
+  );
 };
 
 export default CaseStudy;
