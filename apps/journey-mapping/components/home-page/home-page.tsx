@@ -90,7 +90,7 @@ const HomePage = ({
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      {/* <FinalCta id="get-started" content={finalCta} /> */}
+      <FinalCta id="get-started" content={finalCta} />
     </div>
   );
 };

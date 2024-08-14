@@ -1,15 +1,21 @@
 export const FINAL_CTA = {
-  heading: { content: 'Ready to Transform Your Customer Experience?' },
+  heading: {
+    content: 'Ready to Transform Your Customer Experience?',
+  },
   subheading: {
-    content:
-      "Our expert team is ready to help you map out a path to success. Let's get started!",
+    content: 'Unlock the Potential of Your Customer Journeys!',
   },
   body: {
     content: [
-      "Gain deeper insights into your customers' needs and behaviors, allowing for more personalized and effective interactions.",
-      'Optimize your customer journey to guide leads more effectively through the sales funnel, resulting in higher conversion rates.',
-      'Identify and address key pain points, ensuring that your resources are allocated where they will have the most impact.',
+      'Join leading brands in optimizing every touchpoint with our Journey Mapping service. Our expert team will help you map out a clear path to enhanced customer experiences and business growth.',
+      'Gain deeper insights, improve customer engagement, and ensure that every interaction is meaningful. With our comprehensive approach, including detailed mapping, analysis, and strategic guidance, your business is set to thrive.',
+      'Don’t wait to elevate your customer strategy. Contact us today and start transforming your customer journeys for lasting success!',
     ],
+    className: 'text-lg text-left max-w-4xl',
   },
-  // Visuals can be added here if required by the component (e.g., imagery of satisfied customers or teams in action)
+  ctas: [
+    {
+      label: "LET'S CHAT",
+    },
+  ],
 };
