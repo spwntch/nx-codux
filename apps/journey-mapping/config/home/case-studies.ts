@@ -108,6 +108,6 @@ export const CASE_STUDIES: IContent = {
       `Our Journey Mapping service has empowered organizations like Liberty and Sanlam to enhance their customer experiences and drive business growth. By partnering with us, these industry leaders were able to align their teams around a unified customer journey strategy, optimize touchpoints, and gain valuable insights that transformed their customer interactions.`,
       `Explore our case studies to see the tangible results and benefits that our service has delivered.`,
     ],
-    className: 'max-w-5xl text-center',
+    className: 'max-w-5xl',
   },
 };

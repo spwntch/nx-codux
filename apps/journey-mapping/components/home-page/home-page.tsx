@@ -17,6 +17,7 @@ import FinalCta from './sections/final-cta';
 import HowItWorks from './sections/how-it-works';
 import Pricing from './sections/pricing';
 import DiveIn from './sections/dive-in';
+import Blog from './sections/blog';
 
 export interface HomePageProps {
   hero: {
@@ -35,6 +36,10 @@ export interface HomePageProps {
   pricing: IContent;
   value: IContent[];
   cost: IPricing;
+  blog: {
+    content: IContent;
+    articles: IMdxDoc[];
+  };
   finalCta: IContent;
   // productSummary: IContent;
   // about: {
@@ -57,6 +62,7 @@ const HomePage = ({
   pricing,
   value,
   cost,
+  blog,
   finalCta,
 }: HomePageProps) => {
   const router = useRouter();
@@ -96,7 +102,12 @@ const HomePage = ({
         costContent={cost}
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <FinalCta id="get-started" content={finalCta} className="bg-muted" />
+      <Blog
+        content={blog.content}
+        articles={blog.articles}
+        className="bg-muted"
+      />
+      <FinalCta id="get-started" content={finalCta} />
     </div>
   );
 };
