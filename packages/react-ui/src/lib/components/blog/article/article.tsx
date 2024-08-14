@@ -22,7 +22,7 @@ export const Article = ({
   vAlign = 'middle',
 }: IArticleProps) => {
   return (
-    <div className={cn('w-full', 'flex flex-col')}>
+    <div className={cn('w-full container max-w-5xl', 'flex flex-col')}>
       <ArticleHeader
         backTo={backTo}
         onBackTo={onBackTo}

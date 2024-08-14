@@ -13,9 +13,10 @@ import { join } from 'path';
 // } from '~next/integrations/calendly/server';
 // import { footer } from '../../../config/footer';
 // import { problemsWeSolve } from '../../../config/problems-we-solve';
-import { CASE_STUDIES_GRID } from '../../../config/home/case-studies';
-import { Article, parseMdxFileBuffer } from '@spwntch/react-ui';
+import CaseStudy from 'apps/journey-mapping/components/case-study/case-study';
 import { notFound } from 'next/navigation';
+import { CASE_STUDIES_GRID } from '../../../config/home/case-studies';
+import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
 
 type Props = {
   params: { slug: string };
@@ -72,12 +73,13 @@ const getBuffer = (slug: string) => {
 const CaseStudyPage = async ({ params: { slug } }: Props) => {
   const buffer = getBuffer(slug);
   const doc = await parseMdxFileBuffer(buffer);
-  // if (!doc)
-     return notFound();
+  if (!doc) return notFound();
+
+  const { content, meta } = doc;
 
   return (
-    <div className="flex flex-col">
-      <p>{slug}</p>
+    <div className="flex flex-col mt-28">
+      <CaseStudy meta={meta} content={content} />
     </div>
   );
 };

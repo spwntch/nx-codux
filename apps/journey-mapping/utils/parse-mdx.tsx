@@ -1,7 +1,7 @@
 import { compileMDX } from 'next-mdx-remote/rsc';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
-import { IMdxDoc, IMdxDocFrontMatter } from '../types';
+import { IMdxDoc, IMdxDocFrontMatter } from '@spwntch/react-ui';
 
 export const parseMdx = async (
   source: string,

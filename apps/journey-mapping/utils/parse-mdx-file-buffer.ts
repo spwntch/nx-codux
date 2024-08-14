@@ -1,6 +1,6 @@
+import { IMdxDoc } from '@spwntch/react-ui';
 import matter from 'gray-matter';
 import { parseMdx } from './parse-mdx';
-import { IMdxDoc } from '../types';
 
 export const parseMdxFileBuffer = async (
   buffer: Buffer
