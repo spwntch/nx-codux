@@ -11,6 +11,8 @@ import {
 import { useRouter } from 'next/navigation';
 import Benefits from './sections/benefits';
 import CaseStudies from './sections/case-studies';
+import HowItWorks from './sections/how-it-works';
+import Faqs from './sections/faqs';
 
 export interface HomePageProps {
   hero: {
@@ -23,10 +25,10 @@ export interface HomePageProps {
     content: IContent;
     articles: IMdxDoc[];
   };
+  howItWorks: IContent;
+  faqs: IContent;
   // productSummary: IContent;
-  // howItWorks: IContent;
   // diveIn: IContent;
-  // faqs: IContent;
   // pricing: IContent;
   // value: IContent[];
   // cost: IPricing;
@@ -45,6 +47,8 @@ const HomePage = ({
   clientLogos,
   benefits,
   caseStudies,
+  howItWorks,
+  faqs
 }: HomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -66,14 +70,14 @@ const HomePage = ({
       <LogoCarousel logos={clientLogos} className="bg-white" />
       <Benefits content={benefits} className="bg-muted"/>
       <CaseStudies content={caseStudies.content} articles={caseStudies.articles} />
-      {/* <ProductSummary id="product" content={productSummary} />
       <HowItWorks content={howItWorks} className="bg-muted" />
+      <Faqs id="faq" content={faqs} />
+      {/* <ProductSummary id="product" content={productSummary} />
       <DiveIn
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <Faqs id="faq" content={faqs} />
       <Pricing
         id="pricing"
         pricingContent={pricing}

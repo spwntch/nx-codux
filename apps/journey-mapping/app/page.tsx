@@ -6,6 +6,8 @@ import {
   HOME_HERO_IMAGE
 } from '../config';
 import { CASE_STUDIES, CASE_STUDIES_GRID } from '../config/home/case-studies';
+import FAQS from '../config/home/faqs';
+import HOW_IT_WORKS from '../config/home/how-it-works';
 
 const title =
   'Optimize Your Customer Journey with Expert Mapping | Interact RDT';
@@ -63,10 +65,10 @@ export default function Index() {
         content: CASE_STUDIES,
         articles: CASE_STUDIES_GRID,
       }}
+      howItWorks={HOW_IT_WORKS}
+      faqs={FAQS}
       // productSummary={THE_ICP_PLAYBOOK}
-      // howItWorks={HOW_IT_WORKS}
       // diveIn={DIVE_IN}
-      // faqs={FAQ}
       // pricing={PRICING}
       // value={VALUE}
       // cost={COST}

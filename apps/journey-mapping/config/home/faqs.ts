@@ -1,89 +1,84 @@
-import { IContent } from '@spwntch/react-ui';
+import { IContent } from "./contentInterfaces"; // Adjust the import path as needed
 
-export const FAQ: IContent = {
-  heading: {
-    content: 'Common Questions About the ICP Playbook',
-    className: 'text-3xl font-bold text-center mt-10',
-  },
+const FAQS = {
+  heading: { content: "Frequently Asked Questions" },
   bullets: [
     {
-      heading: 'What is the ICP Playbook?',
+      heading: "What is Journey Mapping?",
       body: [
-        'The ICP Playbook is a comprehensive guide designed to help you develop precise customer profiles, align your teams, and enhance your marketing efficiency. It includes a variety of resources such as structured workshops, detailed worksheets, customizable templates, and more.',
-        'By using the ICP Playbook, businesses can gain a deeper understanding of their ideal customers, streamline their marketing efforts, and ultimately drive better results. The playbook offers a structured, step-by-step approach with actionable templates and real-world examples, making it a practical and effective tool.',
+        "Journey Mapping is a process that visualizes the entire customer journey, identifying key touchpoints where interactions with your brand occur. By mapping these interactions, businesses can gain a deeper understanding of customer behaviors, needs, and pain points, allowing for more personalized and effective engagement. This process is essential for optimizing the customer experience, ensuring that each touchpoint is aligned with the customer’s expectations and business goals.",
+        "In today’s competitive market, understanding the complete customer journey is not just beneficial—it’s necessary. Journey Mapping allows businesses to move beyond guesswork and assumptions, using data and insights to drive meaningful improvements in customer satisfaction and loyalty. By identifying areas for improvement, Journey Mapping enables businesses to enhance customer interactions, leading to higher retention rates and increased revenue.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'How does the ICP Playbook work?',
+      heading: "How long does the process take?",
       body: [
-        'The ICP Playbook includes structured workshops, detailed worksheets, and customizable templates to guide you through the customer profiling process. It starts with an orientation session to help you understand its framework, followed by interactive workshops and practical tools to gather and analyze customer data, develop detailed profiles, and implement these profiles into your strategies.',
-        'Regular reviews and refinements ensure your profiles remain accurate and effective, driving sustained improvements in targeting and conversions over time.',
+        "The duration of the Journey Mapping process can vary depending on the complexity of the customer journey and the specific goals of your business. Typically, the process can take anywhere from a few weeks to a few months. This includes the initial discovery phase, mapping and analysis, and the implementation of insights.",
+        "While the process requires an investment of time, it is designed to be thorough and insightful, ensuring that the outcomes are actionable and aligned with your business objectives. The timeline is also flexible and can be adjusted based on your needs, ensuring minimal disruption to your operations while maximizing the value derived from the process.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'Who should use the ICP Playbook?',
+      heading: "What industries can benefit from this service?",
       body: [
-        'The ICP Playbook is ideal for marketing leaders, product managers, and growth strategists looking to improve targeting and conversions. It’s particularly beneficial for large enterprises, B2B businesses, professional service firms, and tech startups seeking to align their teams and enhance their marketing efficiency.',
+        "Journey Mapping is a versatile tool that can be adapted to various industries, including Technology, Financial Services, Retail, Healthcare, Telecommunications, and Professional Services. Any business that interacts with customers across multiple touchpoints and channels can benefit from this service.",
+        "By tailoring the Journey Mapping process to the specific needs of different industries, we ensure that the insights gained are relevant and actionable. Whether you are looking to improve customer retention in retail or optimize patient experiences in healthcare, Journey Mapping provides the framework to enhance customer interactions and drive business success.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'What outcomes can I expect?',
+      heading: "How is my data handled?",
       body: [
-        'By using the ICP Playbook, you can expect improved targeting, increased conversions, better team alignment, and actionable insights from data. The playbook helps you focus on high-potential customers, reducing wasted marketing spend and increasing your return on investment.',
-        'Many users see significant improvements in their marketing and product strategies within a few weeks of implementation, with the structured approach and practical tools enabling quick wins and sustained success.',
+        "Data security and confidentiality are of utmost importance to us. All customer data collected during the Journey Mapping process is handled with the highest level of care and in compliance with relevant data protection regulations. We use secure systems to store and process data, ensuring that it is only accessible to authorized personnel.",
+        "Your data is used exclusively to enhance your customer journey and will not be shared with third parties without your explicit consent. We also offer anonymization options for sensitive data, further ensuring that your business and customer information remains secure throughout the process.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'Is the ICP Playbook customizable to my business needs?',
+      heading: "What kind of ROI can I expect?",
       body: [
-        'Yes, the ICP Playbook includes customizable templates and worksheets tailored to fit various business models and industries. You can adapt these resources to meet your specific requirements, ensuring they align with your business goals and integrate seamlessly with your existing systems.',
+        "The return on investment (ROI) from Journey Mapping can be substantial. By optimizing customer interactions and addressing pain points, businesses often see increased customer satisfaction, higher conversion rates, and improved customer retention. These benefits directly contribute to revenue growth and a stronger competitive position in the market.",
+        "Moreover, the insights gained from Journey Mapping enable businesses to allocate resources more effectively, reducing inefficiencies and focusing efforts on areas that yield the highest returns. While ROI can vary based on industry and specific business goals, the strategic advantages gained from a well-executed Journey Mapping process are undeniable.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'How much does the ICP Playbook cost?',
+      heading:
+        "How does Journey Mapping help with cross-departmental alignment?",
       body: [
-        'The ICP Playbook offers tailored solutions designed to fit businesses of all sizes and budgets. Whether you are a startup looking for scalable strategies or a large enterprise seeking comprehensive customer profiling tools, we have a package that aligns with your needs.',
-        'Contact our sales team for a personalized, obligation-free quote to find the best option for your business.',
+        "Journey Mapping creates a unified view of the customer experience that can be shared across different departments. This shared understanding ensures that marketing, sales, and product teams are all aligned in their strategies, leading to more consistent and effective customer interactions. By having a common reference point, teams can collaborate more efficiently and avoid the silos that often hinder customer experience improvements.",
+        "Additionally, Journey Mapping fosters a customer-centric culture within the organization. By placing the customer at the center of all decision-making processes, teams are encouraged to work together towards a common goal—enhancing the overall customer experience. This alignment not only improves internal collaboration but also results in a more cohesive and satisfying experience for customers.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'Do you offer support after engaging with the ICP Playbook?',
+      heading:
+        "Can Journey Mapping be customized to fit my specific business needs?",
       body: [
-        'Yes, we provide ongoing support and updates to ensure you get the most out of your ICP Playbook. Our team is available to answer any questions and offer guidance as you implement the playbook.',
-        'We also provide regular updates to keep the playbook current with the latest trends and best practices, ensuring you always have access to the most effective tools and insights.',
+        "Absolutely. Our Journey Mapping service is highly customizable, designed to meet the unique needs of your business. Whether you are in retail, technology, financial services, or another industry, we tailor our approach to reflect the specific dynamics of your market and customer segments. Our tools and templates can be adapted to fit the particular requirements of your business, ensuring that the insights are both relevant and actionable.",
+        "Customization extends beyond the mapping process itself. We work closely with your team to understand your goals, challenges, and customer dynamics, ensuring that the Journey Mapping process aligns with your strategic objectives. This personalized approach maximizes the impact of the insights and recommendations, making them directly applicable to your business context.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'How can I get started with the ICP Playbook?',
+      heading: "Will Journey Mapping require a lot of time from my team?",
       body: [
-        'Getting started with the ICP Playbook is easy. Click "Contact Sales" to request an obligation-free quote and learn how the playbook can help your business thrive.',
-        `If you would like to explore the playbook's features and benefits further, we’re available to provide a detailed walkthrough.`,
-        `We also offer demos to help you understand how the playbook can transform your business and provide case studies demonstrating its success in various industries.`,
+        "We understand that your team has limited time and resources. Our Journey Mapping service is designed to be efficient and collaborative, ensuring that we gather the necessary input from your team without overwhelming them. We handle much of the heavy lifting, allowing your team to focus on providing the insights and feedback that only they can offer.",
+        "Additionally, we offer comprehensive support throughout the process, including workshops and training sessions to make the experience as smooth as possible. Our goal is to integrate seamlessly with your existing workflows, minimizing disruption while ensuring that the final outputs are robust and valuable.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'How long does it take to see results?',
+      heading:
+        "How does Journey Mapping integrate with our existing customer data platforms?",
       body: [
-        'While results may vary depending on your specific circumstances, many users see significant improvements in targeting and conversions within a few weeks of implementing the ICP Playbook. The structured approach and practical tools provided by the playbook make it easier to achieve quick wins.',
-        'Consistent use and regular refinement of your customer profiles will lead to sustained improvements over time. By continuously applying the insights gained from the playbook, you can drive long-term success in your marketing and product strategies.',
+        "Our Journey Mapping service is designed to integrate seamlessly with your existing customer data platforms. This integration allows for real-time updates and insights, ensuring that your journey maps are always current and reflective of actual customer experiences. By leveraging your existing data, we can provide deeper insights and more precise recommendations, enhancing the overall value of the mapping process.",
+        "Integration with your customer data platforms also ensures that the Journey Mapping process is grounded in reality, using real-world data to inform the mapping and analysis. This connection between your data systems and the Journey Mapping process allows for ongoing updates and continuous improvement, making the insights more actionable and relevant over time.",
       ],
-      className: 'text-lg mt-2',
     },
     {
-      heading: 'Can I get a demo before requesting a quote?',
+      heading:
+        "What support is available after the Journey Mapping process is complete?",
       body: [
-        'Yes, we offer demos to help you understand how the ICP Playbook can transform your business. Click "Learn More" to request a demo and see the playbook in action.',
-        'During the demo, you will have the opportunity to explore the features and benefits of the playbook in detail and ask any questions you may have. This will give you a clear understanding of how the playbook can help you achieve your customer profiling and marketing goals.',
+        "We provide ongoing support even after the initial Journey Mapping process is complete. This includes regular check-ins, updates, and refinements to ensure that your customer journeys continue to deliver optimal results as your business and customer needs evolve. Our team remains available to assist with any additional insights, modifications, or strategic advice as your customer experience strategy matures.",
+        "Continuous improvement is a key aspect of our service. As your business grows and changes, so do your customer journeys. We help you stay ahead by providing the tools and support needed to adapt your journey maps to new market conditions, customer behaviors, and business objectives. This ensures that your customer experience strategy remains relevant and effective over the long term.",
       ],
-      className: 'text-lg mt-2',
     },
   ],
+  // Visuals can be added here if required by the component (e.g., icons or images related to each question)
 };
+
+export default FAQS;

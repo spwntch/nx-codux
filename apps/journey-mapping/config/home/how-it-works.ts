@@ -1,49 +1,38 @@
-import { IContent } from '@spwntch/react-ui';
+import { IContent } from '@spwntch/react-ui'; // Adjust the import path as needed
 
-export const HOW_IT_WORKS: IContent = {
-  heading: 'How It Works',
-  subheading: {
-    content: 'A Step-by-Step Guide to Using the ICP Playbook',
-    // Add any necessary className here
-  },
-  body: {
-    content: [
-      'With the ICP Playbook, you’ll be fully supported every step of the way. From orientation to implementation, we ensure you and your team have the tools and knowledge needed to succeed.',
-      'Here’s how our process unfolds:',
-    ],
-    className: 'text-lg text-left max-w-4xl',
-  },
+const HOW_IT_WORKS: IContent = {
+  heading: { content: 'Our Journey Mapping Process' },
   bullets: [
     {
-      heading: 'PROJECT PHASE 1',
-      subheading: 'Introduction and Setup',
+      numbered: true,
+      heading: 'Discovery',
       body: [
-        "Begin with an orientation session to understand the playbook's framework and set up your team.",
+        'We begin by understanding your business needs and customer pain points.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 2',
-      subheading: 'Workshops and Interactive Sessions',
+      numbered: true,
+      heading: 'Mapping',
       body: [
-        'Participate in structured workshops that cover different aspects of customer profiling.',
-        'Engage in group activities and discussions to gain diverse perspectives.',
+        'Using our advanced tools, we map out the entire customer journey, identifying key touchpoints.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 3',
-      subheading: 'Utilizing Worksheets and Templates',
+      numbered: true,
+      heading: 'Analysis',
       body: [
-        'Apply the provided worksheets and templates to gather and analyze customer data.',
-        'Use these tools to develop detailed and actionable customer profiles.',
+        'Our experts analyze the journey map to highlight areas for improvement and opportunities for optimization.',
       ],
     },
     {
-      heading: 'PROJECT PHASE 4',
-      subheading: 'Implementation and Review',
+      numbered: true,
+      heading: 'Implementation',
       body: [
-        'Implement the developed ICPs into your marketing and product strategies.',
-        'Regularly review and refine the profiles based on new data and insights.',
+        'We work with your team to implement the recommended changes and track the results.',
       ],
     },
   ],
+  // Visuals can be added here if required by the component (e.g., infographics or flowcharts)
 };
+
+export default HOW_IT_WORKS;
