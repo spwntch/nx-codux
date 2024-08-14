@@ -4,7 +4,7 @@ const SANLAM: IMdxDoc = {
   meta: {
     slug: 'sanlam',
     date: '2023-09-27',
-    coverImage: '/images/home/case-studies/sanlam.webp',
+    coverImage: '/images/case-studies/sanlam.webp',
     authorName: 'Wagieda P.',
     title: 'A Unified Client Experience',
     abstract: [
@@ -51,7 +51,7 @@ const LIBERTY: IMdxDoc = {
   meta: {
     slug: 'liberty',
     date: '2018-07-23',
-    coverImage: '/images/home/case-studies/liberty.webp',
+    coverImage: '/images/case-studies/liberty.webp',
     authorName: 'Graham E.',
     title: 'Digital Mastery',
     abstract: [

@@ -4,19 +4,13 @@ import {
   FullImageHero,
   IContent,
   IImage,
-  IPricing,
+  IMdxDoc,
   LogoCarousel,
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
-import ProductSummary from './sections/product-summary';
-import HowItWorks from './sections/how-it-works';
-import AboutUs from './sections/about-us';
 import Benefits from './sections/benefits';
-import Faqs from './sections/faqs';
-import GetStarted from './sections/get-started';
-import Pricing from './sections/pricing';
-import DiveIn from './sections/dive-in';
+import CaseStudies from './sections/case-studies';
 
 export interface HomePageProps {
   hero: {
@@ -24,20 +18,24 @@ export interface HomePageProps {
     content: IContent;
   };
   clientLogos: string[];
-  productSummary: IContent;
   benefits: IContent;
-  howItWorks: IContent;
-  diveIn: IContent;
-  faqs: IContent;
-  pricing: IContent;
-  value: IContent[];
-  cost: IPricing;
-  about: {
-    youtubeId: string;
+  caseStudies: {
     content: IContent;
-    stats: { label: string; value: string }[];
+    articles: IMdxDoc[];
   };
-  getStarted: IContent;
+  // productSummary: IContent;
+  // howItWorks: IContent;
+  // diveIn: IContent;
+  // faqs: IContent;
+  // pricing: IContent;
+  // value: IContent[];
+  // cost: IPricing;
+  // about: {
+  //   youtubeId: string;
+  //   content: IContent;
+  //   stats: { label: string; value: string }[];
+  // };
+  // getStarted: IContent;
 
   // testimonials: IContent;
 }
@@ -45,16 +43,8 @@ export interface HomePageProps {
 const HomePage = ({
   hero,
   clientLogos,
-  productSummary,
   benefits,
-  howItWorks,
-  diveIn,
-  faqs,
-  pricing,
-  value,
-  cost,
-  about,
-  getStarted,
+  caseStudies,
 }: HomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -63,7 +53,7 @@ const HomePage = ({
 
   return (
     <div className="flex flex-col">
-      <FullImageHero
+      {/* <FullImageHero
         image={hero.image}
         innerContent={hero.content}
         className="text-white"
@@ -72,10 +62,10 @@ const HomePage = ({
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) handleLinkTo('#get-started');
         }}
-        
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
-      <Benefits content={benefits} />
+      <Benefits content={benefits} /> */}
+      <CaseStudies content={caseStudies.content} articles={caseStudies.articles} />
       {/* <ProductSummary id="product" content={productSummary} />
       <HowItWorks content={howItWorks} className="bg-muted" />
       <DiveIn
