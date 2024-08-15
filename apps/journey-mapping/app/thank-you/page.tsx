@@ -3,21 +3,20 @@ import ThankYouPage from '../../components/thank-you-page/thank-you-page';
 import { THANK_YOU_HERO_CONTENT, THANK_YOU_HERO_IMAGE } from '../../config';
 
 const title =
-  'Unlock Your Ideal Customers with the ICP Playbook | Interact RDT';
+  'Elevate Your Customer Experience with Journey Mapping | Interact RDT';
 const description =
-  'Transform your marketing and product strategies with the ICP Playbook. Identify, profile, and engage high-potential customers with precision. Discover how our comprehensive guide helps improve targeting, increase conversions, align teams, and drive data-driven decision making. Get started today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/increaed-conversions.png`;
+  'Thank you for your interest in our Journey Mapping service. Discover how you can enhance customer satisfaction and drive growth by visualizing and optimizing every customer touchpoint. Explore our tailored solutions to create impactful customer journeys.';
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/journey-mapping-thank-you.png`;
 const keywords: string[] = [
-  'ICP Playbook',
-  'customer profiling',
-  'marketing strategy',
-  'product strategy',
-  'customer engagement',
-  'team alignment',
-  'data-driven marketing',
+  'Journey Mapping',
+  'customer experience',
+  'customer journey',
+  'CX strategy',
+  'customer satisfaction',
+  'touchpoint optimization',
   'customer insights',
-  'marketing efficiency',
-  'customer segmentation',
+  'business growth',
+  'customer journey map',
 ];
 
 export const metadata = {
@@ -29,7 +28,7 @@ export const metadata = {
       title,
       description,
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      siteName: 'ICP Playbook | Interact RDT',
+      siteName: 'Journey Mapping | Interact RDT',
       images: [{ url: image, width: 1200, height: 630 }],
       locale: 'en_US',
       type: 'website',

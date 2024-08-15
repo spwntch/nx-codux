@@ -47,19 +47,19 @@ const FinalCta = ({ id, content, className }: Props) => {
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
     const { firstName, lastName, company, email, phone } = values;
-    // const { data, error } = await getStarted(
-    //   firstName,
-    //   lastName,
-    //   company,
-    //   email,
-    //   phone
-    // );
-    // if (error) console.log(error);
-    // if (data) {
-    //   logProductRequestEvent(data.contact);
-    //   form.reset();
-    //   router.push(`/thank-you?name=${firstName}`);
-    // }
+    const { data, error } = await getStarted(
+      firstName,
+      lastName,
+      company,
+      email,
+      phone
+    );
+    if (error) console.log(error);
+    if (data) {
+      logProductRequestEvent(data.contact);
+      form.reset();
+      router.push(`/thank-you?name=${firstName}`);
+    }
   };
 
   return (
