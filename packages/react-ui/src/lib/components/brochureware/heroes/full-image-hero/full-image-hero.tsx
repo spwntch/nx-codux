@@ -36,12 +36,12 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
     return (
       <div
         className={cn(
-          'w-full isolate relative',
+          'w-full sm:h-fit isolate relative',
           height
             ? `h-[${height}]`
             : navbarHeight
             ? `h-[calc(100vh-${navbarHeight}px)]`
-            : 'h-screen',
+            : 'h-screen ',
           className
         )}
         ref={ref}
@@ -56,7 +56,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             className={cn(isMobile && 'items-center', className)}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup>
+              <ButtonGroup className='sm:pb-6'>
                 {innerContent.ctas.map((cta, index) => (
                   <Button
                     key={index}

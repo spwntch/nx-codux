@@ -27,7 +27,7 @@ const Pricing = ({
 }: Props) => {
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
-      <div className="container">
+      <div className="md:container px-3">
         <ContentContainer innerContent={pricingContent} />
         <SimplePricing
           valueContent={valueContent}

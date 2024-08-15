@@ -36,7 +36,7 @@ export const VALUE: IContent[] = [
         { icon, body: ["In-depth analysis tools"] },
         { icon, body: ["Comprehensive support materials"] },
       ],
-      className: "grid grid-cols-2 w-full text-sm text-muted-foreground mb-0",
+      className: "grid lg:grid-cols-2 w-full text-sm text-muted-foreground mb-0",
     },
   },
   {
@@ -57,7 +57,7 @@ export const VALUE: IContent[] = [
         { icon, body: ["Facilitated sessions and workshops"] },
         { icon, body: ["Ongoing support and guidance"] },
       ],
-      className: "grid grid-cols-2 w-full text-sm text-muted-foreground mb-0",
+      className: "grid lg:grid-cols-2 w-full text-sm text-muted-foreground mb-0",
     },
   },
   {
@@ -77,7 +77,7 @@ export const VALUE: IContent[] = [
         { icon, body: ["Exclusive community access"] },
         { icon, body: ["Opportunities for networking and collaboration"] },
       ],
-      className: "grid grid-cols-2 w-full text-sm text-muted-foreground mb-0",
+      className: "grid lg:grid-cols-2 w-full text-sm text-muted-foreground mb-0",
     },
   },
 ];

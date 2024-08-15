@@ -45,9 +45,9 @@ export const List: React.FC<IBulletsProps> = ({
           </div>
         )}
         {!bullet.icon && !bullet.image && !bullet.emoji && !numbered && <Dot />}
-        <div className="flex-grow">
+        <div className="">
           {bullet.heading && <div className="font-bold">{bullet.heading}</div>}
-          <div>{bullet.body}</div>
+          <div className='text-sm md:text-base'>{bullet.body}</div>
         </div>
       </li>
     ))}

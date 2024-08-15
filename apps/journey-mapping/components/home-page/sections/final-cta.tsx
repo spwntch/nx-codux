@@ -64,7 +64,7 @@ const FinalCta = ({ id, content, className }: Props) => {
 
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28 ', className)}>
-      <div className="container">
+      <div className="md:container px-3">
         <SplitLayout
           className="gap-6"
           mainPaneCoverage={70}

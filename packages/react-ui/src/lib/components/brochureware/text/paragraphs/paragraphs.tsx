@@ -26,7 +26,7 @@ export const Paragraphs: React.FC<IParagraphsProps> = ({
     )}
   >
     {content.map((paragraph, index) => (
-      <p key={index}>{paragraph}</p>
+      <p key={index} className='text-sm md:text-base lg:text-lg'>{paragraph}</p>
     ))}
   </div>
 );

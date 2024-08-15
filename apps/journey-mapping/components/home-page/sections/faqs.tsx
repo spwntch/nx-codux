@@ -21,7 +21,7 @@ const Faqs = ({ id, content, className }: FaqsProps) => {
   };
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
-      <div className="container">
+      <div className="md:container px-3">
         <ContentContainer innerContent={header} />
         {content.bullets && <FaqAccordion faqs={content.bullets} />}
       </div>
