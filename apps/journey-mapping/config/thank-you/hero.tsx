@@ -1,19 +1,19 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 
 export const THANK_YOU_HERO_IMAGE: IImage = {
-  src: '/images/benefits/data-driven-decisions.webp',
+  src: '/images/thank-you/pexels-dreamsky-258557-790916.webp',
   darken: '75%',
 };
 
 export const THANK_YOU_HERO_CONTENT: IContent = {
   title: {
     content: 'We’re Excited to Elevate Your Customer Experience',
-    className: 'max-w-6xl',
+    className: 'max-w-3xl',
   },
   subheading: {
     content:
       'Get ready to transform your customer journeys and drive impactful results.',
-    className: 'max-w-2xl',
+    className: 'max-w-3xl',
   },
   body: {
     content: [

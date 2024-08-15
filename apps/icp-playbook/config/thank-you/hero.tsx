@@ -1,7 +1,7 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 
 export const THANK_YOU_HERO_IMAGE: IImage = {
-  src: '/images/benefits/data-driven-decisions.webp',
+  src: '/images/thank-you/pexels-dreamsky-258557-790916.webp',
   darken: '75%',
 };
 
@@ -13,11 +13,11 @@ export const THANK_YOU_HERO_CONTENT: IContent = {
   // },
   title: {
     content: 'We look forward to meeting you',
-    className: 'max-w-6xl',
+    className: 'max-w-3xl',
   },
   subheading: {
     content: 'Get ready to unlock the full potential of your target audience',
-    className: 'max-w-2xl',
+    className: 'max-w-3xl',
   },
   body: {
     content: [

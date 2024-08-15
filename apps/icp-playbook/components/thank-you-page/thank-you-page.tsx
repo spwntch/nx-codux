@@ -37,8 +37,7 @@ const ThankYouPage = ({ hero }: ThankYouPageProps) => {
         image={hero.image}
         innerContent={content}
         className="text-white"
-        vAlign="bottom"
-        hAlign="right"
+        hAlign="left"
         onCtaClick={(ctaIndex: number) => {
           if (ctaIndex === 0) router.push('https://www.interactrdt.com');
           if (ctaIndex === 1) router.push('/');
