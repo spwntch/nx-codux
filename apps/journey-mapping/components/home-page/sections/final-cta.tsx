@@ -47,7 +47,6 @@ const FinalCta = ({ id, content, className }: Props) => {
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
     const { firstName, lastName, company, email, phone } = values;
-    console.log({ firstName, lastName, company, email, phone })
     const { data, error } = await getStarted(
       firstName,
       lastName,
