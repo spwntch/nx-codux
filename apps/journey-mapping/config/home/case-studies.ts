@@ -101,7 +101,7 @@ export const CASE_STUDIES_GRID: IMdxDoc[] = [SANLAM, LIBERTY];
 export const CASE_STUDIES: IContent = {
   heading: { content: `Proven Success with Leading Brands` },
   subheading: {
-    content: `Discover how our Journey Mapping service has made a measurable impact.`,
+    content: `Discover how our Journey Mapping service has made a measurable impact for our clients.`,
   },
   body: {
     content: [

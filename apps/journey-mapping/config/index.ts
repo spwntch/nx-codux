@@ -10,8 +10,6 @@ export * from './home/hero';
 export * from './home/how-it-works';
 export * from './home/learn-more';
 export * from './home/pricing';
-export * from './home/product-sumary';
-export * from './home/testimonials';
 export * from './nav';
 export * from './thank-you/hero';
 

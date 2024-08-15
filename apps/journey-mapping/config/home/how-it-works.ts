@@ -10,7 +10,7 @@ const HOW_IT_WORKS: IContent = {
       'Imagine a world where every interaction with your brand is purposeful, impactful, and leaves a lasting impression. Our journey mapping process is designed to guide you toward that reality.',
       'By shedding light on every step your customers take, we help you uncover hidden opportunities and craft experiences that truly resonate. With each map we create, we empower you to connect more deeply with your audience, turning insights into transformative customer journeys that set your brand apart.',
     ],
-    className:'max-w-4xl '
+    // className:'max-w-4xl '
   },
   bullets: [
     {

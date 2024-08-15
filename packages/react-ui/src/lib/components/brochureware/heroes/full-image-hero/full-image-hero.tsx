@@ -38,10 +38,10 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
         className={cn(
           'w-full sm:h-fit isolate relative',
           height
-            ? `h-[${height}]`
+            ? `h-[${height}] md:h-[${height}]`
             : navbarHeight
-            ? `h-[calc(100vh-${navbarHeight}px)]`
-            : 'h-screen ',
+            ? `h-[calc(100vh-${navbarHeight}px)] md:h-[calc(100vh-${navbarHeight}px)]`
+            : 'h-screen md:h-screen',
           className
         )}
         ref={ref}
