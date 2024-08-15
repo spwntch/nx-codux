@@ -12,7 +12,7 @@ const HowItWorks = ({ content, className }: Props) => {
   return (
     <div className={cn('flex-col pt-12 pb-28', className)}>
       <div className="md:container px-3">
-        <ContentContainer innerContent={header} />
+        <ContentContainer innerContent={header} className="mb-12" />
         <CardGrid cards={content.bullets} />
       </div>
     </div>
