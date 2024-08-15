@@ -10,7 +10,7 @@ import {
   IContent,
   Input,
   SplitLayout,
-  StackedForm
+  StackedForm,
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
@@ -41,25 +41,26 @@ const FinalCta = ({ id, content, className }: Props) => {
       lastName: '',
       company: '',
       email: '',
-      phone: ''
+      phone: '',
     },
   });
 
   const handleFormSubmit = async (values: GetStartedFormInputs) => {
     const { firstName, lastName, company, email, phone } = values;
-    const { data, error } = await getStarted(
-      firstName,
-      lastName,
-      company,
-      email,
-      phone
-    );
-    if (error) console.log(error);
-    if (data) {
-      logProductRequestEvent(data.contact);
-      form.reset();
-      router.push(`/thank-you?name=${firstName}`);
-    }
+    console.log({ firstName, lastName, company, email, phone })
+    // const { data, error } = await getStarted(
+    //   firstName,
+    //   lastName,
+    //   company,
+    //   email,
+    //   phone
+    // );
+    // if (error) console.log(error);
+    // if (data) {
+    //   logProductRequestEvent(data.contact);
+    //   form.reset();
+    //   router.push(`/thank-you?name=${firstName}`);
+    // }
   };
 
   return (
@@ -69,11 +70,18 @@ const FinalCta = ({ id, content, className }: Props) => {
           className="gap-6"
           mainPaneCoverage={70}
           containers={[
-            <ContentContainer key={0} hAlign="left" vAlign='top' innerContent={header} />,
+            <ContentContainer
+              key={0}
+              hAlign="left"
+              vAlign="top"
+              innerContent={header}
+            />,
             <div key={1} className="mt-8  flex flex-col justify-center h-full">
               <StackedForm
                 form={form}
-                submitButton={{ label: content?.ctas?.[0].label ||  'GET STARTED'}}
+                submitButton={{
+                  label: content?.ctas?.[0].label || 'GET STARTED',
+                }}
                 onSubmit={handleFormSubmit}
                 className="w-full"
               >
@@ -154,7 +162,9 @@ const FinalCta = ({ id, content, className }: Props) => {
                 />
               </StackedForm>
               <div className="flex flex-col justfiy-center pt-8 text-sm text-muted-foreground">
-                <p className="mx-auto">We&apos;ll be in touch to schedule a chat</p>
+                <p className="mx-auto">
+                  We&apos;ll be in touch to schedule a chat
+                </p>
                 {/* <p className="mx-auto">NO CREDIT CARD REQUIRED</p> */}
                 {/* <Link href="mailto:hello@interactrdt.com" className="mx-auto underline hover:text-foreground">
                   I still have questions
