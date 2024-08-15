@@ -18,6 +18,7 @@ import HowItWorks from './sections/how-it-works';
 import Pricing from './sections/pricing';
 import DiveIn from './sections/dive-in';
 import Blog from './sections/blog';
+import AboutUs from './sections/about-us';
 
 export interface HomePageProps {
   hero: {
@@ -41,14 +42,11 @@ export interface HomePageProps {
     articles: IMdxDoc[];
   };
   finalCta: IContent;
-  // productSummary: IContent;
-  // about: {
-  //   youtubeId: string;
-  //   content: IContent;
-  //   stats: { label: string; value: string }[];
-  // };
-
-  // testimonials: IContent;
+  about: {
+    youtubeId: string;
+    content: IContent;
+    stats: { label: string; value: string }[];
+  };
 }
 
 const HomePage = ({
@@ -62,6 +60,7 @@ const HomePage = ({
   pricing,
   value,
   cost,
+  about,
   blog,
   finalCta,
 }: HomePageProps) => {
@@ -102,11 +101,12 @@ const HomePage = ({
         costContent={cost}
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <Blog
+      <AboutUs id="about" {...about} className="bg-muted" />
+      {/* <Blog
         content={blog.content}
         articles={blog.articles}
         className="bg-muted"
-      />
+      /> */}
       <FinalCta id="get-started" content={finalCta} />
     </div>
   );

@@ -8,7 +8,7 @@ export const PRICING: IContent = {
 import { CheckIcon } from "lucide-react";
 
 const icon = (
-  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
+  <CheckIcon aria-hidden="true" className="h-6 w-6" />
 );
 
 export const COST: IPricing = {

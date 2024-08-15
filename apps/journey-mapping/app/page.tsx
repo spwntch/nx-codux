@@ -11,7 +11,10 @@ import {
   PRICING,
   VALUE,
   BLOG,
-  BLOG_POSTS
+  BLOG_POSTS,
+  ABOUT_YOUTUBE,
+  ABOUT_CONTENT,
+  ABOUT_STATS
 } from '../config';
 import FAQS from '../config/home/faqs';
 import HOW_IT_WORKS from '../config/home/how-it-works';
@@ -78,6 +81,11 @@ export default function Index() {
       pricing={PRICING}
       value={VALUE}
       cost={COST}
+      about={{
+        youtubeId: ABOUT_YOUTUBE,
+        content: ABOUT_CONTENT,
+        stats: ABOUT_STATS,
+      }}
       blog={{
         content: BLOG,
         articles: BLOG_POSTS,

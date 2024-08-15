@@ -7,9 +7,7 @@ export const PRICING: IContent = {
 
 import { CheckIcon } from 'lucide-react';
 
-const icon = (
-  <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-primary" />
-);
+const icon = <CheckIcon aria-hidden="true" className="h-6 w-6" />;
 
 export const COST: IPricing = {
   heading: 'Contact us now for an obligation free quote',
@@ -29,7 +27,7 @@ export const VALUE: IContent[] = [
       content: [
         "Full access to everything we've learned about leveraging customers for maximum profitability and retention over 20 years of consulting to leading brands across a multitude of industries.",
       ],
-      className: 'text-sm leading-6 text-muted-foreground mt-2',
+      className: 'max-w-3xl',
     },
     bullets: {
       content: [
@@ -38,7 +36,7 @@ export const VALUE: IContent[] = [
         { icon, body: ['Workshop materials'] },
         { icon, body: ['Analysis templates'] },
       ],
-      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+      className: 'grid sm:grid-cols-2 text-muted-foreground mb-0',
     },
   },
   {
@@ -50,7 +48,7 @@ export const VALUE: IContent[] = [
       content: [
         "We take customer experience serioulsy, and we hope this'll be the best learning journey you've ever had!",
       ],
-      className: 'text-sm leading-6 text-muted-foreground mt-2',
+      className: 'max-w-3xl',
     },
     bullets: {
       content: [
@@ -59,7 +57,7 @@ export const VALUE: IContent[] = [
         { icon, body: ['Facilitated workshops'] },
         { icon, body: ['24/7 support'] },
       ],
-      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+      className: 'grid sm:grid-cols-2 text-muted-foreground mb-0',
     },
   },
   {
@@ -71,7 +69,7 @@ export const VALUE: IContent[] = [
       content: [
         'Join our ever-growing community of learners and experts in the field. Engage in conversation with leaders in your space.',
       ],
-      className: 'text-sm leading-6 text-muted-foreground mt-2',
+      className: 'max-w-3xl',
     },
     bullets: {
       content: [
@@ -79,7 +77,7 @@ export const VALUE: IContent[] = [
         { icon, body: ['Continually growing Discord community'] },
         { icon, body: ['Your next big opportunity, perhaps?'] },
       ],
-      className: 'grid grid-cols-2 w-full text-sm text-muted-foreground mb-0',
+      className: 'grid sm:grid-cols-2 text-muted-foreground mb-0',
     },
   },
 ];

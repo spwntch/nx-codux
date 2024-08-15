@@ -29,7 +29,7 @@ export const HOME_HERO_CONTENT: IContent = {
       'Every customer interaction is crucial to your long-term business success.',
       'Our Journey Mapping service empowers you to visualize and refine every step of the customer journey, ensuring that your customers have a seamless and satisfying experience from start to finish.',
     ],
-    className: 'max-w-2xl',
+    className: 'max-w-3xl',
   },
   bullets: [
     {
