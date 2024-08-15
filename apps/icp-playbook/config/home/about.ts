@@ -2,7 +2,7 @@ import { IContent } from '@spwntch/react-ui';
 
 export const ABOUT_CONTENT: IContent = {
   heading: `Leverage Our Decades of Experience Excellence`,
-  subheading: `You've just found the partner you've been looking for.`,
+  subheading: {content:`You've just found the partner you've been looking for.`, className:'max-w-xl'},
   body: [
     `For over two decades, Interact RDT has been at the forefront of delivering unparalleled customer experience and user experience solutions. Our clientele includes global leaders who testify to our ability to consistently provide top-notch quality while ensuring significant cost savings. We're more than just a vendor; we're your strategic partner, ensuring that you don't just meet but exceed your business goals.`,
   ],

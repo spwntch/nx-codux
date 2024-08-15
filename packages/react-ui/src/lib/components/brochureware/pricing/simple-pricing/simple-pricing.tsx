@@ -14,7 +14,7 @@ export const SimplePricing = ({
   onCtaClick,
 }: Props) => {
   return (
-    <div className="mx-auto  max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none">
+    <div className="mx-auto  max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none justify-between">
       <div>
         {valueContent?.map((proposition, index) => {
           return (
@@ -30,7 +30,7 @@ export const SimplePricing = ({
       </div>
       <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
         <div className="h-full rounded-2xl bg-card py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-          <div className="mx-auto max-w-xs px-8">
+          <div className="mx-auto max-w-xs px-8" >
             <p className="text-base font-semibold text-muted-foreground">
               {costContent.heading}
             </p>

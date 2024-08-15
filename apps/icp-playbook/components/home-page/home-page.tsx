@@ -38,8 +38,6 @@ export interface HomePageProps {
     stats: { label: string; value: string }[];
   };
   getStarted: IContent;
-
-  // testimonials: IContent;
 }
 
 const HomePage = ({

@@ -1,16 +1,21 @@
 import HomePage from '../components/home-page/home-page';
 import {
   BENEFITS,
+  CASE_STUDIES, CASE_STUDIES_GRID,
   CLIENT_LOGOS,
   COST,
+  DIVE_IN,
+  FINAL_CTA,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   PRICING,
   VALUE,
-  FINAL_CTA,
-  DIVE_IN,
+  BLOG,
+  BLOG_POSTS,
+  ABOUT_YOUTUBE,
+  ABOUT_CONTENT,
+  ABOUT_STATS
 } from '../config';
-import { CASE_STUDIES, CASE_STUDIES_GRID } from '../config/home/case-studies';
 import FAQS from '../config/home/faqs';
 import HOW_IT_WORKS from '../config/home/how-it-works';
 
@@ -76,6 +81,15 @@ export default function Index() {
       pricing={PRICING}
       value={VALUE}
       cost={COST}
+      about={{
+        youtubeId: ABOUT_YOUTUBE,
+        content: ABOUT_CONTENT,
+        stats: ABOUT_STATS,
+      }}
+      blog={{
+        content: BLOG,
+        articles: BLOG_POSTS,
+      }}
       finalCta={FINAL_CTA}
     />
   );

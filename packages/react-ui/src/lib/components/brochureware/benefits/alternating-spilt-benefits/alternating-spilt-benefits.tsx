@@ -29,7 +29,12 @@ const AlternatingSplitBenefits = ({
               {benefit.heading}
             </h3>
             {benefit.body.map((paragraph, idx) => (
-              <p className="mt-4 text-sm text-muted-foreground">{paragraph}</p>
+              <p
+                key={idx}
+                className="mt-4 text-sm md:text-base text-muted-foreground"
+              >
+                {paragraph}
+              </p>
             ))}
           </div>
           <div

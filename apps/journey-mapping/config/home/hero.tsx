@@ -1,5 +1,5 @@
 import { IContent, IImage } from '@spwntch/react-ui';
-import { Crosshair, Users, TrendingUp } from 'lucide-react';
+import { Crosshair, TrendingUp, Users } from 'lucide-react';
 
 export const HOME_HERO_IMAGE: IImage = {
   src: '/images/home/hero/vlad-bagacian-d1eaoAabeXs-unsplash.webp',
@@ -15,48 +15,46 @@ export const HOME_HERO_IMAGE: IImage = {
 
 export const HOME_HERO_CONTENT: IContent = {
   title: {
-    content: 'Transform Your Customer Experience with Expert Journey Mapping',
-    className: 'max-w-4xl text-4xl font-bold tracking-tight mb-4',
+    content: 'Unlock Seamless Customer Journeys with Expert Mapping',
+    className: 'max-w-3xl',
+    // className: 'max-w-4xl text-4xl font-bold tracking-tight mb-4',
   },
   subheading: {
     content:
       'Optimize every touchpoint and drive growth with data-driven insights that elevate customer satisfaction.',
-    className: 'max-w-2xl text-xl text-muted-foreground mb-6',
+    className: 'max-w-2xl',
   },
   body: {
     content: [
-      'We understand that each customer interaction is crucial to your business success.',
+      'Every customer interaction is crucial to your long-term business success.',
       'Our Journey Mapping service empowers you to visualize and refine every step of the customer journey, ensuring that your customers have a seamless and satisfying experience from start to finish.',
     ],
-    className: 'max-w-4xl text-lg text-muted-foreground mb-8',
+    className: 'max-w-3xl',
   },
   bullets: [
     {
-      icon: <Crosshair className="h-6 w-6 text-primary" />,
+      icon: <Crosshair className="h-8 w-8 " />,
       body: [
         "Gain a deep understanding of your customers' needs and behaviors.",
       ],
-      className: 'flex items-start space-x-3 mb-4',
     },
     {
-      icon: <Users className="h-6 w-6 text-primary" />,
+      icon: <Users className="h-8 w-8 " />,
       body: [
         'Identify and eliminate pain points to create frictionless experiences.',
       ],
-      className: 'flex items-start space-x-3 mb-4',
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-primary" />,
+      icon: <TrendingUp className="h-8 w-8 " />,
       body: [
         'Align your entire team around a unified vision of the customer journey.',
       ],
-      className: 'flex items-start space-x-3 mb-4',
     },
   ],
   ctas: [
     {
       label: 'CONTACT SALES',
-      variant: { size: 'xl' }, // Adjust this based on your buttonVariants definition
+      variant: { size: 'lg' },
     },
   ],
 };

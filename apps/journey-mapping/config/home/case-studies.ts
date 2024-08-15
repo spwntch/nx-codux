@@ -99,15 +99,19 @@ const LIBERTY: IMdxDoc = {
 export const CASE_STUDIES_GRID: IMdxDoc[] = [SANLAM, LIBERTY];
 
 export const CASE_STUDIES: IContent = {
-  heading: { content: `Proven Success with Leading Brands` },
+  heading: {
+    content: `Proven Success with Leading Brands`,
+    className: 'max-w-3xl mx-auto',
+  },
   subheading: {
-    content: `Discover how our Journey Mapping service has made a measurable impact.`,
+    content: `Discover how our Journey Mapping service has made a measurable impact for our clients.`,
+    className: 'max-w-3xl mx-auto',
   },
   body: {
     content: [
       `Our Journey Mapping service has empowered organizations like Liberty and Sanlam to enhance their customer experiences and drive business growth. By partnering with us, these industry leaders were able to align their teams around a unified customer journey strategy, optimize touchpoints, and gain valuable insights that transformed their customer interactions.`,
       `Explore our case studies to see the tangible results and benefits that our service has delivered.`,
     ],
-    className: 'max-w-5xl text-center',
+    className: 'max-w-4xl mx-auto',
   },
 };

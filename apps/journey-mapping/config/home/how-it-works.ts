@@ -1,16 +1,20 @@
 import { IContent } from '@spwntch/react-ui'; // Adjust the import path as needed
 
 const HOW_IT_WORKS: IContent = {
-  heading: { content: 'Our Journey Mapping Process' },
+  heading: { content: 'Our Journey Mapping Process',
+    className: 'max-w-3xl mx-auto',
+  },
   subheading: {
     content: 'Charting the Path to Unforgettable Customer Experiences',
+    className: 'max-w-3xl mx-auto',
   },
   body: {
     content: [
       'Imagine a world where every interaction with your brand is purposeful, impactful, and leaves a lasting impression. Our journey mapping process is designed to guide you toward that reality.',
       'By shedding light on every step your customers take, we help you uncover hidden opportunities and craft experiences that truly resonate. With each map we create, we empower you to connect more deeply with your audience, turning insights into transformative customer journeys that set your brand apart.',
     ],
-    className:'max-w-4xl text-center'
+    className: 'max-w-4xl mx-auto',
+    // className:'max-w-4xl '
   },
   bullets: [
     {

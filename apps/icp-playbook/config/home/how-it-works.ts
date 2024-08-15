@@ -1,17 +1,17 @@
 import { IContent } from '@spwntch/react-ui';
 
 export const HOW_IT_WORKS: IContent = {
-  heading: 'How It Works',
+  heading: { content: 'How It Works',className: 'max-w-3xl mx-auto', },
   subheading: {
     content: 'A Step-by-Step Guide to Using the ICP Playbook',
-    // Add any necessary className here
+    className: 'max-w-3xl mx-auto',
   },
   body: {
     content: [
       'With the ICP Playbook, you’ll be fully supported every step of the way. From orientation to implementation, we ensure you and your team have the tools and knowledge needed to succeed.',
       'Here’s how our process unfolds:',
     ],
-    className: 'text-lg text-left max-w-4xl',
+    className: 'max-w-3xl mx-auto',
   },
   bullets: [
     {
