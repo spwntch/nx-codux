@@ -8,7 +8,7 @@ type Props = {
 const HeaderSubheading = ({ text, className }: Props) => {
   if (!text) return null;
   return (
-    <h3 className={cn('text-lg md:text-2x lg:text-3xl font-semibold mb-2 mt-4', className)}>{text}</h3>
+    <h3 className={cn('text-lg md:text-2xl  font-semibold mb-4 mt-3', className)}>{text}</h3>
   );
 };
 
