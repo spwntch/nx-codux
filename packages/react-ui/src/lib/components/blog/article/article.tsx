@@ -1,9 +1,8 @@
-import { cn } from '../../../utils';
 import { IMdxDoc } from '../../../types';
+import { cn } from '../../../utils';
+import HeaderSubheading from '../../brochureware/headers/basic-section-header/components/header-subheading';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';
-import HeaderHeading from '../../brochureware/headers/basic-section-header/components/header-heading';
-import HeaderSubheading from '../../brochureware/headers/basic-section-header/components/header-subheading';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
