@@ -14,18 +14,31 @@ import {
 } from '@spwntch/react-ui';
 
 import { useForm } from 'react-hook-form';
-import {
-  GetStartedFormInputs,
-  getStartedFormSchema,
-} from '../../../types/get-started-form';
 
 import { logProductRequestEvent } from '@/react-tracking';
 import { useRouter } from 'next/navigation';
-import { getStarted } from '../../../server-actions/get-started';
 
-type Props = { id: string; content: IContent; className?: string };
+import { z } from 'zod';
+import { submitCtaForm } from '../../server-actions';
 
-const FinalCta = ({ id, content, className }: Props) => {
+export const ctaFormSchema = z.object({
+  firstName: z.string().min(1, { message: 'Required' }),
+  lastName: z.string().min(1, { message: 'Required' }),
+  company: z.string().min(1, { message: 'Required' }),
+  email: z.string().email(),
+  phone: z.string().optional(),
+});
+
+export type CtaFormInputs = z.infer<typeof ctaFormSchema>;
+
+type FinalCtaProps = {
+  id: string;
+  content: IContent;
+  ctaTag: string;
+  className?: string;
+};
+
+export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -33,9 +46,9 @@ const FinalCta = ({ id, content, className }: Props) => {
     body: content.body,
   };
 
-  const form = useForm<GetStartedFormInputs>({
+  const form = useForm<CtaFormInputs>({
     mode: 'onSubmit',
-    resolver: zodResolver(getStartedFormSchema),
+    resolver: zodResolver(ctaFormSchema),
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -45,9 +58,10 @@ const FinalCta = ({ id, content, className }: Props) => {
     },
   });
 
-  const handleFormSubmit = async (values: GetStartedFormInputs) => {
+  const handleFormSubmit = async (values: CtaFormInputs) => {
     const { firstName, lastName, company, email, phone } = values;
-    const { data, error } = await getStarted(
+    const { data, error } = await submitCtaForm(
+      ctaTag,
       firstName,
       lastName,
       company,
@@ -176,5 +190,3 @@ const FinalCta = ({ id, content, className }: Props) => {
     </div>
   );
 };
-
-export default FinalCta;

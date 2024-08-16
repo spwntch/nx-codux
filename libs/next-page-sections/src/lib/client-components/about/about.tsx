@@ -33,4 +33,3 @@ export const About = ({ id, youtubeId, content, stats, className }: AboutProps) 
   );
 };
 
-export default About;

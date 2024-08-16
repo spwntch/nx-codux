@@ -1,9 +1,10 @@
 'use server';
 
 import { Contact, readOrCreateContact, tagContact } from '@/crm';
-import { getErrorMessage } from '../lib';
+import { getErrorMessage } from '../../utils';
 
-export const getStarted = async (
+export const submitCtaForm = async (
+  ctaTag: string,
   firstName: string,
   lastName: string,
   company: string,
@@ -21,10 +22,7 @@ export const getStarted = async (
       email,
       phone,
     });
-    await tagContact(
-      crmContact.id,
-      'start-automation_journey-mapping-get-started-form'
-    );
+    await tagContact(crmContact.id, ctaTag);
 
     return { data: { contact: crmContact }, error: null };
   } catch (error) {

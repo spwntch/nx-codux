@@ -35,4 +35,3 @@ export const Blog = ({ content, articles, className }: BlogProps) => {
   );
 };
 
-export default Blog;

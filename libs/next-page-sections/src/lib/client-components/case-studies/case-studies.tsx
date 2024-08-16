@@ -35,4 +35,3 @@ export const CaseStudies = ({ content, articles, className }: CaseStudiesProps) 
   );
 };
 
-export default CaseStudies;

@@ -13,7 +13,7 @@ export interface FaqsProps {
   className?: string;
 }
 
-const Faqs = ({ id, content, className }: FaqsProps) => {
+export const Faqs = ({ id, content, className }: FaqsProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -29,4 +29,3 @@ const Faqs = ({ id, content, className }: FaqsProps) => {
   );
 };
 
-export default Faqs;

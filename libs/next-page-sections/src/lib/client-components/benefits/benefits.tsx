@@ -30,4 +30,3 @@ export const Benefits = ({ content, className }: BenefitsProps) => {
   );
 };
 
-export default Benefits;

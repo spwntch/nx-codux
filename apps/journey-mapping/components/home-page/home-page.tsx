@@ -9,11 +9,16 @@ import {
   LogoCarousel,
 } from '@spwntch/react-ui';
 
-import { About, Benefits, Blog, CaseStudies } from '@/next-page-sections';
+import {
+  About,
+  Benefits,
+  Blog,
+  CaseStudies,
+  CtaBanner,
+  CtaForm,
+  Faqs,
+} from '@/next-page-sections';
 import { useRouter } from 'next/navigation';
-import DiveIn from './sections/dive-in';
-import Faqs from './sections/faqs';
-import FinalCta from './sections/final-cta';
 import HowItWorks from './sections/how-it-works';
 import Pricing from './sections/pricing';
 
@@ -84,7 +89,7 @@ const HomePage = ({
         content={caseStudies.content}
         articles={caseStudies.articles}
       />
-      <DiveIn
+      <CtaBanner
         content={diveIn}
         onCtaClick={() => handleLinkTo('#get-started')}
         className="bg-muted"
@@ -104,7 +109,12 @@ const HomePage = ({
         articles={blog.articles}
         className="bg-muted"
       />
-      <FinalCta id="get-started" content={finalCta} />
+      <CtaForm
+        id="get-started"
+        content={finalCta}
+        ctaTag="start-automation_journey-mapping-get-started-form
+"
+      />
     </div>
   );
 };
