@@ -17,10 +17,10 @@ import {
   CtaBanner,
   CtaForm,
   Faqs,
+  HowItWorks,
+  Pricing,
 } from '@/next-page-sections';
 import { useRouter } from 'next/navigation';
-import HowItWorks from './sections/how-it-works';
-import Pricing from './sections/pricing';
 
 export interface HomePageProps {
   hero: {

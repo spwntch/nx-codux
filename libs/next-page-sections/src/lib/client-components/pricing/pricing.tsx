@@ -8,7 +8,7 @@ import {
   SimplePricing,
 } from '@spwntch/react-ui';
 
-interface Props {
+interface PricingProps {
   id: string;
   pricingContent: IContent;
   valueContent: IContent[];
@@ -17,14 +17,14 @@ interface Props {
   onCtaClick: () => void;
 }
 
-const Pricing = ({
+export const Pricing = ({
   id,
   pricingContent,
   valueContent,
   costContent,
   className,
   onCtaClick,
-}: Props) => {
+}: PricingProps) => {
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="md:container px-3">
@@ -40,4 +40,3 @@ const Pricing = ({
   );
 };
 
-export default Pricing;

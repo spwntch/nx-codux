@@ -1,9 +1,9 @@
 'use client';
 import { ContentContainer, IContent, CardGrid, cn } from '@spwntch/react-ui';
 
-type Props = { content: IContent; className?: string };
+type HowItWorksProps = { content: IContent; className?: string };
 
-const HowItWorks = ({ content, className }: Props) => {
+export const HowItWorks = ({ content, className }: HowItWorksProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -19,4 +19,3 @@ const HowItWorks = ({ content, className }: Props) => {
   );
 };
 
-export default HowItWorks;

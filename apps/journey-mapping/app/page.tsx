@@ -1,4 +1,4 @@
-import HomePage from '../components/home-page/home-page';
+import HomePage from '../components/home-page';
 import {
   BENEFITS,
   CASE_STUDIES, CASE_STUDIES_GRID,
