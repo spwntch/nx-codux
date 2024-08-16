@@ -33,7 +33,7 @@ export const Article = ({
         hAlign={hAlign}
         vAlign={vAlign}
       />
-      <div className={cn('w-fulll', 'flex gap-12')}>
+      <div className={cn('w-full', 'flex flex-col lg:flex-row gap-12')}>
         <div className="flex-1 w-full">
           <ArticleMdx
             meta={meta}
@@ -45,7 +45,7 @@ export const Article = ({
         </div>
         <div className="max-w-lg">
           {toc?.length && (
-            <div>
+            <div className='hidden lg:block'>
               <HeaderSubheading text="On This Page" className="mt-16 mb-12" />
               <div className="flex flex-col gap-4">
                 {toc.map((item, idx) => (
