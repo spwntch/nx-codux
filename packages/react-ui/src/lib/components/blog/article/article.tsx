@@ -43,7 +43,7 @@ export const Article = ({
           />
         </div>
         <div className="max-w-lg">
-          <HeaderHeading text="Just For You" className="mt-16" />
+          <HeaderHeading text="Just For You" className="mt-16 mb-12" />
           <div className="flex flex-col gap-16">
             <img
               className={cn('object-contain object-center rounded')}
