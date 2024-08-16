@@ -1,6 +1,16 @@
 'use client';
 
 import {
+  About,
+  Benefits,
+  CtaBanner,
+  CtaForm,
+  Faqs,
+  HowItWorks,
+  Pricing,
+  ProductSummary,
+} from '@/next-page-sections';
+import {
   FullImageHero,
   IContent,
   IImage,
@@ -9,14 +19,6 @@ import {
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
-import ProductSummary from './sections/product-summary';
-import HowItWorks from './sections/how-it-works';
-import AboutUs from './sections/about-us';
-import Benefits from './sections/benefits';
-import Faqs from './sections/faqs';
-import GetStarted from './sections/get-started';
-import Pricing from './sections/pricing';
-import DiveIn from './sections/dive-in';
 
 export interface HomePageProps {
   hero: {
@@ -75,7 +77,7 @@ const HomePage = ({
       <ProductSummary id="product" content={productSummary} />
       <HowItWorks content={howItWorks} className="bg-muted" />
       <Benefits content={benefits} />
-      <DiveIn
+      <CtaBanner
         content={diveIn}
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
@@ -90,9 +92,14 @@ const HomePage = ({
         className="bg-muted"
         onCtaClick={() => handleLinkTo('#get-started')}
       />
-      <AboutUs id="about" {...about} />
+      <About id="about" {...about} />
       {/* <Resources id="resources" /> */}
-      <GetStarted id="get-started" content={getStarted} className="bg-muted" />
+      <CtaForm
+        id="get-started"
+        content={getStarted}
+        ctaTag="start-automation_icp-playbook-get-started-form"
+        className="bg-muted"
+      />
     </div>
   );
 };
