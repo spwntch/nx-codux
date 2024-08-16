@@ -9,13 +9,13 @@ import {
 } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 
-export interface BlogProps {
+export interface CaseStudiesProps {
   content: IContent;
   articles: IMdxDoc[];
   className?: string;
 }
 
-const Blog = ({ content, articles, className }: BlogProps) => {
+export const CaseStudies = ({ content, articles, className }: CaseStudiesProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -35,4 +35,4 @@ const Blog = ({ content, articles, className }: BlogProps) => {
   );
 };
 
-export default Blog;
+export default CaseStudies;

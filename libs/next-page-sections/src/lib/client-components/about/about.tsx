@@ -6,7 +6,7 @@ import {
   YoutubePlayer,
 } from '@spwntch/react-ui';
 
-type Props = {
+type AboutProps = {
   id: string;
   youtubeId: string;
   content: IContent;
@@ -14,7 +14,7 @@ type Props = {
   className?: string;
 };
 
-export const AboutUs = ({ id, youtubeId, content, stats, className }: Props) => {
+export const About = ({ id, youtubeId, content, stats, className }: AboutProps) => {
   return (
     <div id={id} className={cn("pt-12 pb-28",className)}>
       <div className="container">
@@ -33,4 +33,4 @@ export const AboutUs = ({ id, youtubeId, content, stats, className }: Props) => 
   );
 };
 
-export default AboutUs;
+export default About;

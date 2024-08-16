@@ -12,7 +12,7 @@ export interface BenefitsProps {
   className?:string
 }
 
-const Benefits = ({ content, className }: BenefitsProps) => {
+export const Benefits = ({ content, className }: BenefitsProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
