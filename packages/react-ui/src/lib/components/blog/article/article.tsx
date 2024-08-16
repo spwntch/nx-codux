@@ -22,7 +22,7 @@ export const Article = ({
   hAlign = 'center',
   vAlign = 'middle',
 }: IArticleProps) => {
-  console.log(meta);
+  console.log(toc);
   return (
     <div>
       <ArticleHeader
@@ -43,18 +43,42 @@ export const Article = ({
           />
         </div>
         <div className="max-w-lg">
+          {toc?.length && (
+            <div>
+              <HeaderHeading text="On This Page" className="mt-16 mb-12" />
+              <div className="flex flex-col gap-4">
+                {toc.map((item, idx) => (
+                  <a
+                    href={item.href}
+                    key={idx}
+                    className=" border-l-8 pl-4 hover:bg-muted py-2 font-semibold"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
           <HeaderHeading text="Just For You" className="mt-16 mb-12" />
           <div className="flex flex-col gap-16">
-            <img
-              className={cn('object-contain object-center rounded')}
-              alt="article coverimage"
-              src="/images/ads/journey-mapping-web-ad.webp"
-            />
-            <img
-              className={cn('object-contain object-center rounded')}
-              alt="article coverimage"
-              src="/images/ads/icp-playbook-web-ad.webp"
-            />
+            <a href="/" target="_blank">
+              <img
+                className={cn('object-contain object-center rounded')}
+                alt="article coverimage"
+                src="/images/ads/journey-mapping-web-ad.webp"
+              />
+            </a>
+            <a
+              href="https://icp-playbook.interactrdt.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className={cn('object-contain object-center rounded')}
+                alt="article coverimage"
+                src="/images/ads/icp-playbook-web-ad.webp"
+              />
+            </a>
           </div>
         </div>
       </div>

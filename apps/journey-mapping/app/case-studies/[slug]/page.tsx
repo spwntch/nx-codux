@@ -81,7 +81,7 @@ const CaseStudyPage = async ({ params: { slug } }: Props) => {
 
   return (
     <div className="flex flex-col mt-28 md:container px-3">
-      <CaseStudy meta={caseStudy.meta} content={doc.content} />
+      <CaseStudy meta={caseStudy.meta} content={doc.content} toc={doc.toc} />
     </div>
   );
 };

@@ -6,15 +6,17 @@ import { JSXElementConstructor, ReactElement } from 'react';
 
 type Props = {
   meta: IMdxDocFrontMatter;
+  toc: any;
   content: ReactElement<any, string | JSXElementConstructor<any>> | undefined;
 };
 
-const CaseStudy = ({ meta, content }: Props) => {
+const CaseStudy = ({ meta, toc, content }: Props) => {
   const router = useRouter();
 
   return (
     <Article
       meta={meta}
+      toc={toc}
       content={content}
       backTo={{ label: 'BACK', href: '/' }}
       onBackTo={(href) => router.push(href)}
