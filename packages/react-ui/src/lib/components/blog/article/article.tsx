@@ -3,6 +3,7 @@ import { IMdxDoc } from '../../../types';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';
 import HeaderHeading from '../../brochureware/headers/basic-section-header/components/header-heading';
+import HeaderSubheading from '../../brochureware/headers/basic-section-header/components/header-subheading';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -45,7 +46,7 @@ export const Article = ({
         <div className="max-w-lg">
           {toc?.length && (
             <div>
-              <HeaderHeading text="On This Page" className="mt-16 mb-12" />
+              <HeaderSubheading text="On This Page" className="mt-16 mb-12" />
               <div className="flex flex-col gap-4">
                 {toc.map((item, idx) => (
                   <a
@@ -59,7 +60,7 @@ export const Article = ({
               </div>
             </div>
           )}
-          <HeaderHeading text="Just For You" className="mt-16 mb-12" />
+          <HeaderSubheading text="Just For You" className="mt-16 mb-12" />
           <div className="flex flex-col gap-16">
             <a href="/" target="_blank">
               <img
