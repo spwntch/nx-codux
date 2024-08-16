@@ -1,0 +1,9 @@
+{
+  "name": "next-page-sections",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next-page-sections/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project next-page-sections --web",
+  "targets": {}
+}
