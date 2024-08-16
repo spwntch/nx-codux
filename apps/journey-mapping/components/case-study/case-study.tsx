@@ -1,7 +1,8 @@
 'use client';
 import { Article, IMdxDocFrontMatter } from '@spwntch/react-ui';
-import { notFound, useRouter } from 'next/navigation';
-import React, { JSXElementConstructor, ReactElement } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { JSXElementConstructor, ReactElement } from 'react';
 
 type Props = {
   meta: IMdxDocFrontMatter;
@@ -10,7 +11,6 @@ type Props = {
 
 const CaseStudy = ({ meta, content }: Props) => {
   const router = useRouter();
-  if (!content) return notFound();
 
   return (
     <Article
@@ -18,6 +18,7 @@ const CaseStudy = ({ meta, content }: Props) => {
       content={content}
       backTo={{ label: 'BACK', href: '/' }}
       onBackTo={(href) => router.push(href)}
+      vAlign="bottom"
     />
   );
 };

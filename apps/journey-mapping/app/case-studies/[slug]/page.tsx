@@ -26,17 +26,19 @@ const docPath = join(process.cwd(), `public/case-studies`);
 
 export async function generateStaticParams() {
   const params = readdirSync(docPath)
-  .filter(path => path.includes('/images'))
+    .filter((path) => path.includes('/images'))
     .map((path) => path.replace(/\.mdx?$/, ''))
     .map((slug) => ({ slug }));
 
   return params;
 }
 
+const findCaseStudy = (slug: string) => {
+  return CASE_STUDIES_GRID.find((caseStudy) => caseStudy.meta.slug === slug);
+};
+
 export const generateMetadata = ({ params: { slug } }: Props) => {
-  const caseStudy = CASE_STUDIES_GRID.find(
-    (caseStudy) => caseStudy.meta.slug === slug
-  );
+  const caseStudy = findCaseStudy(slug);
   if (!caseStudy) {
     return { title: 'Not Found' };
   }
@@ -72,15 +74,14 @@ const getBuffer = (slug: string) => {
 };
 
 const CaseStudyPage = async ({ params: { slug } }: Props) => {
+  const caseStudy = findCaseStudy(slug);
   const buffer = getBuffer(slug);
   const doc = await parseMdxFileBuffer(buffer);
-  if (!doc) return notFound();
-
-  const { content, meta } = doc;
+  if (!caseStudy || !doc) return notFound();
 
   return (
-    <div className="flex flex-col mt-28">
-      <CaseStudy meta={meta} content={content} />
+    <div className="flex flex-col mt-28 md:container px-3">
+      <CaseStudy meta={caseStudy.meta} content={doc.content} />
     </div>
   );
 };

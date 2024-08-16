@@ -14,7 +14,7 @@ export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
   className?: string;
-  onCtaClick: (ctaIndex: number) => void;
+  onCtaClick?: (ctaIndex: number) => void;
 }
 
 export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
@@ -56,13 +56,13 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
             className={cn(isMobile && 'items-center', className)}
           >
             {innerContent.ctas?.length && (
-              <ButtonGroup className='sm:pb-6'>
+              <ButtonGroup className="sm:pb-6">
                 {innerContent.ctas.map((cta, index) => (
                   <Button
                     key={index}
                     size={isMobile ? 'default' : cta.variant?.size || 'default'}
                     variant={cta.variant?.variant || 'default'}
-                    onClick={() => onCtaClick(index)}
+                    onClick={() => onCtaClick && onCtaClick(index)}
                   >
                     {cta.label}
                   </Button>

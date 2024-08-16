@@ -2,6 +2,7 @@ import { cn } from '../../../utils';
 import { IMdxDoc } from '../../../types';
 import { ArticleHeader } from '../article-header/article-header';
 import { ArticleMdx } from '../article-mdx/article-mdx';
+import HeaderHeading from '../../brochureware/headers/basic-section-header/components/header-heading';
 
 interface IArticleProps extends IMdxDoc {
   backTo?: { label?: string; href: string };
@@ -21,27 +22,42 @@ export const Article = ({
   hAlign = 'center',
   vAlign = 'middle',
 }: IArticleProps) => {
+  console.log(meta);
   return (
-    <div className={cn('w-full container px-3 max-w-5xl', 'flex flex-col')}>
+    <div>
       <ArticleHeader
+        meta={meta}
         backTo={backTo}
         onBackTo={onBackTo}
-        slug={meta.slug}
-        date={meta.date}
-        title={meta.title}
-        subtitle={meta.subtitle}
-        coverImage={meta.coverImage}
-        tags={meta.tags}
         hAlign={hAlign}
         vAlign={vAlign}
       />
-      <ArticleMdx
-        meta={meta}
-        toc={toc}
-        content={content}
-        onBackTo={onBackTo}
-        onToc={onToc}
-      />
+      <div className={cn('w-fulll', 'flex gap-12')}>
+        <div className="flex-1 w-full">
+          <ArticleMdx
+            meta={meta}
+            toc={toc}
+            content={content}
+            onBackTo={onBackTo}
+            onToc={onToc}
+          />
+        </div>
+        <div className="max-w-lg">
+          <HeaderHeading text="Just For You" className="mt-16" />
+          <div className="flex flex-col gap-16">
+            <img
+              className={cn('object-contain object-center rounded')}
+              alt="article coverimage"
+              src="/images/ads/journey-mapping-web-ad.webp"
+            />
+            <img
+              className={cn('object-contain object-center rounded')}
+              alt="article coverimage"
+              src="/images/ads/icp-playbook-web-ad.webp"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

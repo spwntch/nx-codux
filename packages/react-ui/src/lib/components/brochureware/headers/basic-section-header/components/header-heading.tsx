@@ -2,7 +2,7 @@ import { cn } from '../../../../../utils';
 
 type Props = {
   text?: string;
-  className: string;
+  className?: string;
 };
 
 const HeaderHeading = ({ text, className }: Props) => {
