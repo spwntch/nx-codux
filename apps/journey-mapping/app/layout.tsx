@@ -21,7 +21,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
         <SiteShell brand={brand} navItems={primaryNav} navbar={navbar}>
           {children}
