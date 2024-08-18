@@ -1,5 +1,5 @@
-import { VariantProps } from "class-variance-authority";
-import { buttonVariants } from "../../components";
+import { VariantProps } from 'class-variance-authority';
+import { buttonVariants } from '../../components';
 
 export type IExclusiveOffer = {
   background: string;
@@ -24,6 +24,7 @@ export interface ICta {
 
 export type ICtaButton = {
   label: string;
-  variant?: VariantProps<typeof buttonVariants>
+  variant?: VariantProps<typeof buttonVariants>;
+  crmTag?: string;
   gaEvent?: { source: string };
 };

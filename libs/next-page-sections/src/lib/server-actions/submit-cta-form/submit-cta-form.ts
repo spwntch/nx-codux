@@ -1,20 +1,17 @@
 'use server';
 
-import {
-  Contact,
-  createOrUpdateContact,
-  readCustomFields,
-  tagContact,
-} from '@/crm';
+import { Contact, createOrUpdateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../../utils';
 
 export const submitCtaForm = async (
-  ctaTag: string,
   firstName: string,
   lastName: string,
   company_name: string,
   email: string,
-  phone?: string
+  phone?: string,
+  events?: {
+    crmEvent?: string;
+  }
 ): Promise<{
   data: { contact: Contact } | null;
   error: string | null;
@@ -27,7 +24,7 @@ export const submitCtaForm = async (
       phone,
       fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
     });
-    // await tagContact(crmContact.id, ctaTag);
+    if (events?.crmEvent) await tagContact(crmContact.id, events.crmEvent);
 
     return { data: { contact: crmContact }, error: null };
   } catch (error) {

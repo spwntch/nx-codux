@@ -15,11 +15,9 @@ import {
 
 import { useForm } from 'react-hook-form';
 
-import { logProductRequestEvent } from '@/react-tracking';
 import { useRouter } from 'next/navigation';
 
 import { z } from 'zod';
-import { submitCtaForm } from '../../server-actions';
 
 export const ctaFormSchema = z.object({
   firstName: z.string().min(1, { message: 'Required' }),
@@ -34,11 +32,16 @@ export type CtaFormInputs = z.infer<typeof ctaFormSchema>;
 type FinalCtaProps = {
   id: string;
   content: IContent;
-  ctaTag: string;
+  crmEvent?: string;
   className?: string;
 };
 
-export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
+export const CtaForm = ({
+  id,
+  content,
+  crmEvent,
+  className,
+}: FinalCtaProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -59,23 +62,25 @@ export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
+    console.log(crmEvent);
     const { firstName, lastName, company_name, email, phone } = values;
-    const { data, error } = await submitCtaForm(
-      ctaTag,
-      firstName,
-      lastName,
-      company_name,
-      email,
-      phone
-    );
-    if (error) console.log(error);
-    if (data) {
-      console.log(data);
+    console.log({ firstName, lastName, company_name, email, phone, crmEvent });
+    // const { data, error } = await submitCtaForm(
+    //   firstName,
+    //   lastName,
+    //   company_name,
+    //   email,
+    //   phone,
+    //   { crmEvent }
+    // );
+    // if (error) console.log(error);
+    // if (data) {
+      // console.log(data);
       //   logProductRequestEvent(data.contact);
-        // form.reset();
+      // form.reset();
       //   router.push(`/thank-you?name=${firstName}`);
     }
-  };
+  // };
 
   return (
     <div id={id} className={cn('flex-col pt-12  ', className)}>

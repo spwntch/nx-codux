@@ -109,12 +109,14 @@ const HomePage = ({
         articles={blog.articles}
         className="bg-muted"
       />
-      <CtaForm
-        id="get-started"
-        content={finalCta}
-        ctaTag="start-automation_journey-mapping-get-started-form
-"
-      />
+
+      {finalCta.ctas?.length && (
+        <CtaForm
+          id="get-started"
+          content={finalCta}
+          crmEvent={finalCta.ctas[0].crmTag}
+        />
+      )}
     </div>
   );
 };

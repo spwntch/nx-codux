@@ -1,3 +1,5 @@
+import { ICta } from '@spwntch/react-ui';
+
 export const FINAL_CTA = {
   heading: {
     content: 'Ready to Transform Your Customer Experience?',
@@ -16,6 +18,7 @@ export const FINAL_CTA = {
   ctas: [
     {
       label: "LET'S CHAT",
+      crmTag: 'start-automation_journey-mapping-get-started-form',
     },
   ],
 };
