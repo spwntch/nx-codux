@@ -1,3 +1,5 @@
 export interface CustomField {
-    id:string;
+  id: string;
+  title: string;
+  perstag: string;
 }

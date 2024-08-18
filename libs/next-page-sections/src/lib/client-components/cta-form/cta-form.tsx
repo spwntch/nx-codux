@@ -24,7 +24,7 @@ import { submitCtaForm } from '../../server-actions';
 export const ctaFormSchema = z.object({
   firstName: z.string().min(1, { message: 'Required' }),
   lastName: z.string().min(1, { message: 'Required' }),
-  company: z.string().min(1, { message: 'Required' }),
+  company_name: z.string().min(1, { message: 'Required' }),
   email: z.string().email(),
   phone: z.string().optional(),
 });
@@ -52,19 +52,19 @@ export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
     defaultValues: {
       firstName: '',
       lastName: '',
-      company: '',
+      company_name: '',
       email: '',
       phone: '',
     },
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
-    const { firstName, lastName, company, email, phone } = values;
+    const { firstName, lastName, company_name, email, phone } = values;
     const { data, error } = await submitCtaForm(
       ctaTag,
       firstName,
       lastName,
-      company,
+      company_name,
       email,
       phone
     );
@@ -72,7 +72,7 @@ export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
     if (data) {
       console.log(data);
       //   logProductRequestEvent(data.contact);
-      //   form.reset();
+        // form.reset();
       //   router.push(`/thank-you?name=${firstName}`);
     }
   };
@@ -131,7 +131,7 @@ export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
                 />
                 <FormField
                   control={form.control}
-                  name="company"
+                  name="company_name"
                   render={({ field }) => (
                     <FormItem className="min-w-64 w-full">
                       <FormLabel>Company</FormLabel>
