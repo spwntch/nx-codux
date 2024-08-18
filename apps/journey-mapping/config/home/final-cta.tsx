@@ -17,7 +17,7 @@ export const FINAL_CTA: IContent = {
   },
   cta: {
     label: "LET'S CHAT",
-    triggerEvent: {
+    triggerEvents: {
       crm: 'start-automation_journey-mapping-get-started-form',
     },
   },
