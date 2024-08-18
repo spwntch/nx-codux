@@ -110,11 +110,8 @@ const HomePage = ({
         className="bg-muted"
       />
 
-      {finalCta.ctas?.length && (
-        <CtaForm
-          id="get-started"
-          content={finalCta}
-        />
+      {(finalCta.cta || finalCta.ctas?.length) && (
+        <CtaForm id="get-started" content={finalCta} />
       )}
     </div>
   );

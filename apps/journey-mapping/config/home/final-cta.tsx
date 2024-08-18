@@ -15,12 +15,10 @@ export const FINAL_CTA: IContent = {
     ],
     className: 'text-lg text-left max-w-4xl',
   },
-  ctas: [
-    {
-      label: "LET'S CHAT",
-      triggerEvent: {
-        crm: 'start-automation_journey-mapping-get-started-form',
-      },
+  cta: {
+    label: "LET'S CHAT",
+    triggerEvent: {
+      crm: 'start-automation_journey-mapping-get-started-form',
     },
-  ],
+  },
 };

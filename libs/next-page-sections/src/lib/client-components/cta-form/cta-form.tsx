@@ -56,7 +56,8 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
-    console.log(content.ctas);
+    console.log('cta', content.cta);
+    console.log('ctas', content.ctas);
     const { firstName, lastName, company_name, email, phone } = values;
     console.log({ firstName, lastName, company_name, email, phone });
     // const { data, error } = await submitCtaForm(
@@ -74,7 +75,6 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
     // form.reset();
     //   router.push(`/thank-you?name=${firstName}`);
   };
-  // };
 
   return (
     <div id={id} className={cn('flex-col pt-12  ', className)}>
@@ -93,7 +93,7 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
               <StackedForm
                 form={form}
                 submitButton={{
-                  label: content?.ctas?.[0].label || 'GET STARTED',
+                  label: content?.cta?.label || 'GET STARTED',
                 }}
                 onSubmit={handleFormSubmit}
                 className="w-full"
