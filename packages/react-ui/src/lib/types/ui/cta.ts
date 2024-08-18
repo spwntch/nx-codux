@@ -25,6 +25,8 @@ export interface ICta {
 export type ICtaButton = {
   label: string;
   variant?: VariantProps<typeof buttonVariants>;
-  crmTag?: string;
-  gaEvent?: { source: string };
+  triggerEvent?: {
+    ga?: string;
+    crm?: string;
+  };
 };

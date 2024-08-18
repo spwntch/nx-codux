@@ -32,16 +32,10 @@ export type CtaFormInputs = z.infer<typeof ctaFormSchema>;
 type FinalCtaProps = {
   id: string;
   content: IContent;
-  crmEvent?: string;
   className?: string;
 };
 
-export const CtaForm = ({
-  id,
-  content,
-  crmEvent,
-  className,
-}: FinalCtaProps) => {
+export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -62,9 +56,9 @@ export const CtaForm = ({
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
-    console.log(crmEvent);
+    console.log(content.ctas);
     const { firstName, lastName, company_name, email, phone } = values;
-    console.log({ firstName, lastName, company_name, email, phone, crmEvent });
+    console.log({ firstName, lastName, company_name, email, phone });
     // const { data, error } = await submitCtaForm(
     //   firstName,
     //   lastName,
@@ -75,11 +69,11 @@ export const CtaForm = ({
     // );
     // if (error) console.log(error);
     // if (data) {
-      // console.log(data);
-      //   logProductRequestEvent(data.contact);
-      // form.reset();
-      //   router.push(`/thank-you?name=${firstName}`);
-    }
+    // console.log(data);
+    //   logProductRequestEvent(data.contact);
+    // form.reset();
+    //   router.push(`/thank-you?name=${firstName}`);
+  };
   // };
 
   return (

@@ -114,7 +114,6 @@ const HomePage = ({
         <CtaForm
           id="get-started"
           content={finalCta}
-          crmEvent={finalCta.ctas[0].crmTag}
         />
       )}
     </div>
