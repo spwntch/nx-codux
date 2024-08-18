@@ -70,9 +70,10 @@ export const CtaForm = ({ id, content, ctaTag, className }: FinalCtaProps) => {
     );
     if (error) console.log(error);
     if (data) {
-      logProductRequestEvent(data.contact);
-      form.reset();
-      router.push(`/thank-you?name=${firstName}`);
+      console.log(data);
+      //   logProductRequestEvent(data.contact);
+      //   form.reset();
+      //   router.push(`/thank-you?name=${firstName}`);
     }
   };
 

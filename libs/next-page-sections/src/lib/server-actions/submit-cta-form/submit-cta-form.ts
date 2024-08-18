@@ -1,6 +1,6 @@
 'use server';
 
-import { Contact, readOrCreateContact, tagContact } from '@/crm';
+import { Contact, createOrUpdateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../../utils';
 
 export const submitCtaForm = async (
@@ -15,14 +15,14 @@ export const submitCtaForm = async (
   error: string | null;
 }> => {
   try {
-    const crmContact = await readOrCreateContact({
+    const crmContact = await createOrUpdateContact({
       firstName,
       lastName,
       company,
       email,
       phone,
     });
-    await tagContact(crmContact.id, ctaTag);
+    // await tagContact(crmContact.id, ctaTag);
 
     return { data: { contact: crmContact }, error: null };
   } catch (error) {
