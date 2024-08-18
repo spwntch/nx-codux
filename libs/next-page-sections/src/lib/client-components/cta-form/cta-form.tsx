@@ -68,8 +68,7 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
     );
     if (error) console.log(error);
     if (data) {
-      console.log(data);
-      // logProductRequestEvent(data.contact);
+      // console.log(data);
       // form.reset();
       // router.push(`/thank-you?name=${firstName}`);
     }

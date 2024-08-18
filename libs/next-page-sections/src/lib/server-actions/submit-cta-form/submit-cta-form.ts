@@ -11,7 +11,7 @@ export const submitCtaForm = async (
   phone?: string,
   triggeredEvents?: {
     ga?: string;
-    crmEvent?: string;
+    crm?: string;
   }
 ): Promise<{
   data: { contact: Contact } | null;
@@ -33,7 +33,15 @@ export const submitCtaForm = async (
     //   phone,
     //   fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
     // });
-    // if (events?.crmEvent) await tagContact(crmContact.id, events.crmEvent);
+
+    if (triggeredEvents?.ga) {
+      console.log(`GA Event: ${triggeredEvents.ga}`);
+      // logProductRequestEvent(data.contact);
+    }
+    if (triggeredEvents?.crm) {
+      console.log(`CRM Event: ${triggeredEvents?.crm}`);
+      //  await tagContact(crmContact.id, triggeredEvents.crm);
+    }
 
     // return { data: { contact: crmContact }, error: null };
     return { data: null, error: null };
