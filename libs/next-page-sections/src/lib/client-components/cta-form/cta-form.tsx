@@ -18,6 +18,7 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
 import { z } from 'zod';
+import { submitCtaForm } from '../../server-actions';
 
 export const ctaFormSchema = z.object({
   firstName: z.string().min(1, { message: 'Required' }),
@@ -56,24 +57,22 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
-    console.log('cta', content.cta);
-    console.log('ctas', content.ctas);
     const { firstName, lastName, company_name, email, phone } = values;
-    console.log({ firstName, lastName, company_name, email, phone });
-    // const { data, error } = await submitCtaForm(
-    //   firstName,
-    //   lastName,
-    //   company_name,
-    //   email,
-    //   phone,
-    //   { crmEvent }
-    // );
-    // if (error) console.log(error);
-    // if (data) {
-    // console.log(data);
-    //   logProductRequestEvent(data.contact);
-    // form.reset();
-    //   router.push(`/thank-you?name=${firstName}`);
+    const { data, error } = await submitCtaForm(
+      firstName,
+      lastName,
+      company_name,
+      email,
+      phone,
+      content?.cta?.triggerEvents || content?.ctas?.[0]?.triggerEvents
+    );
+    if (error) console.log(error);
+    if (data) {
+      console.log(data);
+      // logProductRequestEvent(data.contact);
+      // form.reset();
+      // router.push(`/thank-you?name=${firstName}`);
+    }
   };
 
   return (

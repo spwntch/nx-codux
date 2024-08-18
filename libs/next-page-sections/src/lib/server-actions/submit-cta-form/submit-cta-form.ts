@@ -9,7 +9,8 @@ export const submitCtaForm = async (
   company_name: string,
   email: string,
   phone?: string,
-  events?: {
+  triggeredEvents?: {
+    ga?: string;
     crmEvent?: string;
   }
 ): Promise<{
@@ -17,16 +18,25 @@ export const submitCtaForm = async (
   error: string | null;
 }> => {
   try {
-    const crmContact = await createOrUpdateContact({
+    console.log({
       firstName,
       lastName,
+      company_name,
       email,
       phone,
-      fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
+      triggeredEvents,
     });
-    if (events?.crmEvent) await tagContact(crmContact.id, events.crmEvent);
+    // await createOrUpdateContact({
+    //   firstName,
+    //   lastName,
+    //   email,
+    //   phone,
+    //   fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
+    // });
+    // if (events?.crmEvent) await tagContact(crmContact.id, events.crmEvent);
 
-    return { data: { contact: crmContact }, error: null };
+    // return { data: { contact: crmContact }, error: null };
+    return { data: null, error: null };
   } catch (error) {
     const message = getErrorMessage(error);
     return { data: null, error: message };
