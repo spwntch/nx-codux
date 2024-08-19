@@ -2,7 +2,6 @@
 
 import { Contact, createOrUpdateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../../utils';
-import { logGoogeAdsEvent, logProductRequestEvent } from '@/react-tracking';
 
 export const submitCtaForm = async (
   firstName: string,
@@ -35,7 +34,6 @@ export const submitCtaForm = async (
       fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
     });
 
-   
     if (triggeredEvents?.crm) {
       console.log(`CRM Event: ${triggeredEvents?.crm}`);
       await tagContact(crmContact.id, triggeredEvents.crm);

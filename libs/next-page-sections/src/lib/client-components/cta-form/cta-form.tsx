@@ -19,7 +19,7 @@ import { useRouter } from 'next/navigation';
 
 import { z } from 'zod';
 import { submitCtaForm } from '../../server-actions';
-import { logProductRequestEvent } from '@/react-tracking';
+import { logGA4Event } from '@/react-tracking';
 
 export const ctaFormSchema = z.object({
   firstName: z.string().min(1, { message: 'Required' }),
@@ -69,8 +69,8 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
     );
     if (error) console.log(error);
     if (data) {
-      console.log(data);
-      logProductRequestEvent(data.contact);
+      if (content?.cta?.triggerEvents?.ga)
+        logGA4Event(content?.cta?.triggerEvents?.ga, data.contact);
       form.reset();
       router.push(`/thank-you?name=${firstName}`);
     }

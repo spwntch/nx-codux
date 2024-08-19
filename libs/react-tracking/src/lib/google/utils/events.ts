@@ -9,48 +9,28 @@ const parseContact = (contact: Contact) => {
   };
 };
 
-export const logGoogeAdsEvent = (event: string, contact: Contact) => {
+export const logGA4Event = (
+  event: string,
+  contact: Contact,
+  data?: { path?: string; slug?: string; emailId?: string }
+) => {
   switch (event) {
     case 'product_purchase_request':
-      return logProductRequestEvent(contact);
+      return window.gtag('event', event, { ...parseContact(contact) });
+    case 'download_request':
+    case 'download_completed':
+      return window.gtag('event', event, {
+        slug: data?.slug,
+        ...parseContact(contact),
+      });
+    case 'download_email_sent':
+      return window.gtag('event', event, {
+        slug: data?.slug,
+        emailId: data?.emailId,
+        ...parseContact(contact),
+      });
     default:
       console.log(`Event ${event} not supported`);
       return;
   }
 };
-
-export const logProductRequestEvent = (contact: Contact) =>
-  window.gtag('event', 'product_purchase_request', {
-    ...parseContact(contact),
-  });
-
-export const logResourceDownloadRequestEvent = (
-  path: string,
-  slug: string,
-  contact: Contact
-) => {
-  window.gtag('event', 'download_request', { slug, ...parseContact(contact) });
-  // logMagnetDownloadRequestConversion();
-};
-
-export const logResourceDownloadEmailSentEvent = (
-  path: string,
-  slug: string,
-  contact: Contact,
-  emailId: string
-) =>
-  window.gtag('event', 'download_email_sent', {
-    slug,
-    emailId,
-    ...parseContact(contact),
-  });
-
-export const logResourceDownloadEvent = (
-  path: string,
-  slug: string,
-  contact: Contact
-) =>
-  window.gtag('event', 'download_completed', {
-    slug,
-    ...parseContact(contact),
-  });
