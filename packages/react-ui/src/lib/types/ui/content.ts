@@ -33,5 +33,6 @@ export interface IContent {
   body?: string[] | ParapgraphsWithClassName; // Array of P tags
   bullets?: IBullet[] | BulletsWithClassName;
   tags?: string[] | ParapgraphsWithClassName;
+  cta?: ICtaButton;
   ctas?: ICtaButton[];
 }

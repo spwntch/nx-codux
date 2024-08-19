@@ -1,4 +1,6 @@
-export const FINAL_CTA = {
+import { IContent } from '@spwntch/react-ui';
+
+export const FINAL_CTA: IContent = {
   heading: {
     content: 'Ready to Transform Your Customer Experience?',
   },
@@ -13,9 +15,11 @@ export const FINAL_CTA = {
     ],
     className: 'text-lg text-left max-w-4xl',
   },
-  ctas: [
-    {
-      label: "LET'S CHAT",
+  cta: {
+    label: "LET'S CHAT",
+    triggerEvents: {
+      crm: 'start-automation_journey-mapping-get-started-form',
+      ga: 'product_purchase_request'
     },
-  ],
+  },
 };

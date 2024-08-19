@@ -80,7 +80,7 @@ const HomePage = ({
         // vAlign="bottom"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleLinkTo('#get-started');
+          if (ctaIndex === 0) handleLinkTo('#journey-mapping-cta-form');
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
@@ -91,7 +91,7 @@ const HomePage = ({
       />
       <CtaBanner
         content={diveIn}
-        onCtaClick={() => handleLinkTo('#get-started')}
+        onCtaClick={() => handleLinkTo('#journey-mapping-cta-form')}
         className="bg-muted"
       />
       <HowItWorks content={howItWorks} />
@@ -101,7 +101,7 @@ const HomePage = ({
         pricingContent={pricing}
         valueContent={value}
         costContent={cost}
-        onCtaClick={() => handleLinkTo('#get-started')}
+        onCtaClick={() => handleLinkTo('#journey-mapping-cta-form')}
       />
       <About id="about" {...about} className="bg-muted" />
       <Blog
@@ -109,12 +109,10 @@ const HomePage = ({
         articles={blog.articles}
         className="bg-muted"
       />
-      <CtaForm
-        id="get-started"
-        content={finalCta}
-        ctaTag="start-automation_journey-mapping-get-started-form
-"
-      />
+
+      {(finalCta.cta || finalCta.ctas?.length) && (
+        <CtaForm id="journey-mapping-cta-form" content={finalCta} />
+      )}
     </div>
   );
 };
