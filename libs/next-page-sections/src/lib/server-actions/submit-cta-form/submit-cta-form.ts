@@ -2,6 +2,7 @@
 
 import { Contact, createOrUpdateContact, tagContact } from '@/crm';
 import { getErrorMessage } from '../../utils';
+import { logGoogeAdsEvent, logProductRequestEvent } from '@/react-tracking';
 
 export const submitCtaForm = async (
   firstName: string,
@@ -26,25 +27,21 @@ export const submitCtaForm = async (
       phone,
       triggeredEvents,
     });
-    // await createOrUpdateContact({
-    //   firstName,
-    //   lastName,
-    //   email,
-    //   phone,
-    //   fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
-    // });
+    const crmContact = await createOrUpdateContact({
+      firstName,
+      lastName,
+      email,
+      phone,
+      fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
+    });
 
-    if (triggeredEvents?.ga) {
-      console.log(`GA Event: ${triggeredEvents.ga}`);
-      // logProductRequestEvent(data.contact);
-    }
+   
     if (triggeredEvents?.crm) {
       console.log(`CRM Event: ${triggeredEvents?.crm}`);
-      //  await tagContact(crmContact.id, triggeredEvents.crm);
+      await tagContact(crmContact.id, triggeredEvents.crm);
     }
 
-    // return { data: { contact: crmContact }, error: null };
-    return { data: null, error: null };
+    return { data: { contact: crmContact }, error: null };
   } catch (error) {
     const message = getErrorMessage(error);
     return { data: null, error: message };

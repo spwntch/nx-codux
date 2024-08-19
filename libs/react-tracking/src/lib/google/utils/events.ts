@@ -9,8 +9,20 @@ const parseContact = (contact: Contact) => {
   };
 };
 
+export const logGoogeAdsEvent = (event: string, contact: Contact) => {
+  switch (event) {
+    case 'product_purchase_request':
+      return logProductRequestEvent(contact);
+    default:
+      console.log(`Event ${event} not supported`);
+      return;
+  }
+};
+
 export const logProductRequestEvent = (contact: Contact) =>
-  window.gtag('event', 'product_purchase_request', { ...parseContact(contact) });
+  window.gtag('event', 'product_purchase_request', {
+    ...parseContact(contact),
+  });
 
 export const logResourceDownloadRequestEvent = (
   path: string,

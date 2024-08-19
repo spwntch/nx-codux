@@ -2,7 +2,6 @@ export interface Contact {
   id: string;
   firstName: string | null;
   lastName: string | null;
-  fullName: string | null;
   email: string;
   phone?: string;
   spwntch_contact_id?: string;

@@ -19,6 +19,7 @@ export const FINAL_CTA: IContent = {
     label: "LET'S CHAT",
     triggerEvents: {
       crm: 'start-automation_journey-mapping-get-started-form',
+      ga: 'product_purchase_request'
     },
   },
 };
