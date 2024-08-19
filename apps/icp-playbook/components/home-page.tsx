@@ -93,13 +93,9 @@ const HomePage = ({
         onCtaClick={() => handleLinkTo('#get-started')}
       />
       <About id="about" {...about} />
-      {/* <Resources id="resources" /> */}
-      <CtaForm
-        id="get-started"
-        content={getStarted}
-        ctaTag="start-automation_icp-playbook-get-started-form"
-        className="bg-muted"
-      />
+      {(getStarted.cta || getStarted.ctas?.length) && (
+        <CtaForm id="get-started" content={getStarted} />
+      )}
     </div>
   );
 };

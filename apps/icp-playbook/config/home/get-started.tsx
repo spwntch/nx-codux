@@ -18,6 +18,10 @@ export const GET_STARTED: IContent = {
   ctas:[
     {
       label: `LET'S CHAT`,
+      triggerEvents: {
+        crm: 'start-automation_icp-playbook-get-started-form',
+        ga: 'product_purchase_request'
+      },
     },
   ]
 };
