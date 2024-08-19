@@ -12,11 +12,14 @@ const parseContact = (contact: Contact) => {
 export const logGA4Event = (
   event: string,
   contact: Contact,
-  data?: { path?: string; slug?: string; emailId?: string }
+  data?: { ctaFormId?: string; path?: string; slug?: string; emailId?: string }
 ) => {
   switch (event) {
     case 'product_purchase_request':
-      return window.gtag('event', event, { ...parseContact(contact) });
+      return window.gtag('event', event, {
+        ...parseContact(contact),
+        ...data,
+      });
     case 'download_request':
     case 'download_completed':
       return window.gtag('event', event, {

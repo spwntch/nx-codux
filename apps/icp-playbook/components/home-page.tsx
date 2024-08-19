@@ -70,7 +70,7 @@ const HomePage = ({
         vAlign="middle"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleLinkTo('#get-started');
+          if (ctaIndex === 0) handleLinkTo('#icp-playbook-cta-form');
         }}
       />
       <LogoCarousel logos={clientLogos} className="bg-white" />
@@ -80,7 +80,7 @@ const HomePage = ({
       <CtaBanner
         content={diveIn}
         className="bg-muted"
-        onCtaClick={() => handleLinkTo('#get-started')}
+        onCtaClick={() => handleLinkTo('#icp-playbook-cta-form')}
       />
       {/* <LearnMore content={learnMore} /> */}
       <Faqs id="faq" content={faqs} />
@@ -90,11 +90,11 @@ const HomePage = ({
         valueContent={value}
         costContent={cost}
         className="bg-muted"
-        onCtaClick={() => handleLinkTo('#get-started')}
+        onCtaClick={() => handleLinkTo('#icp-playbook-cta-form')}
       />
       <About id="about" {...about} />
       {(getStarted.cta || getStarted.ctas?.length) && (
-        <CtaForm id="get-started" content={getStarted} />
+        <CtaForm id="icp-playbook-cta-form" content={getStarted} />
       )}
     </div>
   );
