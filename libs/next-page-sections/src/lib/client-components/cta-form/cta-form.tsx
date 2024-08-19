@@ -58,6 +58,7 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
   });
 
   const handleFormSubmit = async (values: CtaFormInputs) => {
+    const triggerEvents = content?.cta?.triggerEvents || content?.ctas?.[0]?.triggerEvents;
     const { firstName, lastName, company_name, email, phone } = values;
     const { data, error } = await submitCtaForm(
       firstName,
@@ -65,12 +66,12 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
       company_name,
       email,
       phone,
-      content?.cta?.triggerEvents || content?.ctas?.[0]?.triggerEvents
+      triggerEvents
     );
     if (error) console.log(error);
     if (data) {
-      if (content?.cta?.triggerEvents?.ga)
-        logGA4Event(content?.cta?.triggerEvents?.ga, data.contact);
+      if (triggerEvents?.ga)
+        logGA4Event(triggerEvents?.ga, data.contact);
       form.reset();
       router.push(`/thank-you?name=${firstName}`);
     }
