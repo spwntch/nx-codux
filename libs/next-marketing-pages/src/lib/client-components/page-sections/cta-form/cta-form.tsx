@@ -24,7 +24,7 @@ import { logGA4Event } from '@/react-tracking';
 export const ctaFormSchema = z.object({
   firstName: z.string().min(1, { message: 'Required' }),
   lastName: z.string().min(1, { message: 'Required' }),
-  company_name: z.string().min(1, { message: 'Required' }),
+  companyName: z.string().min(1, { message: 'Required' }),
   email: z.string().email(),
   phone: z.string().optional(),
 });
@@ -51,7 +51,7 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
     defaultValues: {
       firstName: '',
       lastName: '',
-      company_name: '',
+      companyName: '',
       email: '',
       phone: '',
     },
@@ -60,11 +60,11 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
   const handleFormSubmit = async (values: CtaFormInputs) => {
     const triggerEvents =
       content?.cta?.triggerEvents || content?.ctas?.[0]?.triggerEvents;
-    const { firstName, lastName, company_name, email, phone } = values;
+    const { firstName, lastName, companyName, email, phone } = values;
     const { data, error } = await submitCtaForm(
       firstName,
       lastName,
-      company_name,
+      companyName,
       email,
       phone,
       triggerEvents
@@ -133,7 +133,7 @@ export const CtaForm = ({ id, content, className }: FinalCtaProps) => {
                 />
                 <FormField
                   control={form.control}
-                  name="company_name"
+                  name="companyName"
                   render={({ field }) => (
                     <FormItem className="min-w-64 w-full">
                       <FormLabel>Company</FormLabel>
