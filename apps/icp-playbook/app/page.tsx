@@ -14,6 +14,7 @@ import {
   PRICING,
   FEATURES,
   VALUE,
+  PAIN_POINTS,
 } from '../config';
 import { FAQ } from '../config/home/faqs';
 
@@ -69,10 +70,11 @@ export default function Index() {
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
-      productFeatures={FEATURES}
       benefits={BENEFITS}
-      howItWorks={HOW_IT_WORKS}
+      painPoints={PAIN_POINTS}
       ctaBanner={CTA_BANNER}
+      features={FEATURES}
+      howItWorks={HOW_IT_WORKS}
       faqs={FAQ}
       pricing={PRICING}
       value={VALUE}

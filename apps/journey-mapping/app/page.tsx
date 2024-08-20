@@ -14,6 +14,7 @@ import {
   FINAL_CTA,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
+  PAIN_POINTS,
   PRICING,
   VALUE,
 } from '../config';
@@ -71,6 +72,7 @@ export default function Index() {
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
+      painPoints={PAIN_POINTS}
       benefits={BENEFITS}
       caseStudies={{
         content: CASE_STUDIES,
