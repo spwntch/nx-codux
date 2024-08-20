@@ -1,7 +1,7 @@
 import { GoogleAnalytics } from '@/react-tracking';
-import SiteShell from '../components/site-shell/site.shell';
 import { brand, primaryNav } from '../config';
 import './global.css';
+import { SiteShell } from '@/next-marketing-pages';
 
 export const metadata = {
   metadataBase:
