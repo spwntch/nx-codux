@@ -1,4 +1,4 @@
-import HomePage from '../components/home-page/home-page';
+import { FreeQuoteLandingPage } from '@/next-marketing-pages';
 import { HOME_HERO_CONTENT, HOME_HERO_IMAGE } from '../config';
 
 export default function Index() {
@@ -8,6 +8,6 @@ export default function Index() {
    * Note: The corresponding styles are in the ./index.tailwind file.
    */
   return (
-    <HomePage hero={{ image: HOME_HERO_IMAGE, content: HOME_HERO_CONTENT }} />
+    <FreeQuoteLandingPage hero={{ image: HOME_HERO_IMAGE, content: HOME_HERO_CONTENT }} />
   );
 }

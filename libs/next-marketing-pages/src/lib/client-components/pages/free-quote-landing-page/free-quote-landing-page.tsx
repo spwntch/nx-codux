@@ -50,7 +50,7 @@ export interface FreeQuoteLandingPageProps {
     content: IContent;
     articles: IMdxDoc[];
   };
-  finalCta: IContent;
+  finalCta?: IContent;
 }
 
 export const FreeQuoteLandingPage = ({
@@ -123,7 +123,7 @@ export const FreeQuoteLandingPage = ({
           className="bg-muted"
         />
       )}
-      {(finalCta.cta || finalCta.ctas?.length) && (
+      {(finalCta?.cta || finalCta?.ctas?.length) && (
         <CtaForm id="cta-form" content={finalCta} />
       )}
     </div>
