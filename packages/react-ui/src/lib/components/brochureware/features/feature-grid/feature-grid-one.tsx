@@ -1,14 +1,23 @@
 import { BulletsWithClassName, IBullet } from '../../../../types';
-import { getBulletsContentAndClassName } from '../../../../utils';
+import { cn, getBulletsContentAndClassName } from '../../../../utils';
 
 interface IHeaderWithFeatureCardsProps {
   features: IBullet[] | BulletsWithClassName;
+  className?: string;
 }
 
-const FeatureGrid = ({ features }: IHeaderWithFeatureCardsProps) => {
+export const FeatureGridOne = ({
+  features,
+  className,
+}: IHeaderWithFeatureCardsProps) => {
   const { bulletsContent } = getBulletsContentAndClassName(features);
   return (
-    <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+    <div
+      className={cn(
+        'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16',
+        className
+      )}
+    >
       {bulletsContent.map((feature) => (
         <div key={feature.heading} className="relative pl-16">
           <dt className="text-base font-semibold leading-7 text-foreground">
@@ -25,5 +34,3 @@ const FeatureGrid = ({ features }: IHeaderWithFeatureCardsProps) => {
     </div>
   );
 };
-
-export default FeatureGrid;

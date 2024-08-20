@@ -89,7 +89,9 @@ export const FreeQuoteLandingPage = ({
         }}
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
-      {painPoints && <FeaturesGrid id="product" content={painPoints} />}
+      {painPoints && (
+        <FeaturesGrid id="product" content={painPoints} gridStyle="two" />
+      )}
       {benefits && <Benefits content={benefits} className="bg-muted" />}
       {caseStudies && (
         <CaseStudies
