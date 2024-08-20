@@ -1,6 +1,5 @@
 'use client';
 import { Article, IMdxDocFrontMatter } from '@spwntch/react-ui';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { JSXElementConstructor, ReactElement } from 'react';
 
@@ -10,7 +9,7 @@ type Props = {
   content: ReactElement<any, string | JSXElementConstructor<any>> | undefined;
 };
 
-const CaseStudy = ({ meta, toc, content }: Props) => {
+export const ArticlePage = ({ meta, toc, content }: Props) => {
   const router = useRouter();
 
   return (
@@ -25,4 +24,3 @@ const CaseStudy = ({ meta, toc, content }: Props) => {
   );
 };
 
-export default CaseStudy;

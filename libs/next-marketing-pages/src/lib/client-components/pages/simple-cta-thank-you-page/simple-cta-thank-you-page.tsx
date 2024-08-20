@@ -16,7 +16,7 @@ export interface ThankYouPageProps {
   };
 }
 
-const ThankYouPage = ({ hero }: ThankYouPageProps) => {
+export const SimpleCtaThankYouPage = ({ hero }: ThankYouPageProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
@@ -47,4 +47,3 @@ const ThankYouPage = ({ hero }: ThankYouPageProps) => {
   );
 };
 
-export default ThankYouPage;

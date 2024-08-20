@@ -1,20 +1,7 @@
-// import { CaseStudy } from '@spwn-next/landing-page-sections';
+import { ArticlePage } from '@/next-marketing-pages';
 import { readFileSync, readdirSync } from 'fs';
-import { join } from 'path';
-// import ScheduleMeetingButton from '../../../components/ScheduleMeetingButton';
-// import { CaseStudy } from '~next/features/case-studies/server';
-// import {
-//   FeaturesSection,
-//   FooterSection,
-// } from '~next/features/landing-pages/server';
-// import {
-//   QASession,
-//   ScheduleCalendlyMeeting,
-// } from '~next/integrations/calendly/server';
-// import { footer } from '../../../config/footer';
-// import { problemsWeSolve } from '../../../config/problems-we-solve';
-import CaseStudy from '../../../components/case-study/case-study';
 import { notFound } from 'next/navigation';
+import { join } from 'path';
 import { CASE_STUDIES_GRID } from '../../../config/home/case-studies';
 import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
 
@@ -81,7 +68,7 @@ const CaseStudyPage = async ({ params: { slug } }: Props) => {
 
   return (
     <div className="flex flex-col mt-28 md:container px-3">
-      <CaseStudy meta={caseStudy.meta} content={doc.content} toc={doc.toc} />
+      <ArticlePage meta={caseStudy.meta} content={doc.content} toc={doc.toc} />
     </div>
   );
 };
