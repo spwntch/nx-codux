@@ -1,17 +1,13 @@
 'use client';
 import { cn, ContentContainer, FeatureGrid, IContent } from '@spwntch/react-ui';
 
-type ProductSummaryProps = {
+type FeaturesGridProps = {
   id: string;
   content: IContent;
   className?: string;
 };
 
-export const ProductFeatures = ({
-  id,
-  content,
-  className,
-}: ProductSummaryProps) => {
+export const FeaturesGrid = ({ id, content, className }: FeaturesGridProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,

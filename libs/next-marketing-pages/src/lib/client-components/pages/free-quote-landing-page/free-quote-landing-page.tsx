@@ -20,7 +20,7 @@ import {
   Faqs,
   HowItWorks,
   Pricing,
-  ProductFeatures,
+  FeaturesGrid,
 } from '../../page-sections';
 
 export interface FreeQuoteLandingPageProps {
@@ -102,7 +102,7 @@ export const FreeQuoteLandingPage = ({
         />
       )}
       {productFeatures && (
-        <ProductFeatures id="product" content={productFeatures} />
+        <FeaturesGrid id="product" content={productFeatures} />
       )}
       {howItWorks && <HowItWorks content={howItWorks} />}
       {faqs && <Faqs id="faq" content={faqs} className="bg-muted" />}

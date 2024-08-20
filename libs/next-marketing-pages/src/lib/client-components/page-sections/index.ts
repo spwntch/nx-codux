@@ -5,7 +5,7 @@ export * from './case-studies/case-studies';
 export * from './cta-banner/cta-banner';
 export * from './cta-form/cta-form';
 export * from './faqs/faqs';
-export * from './faqs/product-features/product-features';
+export * from './features/features';
 export * from './how-it-works/how-it-works';
 export * from './pricing/pricing';
 
