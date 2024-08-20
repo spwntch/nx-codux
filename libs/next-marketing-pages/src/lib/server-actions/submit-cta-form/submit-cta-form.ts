@@ -6,7 +6,7 @@ import { getErrorMessage } from '../../utils';
 export const submitCtaForm = async (
   firstName: string,
   lastName: string,
-  company_name: string,
+  companyName: string,
   email: string,
   phone?: string,
   triggeredEvents?: {
@@ -18,20 +18,12 @@ export const submitCtaForm = async (
   error: string | null;
 }> => {
   try {
-    console.log({
-      firstName,
-      lastName,
-      company_name,
-      email,
-      phone,
-      triggeredEvents,
-    });
     const crmContact = await createOrUpdateContact({
       firstName,
       lastName,
       email,
       phone,
-      fieldValues: [{ field: '147', value: company_name }], // TODO: can't have field id hardcoded. needs to be dynamic
+      fieldValues: [{ field: '147', value: companyName }], // TODO: can't have field id hardcoded. needs to be dynamic
     });
 
     if (triggeredEvents?.crm) {
