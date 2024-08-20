@@ -17,8 +17,10 @@
     "paths": {
       "@/codux": ["codux/src/index.ts"],
       "@/crm": ["libs/crm/src/index.ts"],
-      "@/next-page-sections": ["libs/next-page-sections/src/index.ts"],
-      "@/next-page-sections/server": ["libs/next-page-sections/src/server.ts"],
+      "@/next-marketing-pages": ["libs/next-marketing-pages/src/index.ts"],
+      "@/next-marketing-pages/server": [
+        "libs/next-marketing-pages/src/server.ts"
+      ],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]

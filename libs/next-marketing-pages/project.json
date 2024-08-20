@@ -1,0 +1,9 @@
+{
+  "name": "next-marketing-pages",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next-marketing-pages/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project next-marketing-pages --web",
+  "targets": {}
+}

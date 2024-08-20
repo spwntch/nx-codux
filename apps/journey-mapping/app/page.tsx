@@ -1,6 +1,11 @@
-import HomePage from '../components/home-page';
+import { FreeQuoteLandingPage } from '@/next-marketing-pages';
 import {
+  ABOUT_CONTENT,
+  ABOUT_STATS,
+  ABOUT_YOUTUBE,
   BENEFITS,
+  BLOG,
+  BLOG_POSTS,
   CASE_STUDIES, CASE_STUDIES_GRID,
   CLIENT_LOGOS,
   COST,
@@ -9,12 +14,7 @@ import {
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   PRICING,
-  VALUE,
-  BLOG,
-  BLOG_POSTS,
-  ABOUT_YOUTUBE,
-  ABOUT_CONTENT,
-  ABOUT_STATS
+  VALUE
 } from '../config';
 import FAQS from '../config/home/faqs';
 import HOW_IT_WORKS from '../config/home/how-it-works';
@@ -64,7 +64,7 @@ export const metadata = {
 };
 export default function Index() {
   return (
-    <HomePage
+    <FreeQuoteLandingPage
       hero={{
         image: HOME_HERO_IMAGE,
         content: HOME_HERO_CONTENT,
@@ -75,7 +75,7 @@ export default function Index() {
         content: CASE_STUDIES,
         articles: CASE_STUDIES_GRID,
       }}
-      diveIn={DIVE_IN}
+      ctaBanner={DIVE_IN}
       howItWorks={HOW_IT_WORKS}
       faqs={FAQS}
       pricing={PRICING}
@@ -86,10 +86,10 @@ export default function Index() {
         content: ABOUT_CONTENT,
         stats: ABOUT_STATS,
       }}
-      blog={{
-        content: BLOG,
-        articles: BLOG_POSTS,
-      }}
+      // blog={{
+      //   content: BLOG,
+      //   articles: BLOG_POSTS,
+      // }}
       finalCta={FINAL_CTA}
     />
   );

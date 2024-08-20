@@ -2,7 +2,7 @@ import { IContent, IImage } from '@spwntch/react-ui';
 
 export const THANK_YOU_HERO_IMAGE: IImage = {
   src: '/images/thank-you/pexels-dreamsky-258557-790916.webp',
-  darken: '75%',
+  darken: '50%',
 };
 
 export const THANK_YOU_HERO_CONTENT: IContent = {
