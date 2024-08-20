@@ -1,4 +1,4 @@
-import HomePage from '../components/home-page';
+import { FreeQuoteLandingPage } from '@/next-marketing-pages';
 import {
   ABOUT_CONTENT,
   ABOUT_STATS,
@@ -63,16 +63,16 @@ export const metadata = {
 
 export default function Index() {
   return (
-    <HomePage
+    <FreeQuoteLandingPage
       hero={{
         image: HOME_HERO_IMAGE,
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
-      productSummary={THE_ICP_PLAYBOOK}
+      productFeatures={THE_ICP_PLAYBOOK}
       benefits={BENEFITS}
       howItWorks={HOW_IT_WORKS}
-      diveIn={DIVE_IN}
+      ctaBanner={DIVE_IN}
       faqs={FAQ}
       pricing={PRICING}
       value={VALUE}
@@ -82,7 +82,7 @@ export default function Index() {
         content: ABOUT_CONTENT,
         stats: ABOUT_STATS,
       }}
-      getStarted={GET_STARTED}
+      finalCta={GET_STARTED}
       // testimonials={TESTIMONIALS}
     />
   );

@@ -20,6 +20,7 @@ import {
   Faqs,
   HowItWorks,
   Pricing,
+  ProductFeatures,
 } from '../../page-sections';
 
 export interface FreeQuoteLandingPageProps {
@@ -34,6 +35,7 @@ export interface FreeQuoteLandingPageProps {
     articles: IMdxDoc[];
   };
   ctaBanner?: IContent;
+  productFeatures?: IContent;
   howItWorks?: IContent;
   faqs?: IContent;
   pricing?: IContent;
@@ -57,6 +59,7 @@ export const FreeQuoteLandingPage = ({
   benefits,
   caseStudies,
   ctaBanner,
+  productFeatures,
   howItWorks,
   faqs,
   pricing,
@@ -80,7 +83,7 @@ export const FreeQuoteLandingPage = ({
         // vAlign="bottom"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleLinkTo('#journey-mapping-cta-form');
+          if (ctaIndex === 0) handleLinkTo('#cta-form');
         }}
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
@@ -94,9 +97,12 @@ export const FreeQuoteLandingPage = ({
       {ctaBanner && (
         <CtaBanner
           content={ctaBanner}
-          onCtaClick={() => handleLinkTo('#journey-mapping-cta-form')}
+          onCtaClick={() => handleLinkTo('#cta-form')}
           className="bg-muted"
         />
+      )}
+      {productFeatures && (
+        <ProductFeatures id="product" content={productFeatures} />
       )}
       {howItWorks && <HowItWorks content={howItWorks} />}
       {faqs && <Faqs id="faq" content={faqs} className="bg-muted" />}
@@ -106,7 +112,7 @@ export const FreeQuoteLandingPage = ({
           pricingContent={pricing}
           valueContent={value}
           costContent={cost}
-          onCtaClick={() => handleLinkTo('#journey-mapping-cta-form')}
+          onCtaClick={() => handleLinkTo('#cta-form')}
         />
       )}
       {about && <About id="about" {...about} className="bg-muted" />}
@@ -118,7 +124,7 @@ export const FreeQuoteLandingPage = ({
         />
       )}
       {(finalCta.cta || finalCta.ctas?.length) && (
-        <CtaForm id="journey-mapping-cta-form" content={finalCta} />
+        <CtaForm id="cta-form" content={finalCta} />
       )}
     </div>
   );

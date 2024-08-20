@@ -7,7 +7,7 @@ type ProductSummaryProps = {
   className?: string;
 };
 
-export const ProductSummary = ({
+export const ProductFeatures = ({
   id,
   content,
   className,

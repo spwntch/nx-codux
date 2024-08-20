@@ -18,7 +18,7 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
 import { z } from 'zod';
-import { submitCtaForm } from '../../server-actions';
+import { submitCtaForm } from '../../../server-actions';
 import { logGA4Event } from '@/react-tracking';
 
 export const ctaFormSchema = z.object({
