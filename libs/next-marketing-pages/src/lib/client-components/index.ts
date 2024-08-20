@@ -8,4 +8,3 @@ export * from './faqs/faqs';
 export * from './how-it-works/how-it-works';
 export * from './pricing/pricing';
 export * from './product-summary/product-summary';
-

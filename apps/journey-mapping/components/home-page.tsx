@@ -19,7 +19,7 @@ import {
   Faqs,
   HowItWorks,
   Pricing,
-} from '@/next-page-sections';
+} from '@/next-marketing-pages';
 import { useRouter } from 'next/navigation';
 
 export interface HomePageProps {

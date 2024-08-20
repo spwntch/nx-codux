@@ -1,9 +1,17 @@
 'use client';
 import { cn, ContentContainer, FeatureGrid, IContent } from '@spwntch/react-ui';
 
-type ProductSummaryProps = { id: string; content: IContent; className?: string };
+type ProductSummaryProps = {
+  id: string;
+  content: IContent;
+  className?: string;
+};
 
-export const ProductSummary = ({ id, content, className }: ProductSummaryProps) => {
+export const ProductSummary = ({
+  id,
+  content,
+  className,
+}: ProductSummaryProps) => {
   const header: IContent = {
     heading: content.heading,
     subheading: content.subheading,
@@ -18,4 +26,3 @@ export const ProductSummary = ({ id, content, className }: ProductSummaryProps) 
     </div>
   );
 };
-

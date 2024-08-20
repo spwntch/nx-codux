@@ -9,7 +9,7 @@ import {
   HowItWorks,
   Pricing,
   ProductSummary,
-} from '@/next-page-sections';
+} from '@/next-marketing-pages';
 import {
   FullImageHero,
   IContent,

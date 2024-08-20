@@ -34,4 +34,3 @@ export const Blog = ({ content, articles, className }: BlogProps) => {
     </div>
   );
 };
-

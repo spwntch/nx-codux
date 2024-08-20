@@ -20,4 +20,3 @@ export const CtaBanner = ({
     </div>
   );
 };
-
