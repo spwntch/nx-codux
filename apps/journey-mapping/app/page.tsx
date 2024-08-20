@@ -6,18 +6,20 @@ import {
   BENEFITS,
   BLOG,
   BLOG_POSTS,
-  CASE_STUDIES, CASE_STUDIES_GRID,
+  CASE_STUDIES,
+  CASE_STUDIES_GRID,
   CLIENT_LOGOS,
   COST,
-  DIVE_IN,
+  CTA_BANNER,
   FINAL_CTA,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
+  PAIN_POINTS,
   PRICING,
-  VALUE
+  VALUE,
 } from '../config';
 import FAQS from '../config/home/faqs';
-import HOW_IT_WORKS from '../config/home/how-it-works';
+import HOW_IT_WORKS from '../config/home/process';
 
 const title =
   'Optimize Your Customer Journey with Expert Mapping | Interact RDT';
@@ -70,12 +72,13 @@ export default function Index() {
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
+      painPoints={PAIN_POINTS}
       benefits={BENEFITS}
       caseStudies={{
         content: CASE_STUDIES,
         articles: CASE_STUDIES_GRID,
       }}
-      ctaBanner={DIVE_IN}
+      ctaBanner={CTA_BANNER}
       howItWorks={HOW_IT_WORKS}
       faqs={FAQS}
       pricing={PRICING}

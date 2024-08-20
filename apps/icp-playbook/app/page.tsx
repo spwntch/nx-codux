@@ -6,14 +6,15 @@ import {
   BENEFITS,
   CLIENT_LOGOS,
   COST,
-  DIVE_IN,
-  GET_STARTED,
+  CTA_BANNER,
+  FINAL_CTA,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
   HOW_IT_WORKS,
   PRICING,
-  THE_ICP_PLAYBOOK,
+  FEATURES,
   VALUE,
+  PAIN_POINTS,
 } from '../config';
 import { FAQ } from '../config/home/faqs';
 
@@ -69,10 +70,11 @@ export default function Index() {
         content: HOME_HERO_CONTENT,
       }}
       clientLogos={CLIENT_LOGOS}
-      productFeatures={THE_ICP_PLAYBOOK}
       benefits={BENEFITS}
+      painPoints={PAIN_POINTS}
+      ctaBanner={CTA_BANNER}
+      features={FEATURES}
       howItWorks={HOW_IT_WORKS}
-      ctaBanner={DIVE_IN}
       faqs={FAQ}
       pricing={PRICING}
       value={VALUE}
@@ -82,7 +84,7 @@ export default function Index() {
         content: ABOUT_CONTENT,
         stats: ABOUT_STATS,
       }}
-      finalCta={GET_STARTED}
+      finalCta={FINAL_CTA}
       // testimonials={TESTIMONIALS}
     />
   );

@@ -1,6 +1,6 @@
 import { IContent } from '@spwntch/react-ui';
 
-export const DIVE_IN: IContent = {
+export const CTA_BANNER: IContent = {
   heading: {
     content: 'Ready to dive in?',
   },

@@ -20,7 +20,7 @@ import {
   Faqs,
   HowItWorks,
   Pricing,
-  ProductFeatures,
+  FeaturesGrid,
 } from '../../page-sections';
 
 export interface FreeQuoteLandingPageProps {
@@ -29,13 +29,14 @@ export interface FreeQuoteLandingPageProps {
     content: IContent;
   };
   clientLogos?: string[];
+  painPoints?: IContent;
   benefits?: IContent;
   caseStudies?: {
     content: IContent;
     articles: IMdxDoc[];
   };
   ctaBanner?: IContent;
-  productFeatures?: IContent;
+  features?: IContent;
   howItWorks?: IContent;
   faqs?: IContent;
   pricing?: IContent;
@@ -56,10 +57,11 @@ export interface FreeQuoteLandingPageProps {
 export const FreeQuoteLandingPage = ({
   hero,
   clientLogos,
+  painPoints,
   benefits,
   caseStudies,
   ctaBanner,
-  productFeatures,
+  features,
   howItWorks,
   faqs,
   pricing,
@@ -87,6 +89,9 @@ export const FreeQuoteLandingPage = ({
         }}
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
+      {painPoints && (
+        <FeaturesGrid id="product" content={painPoints} gridStyle="two" />
+      )}
       {benefits && <Benefits content={benefits} className="bg-muted" />}
       {caseStudies && (
         <CaseStudies
@@ -101,9 +106,8 @@ export const FreeQuoteLandingPage = ({
           className="bg-muted"
         />
       )}
-      {productFeatures && (
-        <ProductFeatures id="product" content={productFeatures} />
-      )}
+
+      {features && <FeaturesGrid id="product" content={features} />}
       {howItWorks && <HowItWorks content={howItWorks} />}
       {faqs && <Faqs id="faq" content={faqs} className="bg-muted" />}
       {pricing && value && cost && (

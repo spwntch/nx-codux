@@ -1,7 +1,7 @@
 import { IContent } from '@spwntch/react-ui';
 import { BarChart3, Brain, ClipboardList, ShieldQuestion } from 'lucide-react';
 
-export const THE_ICP_PLAYBOOK: IContent = {
+export const FEATURES: IContent = {
   heading: {
     content: 'What is the ICP Playbook?',
   },
@@ -10,7 +10,8 @@ export const THE_ICP_PLAYBOOK: IContent = {
   },
   body: {
     content: [
-      'The ICP (Ideal Customer Profile) Playbook is a comprehensive toolkit designed to help you identify and target your ideal customers with precision.','Developed for marketing, sales, and product teams, it includes structured workshops, worksheets, templates, and more to streamline your customer profiling process.',
+      'The ICP (Ideal Customer Profile) Playbook is a comprehensive toolkit designed to help you identify and target your ideal customers with precision.',
+      'Developed for marketing, sales, and product teams, it includes structured workshops, worksheets, templates, and more to streamline your customer profiling process.',
     ],
   },
   bullets: [
