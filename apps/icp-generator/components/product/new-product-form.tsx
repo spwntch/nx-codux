@@ -8,6 +8,7 @@ import {
   RadioGroup,
   RadioGroupItem,
   StackedForm,
+  Textarea,
 } from '@spwntch/react-ui';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -16,6 +17,7 @@ export const productFormSchema = z.object({
   productName: z.string().min(1, { message: 'Required' }),
   productCategory: z.string().min(1, { message: 'Required' }),
   targetMarket: z.string().min(1, { message: 'Required' }),
+  productDescription: z.string(),
 });
 
 export type ProductFormInputs = z.infer<typeof productFormSchema>;
@@ -28,6 +30,7 @@ const NewProductForm = () => {
       productName: '',
       productCategory: '',
       targetMarket: '',
+      productDescription: '',
     },
   });
 
@@ -119,7 +122,9 @@ const NewProductForm = () => {
                   <FormControl>
                     <RadioGroupItem value="b2b" />
                   </FormControl>
-                  <FormLabel className="font-normal">Business to Business </FormLabel>
+                  <FormLabel className="font-normal">
+                    Business to Business{' '}
+                  </FormLabel>
                 </FormItem>
                 <FormItem className="flex items-center space-x-3 space-y-0">
                   <FormControl>
@@ -130,6 +135,21 @@ const NewProductForm = () => {
               </RadioGroup>
             </FormControl>
             {/* <FormMessage /> */}
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
+        name="productDescription"
+        render={({ field }) => (
+          <FormItem className="w-full">
+            <FormLabel>Product Description (Optional)</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Tell us a little bit more about the product you're planning to market."
+                {...field}
+              />
+            </FormControl>
           </FormItem>
         )}
       />
