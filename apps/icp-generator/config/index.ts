@@ -1,5 +1,5 @@
 export * from './brand';
-// export * from './home/about';
+export * from './home';
 // export * from './home/benefits';
 // export * from './home/blog';
 // export * from './home/case-studies';
