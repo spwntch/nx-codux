@@ -1,14 +1,21 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { FormControl, FormField, FormItem, FormLabel, Input, StackedForm } from '@spwntch/react-ui';
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  Input,
+  RadioGroup,
+  RadioGroupItem,
+  StackedForm,
+} from '@spwntch/react-ui';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 export const productFormSchema = z.object({
-  firstName: z.string().min(1, { message: 'Required' }),
-  lastName: z.string().min(1, { message: 'Required' }),
-  companyName: z.string().min(1, { message: 'Required' }),
-  email: z.string().email(),
-  phone: z.string().optional(),
+  productName: z.string().min(1, { message: 'Required' }),
+  productCategory: z.string().min(1, { message: 'Required' }),
+  targetMarket: z.string().min(1, { message: 'Required' }),
 });
 
 export type ProductFormInputs = z.infer<typeof productFormSchema>;
@@ -18,16 +25,15 @@ const NewProductForm = () => {
     mode: 'onSubmit',
     resolver: zodResolver(productFormSchema),
     defaultValues: {
-      firstName: '',
-      lastName: '',
-      companyName: '',
-      email: '',
-      phone: '',
+      productName: '',
+      productCategory: '',
+      targetMarket: '',
     },
   });
 
   const handleFormSubmit = async (values: ProductFormInputs) => {
     console.log(values);
+    form.reset();
   };
 
   return (
@@ -41,10 +47,10 @@ const NewProductForm = () => {
     >
       <FormField
         control={form.control}
-        name="firstName"
+        name="productName"
         render={({ field }) => (
           <FormItem className="min-w-64 w-full">
-            <FormLabel>First Name</FormLabel>
+            <FormLabel>Product Name</FormLabel>
             <FormControl>
               <Input disabled={form.formState.isSubmitting} {...field} />
             </FormControl>
@@ -53,49 +59,77 @@ const NewProductForm = () => {
       />
       <FormField
         control={form.control}
-        name="lastName"
+        name="productCategory"
         render={({ field }) => (
-          <FormItem className="min-w-64 w-full">
-            <FormLabel>Last Name</FormLabel>
+          <FormItem className="space-y-3 w-full">
+            <FormLabel>Product Category</FormLabel>
             <FormControl>
-              <Input disabled={form.formState.isSubmitting} {...field} />
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                className="flex flex-col space-y-1"
+              >
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="physical-product" />
+                  </FormControl>
+                  <FormLabel className="font-normal">
+                    Physical Product
+                  </FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="digital-product" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Digital Product</FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="service" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Service</FormLabel>
+                </FormItem>
+              </RadioGroup>
             </FormControl>
+            {/* <FormMessage /> */}
           </FormItem>
         )}
       />
       <FormField
         control={form.control}
-        name="companyName"
+        name="targetMarket"
         render={({ field }) => (
-          <FormItem className="min-w-64 w-full">
-            <FormLabel>Company</FormLabel>
+          <FormItem className="space-y-3 w-full">
+            <FormLabel>Product Category</FormLabel>
             <FormControl>
-              <Input disabled={form.formState.isSubmitting} {...field} />
+              <RadioGroup
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                className="flex flex-col space-y-1"
+              >
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="b2c" />
+                  </FormControl>
+                  <FormLabel className="font-normal">
+                    Business to Consumer
+                  </FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="b2b" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Business to Business </FormLabel>
+                </FormItem>
+                <FormItem className="flex items-center space-x-3 space-y-0">
+                  <FormControl>
+                    <RadioGroupItem value="b2c-and-b2b" />
+                  </FormControl>
+                  <FormLabel className="font-normal">Both</FormLabel>
+                </FormItem>
+              </RadioGroup>
             </FormControl>
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="email"
-        render={({ field }) => (
-          <FormItem className="min-w-64 w-full">
-            <FormLabel>Business Email Address</FormLabel>
-            <FormControl>
-              <Input disabled={form.formState.isSubmitting} {...field} />
-            </FormControl>
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="phone"
-        render={({ field }) => (
-          <FormItem className="min-w-64 w-full">
-            <FormLabel>Contact Number (Optional)</FormLabel>
-            <FormControl>
-              <Input disabled={form.formState.isSubmitting} {...field} />
-            </FormControl>
+            {/* <FormMessage /> */}
           </FormItem>
         )}
       />
