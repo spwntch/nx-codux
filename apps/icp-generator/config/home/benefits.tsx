@@ -2,12 +2,12 @@ import { IContent } from '@spwntch/react-ui';
 import { CheckCircle, TrendingUp, Shield } from 'lucide-react';
 
 export const BENEFITS: IContent = {
-  title: {
-    content: 'Unlock the Full Potential of Your Strategy',
+  heading: {
+    content: `A Simple, Elegant Solution`,
     className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'Why Choose the AI-Driven ICP Generator?',
+    content: 'Why You Should Choose Our AI-Driven ICP Generator',
     className: 'text-xl mb-6',
   },
   bullets: [
@@ -26,10 +26,17 @@ export const BENEFITS: IContent = {
       ],
     },
     {
-      image: {src: 'images/reduced-risk.webp', alt: 'Reducec Risk'},
+      image: {src: 'images/reduced-risk.webp', alt: 'Reduce Risk'},
       heading: 'Reduced Risk',
       body: [
         'Mitigate the risks of targeting the wrong audience or misaligning your strategies by using accurate, AI-generated ICPs and Buyer Personas tailored to your specific market.',
+      ],
+    },
+    {
+      image: {src: 'images/experiment-with-confidence.webp', alt: 'Experiment with Confidence'},
+      heading: 'The Freedom to Experiment',
+      body: [
+        'Empower your team to explore new markets and product ideas quickly and efficiently, enabling rapid market validation and innovation without wasting resources.',
       ],
     },
   ],

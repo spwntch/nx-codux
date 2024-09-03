@@ -2,12 +2,12 @@ import { IContent } from '@spwntch/react-ui';
 import { Clock, Target, Layers } from 'lucide-react';
 
 export const PAIN_POINTS: IContent = {
-  title: {
+  heading: {
     content: 'Addressing Your Biggest Challenges',
     className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'How the AI-Driven ICP Generator Solves Your Problem',
+    content: 'How the AI-Driven ICP Generator Solves Your Biggest Problema',
     className: 'text-xl mb-6',
   },
   bullets: [
