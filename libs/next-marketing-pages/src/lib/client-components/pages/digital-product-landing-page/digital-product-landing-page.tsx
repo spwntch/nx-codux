@@ -1,7 +1,7 @@
-"use client";
+'use client';
 import { FullImageHero, IContent, IImage } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
-import { Benefits, FeaturesGrid } from '../../page-sections';
+import { Benefits, CtaBanner, FeaturesGrid } from '../../page-sections';
 
 export interface DigitalProductLandingPageProps {
   hero: {
@@ -11,6 +11,7 @@ export interface DigitalProductLandingPageProps {
   // clientLogos?: string[];
   painPoints?: IContent;
   benefits?: IContent;
+  ctaBanner?: IContent;
   features?: IContent;
   // benefits?: IContent;
   // caseStudies?: {
@@ -40,7 +41,8 @@ export const DigitalProductLandingPage = ({
   hero,
   painPoints,
   benefits,
-  features
+  ctaBanner,
+  features,
 }: DigitalProductLandingPageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -57,12 +59,20 @@ export const DigitalProductLandingPage = ({
           if (ctaIndex === 0) handleLinkTo('#cta-form');
         }}
       />
-       {painPoints && (
+      {painPoints && (
         <FeaturesGrid id="product" content={painPoints} gridStyle="two" />
       )}
-       {benefits && <Benefits content={benefits} className="bg-muted" />}
-       {features && <FeaturesGrid id="product" content={features} />}
-
+      {benefits && <Benefits content={benefits} className="bg-muted" />}
+      {ctaBanner && (
+        <CtaBanner
+          content={ctaBanner}
+          onCtaClick={() => handleLinkTo('#cta-form')}
+          
+        />
+      )}
+      {features && <FeaturesGrid id="product" content={features} 
+      className="bg-muted"
+      />}
     </div>
   );
 };
