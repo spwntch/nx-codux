@@ -45,13 +45,13 @@ export const HERO_CONTENT: IContent = {
   ],
   ctas: [
     {
-      label: 'SIGN ME UP',
+      label: 'INSTANT PURCHASE',
       variant: { size: 'xl' },
       //   url: '/start',
       //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',
     },
     {
-      label: 'LEARN MORE',
+      label: 'TRY FOR FREE',
       variant: { size: 'xl', variant: 'link' },
       //   url: '/start',
       //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',
