@@ -1,6 +1,7 @@
 "use client";
 import { FullImageHero, IContent, IImage } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
+import { FeaturesGrid } from '../../page-sections';
 
 export interface DigitalProductLandingPageProps {
   hero: {
@@ -8,7 +9,7 @@ export interface DigitalProductLandingPageProps {
     content: IContent;
   };
   // clientLogos?: string[];
-  // painPoints?: IContent;
+  painPoints?: IContent;
   // benefits?: IContent;
   // caseStudies?: {
   //   content: IContent;
@@ -35,6 +36,7 @@ export interface DigitalProductLandingPageProps {
 
 export const DigitalProductLandingPage = ({
   hero,
+  painPoints
 }: DigitalProductLandingPageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -52,6 +54,9 @@ export const DigitalProductLandingPage = ({
           if (ctaIndex === 0) handleLinkTo('#cta-form');
         }}
       />
+       {painPoints && (
+        <FeaturesGrid id="product" content={painPoints} gridStyle="two" />
+      )}
     </div>
   );
 };
