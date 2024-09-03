@@ -10,13 +10,11 @@ import {
 } from 'lucide-react';
 
 export const FEATURES: IContent = {
-  title: {
-    content: 'Comprehensive Features for Complete Customer Insights',
-    className: 'text-3xl font-bold mb-4',
+  heading: {
+    content: 'Comprehensive Buyer Insights',
   },
   subheading: {
     content: 'What You Can Expect from the AI Driven ICP Generator',
-    className: 'text-xl mb-6',
   },
   bullets: [
     {
@@ -71,8 +69,8 @@ export const FEATURES: IContent = {
   ],
   body: {
     content: [
-      'With these powerful features, the AI Driven ICP Generator provides a 360-degree view of your ideal customers, enabling you to create personalized strategies that resonate deeply and drive results.',
+      'With our powerful software features, the AI Driven ICP Generator provides a 360-degree view of your ideal customers, enabling you to create personalized strategies that resonate deeply and drive results.',
     ],
-    className: 'max-w-3xl mt-8',
+    className: 'max-w-4xl',
   },
 };
