@@ -8,8 +8,8 @@ export const HOME_HERO_IMAGE: IImage = {
 
 export const HOME_HERO_CONTENT: IContent = {
   title: {
-    content: 'Massive Experience Disruption. Coming Soon.',
-    className: 'max-w-3xl',
+    content: 'Massive UX Gains. Available Now.',
+    className: 'max-w-2xl',
   },
-  // subheading: "In the meantime, scroll down..."
+  subheading: "Scroll down 👇"
 };
