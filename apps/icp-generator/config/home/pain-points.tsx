@@ -7,7 +7,7 @@ export const PAIN_POINTS: IContent = {
     className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'How the AI-Driven ICP Generator Solves Your Pain Points',
+    content: 'How the AI-Driven ICP Generator Solves Your Problem',
     className: 'text-xl mb-6',
   },
   bullets: [
