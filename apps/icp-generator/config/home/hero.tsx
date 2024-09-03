@@ -8,7 +8,7 @@ export const HERO_IMAGE: IImage = {
 
 export const HERO_CONTENT: IContent = {
   title: {
-    content: 'Accelerate Your Product Success with AI-Driven ICPs',
+    content: 'Accelerate Your Product Success with AI Driven ICPs',
     className: 'max-w-3xl text-4xl font-bold tracking-tight mb-4',
   },
   subheading: {

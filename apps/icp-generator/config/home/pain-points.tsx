@@ -7,7 +7,7 @@ export const PAIN_POINTS: IContent = {
     className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'How the AI-Driven ICP Generator Solves Your Biggest Problema',
+    content: 'How the AI Driven ICP Generator Solves Your Biggest Problems',
     className: 'text-xl mb-6',
   },
   bullets: [
@@ -16,7 +16,7 @@ export const PAIN_POINTS: IContent = {
       heading: 'Speed in Decision-Making',
       body: [
         'Traditional methods of developing ICPs are too slow, delaying crucial decisions in product development, marketing, and growth strategies.',
-        'Our AI-Driven ICP Generator provides instant access to accurate customer profiles, enabling faster, more informed decision-making.',
+        'Our AI Driven ICP Generator provides instant access to accurate customer profiles, enabling faster, more informed decision-making.',
       ],
     },
     {
@@ -38,7 +38,7 @@ export const PAIN_POINTS: IContent = {
   ],
   body: {
     content: [
-      'These pain points are common hurdles in product and marketing strategies, but with the AI-Driven ICP Generator, you can overcome them and drive your business forward with confidence.',
+      'These pain points are common hurdles in product and marketing strategies, but with the AI Driven ICP Generator, you can overcome them and drive your business forward with confidence.',
     ],
     className: 'max-w-3xl mt-8',
   },
