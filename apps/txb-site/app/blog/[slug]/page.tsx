@@ -20,16 +20,16 @@ type Props = {
 //   return params;
 // }
 
-// const findCaseStudy = (slug: string) => {
-//   return CASE_STUDIES_GRID.find((caseStudy) => caseStudy.meta.slug === slug);
+// const findPost = (slug: string) => {
+//   return CASE_STUDIES_GRID.find((Post) => Post.meta.slug === slug);
 // };
 
 // export const generateMetadata = ({ params: { slug } }: Props) => {
-//   const caseStudy = findCaseStudy(slug);
-//   if (!caseStudy) {
+//   const Post = findPost(slug);
+//   if (!Post) {
 //     return { title: 'Not Found' };
 //   }
-//   const { title, abstract: description, keywords } = caseStudy.meta;
+//   const { title, abstract: description, keywords } = Post.meta;
 //   const coverImage = `${process.env.NEXT_PUBLIC_SITE_URL}/images/${slug}-cover.jpg`;
 
 //   return {
@@ -60,19 +60,19 @@ type Props = {
 //   return readFileSync(filePath);
 // };
 
-const CaseStudyPage = async ({ params: { slug } }: Props) => {
+const PostPage = async ({ params: { slug } }: Props) => {
   return <div>Work in Progress</div>
 
-  // const caseStudy = findCaseStudy(slug);
+  // const Post = findPost(slug);
   // const buffer = getBuffer(slug);
   // const doc = await parseMdxFileBuffer(buffer);
-  // if (!caseStudy || !doc) return notFound();
+  // if (!Post || !doc) return notFound();
 
   // return (
   //   <div className="flex flex-col mt-28 md:container px-3">
-  //     <ArticlePage meta={caseStudy.meta} content={doc.content} toc={doc.toc} />
+  //     <ArticlePage meta={Post.meta} content={doc.content} toc={doc.toc} />
   //   </div>
   // );
 };
 
-export default CaseStudyPage;
+export default PostPage;
