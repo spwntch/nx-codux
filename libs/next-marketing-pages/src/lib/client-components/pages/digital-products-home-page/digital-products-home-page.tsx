@@ -5,13 +5,13 @@ import {
   IContent,
   IImage,
   IMdxDoc,
-  LogoCarousel
+  LogoCarousel,
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
 import { About, Blog, CtaForm } from '../../page-sections';
 
-export interface MostlyHeroLandingPageProps {
+export interface DigitalProductsHomePageProps {
   hero: {
     image: IImage;
     content: IContent;
@@ -29,13 +29,13 @@ export interface MostlyHeroLandingPageProps {
   finalCta?: IContent;
 }
 
-export const MostlyHeroLandingPage = ({
+export const DigitalProductsHomePage = ({
   hero,
   clientLogos,
   about,
   blog,
   finalCta,
-}: MostlyHeroLandingPageProps) => {
+}: DigitalProductsHomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
     router.push(url);
