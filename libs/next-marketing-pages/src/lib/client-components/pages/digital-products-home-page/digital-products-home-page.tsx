@@ -9,7 +9,7 @@ import {
 } from '@spwntch/react-ui';
 
 import { useRouter } from 'next/navigation';
-import { About, Blog, CtaForm } from '../../page-sections';
+import { About, Blog, CtaForm, Products } from '../../page-sections';
 
 export interface DigitalProductsHomePageProps {
   hero: {
@@ -17,6 +17,9 @@ export interface DigitalProductsHomePageProps {
     content: IContent;
   };
   clientLogos?: string[];
+  products: {
+    content: IContent;
+  };
   about?: {
     youtubeId: string;
     content: IContent;
@@ -32,13 +35,14 @@ export interface DigitalProductsHomePageProps {
 export const DigitalProductsHomePage = ({
   hero,
   clientLogos,
+  products,
   about,
   blog,
   finalCta,
 }: DigitalProductsHomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
-    router.push(url, {scroll: true});
+    router.push(url, { scroll: true });
   };
 
   return (
@@ -53,7 +57,7 @@ export const DigitalProductsHomePage = ({
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
       <div id="products">
-        PRODUCTS GO HERE
+        <Products content={products.content}/>
       </div>
       {about && <About id="about" {...about} className="bg-muted" />}
       {blog && (
