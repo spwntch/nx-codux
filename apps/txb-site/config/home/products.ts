@@ -18,4 +18,14 @@ export const PRODUCTS: IContent = {
     ],
     className: 'max-w-4xl mx-auto text-center',
   },
+  bullets: [
+    {
+      image: { src: '/images/products/icp-generator/icp-generator-hero-image.webp' },
+      heading: 'AI Powered ICP Generator',
+      body: [
+        'Leverage the power of AI to generate accurate Ideal Customer Profiles (ICPs) in minutes.',
+        'Our AI Powered ICP Generator uses advanced algorithms to analyze your customer data and identify key characteristics that define your target audience.',
+      ],
+    },
+  ],
 };
