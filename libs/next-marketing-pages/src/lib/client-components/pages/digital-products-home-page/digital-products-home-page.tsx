@@ -38,7 +38,7 @@ export const DigitalProductsHomePage = ({
 }: DigitalProductsHomePageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
-    router.push(url);
+    router.push(url, {scroll: true});
   };
 
   return (
@@ -48,10 +48,13 @@ export const DigitalProductsHomePage = ({
         innerContent={hero.content}
         className="text-white"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleLinkTo('#cta-form');
+          if (ctaIndex === 0) handleLinkTo('#products');
         }}
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
+      <div id="products">
+        PRODUCTS GO HERE
+      </div>
       {about && <About id="about" {...about} className="bg-muted" />}
       {blog && (
         <Blog

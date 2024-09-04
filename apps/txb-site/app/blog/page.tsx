@@ -3,7 +3,7 @@ import React from 'react'
 
 const BlogPage = () => {
   return (
-    <div>Blogs Page Goes Here</div>
+    <div className='mt-72 flex justify-center'>Blog</div>
   )
 }
 

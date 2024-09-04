@@ -22,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <SiteShell brand={brand} navItems={NAV} navbar={navbar}>
+        <SiteShell
+          brand={brand}
+          navItems={NAV}
+          navbar={navbar}
+          underContruction={true}
+        >
           {children}
         </SiteShell>
       </body>
