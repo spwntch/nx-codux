@@ -20,12 +20,34 @@ export const PRODUCTS: IContent = {
   },
   bullets: [
     {
-      image: { src: '/images/products/icp-generator/icp-generator-hero-image.webp' },
+      image: {
+        src: '/images/products/icp-generator/icp-generator-hero-image.webp',
+      },
       heading: 'AI Powered ICP Generator',
       body: [
         'Leverage the power of AI to generate accurate Ideal Customer Profiles (ICPs) in minutes.',
         'Our AI Powered ICP Generator uses advanced algorithms to analyze your customer data and identify key characteristics that define your target audience.',
       ],
+    },
+    {
+      comingSoon: true,
+      image: { src: '/images/products/bx-map/bx-map-hero-image.webp' },
+      heading: 'Brand Experience Map',
+      body: [
+        'Gain a comprehensive view of your brand’s customer journey with the Brand Experience Map.',
+        'This innovative tool allows you to visualize customer interactions across touchpoints and identify opportunities to enhance the overall brand experience.',
+      ],
+    },
+    {
+      comingSoon: true,
+      heading: 'Customer Journey Map Generator',
+      body: [
+        "Understand your customers' interactions with your brand at every touchpoint with the Customer Journey Map Generator.",
+        'This powerful tool enables you to map out the customer journey, identify pain points, and optimize the overall experience to drive customer satisfaction and loyalty.',
+      ],
+      image: {
+        src: '/images/products/customer-journey-map-generator/customer-journey-map-generator-hero-image.webp',
+      },
     },
   ],
 };
