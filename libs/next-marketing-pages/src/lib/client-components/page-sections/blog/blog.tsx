@@ -25,7 +25,7 @@ export const Blog = ({ content, articles, path, className }: BlogProps) => {
   };
   return (
     <div className={cn('flex-col pt-12 pb-28', className)}>
-      <div className="md:container px-3">
+      <div className="px-3">
         {content && <ContentContainer innerContent={header} />}
         <ArticleGrid
           articles={articles}

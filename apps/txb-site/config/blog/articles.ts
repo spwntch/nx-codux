@@ -6,6 +6,7 @@ const AI_AND_UX_SYNERGY: IMdxDoc = {
     date: '2024-09-05',
     coverImage: '/images/articles/ai-and-ux-synergy.webp',
     authorName: 'Dave Benjamin',
+    authorAvatar: '/images/authors/dave-ai-avatar.webp',
     title: 'AI and UX Synergy: Merging Technology with Empathy for Ideal Customer Experiences',
     abstract: [
       'In today’s digital-first world, creating seamless and personalized user experiences (UX) has become essential for business success. This blog explores the synergy between AI and UX, highlighting how combining technology with empathy can lead to Ideal Customer Experiences that are both efficient and emotionally resonant. Learn how AI’s data-driven insights and predictive capabilities can enhance customer interactions, while human-centered UX design ensures that these experiences connect with users on an emotional level, driving loyalty and satisfaction.'
@@ -34,9 +35,11 @@ const AI_AND_UX_SYNERGY: IMdxDoc = {
 const FROM_DATA_TO_DELIGHT: IMdxDoc = {
   meta: {
     slug: 'from-data-to-delight',
-    date: '2024-09-05',
+    date: '2024-08-23',
     coverImage: '/images/articles/from-data-to-delight.webp',
-    authorName: 'Dave Benjamin',
+    authorName: 'Gary Greenfield',
+    authorAvatar: '/images/authors/gary-ai-avatar.webp',
+
     title: 'From Data to Delight: How AI Enhances Customer Segmentation and Personalization',
     abstract: [
       `In the world of customer experience, data is the new gold. However, data alone isn't enough to create meaningful customer experiences. This blog explores how AI-driven customer segmentation and personalization strategies are transforming the way businesses engage with their audiences. Learn how AI enables precise segmentation, predictive insights, and hyper-personalized experiences, turning data into delight and driving customer satisfaction, loyalty, and growth.`
@@ -66,9 +69,10 @@ const FROM_DATA_TO_DELIGHT: IMdxDoc = {
 const PRECISION_TARGETING: IMdxDoc = {
   meta: {
     slug: 'precision-targeting-ai-icp',
-    date: '2024-09-05',
+    date: '2024-08-18',
     coverImage: '/images/articles/precision-targeting-ai-icp.webp',
     authorName: 'Dave Benjamin',
+    authorAvatar: '/images/authors/dave-ai-avatar.webp',
     title: 'Precision Targeting: Using AI to Build Ideal Customer Profiles that Drive Engagement',
     abstract: [
       'In the digital age, precision targeting is key to standing out in saturated markets. This blog explores how AI is revolutionizing the development of Ideal Customer Profiles (ICPs), enabling businesses to create dynamic, personalized, and highly relevant customer engagement strategies. Learn how AI-driven ICPs enhance targeting precision, improve customer experiences, and drive engagement by leveraging real-time data and predictive analytics.'
@@ -97,9 +101,11 @@ const PRECISION_TARGETING: IMdxDoc = {
 const PREDICTING_SUCCESS: IMdxDoc = {
   meta: {
     slug: 'predicting-success-ai-icp',
-    date: '2024-09-05',
+    date: '2024-08-03',
     coverImage: '/images/articles/predicting-success-ai-icp.webp',
-    authorName: 'Dave Benjamin',
+    authorName: 'Candice Malcolm',
+    authorAvatar: '/images/authors/candice-ai-avatar.webp',
+
     title: 'Predicting Success: Leveraging AI for ICPs that Anticipate Customer Needs',
     abstract: [
       'In today’s competitive business landscape, anticipating customer needs is crucial for success. This blog explores how AI-driven Ideal Customer Profiles (ICPs) enable businesses to predict customer behaviors, preferences, and needs with remarkable accuracy. Learn how AI empowers companies to create dynamic, forward-looking ICPs that lead to proactive engagement, higher customer satisfaction, and improved business outcomes.'
@@ -127,9 +133,10 @@ const PREDICTING_SUCCESS: IMdxDoc = {
 const THE_AI_ADVANTAGE: IMdxDoc = {
   meta: {
     slug: 'ai-advantage-redefining-icp',
-    date: '2024-09-05',
+    date: '2024-07-14',
     coverImage: '/images/articles/ai-advantage-redefining-icp.webp',
-    authorName: 'Dave Benjamin',
+    authorName: 'Candice Malcolm',
+    authorAvatar: '/images/authors/candice-ai-avatar.webp',
     title: 'The AI Advantage: Redefining Ideal Customer Profiles for Enhanced User Experience',
     abstract: [
       'In today’s digital landscape, understanding your customers is key to business success. This blog explores how AI is revolutionizing the development of Ideal Customer Profiles (ICPs), allowing businesses to create more refined, dynamic, and accurate customer profiles. Discover how AI-driven ICPs lead to personalized user experiences, higher engagement, and proactive customer service, redefining what it means to be customer-centric in the modern age.'
@@ -158,9 +165,10 @@ const THE_AI_ADVANTAGE: IMdxDoc = {
 const THE_REAL_REASON_YOU_NEED_AN_ICP: IMdxDoc = {
   meta: {
     slug: 'the-real-reason-you-need-an-icp',
-    date: '2024-03-11',
+    date: '2024-06-09',
     coverImage: '/images/articles/the-real-reason-you-need-an-icp.webp',
-    authorName: 'Dave Benjamin',
+    authorName: 'Gary Greenfield',
+    authorAvatar: '/images/authors/gary-ai-avatar.webp',
     // authorAvatar: '/images/articles/sanlam-icon.webp',
     title: 'The Real Reason You Need an ICP',
     abstract: [
