@@ -9,6 +9,7 @@ export interface ArticlesPageProps {
     content: IContent;
   };
   blog: {
+    content?: IContent;
     articles: IMdxDoc[];
   };
 }
