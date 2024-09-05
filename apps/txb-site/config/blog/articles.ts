@@ -68,9 +68,9 @@ const FROM_DATA_TO_DELIGHT: IMdxDoc = {
 
 const PRECISION_TARGETING: IMdxDoc = {
   meta: {
-    slug: 'precision-targeting-ai-icp',
+    slug: 'precision-targeting',
     date: '2024-08-18',
-    coverImage: '/images/articles/precision-targeting-ai-icp.webp',
+    coverImage: '/images/articles/precision-targeting.webp',
     authorName: 'Dave Benjamin',
     authorAvatar: '/images/authors/dave-ai-avatar.webp',
     title: 'Precision Targeting: Using AI to Build Ideal Customer Profiles that Drive Engagement',
@@ -100,9 +100,9 @@ const PRECISION_TARGETING: IMdxDoc = {
 
 const PREDICTING_SUCCESS: IMdxDoc = {
   meta: {
-    slug: 'predicting-success-ai-icp',
+    slug: 'predicting-success',
     date: '2024-08-03',
-    coverImage: '/images/articles/predicting-success-ai-icp.webp',
+    coverImage: '/images/articles/predicting-success.webp',
     authorName: 'Candice Malcolm',
     authorAvatar: '/images/authors/candice-ai-avatar.webp',
 
