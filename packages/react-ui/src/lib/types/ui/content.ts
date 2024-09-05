@@ -13,6 +13,7 @@ export interface IBullet {
   subheading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
   body: string[]; // the main bullet text.
   bullets?: IBullet[];
+  href?: string;
   className?: string;
 }
 
