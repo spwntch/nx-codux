@@ -42,7 +42,7 @@ export const Article = ({
             onToc={onToc}
           />
         </div>
-        <div className="max-w-lg">
+        <div className="max-w-md">
           {toc?.length && (
             <div className='hidden lg:block'>
               <HeaderSubheading text="On This Page" className="mt-16 mb-12" />
